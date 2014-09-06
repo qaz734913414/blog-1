@@ -1,7 +1,5 @@
-source:         ./src
-destination:    ./result
-plugins:        ./_plugins
-layouts:        ./_layouts
+source:         .
+#destination:    ./result
 keep_files:     ['.git','.svn']
 
 encoding:       "utf-8"
