@@ -1,5 +1,5 @@
 source:         .
-#destination:    ./result
+destination:    ./result
 keep_files:     ['.git','.svn']
 
 encoding:       "utf-8"
