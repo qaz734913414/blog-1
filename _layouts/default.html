@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html>
 
-  {% include head.html %}
+	{% include head.html %}
 
-  <body>
+	<body>
 
-    {% include navigate.html %}
+		{% include navigate.html %}
 	
-    <div class="container main">
-      <div class="main-l {% if page.detail %}{% else %}{{ "detail" }}{% endif %}">{{ content }}</div>
-	  <div class="main-r">
-		  {% include module_1.html %}
-		  {% include module_2.html %}
-		  {% include module_3.html %}
-	  </div>
-    </div>
+		<div class="container main">
+			<div class="main-l {% if page.detail %}{% else %}{{ "detail" }}{% endif %}">{{ content }}</div>
+			<div class="main-r">
+				{% include module_1.html %}
+				{% include module_2.html %}
+				{% include module_3.html %}
+			</div>
+		</div>
 	
+		{% include footer.html %}
 
-    {% include footer.html %}
-
-  </body>
+	</body>
 
 </html>
