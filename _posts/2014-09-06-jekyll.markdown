@@ -1,0 +1,63 @@
+---
+layout: page
+title:  "jekyll 博客"
+origin: 张嘉杰.原创
+date:   2014-09-06
+categories: jekyll blog
+tags: github jekyll mac blog
+---
+中秋把博客迁到 [Github]上来，感觉爽了很多。使用了 [Jekyll]、[Github Pages]。
+`jekyll` 是一个博客生成引擎，可将`markdown`文件生成静态的HTML，支持模板，可以辅助生成分类和标签页。
+`Github Pages` 是 `Github` 的一个非常好的服务，免费，可以绑定域名。
+<!--more-->
+简单介绍一下如何快速安装部署一个全新的blog.
+
+{% highlight html %}
+# 查看ruby版本
+ruby -version 
+
+# 安装jekyll
+gem install jekyll 
+
+# 出现如下错误
+ERROR:  While executing gem ... (OptionParser::MissingArgument)
+    missing argument: -v
+	
+# 赋值权限执行
+sudo gem install jekyll
+
+# 安装完毕创建博客目录
+jekyll new blog
+
+# 进入目录
+cd blog
+
+# 启动服务
+jekyll server
+{% endhighlight %}
+
+完成以上步骤。外面访问地址栏 http://localhost:4000/ 就可以看到 jekyll 初始化的模板页面了。
+
+下面介绍一下 jekyll 生成的目录结构。
+{% highlight html %}
+
+_config.yml 	# 配置文件
+_includes	# 引用文件
+_layouts	# 框架模板
+_posts		# 文章模板（格式：`YYYY-MM-DD-name-of-post.markdown`）
+_site		# 输出文件目录
+css		# 样式
+index.html	# 首页
+
+{% endhighlight %}
+
+相关参考文章地址：
+[Github]、[Github Pages]、[Jekyll]、[Jekyll-Gh]、[Jekyll-Help]、[Markdown]
+
+[Github]: 	    http://github.com/jcores
+[Github Pages]: http://pages.github.com
+[Jekyll]:      	http://jekyllrb.com
+[Jekyll-Gh]:   	https://github.com/jekyll/jekyll
+[Jekyll-Help]: 	https://github.com/jekyll/jekyll-help
+[Markdown]:	http://daringfireball.net/projects/markdown/syntax/
+

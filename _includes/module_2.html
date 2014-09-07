@@ -1,0 +1,12 @@
+			<!-- 表情云 -->
+			<div class="box-comm">
+				<div class="bt-hd cl">
+					<span>标签云</span>
+					<s></s>
+				</div>
+				<div class="box-cont cloud">
+					{% for tag in site.tags %}
+						<a href="/show_by_tag.html?tag={{ tag | first }}">{{ tag | first }} {{ tag | last | size }}</a>
+					{% endfor %} 
+				</div>
+			</div>
