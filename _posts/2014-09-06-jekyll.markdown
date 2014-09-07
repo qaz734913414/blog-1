@@ -51,13 +51,32 @@ index.html	# 首页
 
 {% endhighlight %}
 
-相关参考文章地址：
-[Github]、[Github Pages]、[Jekyll]、[Jekyll-Gh]、[Jekyll-Help]、[Markdown]
+先在 `Github` 上建立blog资源目录，至于 `Git` 的相关命令如下：
+{% highlight html %}
 
-[Github]: 	    http://github.com/jcores
-[Github Pages]: http://pages.github.com
-[Jekyll]:      	http://jekyllrb.com
-[Jekyll-Gh]:   	https://github.com/jekyll/jekyll
-[Jekyll-Help]: 	https://github.com/jekyll/jekyll-help
-[Markdown]:	http://daringfireball.net/projects/markdown/syntax/
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/[gitgub名称]/blog.git
+git push -u origin master
+
+{% endhighlight %}
+
+等待十分钟左右，访问地址栏 http://[gitgub名称].github.io/blog/ 即可。
+
+至于绑定域名先在 `jekyll` 目录下添加文件 CNAME 里面写入相关域名。
+域名解析A地址指向 `204.232.175.78` 稍后访问域名即可。
+
+相关参考文章地址：
+
+Github - <http://github.com/jcores>  
+Github Pages - <http://pages.github.com>  
+Jekyll - <http://jekyllrb.com>  
+Jekyll-Gh - <https://github.com/jekyll/jekyll>  
+Jekyll-Help - <https://github.com/jekyll/jekyll-help>  
+Markdown - <http://daringfireball.net/projects/markdown/syntax>
+
+[Github]:		http://github.com/jcores
+[Github Pages]:	http://pages.github.com
+[Jekyll]:		http://jekyllrb.com
 
