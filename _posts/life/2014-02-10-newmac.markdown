@@ -12,7 +12,7 @@ tags: mac OSX
 <!--more-->
 
 第一步：
-s
+
 	1. 修改电脑名称。查看“”－“系统偏好设置”－修改全名。  
 	2. 设置键盘快捷键。s查看“”－“系统偏好设置”－“键盘”－“快捷键”－修改键盘快捷键。
 
@@ -89,7 +89,7 @@ Eclipse相关插件：
 
 Xcode - <https://developer.apple.com/xcode/>  
 Homebrew - <http://brew.sh/>  
-Eclipse - <http://eclipse.org/downloads/>
+Eclipse - <http://eclipse.org/downloads/>  
 WebStorm - <http://www.jetbrains.com/webstorm/s>
 
 -----------------------
