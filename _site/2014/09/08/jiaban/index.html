@@ -5,9 +5,9 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<title>jekyll 博客</title>
-	<meta name="keywords" content="github,jekyll,mac,blog" />
-	<meta name="description" content="jekyll 博客" />
+	<title>话.程序员加班</title>
+	<meta name="keywords" content="程序员,加班,程序员加班" />
+	<meta name="description" content="程序员 加班 程序员加班" />
 	<meta name="author" content="jcore" />
 	<meta name="viewport" content="width=device-width; initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="/resources/css/reset.css">
@@ -39,100 +39,40 @@
 	
 		<div class="container main">
 			<div class="main-l detail"><div class="detail-bd">
-	<h1>jekyll 博客</h1>
+	<h1>话.程序员加班</h1>
 	<div class="deatil-t-hd">
-		<span class="t-sp1">来源：<em>张嘉杰.原创 (2014-09-06)</em></span>
+		<span class="t-sp1">来源：<em>张嘉杰.原创 (2014-09-08)</em></span>
 		<span class="t-sp2">标签：
 			<em>
 				
-					<a href="/tags.html#github">github</a>
-				
-					<a href="/tags.html#jekyll">jekyll</a>
-				
-					<a href="/tags.html#mac">mac</a>
-				
-					<a href="/tags.html#blog">blog</a>
+					<a href="/tags.html#北漂">北漂</a>
 				
 			</em>
 		</span>
-		<span class="t-sp4">评论：<em><span style="margin-left:-10px;" class="ds-thread-count" data-thread-key="/2014/09/06/jekyll" ></span></em></span>
+		<span class="t-sp4">评论：<em><span style="margin-left:-10px;" class="ds-thread-count" data-thread-key="/2014/09/08/jiaban" ></span></em></span>
 	</div>
 	
 	<div class="detail-cont">
-		<p>中秋把博客迁到 <a href="http://github.com/jcores">Github</a>上来，感觉爽了很多。使用了 <a href="http://jekyllrb.com">Jekyll</a>、<a href="http://pages.github.com">Github Pages</a>。
-<code>jekyll</code> 是一个博客生成引擎，可将<code>markdown</code>文件生成静态的HTML，支持模板，可以辅助生成分类和标签页。
-<code>Github Pages</code> 是 <code>Github</code> 的一个非常好的服务，免费，可以绑定域名。
-<!--more-->
-简单介绍一下如何快速安装部署一个全新的blog.</p>
+		<p>不知不觉中秋节就快过了，昨儿和好朋友聊天时聊到了<code>加班</code>这个话题。好多身边的朋友听到程序员的第一反应就是少言寡欲、周而复始的上班、下班、<code>加班</code>，在天朝程序员加班成为了一个不变的规则。个人觉得<code>加班</code>是可以的，但不应该成为一种常态。<br />
+<!--more--></p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># 查看ruby版本</span>
-ruby -version 
+<p>一般加班的理由会有很多：</p>
 
-<span class="c">#升级gem</span>
-sudo gem update --system
+<pre><code>1. 很想尽快写完项目，一气呵成。这是大部分程序员们自发加班的主要驱动力。
+2. 项目开发进度紧张，尽快完成。项目经理一般会以此为理由加班，程序员拖延症因不能按时完成项目而加班。
+</code></pre>
 
-<span class="c"># 安装jekyll</span>
-gem install jekyll 
+<p>个人觉得以下几点应该注意：  </p>
 
-<span class="c"># 出现如下错误</span>
-ERROR:  While executing gem ... <span class="o">(</span>OptionParser::MissingArgument<span class="o">)</span>
-    missing argument: -v
-	
-<span class="c"># 赋值权限执行</span>
-sudo gem install jekyll
+<pre><code>1. 每个人的工作激情不会持续很长时间，8小时工作时间是科学、合理的。长时间加班，造成没有精神状态、记忆力差，等等。  
+2. 团队里面的其他成员长期加班，因为进度的问题，别人也需要陪着你加班。时间久了，会造成团队之间的敌对和紧张关系。  
+3. 每个人都想成为管理者的得力助手，如果加班成为常态，管理者会认为是应该的。如果哪天不在加班，管理者必然会感到不适应。
+</code></pre>
 
-<span class="c">#支持markdown语法</span>
-sudo gem install rdiscount
+<p>以上是我工作八年以来的一个总结，其实我个人还是反对加班的。<br />
+希望可以多给自己多补充一点<code>阅读技能</code>、<code>沟通技能</code>、<code>生活技能</code>、<code>锻炼技能</code>、<code>创业技能</code> 才是关键，所谓不想当老板的程序员不是好码农。  </p>
 
-<span class="c"># 安装完毕创建博客目录</span>
-jekyll new blog
-
-<span class="c"># 进入目录</span>
-<span class="nb">cd </span>blog
-
-<span class="c"># 启动服务</span>
-jekyll server</code></pre></div>
-
-<p>完成以上步骤。外面访问地址栏 http://localhost:4000/ 就可以看到 jekyll 初始化的模板页面了。</p>
-
-<p>下面介绍一下 jekyll 生成的目录结构。</p>
-
-<div class="highlight"><pre><code class="language-html" data-lang="html">_config.yml 	# 配置文件
-_includes	# 重复利用文件
-_layouts	# 模板html文件
-_posts		# 文章模板（格式：`YYYY-MM-DD-name-of-post.markdown`）
-_site		# 生成文章html文档
-css		# 样式
-index.html	# 首页</code></pre></div>
-
-<p>先在 <code>Github</code> 上建立blog资源目录，至于 <code>Git</code> 的相关命令如下：</p>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">git init
-git add README.md
-git commit -m <span class="s2">&quot;first commit&quot;</span>
-git remote add origin https://github.com/<span class="o">[</span>gitgub名称<span class="o">]</span>/blog.git
-git push -u origin master</code></pre></div>
-
-<p>等待十分钟左右，访问地址栏 http://[gitgub名称].github.io/blog/ 即可。</p>
-
-<p>至于绑定域名先在 <code>jekyll</code> 目录下添加文件 CNAME 里面写入相关域名。
-域名解析A地址指向 <code>204.232.175.78</code> 稍后访问域名即可。</p>
-
-<h3 id="section">有没有觉得很简单 :)</h3>
-
-<hr />
-
-<p>相关参考文章地址：</p>
-
-<p>Git 安装地址 - <a href="http://git-scm.com/book/en/Getting-Started-Installing-Git">http://git-scm.com/book/en/Getting-Started-Installing-Git</a><br />
-Github Jcore - <a href="http://github.com/jcores">http://github.com/jcores</a><br />
-Github Pages - <a href="http://pages.github.com">http://pages.github.com</a><br />
-Jekyll - <a href="http://jekyllrb.com">http://jekyllrb.com</a><br />
-Jekyll-Gh - <a href="https://github.com/jekyll/jekyll">https://github.com/jekyll/jekyll</a><br />
-Jekyll-Help - <a href="https://github.com/jekyll/jekyll-help">https://github.com/jekyll/jekyll-help</a><br />
-Liquid-Help - <a href="https://github.com/shopify/liquid/wiki/liquid-for-designers">https://github.com/shopify/liquid/wiki/liquid-for-designers</a><br />
-Markdown - <a href="http://daringfireball.net/projects/markdown/syntax">http://daringfireball.net/projects/markdown/syntax</a><br />
-Markdown 预览 - <a href="https://stackedit.io/editor">https://stackedit.io/editor</a></p>
+<h2 id="section">顺便也祝大家中秋快乐 :)</h2>
 
 <hr />
 
@@ -161,10 +101,8 @@ Markdown 预览 - <a href="https://stackedit.io/editor">https://stackedit.io/edi
 	</div>
 	<div class="detail-ud">
 		
-			<p>上一篇:<a href="/2014/07/18/yunti" ><b class="mobile-ignore">云梯 VPN</b></a></p>
+			<p>上一篇:<a href="/2014/09/07/dizhen" ><b class="mobile-ignore">河北地震.感想</b></a></p>
 	    
-		
-			<p>下一篇:<a href="/2014/09/07/dizhen" ><b class="mobile-ignore">河北地震.感想</b></a></p>
 		
 	</div>
 </div>
@@ -193,7 +131,7 @@ Markdown 预览 - <a href="https://stackedit.io/editor">https://stackedit.io/edi
 	</div>
 </div>
 <div class="detail-xg">
-	<div class="ds-thread" data-thread-key="/2014/09/06/jekyll" data-title="jekyll 博客" ></div>
+	<div class="ds-thread" data-thread-key="/2014/09/08/jiaban" data-title="话.程序员加班" ></div>
 </div>
 </div>
 			<div class="main-r">
@@ -338,10 +276,10 @@ Markdown 预览 - <a href="https://stackedit.io/editor">https://stackedit.io/edi
 </script> 
 <![endif]-->
 <script type="text/javascript">
-    var wumiiPermaLink = "/2014/09/06/jekyll"; //请用代码生成文章永久的链接
-    var wumiiTitle = "jekyll 博客"; //请用代码生成文章标题
-    var wumiiTags = "github,jekyll,mac,blog"; //请用代码生成文章标签，以英文逗号分隔，如："标签1,标签2"
-    var wumiiCategories = ["jekyll"]; //请用代码生成文章分类，分类名放在 JSONArray 中，如: ["分类1", "分类2"]
+    var wumiiPermaLink = "/2014/09/08/jiaban"; //请用代码生成文章永久的链接
+    var wumiiTitle = "话.程序员加班"; //请用代码生成文章标题
+    var wumiiTags = "北漂"; //请用代码生成文章标签，以英文逗号分隔，如："标签1,标签2"
+    var wumiiCategories = ["life"]; //请用代码生成文章分类，分类名放在 JSONArray 中，如: ["分类1", "分类2"]
     var wumiiSitePrefix = "http://jcore.cn/";
     var wumiiParams = "&num=5&mode=1&pf=JAVASCRIPT";
 </script>

@@ -45,6 +45,13 @@
 
 
 	<url>
+		<loc>/2014/09/08/jiaban</loc>
+		<lastmod>2014-09-08</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
 		<loc>/2014/09/07/dizhen</loc>
 		<lastmod>2014-09-07</lastmod>
 		<changefreq>weekly</changefreq>

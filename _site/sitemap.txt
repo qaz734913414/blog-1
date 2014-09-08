@@ -6,6 +6,7 @@
 /sitemap.txt
 /sitemap.xml
 
+/2014/09/08/jiaban
 /2014/09/07/dizhen
 /2014/09/06/jekyll
 /2014/07/18/yunti
