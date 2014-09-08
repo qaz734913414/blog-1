@@ -6,7 +6,7 @@
 	</div>
 	<div class="box-cont cloud">
 		{% for tag in site.tags %}
-			<a href="/show_by_tag.html?tag={{ tag | first }}">{{ tag | first }} {{ tag | last | size }}</a>
+			<a href="{{ tag | first }}">{{ tag | first }} {{ tag | last | size }}</a>
 		{% endfor %} 
 	</div>
 </div>

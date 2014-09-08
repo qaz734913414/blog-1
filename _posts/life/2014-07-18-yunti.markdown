@@ -1,0 +1,20 @@
+---
+layout: page
+title:  "云梯 VPN"
+description: "云梯 VPN"
+keywords: vpn,mac
+origin: 张嘉杰.原创
+date:   2014-07-18
+categories: life
+tags: vpn mac
+---
+忍受不了没有 `Google`、`Vagrant` 查询信息和一些技术帖子，`Youtube` 看一些直播视频。
+`webfreer`、`天行`、`无界`、`红杏` 基本连上10分钟必断，而且还有病毒。百度浏览器提供的代理也是很不稳定。
+`云梯 VPN`（收费）是之前的同事推荐，还算是比较稳定的，而且国内的网页不走代理流量。
+<!--more-->  
+
+下面给大家推荐一个免费的 VPN，速度还不错哦。
+
+[海盗船 VPN]( http://www.4a8a.net/ )
+
+-----------------------
