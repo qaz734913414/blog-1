@@ -96,8 +96,6 @@ h1,h2,h3,h4,h5,h6{font-size:14px;margin:0;padding:0;}
 /* 分页*/
 .page{width:435px;margin:0 auto;}
 .page ul li{float:left;}
-.page a{float:left;display:block;margin-right:5px;_margin-right:2px;padding:3px 10px;border:1px solid #e3e3e3;background-color:#fff;text-decoration:none;}
-.page a.on,.page a:hover{color:#fff;background-color:#7bac2f;}
 
 .foot{width:100%;margin-top:20px;padding-bottom:5px;border-top:1px solid #bbb;text-align:center;color:#666;}
 .foot a{color:#666;}
