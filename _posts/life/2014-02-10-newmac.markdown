@@ -83,13 +83,13 @@ Eclipse相关插件：
 相关参考文章地址：
 
 Xcode - <https://developer.apple.com/xcode/>  
-Homebrew - <http://brew.sh/>  
+Homebrew - <http://brew.sh/index_zh-cn.html>  
 Eclipse - <http://eclipse.org/downloads/>  
 WebStorm - <http://www.jetbrains.com/webstorm/>
 
 -----------------------
 
 [Xcode]: 	https://developer.apple.com/xcode/
-[Homebrew]: http://brew.sh/
+[Homebrew]: http://brew.sh/index_zh-cn.html
 [Eclipse]: 	http://eclipse.org/downloads/
 [WebStorm]: http://www.jetbrains.com/webstorm/
