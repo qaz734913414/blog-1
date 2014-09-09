@@ -75,13 +75,8 @@ google-chrome	onepassword	totalterminal	vlc
 Eclipse相关插件：
 
 	1. maven
-	2. 
 
-第五步：
-
->  安装 [WebStorm].
-
-大功告成，睡觉了。  
+先写到这儿吧，还有好多软件，慢慢更新。  
 
 -----------------------
 
