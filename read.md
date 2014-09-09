@@ -19,7 +19,7 @@ description: "jcore豆瓣读书"
 		</div>
 	</div>
 </article>
-<script type="text/javascript" src="{{ site:staticurl }}/resources/js/douban.js"></script>
+<script type="text/javascript" src="/resources/js/douban.js"></script>
 <script type="text/javascript">
 	var dbapi = new DoubanApi();
 	window.onload = function(){
