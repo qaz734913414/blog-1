@@ -73,7 +73,7 @@ root:~ zjj$ brew install imagemagick
 
 {% endhighlight %}
 
-`mac`下相对对比较简单哈。不熟悉`brew`命令的朋友，参考我这个帖子 [mac新做系统安装软件]。
+`mac`下相对对比较简单哈。不熟悉`brew`命令的朋友，[戳这里](/2014/02/10/newmac/)。
 
 -----------------------
 
@@ -82,5 +82,3 @@ root:~ zjj$ brew install imagemagick
 imagemagick - <http://www.imagemagick.org/script/index.php>
 
 -----------------------
-
-[mac新做系统安装软件]: /2014/02/10/newmac/

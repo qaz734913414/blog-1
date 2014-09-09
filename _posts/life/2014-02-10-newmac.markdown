@@ -68,6 +68,8 @@ google-chrome	onepassword	totalterminal	vlc
 
 {% endhighlight %}
 
+这里介绍一下`launchrocket`，他可以方便的管理一些常用软件。不了解的朋友，[戳这里](/2014/02/10/launchrocket/)。
+
 第四步：
 
 >  安装 [Eclipse].  
