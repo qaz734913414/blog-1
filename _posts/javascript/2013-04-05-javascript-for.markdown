@@ -87,8 +87,11 @@ time.end( forTemplates[4] );
 {% endhighlight %}
 
 执行结果截了张图，供大家参考： 
-<a href="{{ "/resources/demo" | prepend: site.staticurl }}{{ page.url }}.html" target="_blank">运行例子</a>
 
-![javascript高率遍历]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)
+![javascript高率遍历]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)  
+
+-----------------------
+
+<a class="btn btn-primary btn-sm" href="{{ "/resources/demo" | prepend: site.staticurl }}{{ page.url }}.html" target="_blank">查看DEMO</a>
 
 -----------------------
