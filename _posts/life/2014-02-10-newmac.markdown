@@ -85,11 +85,11 @@ Eclipse相关插件：
 Xcode - <https://developer.apple.com/xcode/>  
 Homebrew - <http://brew.sh/>  
 Eclipse - <http://eclipse.org/downloads/>  
-WebStorm - <http://www.jetbrains.com/webstorm/s>
+WebStorm - <http://www.jetbrains.com/webstorm/>
 
 -----------------------
 
 [Xcode]: 	https://developer.apple.com/xcode/
 [Homebrew]: http://brew.sh/
 [Eclipse]: 	http://eclipse.org/downloads/
-[WebStorm]: http://www.jetbrains.com/webstorm/s
+[WebStorm]: http://www.jetbrains.com/webstorm/
