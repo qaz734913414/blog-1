@@ -58,9 +58,11 @@ h1,h2,h3,h4,h5,h6{font-size:14px;margin:0;padding:0;}
 .bt-hd s{display:block;position:absolute;left:0;bottom:-2px;width:80px;height:2px;overflow:hidden;background-color:#7bac2f;}
 
 .main-ua li{margin-bottom:10px;padding:10px;background-color:#fff;}
+.main-ua li img { box-shadow: 4px 4px 4px #333; }
 .main-ua dl dt{float:left;margin-right:15px;}
 .main-ua dl dd{line-height:23px;}
 .main-hd a{font-size:14px;font-weight:bold;}
+
 
 .box-comm{margin-bottom:10px;}
 .box-cont{padding:10px;background-color:#fff;}
