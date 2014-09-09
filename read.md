@@ -5,9 +5,9 @@ keywords:	 "Jcore,douban,豆瓣读书"
 description: "jcore豆瓣读书"
 ---
 
-<h2><b>读书</b></h2>
-<hr/>
 数据源来自我的豆瓣读书...
+<hr/>
+
 <article>
 	<div id="archives">
 		<div id="douban">
