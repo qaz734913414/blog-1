@@ -155,7 +155,7 @@ a:hover{color:#3399cc;}
 /* douban */
 .douban-list { margin-top:10px; }
 .douban-list ul li { float: left; list-style: none outside none; margin:0 0 12px 10px; display:inline-block;}
-.douban-list ul li img {width: 108px; height: 136px; border: solid 1px #DDD; box-shadow: 7px 7px 7px #333;}
+.douban-list ul li img {width: 100px; height: 147px; border: solid 1px #DDD; box-shadow: 7px 7px 7px #333;}
 
 
 /*窗口 缩小后宽度小于990调整*/
