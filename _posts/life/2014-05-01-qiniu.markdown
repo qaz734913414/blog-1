@@ -5,7 +5,7 @@ description: "CND 七牛 七牛云存储"
 keywords: CND,七牛
 origin: 张嘉杰.原创
 date:   2014-05-01
-categories: life
+category: life
 tags: CND 七牛
 ---
 [七牛云存储] 确实很火，速度快而且还免费。所以我也将我的博客做了镜像，js、css、images目录等等。个人博客，基本上够用了。  来个介绍吧：存储空间10GB，每月下载流量10GB，每月PUT/DELETE 10万次请求，每月GET 100万次请求。  

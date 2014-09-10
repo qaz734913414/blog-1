@@ -5,7 +5,7 @@ description: "jekyll 博客"
 keywords: github,jekyll,mac,blog
 origin: 张嘉杰.原创
 date:   2014-09-06
-categories: jekyll
+category: jekyll
 tags: github jekyll mac blog
 ---
 中秋把博客迁到 [Github]上来，感觉爽了很多。使用了 [Jekyll]、[Github Pages]。

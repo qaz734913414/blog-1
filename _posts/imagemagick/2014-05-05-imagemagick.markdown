@@ -5,7 +5,7 @@ description: "imagemagick 安装"
 keywords: imagemagick,jmagick,linux,mac
 origin: 张嘉杰.原创
 date:   2014-05-05
-categories: imagemagick
+category: imagemagick
 tags: imagemagick jmagick linux mac
 ---
 公司商品页图片儿用java程序压缩以后，展示出来不是很清楚，图片的质量被领导质疑，和技术总监商量测试完以后决定使用`imagemagick`来压缩图片。
@@ -63,13 +63,13 @@ mac下：(家里的版本是OSX 10.9.3)。
 {% highlight bash %}
 
 # 查看已安装的插件集合
-root:~ zjj$ brew list
+$ brew list
 
 # 查看是否有imagemagick插件
-root:~ zjj$ brew search imagemagick
+$ brew search imagemagick
 
 # 安装imagemagick插件
-root:~ zjj$ brew install imagemagick
+$ brew install imagemagick
 
 {% endhighlight %}
 

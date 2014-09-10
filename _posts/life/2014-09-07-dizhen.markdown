@@ -5,7 +5,7 @@ description: "河北地震.感想"
 keywords: 北漂
 origin: 张嘉杰.原创
 date:   2014-09-07
-categories: life
+category: life
 tags: 北漂
 ---
 昨天晚上18时37分张家口发生4.2级`地震`。据称北京有震感。北京的小伙伴们有感吗？我怎么没感觉到。。。

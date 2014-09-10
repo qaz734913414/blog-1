@@ -50,7 +50,7 @@ layout: default
 	</div>
 </div>
 
-<!--相关文章 
+<!--相关文章 -->
 <div class="detail-xg">
 	<div class="bt-hd">
 		<span>相关文章 </span>
@@ -58,21 +58,12 @@ layout: default
 	<div class="intro-list detail-xg-u cl">
 		<script type="text/javascript" id="wumiiRelatedItems"></script>
 		<ul>
-			<li><a href="#">4月25-27日球软件开发大开发大会球软件会球软件开发...</a></li>
-			<li><a href="#">4月25-27日球软件开发大会球软件开发...</a></li>
-			<li><a href="#">4月25-27日球软件开发大开发大会球软件会球软件开发...</a></li>
-			<li><a href="#">4月25-27日球软件开发大会球软件开发...</a></li>
-			<li><a href="#">4月25-27日球软件开发大会球软件开发...</a></li>
-		</ul>
-		<ul>
-			<li><a href="#">4月25-27日球软件开发大会球软件开发...</a></li>
-			<li><a href="#">4月25-27日球软件开发大会球软件开发...</a></li>
-			<li><a href="#">4月25-27日球软件开发大开发大会球软件会球软件开发...</a></li>
-			<li><a href="#">4月25-27日球软件开发大会球软件开发...</a></li>
-			<li><a href="#">4月25-27日球软件开发大会开发大会球软件球软件开发...</a></li>
+			{% for post in site.categories[page.category] limit:6 %}
+				<li><a href="{{ post.url }}">{{ post.title  }}</a></li>
+			{% endfor  %}
 		</ul>
 	</div>
-</div>-->
+</div>
 <div class="detail-xg">
 	<div class="ds-thread" data-thread-key="{{page.id}}" data-title="{{page.title}}" ></div>
 </div>

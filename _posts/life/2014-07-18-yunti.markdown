@@ -5,7 +5,7 @@ description: "云梯 VPN"
 keywords: vpn,mac
 origin: 张嘉杰.原创
 date:   2014-07-18
-categories: life
+category: life
 tags: vpn mac
 ---
 忍受不了没有 `Google`、`Vagrant` 查询信息和一些技术帖子，`Youtube` 看一些直播视频。

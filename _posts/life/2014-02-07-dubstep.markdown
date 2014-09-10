@@ -5,7 +5,7 @@ description: "dubstep 电子混音"
 keywords: dubstep,mac,launchpad,skrillex
 origin: 张嘉杰.原创
 date:   2014-02-07
-categories: life
+category: life
 tags: dubstep mac launchpad skrillex
 ---
 春节回家摸了摸买了很久的设备。`launchpad` 确实是个神器，还是很有感觉的，虽然用的还不是很熟练。

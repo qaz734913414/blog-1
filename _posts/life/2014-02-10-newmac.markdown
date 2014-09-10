@@ -5,7 +5,7 @@ description: "mac新做系统安装软件"
 keywords: mac,OSX
 origin: 张嘉杰.原创
 date:   2014-02-10
-categories: mac
+category: mac
 tags: mac OSX
 ---
 每次`mac`重做完系统以后，都需要安装很多工具和软件。这里记录一下相关的安装过程和方法。有需要的朋友也可以参考一下。  

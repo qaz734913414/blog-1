@@ -5,7 +5,7 @@ description: "关于内存工具MemoryAnalyzer的分析和使用"
 keywords: MemoryAnalyzer,dump,architect
 origin: 张嘉杰.原创
 date:   2014-08-25
-categories: architect
+category: architect
 tags: MemoryAnalyzer dump architect
 ---
 公司网站`tomcat`容器老是突然进程消失，或者应用挂起无反应。所以用`jmap`抓出`dump`利用`MemoryAnalyzer`工具来分析异常。  
