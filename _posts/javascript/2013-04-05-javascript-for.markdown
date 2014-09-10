@@ -92,6 +92,6 @@ time.end( forTemplates[4] );
 
 -----------------------
 
-<a class="btn btn-primary btn-sm" href="{{ "/resources/demo" | prepend: site.staticurl }}{{ page.url }}.html" target="_blank">查看DEMO</a> 
+<a class="btn btn-primary btn-sm" href="{{ page.url | prepend: "/resources/demo" }}.html" target="_blank">查看DEMO</a> 
 
 -----------------------
