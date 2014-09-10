@@ -12,9 +12,9 @@ tags: javascript 高效率
 <!--more-->
 
 脚本如下：
-<p data-height="388" data-theme-id="8417" data-slug-hash="HrKlf" data-default-tab="result" data-user="jcores" class='codepen'>See the Pen <a href='http://codepen.io/jcores/pen/HrKlf/'>HrKlf</a> by JakeZhang (<a href='http://codepen.io/jcores'>@jcores</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//codepen.io/assets/embed/ei.js"></script>
 
+<p data-height="268" data-theme-id="8417" data-slug-hash="HrKlf" data-default-tab="result" data-user="jcores" class='codepen'>See the Pen <a href='http://codepen.io/jcores/pen/HrKlf/'>HrKlf</a> by JakeZhang (<a href='http://codepen.io/jcores'>@jcores</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async="true" src="http://codepen.io/assets/embed/ei.js"> </script>
 -----------------------
 
 <a class="btn btn-primary btn-sm" href="{{ "/resources/demo" | prepend: site.staticurl }}{{ page.url }}.html" target="_blank">查看DEMO</a> 
