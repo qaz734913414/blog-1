@@ -12,19 +12,25 @@ tags: mac OSX
 <!--more-->
 
 第一步：
+{% highlight html %}
 
-	1. 修改电脑名称。查看“”－“系统偏好设置”－修改全名。  
-	2. 设置键盘快捷键。s查看“”－“系统偏好设置”－“键盘”－“快捷键”－修改键盘快捷键。
+1. 修改电脑名称。查看“”－“系统偏好设置”－修改全名.
+2. 设置键盘快捷键。s查看“”－“系统偏好设置”－“键盘”－“快捷键”－修改键盘快捷键。
+
+{% endhighlight %}
 
 第二步：
+{% highlight html %}
 
-	1. 查看“”－“关于本机”－“更多信息”－“系统报告”的“硬件概览”中的第二行——型号标识符并牢记
-	2. 在Finder中进入路径“系统”－“资源库”－“Extensions”（路径为System\Library\Extensions）  
-	   在Extensions中搜做到项“IOPlatformPluginFamily.kext”，右击它并选择“显示包内容”，此时看到“Contents”文件夹
-	3. 进入“Contents”－“Plugins”文件夹内找到项“ACPI_SMC_PlatformPlugin.kext”，右击它并选择“显示包内容”  
-	   此时看到“Contents”文件夹
-	4. 进入“Contents”－“Resources”文件夹内，找到文件名跟步骤1）中显示之型号标识符一致的“.plist”文件并删除它
-	5. 重启计算机
+1. 查看“”－“关于本机”－“更多信息”－“系统报告”的“硬件概览”中的第二行——型号标识符并牢记
+2. 在Finder中进入路径“系统”－“资源库”－“Extensions”（路径为System\Library\Extensions）
+   在Extensions中搜做到项“IOPlatformPluginFamily.kext”，右击它并选择“显示包内容”，此时看到“Contents”文件夹
+3. 进入“Contents”－“Plugins”文件夹内找到项“ACPI_SMC_PlatformPlugin.kext”，右击它并选择“显示包内容”  
+   此时看到“Contents”文件夹
+4. 进入“Contents”－“Resources”文件夹内，找到文件名跟步骤1）中显示之型号标识符一致的“.plist”文件并删除它
+5. 重启计算机
+
+{% endhighlight %}
 
 第三步：
 
