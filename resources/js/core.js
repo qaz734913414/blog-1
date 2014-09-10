@@ -59,7 +59,7 @@ $(function(){
         $('.main-contenter').hide();
         $('#search-loader').show();
         if (entries == null) {
-            $.ajax({url: '{{ site.staticurl }}/atom.xml?r=' + (Math.random() * 99999999999), dataType: 'xml', success: function(data) {
+            $.ajax({url: '/atom.xml?r=' + (Math.random() * 99999999999), dataType: 'xml', success: function(data) {
                 entries = data.getElementsByTagName('entry');
                 findEntries(query);
             }});
