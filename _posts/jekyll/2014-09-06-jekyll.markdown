@@ -16,32 +16,32 @@ tags: github jekyll mac blog
 
 {% highlight bash %}
 # 查看ruby版本
-ruby -version 
+$ ruby -version 
 
 #升级gem
-sudo gem update --system
+$ sudo gem update --system
 
 # 安装jekyll
-gem install jekyll 
+$ gem install jekyll 
 
 # 出现如下错误
 ERROR:  While executing gem ... (OptionParser::MissingArgument)
     missing argument: -v
 	
 # 赋值权限执行
-sudo gem install jekyll
+$ sudo gem install jekyll
 
 #支持markdown语法
-sudo gem install rdiscount
+$ sudo gem install rdiscount
 
 # 安装完毕创建博客目录
-jekyll new blog
+$ jekyll new blog
 
 # 进入目录
-cd blog
+$ cd blog
 
 # 启动服务
-jekyll server
+$ jekyll server
 {% endhighlight %}
 
 完成以上步骤。外面访问地址栏 http://localhost:4000/ 就可以看到 jekyll 初始化的模板页面了。
@@ -62,11 +62,11 @@ index.html	# 首页
 先在 `Github` 上建立blog资源目录，至于 `Git` 的相关命令如下：
 {% highlight bash %}
 
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/[gitgub名称]/blog.git
-git push -u origin master
+$ git init
+$ git add README.md
+$ git commit -m "first commit"
+$ git remote add origin https://github.com/[gitgub名称]/blog.git
+$ git push -u origin master
 
 {% endhighlight %}
 

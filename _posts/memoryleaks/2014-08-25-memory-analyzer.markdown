@@ -15,10 +15,10 @@ tags: MemoryAnalyzer dump architect
 {% highlight bash %}
 
 #查看java进程号
-ps -ax|grep java 
+$ ps -ax|grep java 
 
 #jmap命令 [file 保存dump名称 pid 为java进程号]
-jmap -dump:format=b,file=<dump>.bin <pid>
+$ jmap -dump:format=b,file=<dump>.bin <pid>
 	
 {% endhighlight %}
 

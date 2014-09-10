@@ -16,42 +16,42 @@ tags: imagemagick jmagick linux mac
 linux下：(公司测试服务器已经安装过imagemagick、和jmagick)
 {% highlight bash %}
 # 查看ImageMagick版本号
-[root@zjj ~]# rpm -qa | grep ImageMagick
+$ rpm -qa | grep ImageMagick
 ImageMagick-6.2.8.0-4.el5_1.1
 
 # 查看jmagick版本号
-[root@zjj ~]# rpm -qa | grep jmagick
+$ rpm -qa | grep jmagick
 jmagick-6.4.0-3
 
 # 先卸载imagemagick老版本
-[root@zjj ~]# rpm -e ImageMagick-6*
+$ rpm -e ImageMagick-6*
 error: "ImageMagick-6.2.8.0-4.el5_1.1" specifies multiple packages
 
 # 加上两个参数就行
-[root@zjj ~]# rpm -e --allmatches --nodeps ImageMagick-6.2*
+$ rpm -e --allmatches --nodeps ImageMagick-6.2*
 
 # 卸载jmagick老版本
-[root@zjj ~]# rpm -e jmagick*
+$ rpm -e jmagick*
 error: package jmagick-6.4.0-3.x86_64.rpm is not installed
 	
 # 加上两个参数就行
-[root@zjj ~]# rpm -e --allmatches --nodeps ImageMagick-6.2*
+$ rpm -e --allmatches --nodeps ImageMagick-6.2*
 
 # 从jmagick网站下载6.4.0版本的imagemagick和jmagick
-[root@zjj ~]# wget http://downloads.jmagick.org/6.4.0/ImageMagick-6.4.0-0.tar.gz
-[root@zjj ~]# tar zxvf ImageMagick-6.4.0-0.tar.gz && cd ImageMagick-6.4.0 
-[root@zjj ImageMagick-6.4.0]# ./configure --prefix=/usr/local/ImageMagick && make && make install
+$ wget http://downloads.jmagick.org/6.4.0/ImageMagick-6.4.0-0.tar.gz
+$ tar zxvf ImageMagick-6.4.0-0.tar.gz && cd ImageMagick-6.4.0 
+$ ./configure --prefix=/usr/local/ImageMagick && make && make install
 
 # 查看java目录（安装jmagick需要with-java-home）
-[root@zjj]# which java 
+$ which java 
 
-[root@zjj ~]# wget http://downloads.jmagick.org/6.4.0/jmagick-6.4.0-src.tar.gz
-[root@zjj ~]# tar zxvf jmagick-6.4.0-src.tar.gz && cd 6.4.0
-[root@zjj 6.4.0]# ./configure --prefix=/usr/local/jmagick --with-magick-home=/usr/local/ImageMagick --with-java-home=/usr/local/java
+$ wget http://downloads.jmagick.org/6.4.0/jmagick-6.4.0-src.tar.gz
+$ tar zxvf jmagick-6.4.0-src.tar.gz && cd 6.4.0
+$ ./configure --prefix=/usr/local/jmagick --with-magick-home=/usr/local/ImageMagick --with-java-home=/usr/local/java
 
 # 复制相关so文件，到jre目录
-[root@zjj]# cp /usr/local/jmagick/lib/libJMagick.so /usr/local/java/jre/lib/amd64/
-[root@zjj]# cp /usr/local/jmagick/lib/jmagick-6.4.0.jar /usr/local/java/jre/lib/ext/
+$ cp /usr/local/jmagick/lib/libJMagick.so /usr/local/java/jre/lib/amd64/
+$ cp /usr/local/jmagick/lib/jmagick-6.4.0.jar /usr/local/java/jre/lib/ext/
 
 {% endhighlight %}
 

@@ -36,20 +36,20 @@ tags: mac OSX
 
 {% highlight bash %}
 # 安装 homebrew（提示先安装 Command Line Tools。）
-root:~ zjj$ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+$ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
 # 安装 cask 
-root:~ zjj$ brew tap phinze/homebrew-cask && brew install brew-cask
+$ brew tap phinze/homebrew-cask && brew install brew-cask
 
 # 管理brew安装的service工具
-root:~ zjj$ brew tap jimbojsb/launchrocket && brew cask install launchrocket
+$ brew tap jimbojsb/launchrocket && brew cask install launchrocket
 
 # brew安装软件
-root:~ zjj$ brew search          —所有
-root:~ zjj$ brew search nginx    —查找nginx
-root:~ zjj$ brew install nginx   -安装nginx
-root:~ zjj$ brew uninstall nginx —卸载nginx
-root:~ zjj$ brew list 		 —所有已安装软件
+$ brew search          —所有
+$ brew search nginx    —查找nginx
+$ brew install nginx   -安装nginx
+$ brew uninstall nginx —卸载nginx
+$ brew list 		 —所有已安装软件
 brew-cask	libevent	mongodb		pcre		sqlite
 freetype	libpng		mysql		pkg-config	wget
 gdbm		libtool		nginx		python3		xz
@@ -57,11 +57,11 @@ imagemagick	maven		node		readline        git
 jpeg		memcached	openssl		redis
 
 # brew cask安装软件
-root:~ zjj$ brew cask search    	       —所有
-root:~ zjj$ brew cask search LaunchRocket      —查找LaunchRocket
-root:~ zjj$ brew cask install LaunchRocket     -安装LaunchRocket
-root:~ zjj$ brew cask uninstall LaunchRocket   —卸载LaunchRocket
-root:~ zjj$ brew cask list		       —所有已安装软件
+$ brew cask search    	       —所有
+$ brew cask search LaunchRocket      —查找LaunchRocket
+$ brew cask install LaunchRocket     -安装LaunchRocket
+$ brew cask uninstall LaunchRocket   —卸载LaunchRocket
+$ brew cask list		       —所有已安装软件
 alfred		induction	qq		utorrent	webstorm
 baidumusic	launchrocket	textmate	virtualbox
 google-chrome	onepassword	totalterminal	vlc
