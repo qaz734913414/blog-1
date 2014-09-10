@@ -88,10 +88,10 @@ time.end( forTemplates[4] );
 
 执行结果截了张图，供大家参考： 
 
-![javascript高率遍历]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)  
+![javascript高率遍历]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)
 
 -----------------------
 
-<a class="btn btn-primary btn-sm" href="{{ page.url | prepend: "/resources/demo" }}.html" target="_blank">查看DEMO</a> 
+<a class="btn btn-primary btn-sm" href="/resources/demo{{ page.url}}.html" target="_blank">查看DEMO</a> 
 
 -----------------------

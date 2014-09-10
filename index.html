@@ -15,10 +15,10 @@ keywords: jcore, 博客, 架构, IT, 程序员
 	{% for post in paginator.posts %}
 	<li>
 		<dl class="cl">
-			<dt><a href="{{ site.url }}{{ post.url }}"><img src="{{ site:staticurl }}/resources/images{{ post.url }}.png" width="175" height="120" /></a></dt>
-			<dd class="main-hd"><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></dd>
+			<dt><a href="{{ site.baseurl }}{{ post.url }}"><img src="{{ site:staticurl }}/resources/images{{ post.url }}.png" width="175" height="120" /></a></dt>
+			<dd class="main-hd"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></dd>
 			<dd>发表于 <span class="blue">{{ post.date | date:"%Y年%m月%d日" }}</span> - 
-				<span class="ds-thread-count" data-thread-key="{{post.id}}" ></span></dd>
+				<span class="ds-thread-count" data-thread-key="{{ post.id }}" ></span></dd>
 			<dd class="pt5"> {{ post.content | split:'<!--more-->' |first }}</dd>
 		</dl>
 	</li>

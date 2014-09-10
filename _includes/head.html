@@ -6,8 +6,8 @@
 	<meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}" />
 	<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
 	<meta name="author" content="jcore" />
-	<link rel="stylesheet" type="text/css" href="{{ "/resources/css/reset.css" | prepend: site.staticurl }}">
-	<link rel="stylesheet" type="text/css" href="{{ "/resources/css/bootstrap.css" | prepend: site.staticurl }}">
-	<link rel="stylesheet" type="text/css" href="{{ "/resources/css/index.css" | prepend: site.staticurl }}">
-	<link rel="stylesheet" type="text/css" href="{{ "/resources/css/nprogress.css" | prepend: site.staticurl }}">
+	<link rel="stylesheet" type="text/css" href="{{ site.staticurl }}/resources/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="{{ site.staticurl }}/resources/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="{{ site.staticurl }}/resources/css/index.css">
+	<link rel="stylesheet" type="text/css" href="{{ site.staticurl }}/resources/css/nprogress.css">
 </head>
