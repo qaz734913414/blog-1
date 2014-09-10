@@ -23,7 +23,7 @@ $ jmap -dump:format=b,file=<dump>.bin <pid>
 {% endhighlight %}
 
 1. MemoryAnalyzer下载地址  <http://www.eclipse.org/mat/downloads.php>
-2. MemoryAnalyzer官方文档  <http://help.eclipse.org/indigo/index.jsp>  （此文档写得比较详细，假如有需要的话可以抽半天给大家说明一下具体的用法）
+2. MemoryAnalyzer官方文档  <http://help.eclipse.org/indigo/index.jsp>  （此文档写得比较详细）
 
 关于官方文档解释不全的问题，补充以下链接提供参考。  
 1. OQL （类似sql的dump查询分析）  
