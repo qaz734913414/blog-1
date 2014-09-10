@@ -92,7 +92,7 @@ time.end( forTemplates[4] );
 
 -----------------------
 
-<p data-height="268" data-theme-id="8417" data-slug-hash="HrKlf" data-default-tab="result" data-user="jcores" class='codepen'>See the Pen <a href='http://codepen.io/jcores/pen/HrKlf/'>HrKlf</a> by JakeZhang (<a href='http://codepen.io/jcores'>@jcores</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<p data-height="268" data-theme-id="8417" data-slug-hash="HrKlf" data-user="jcores" class='codepen'>See the Pen <a href='http://codepen.io/jcores/pen/HrKlf/'>HrKlf</a> by JakeZhang (<a href='http://codepen.io/jcores'>@jcores</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async="true" src="http://codepen.io/assets/embed/ei.js"> </script>
 
 -----------------------
