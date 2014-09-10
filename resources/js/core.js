@@ -21,31 +21,6 @@ $(function(){
             return entityMap[s];
         });
     }
-    function xmlDateToJavascriptDate(xmlDate) {
-        var re = /^([0-9]{4,})-([0-9]{2})-([0-9]{2})T([0-9]{2}):([0-9]{2}):([0-9]{2})(\.[0-9]+)?(Z|([+-])([0-9]{2}):([0-9]{2}))?$/;
-        var match = xmlDate.match(re);
-        if (!match)
-            return null;
-        var all = match[0];
-        var year = match[1];  var month = match[2];  var day = match[3];
-        var hour = match[4];  var minute = match[5]; var second = match[6];
-        var milli = match[7];
-        var z_or_offset = match[8];  var offset_sign = match[9];
-        var offset_hour = match[10]; var offset_minute = match[11];
-        if (offset_sign) {
-            var direction = (offset_sign == "+" ? 1 : -1);
-            hour =   parseInt(hour)   + parseInt(offset_hour)   * direction;
-            minute = parseInt(minute) + parseInt(offset_minute) * direction;
-        }
-        month = parseInt(month) - 1;
-        var utcDate = Date.UTC(year, month, day, hour, minute, second, (milli || 0));
-        return new Date(utcDate);
-    }
-    function formatDate(date) {
-        var monthNames = [ "January", "February", "March", "April", "May", "June",
-            "July", "August", "September", "October", "November", "December" ];
-        return date.getDate() + ' ' + monthNames[date.getMonth()] + ' ' + date.getFullYear();
-    }
     function findEntries(q) {
         var matches = [];
         var rq = new RegExp(q, 'im');
@@ -58,24 +33,27 @@ $(function(){
             var content = $(entry.getElementsByTagName('content')[0]).text();
             //if (rq.test(title) || rq.test(title_en) || rq.test(content)) {
             if (rq.test(title) || rq.test(content)) {
-                var updated = formatDate(xmlDateToJavascriptDate($(entry.getElementsByTagName('updated')[0]).text()));
-                matches.push({'title': title, 'link': link, 'date': updated, 'content': content});
+                matches.push({'title': title, 'link': link, 'content': content});
             }
         }
-        var html = '<h2><small>Search Result:</small></h2><br>';
+		
+		var html = '<div class="bt-hd cl"><span>搜索结果</span><s></s></div>';
+		html += '<ul class="main-ua">';
+		if(matches.length==0) html += '<li>很抱歉！没有找到与 '+q+' 相关文章！</li>';
         for (var i = 0; i < matches.length; i++) {
             var match = matches[i];
-            html += '<article>';
-            html += '<header><h2 class="h2 entry-title"><a href="' + match.link + '">' + htmlEscape(match.title) + '</a></h2></header>';
+            html += '<li>';
+            html += '<header><h4 class="h4 entry-title"><a href="' + match.link + '">' + htmlEscape(match.title) + '</a></h4></header>';
             html += '<section><p>' + htmlEscape(match.content) + '</p></section>';
-            html += '<footer><p>Update: ' + match.date + '</p></footer>';
-            html += '</article>';
+            html += '</li>';
         }
-        $('.main-contenter').html(html);
-        $('#search-loader').hide();
-        $('.main-contenter').show();
+		html += '</ul>';
+		
+		NProgress.done();
+        $('.main-l').html(html);
     }
     $('#search-form').submit(function() {
+		NProgress.start();
         var query = $('#query').val();
         $('#query').blur().attr('disabled', true);
         $('.main-contenter').hide();
