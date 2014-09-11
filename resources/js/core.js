@@ -50,7 +50,7 @@ $(function(){
 		html += '</ul>';
 		
 		NProgress.done();
-		$('.main-l').html(html);
+		$('.main-l .default404').html(html);
 	}
 	$('#search-form').submit(function() {
 		NProgress.start();
