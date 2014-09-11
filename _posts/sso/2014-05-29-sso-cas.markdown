@@ -26,12 +26,11 @@ $ wget http://downloads.jasig.org/cas-clients/cas-client-3.2.1-release.tar.gz
 
 {% endhighlight %}
 
-完成上述步骤，接下来修改本地host。因为公司电脑室win7系统。所以host路径为：  
-`C:\Windows\System32\drivers\etc\host`增加：  
+完成上述步骤，接下来修改本地host。因为公司电脑是win7系统，host路径为：`C:\Windows\System32\drivers\etc\host`增加：  
 {% highlight html %}
-192.168.1.10 sso.228.com.cn      单点登录服务器
-192.168.1.11 web.228.com.cn      网站服务
-192.168.1.12 wap.228.com.cn      手机服务
+192.168.1.10 sso.228.com.cn #单点登录服务器
+192.168.1.11 web.228.com.cn #网站服务
+192.168.1.12 wap.228.com.cn #手机服务
 {% endhighlight %}
 
 
