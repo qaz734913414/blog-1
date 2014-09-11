@@ -8,15 +8,27 @@ date:   2014-05-29
 category: sso
 tags: sso cas tomcat
 ---
-SSO开源框架有很多，[JSecurity]、[JOSSO]、[CAS]，对比之后个人比较倾向`JOSSO`,测试完成，发现`JOSSO`不能跨域访问，果断舍弃。继续研究 CAS。
+SSO开源框架有很多，[JSecurity]、[JOSSO]、[CAS]，对比之后个人比较倾向`JOSSO`,测试完成，发现`JOSSO`不能跨域访问，果断舍弃。继续研究 CAS。  
 <!--more-->
-首先是准备环境  
+
+首先检查环境，然后下载需要的工具
 
 {% highlight html %}
 
-111
-	
+# 查看jdk版本
+$ java -version
+java version "1.7.0_10"
+
+# 下载工具(依次为tomcat、cas-server、cas-client)
+$ wget http://ftp.cuhk.edu.hk/pub/packages/apache.org/tomcat/tomcat-7/v7.0.55/bin/apache-tomcat-7.0.55-deployer.tar.gz
+$ wget http://downloads.jasig.org/cas/cas-server-4.0.0-release.tar.gz
+$ wget http://downloads.jasig.org/cas-clients/cas-client-3.2.1-release.tar.gz
+
 {% endhighlight %}
+
+完成上述步骤，接下来修改本地host。
+
+
 
 -----------------------
 
