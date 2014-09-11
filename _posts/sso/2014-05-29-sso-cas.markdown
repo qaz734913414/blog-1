@@ -1,0 +1,26 @@
+---
+layout: page
+title:  "CAS单点登录实现过程"
+description: "单点登录部署 sso cas tomcat"
+keywords: 单点登录部署,sso,cas,tomcat
+origin: 张嘉杰.原创
+date:   2014-05-29
+category: sso
+tags: sso cas tomcat
+---
+SSO开源框架有很多，[JSecurity]、[JOSSO]、[CAS]，对比之后个人比较倾向`JOSSO`,测试完成，发现JOSSO不能跨域访问，果断舍弃。继续研究 CAS。
+<!--more-->
+首先是准备环境  
+
+{% highlight html %}
+
+
+	
+{% endhighlight %}
+
+-----------------------
+
+[JSecurity]: http://www.jsecurity.org/
+[JOSSO]: http://www.josso.org/
+[CAS]: http://www.jasig.org/
+-----------------------
