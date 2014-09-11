@@ -104,6 +104,16 @@ OK, 今天就到这儿了。到此为止CAS单点登录基础DEMO就算是完成
 
 -----------------------
 
+相关参考文章地址：
+
+CAS - <http://www.jasig.org/cas>  
+Tomcat-Container-Authentication - <https://wiki.jasig.org/display/CASC/Tomcat+Container+Authentication>  
+CAS-client-integration-tomcat-v7 - <https://github.com/Jasig/java-cas-client/tree/master/cas-client-integration-tomcat-v7>  
+CAS-demo - <https://wiki.jasig.org/display/CASUM/Demo>  
+CAS-client-simple-webapp - <https://wiki.jasig.org/display/CASC/JA-SIG+Java+Client+Simple+WebApp+Sample>
+
+-----------------------
+
 [JSecurity]: http://www.jsecurity.org/
 [JOSSO]: http://www.josso.org/
 [CAS]: http://www.jasig.org/
