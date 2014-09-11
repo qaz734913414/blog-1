@@ -8,13 +8,13 @@ date:   2014-05-29
 category: sso
 tags: sso cas tomcat
 ---
-SSO开源框架有很多，[JSecurity]、[JOSSO]、[CAS]，对比之后个人比较倾向`JOSSO`,测试完成，发现JOSSO不能跨域访问，果断舍弃。继续研究 CAS。
+SSO开源框架有很多，[JSecurity]、[JOSSO]、[CAS]，对比之后个人比较倾向`JOSSO`,测试完成，发现`JOSSO`不能跨域访问，果断舍弃。继续研究 CAS。
 <!--more-->
 首先是准备环境  
 
 {% highlight html %}
 
-
+111
 	
 {% endhighlight %}
 
