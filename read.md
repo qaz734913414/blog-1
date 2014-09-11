@@ -5,7 +5,6 @@ keywords:	 "Jcore,douban,豆瓣读书"
 description: "jcore豆瓣读书"
 ---
 
-数据源来自我的豆瓣读书...
 <hr/>
 
 <article>
@@ -19,6 +18,8 @@ description: "jcore豆瓣读书"
 		</div>
 	</div>
 </article>
+
+<hr/>
 <script type="text/javascript" src="{{ site.staticurl }}/resources/js/douban.js"></script>
 <script type="text/javascript">
 	var dbapi = new DoubanApi();
