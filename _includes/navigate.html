@@ -9,12 +9,13 @@
 <div class="nav">
 	<div class="container">
 		<ul>
-			<li><a class="on" href="/">首页</a></li>
-			<li><a href="#">技术专区</a></li>
-			<li><a href="#">日志随笔</a></li>
-			<li><a href="#">资源工具</a></li>
-			<li><a href="/read">阅读书籍</a></li>
-			<li><a href="#">个人介绍</a></li>
+			<li><a {% if page.menu == nil %}class="on"{% endif %} href="/">首页</a></li>
+			<li><a {% if page.menu == 'skill' %}class="on"{% endif %} href="#">技术专区</a></li>
+			<li><a {% if page.menu == 'essay' %}class="on"{% endif %} href="#">日志随笔</a></li>
+			<li><a {% if page.menu == 'time' %}class="on"{% endif %} href="#">时光轴</a></li>
+			<li><a {% if page.menu == 'time' %}class="on"{% endif %} href="/read">阅读书籍</a></li>
+			<li><a {% if page.menu == 'about' %}class="on"{% endif %} href="#">个人介绍</a></li>
+			
 		</ul>
 	</div>
 </div>
