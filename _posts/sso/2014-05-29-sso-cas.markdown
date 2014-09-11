@@ -13,7 +13,7 @@ SSO开源框架有很多，[JSecurity]、[JOSSO]、[CAS]，对比之后个人比
 
 1. 首先检查环境，然后下载需要的工具
 
-{% highlight html %}
+{% highlight bash %}
 
 # 查看jdk版本
 $ java -version
@@ -36,7 +36,8 @@ $ wget http://downloads.jasig.org/cas-clients/cas-client-3.2.1-release.tar.gz
 {% endhighlight %}
 
 3. 部署CAS服务
-{% highlight html %}
+	3.1 生成证书
+{% highlight bash %}
 
 # 创建keytool证书  
 $ keytool -genkey -alias 228 -keyalg RSA -keystore "/home/ssokey/228key"
@@ -45,14 +46,27 @@ $ keytool -genkey -alias 228 -keyalg RSA -keystore "/home/ssokey/228key"
 
 ![创建keytool证书]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)
 
-{% highlight html %}
+{% highlight bash %}
 
 # 生成keytool证书  
 $ keytool -export -file /home/ssokey/228key.crt -alias 228 -keystore /home/ssokey/228key
 
 {% endhighlight %}
 
-![生成keytool证书]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)
+![生成keytool证书]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.png)
+
+{% highlight bash %}
+
+# keytool证书导入jdk  
+$ keytool -import -keystore "/usr/local/jdk1.7.0_10/jre/lib/security/cacerts" -file /home/ssokey/228key.crt -alias 228
+
+{% endhighlight %}
+
+![keytool证书导入jdk]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-2.png)
+
+# 部署服务端
+
+
 
 -----------------------
 
