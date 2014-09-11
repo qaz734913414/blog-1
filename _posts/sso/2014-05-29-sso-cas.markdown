@@ -36,7 +36,9 @@ $ wget http://downloads.jasig.org/cas-clients/cas-client-3.2.1-release.tar.gz
 {% endhighlight %}
 
 3. 部署CAS服务
+
 	3.1 生成证书
+	
 {% highlight bash %}
 
 # 创建keytool证书  
