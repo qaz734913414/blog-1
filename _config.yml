@@ -10,7 +10,7 @@ staticurl:      "http://jcore.qiniudn.com"
 
 baseurl:        ""
 
-paginate:       5
+paginate:       6
 paginate_path:  "page:num"
 
 markdown:       kramdown
