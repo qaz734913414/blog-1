@@ -5,21 +5,23 @@ keywords:	 "Jcore,douban,豆瓣读书"
 description: "jcore豆瓣读书"
 ---
 
+
 <hr/>
 
 <article>
 	<div id="archives">
 		<div id="douban">
-<!--
+			<!--
+			数据源来自我的豆瓣读书...
 			<div id="bookreading" class="douban-list"></div>
 			<div id="bookread" class="douban-list"></div>
 			<div id="bookwish" class="douban-list"></div>
--->
+			-->
 		</div>
 	</div>
+<hr/>	
+	
 </article>
-
-<hr/>
 <script type="text/javascript" src="{{ site.staticurl }}/resources/js/douban.js"></script>
 <script type="text/javascript">
 	var dbapi = new DoubanApi();
