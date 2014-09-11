@@ -15,10 +15,10 @@ tags: dubstep mac launchpad skrillex
 
 因为资源问题 只能分享一些外链给大家了。
 
-![Skrillex]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.jpg)
+![Skrillex]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.jpg)  
 [Benny Benassi - Cinema (Skrillex Remix)]
 
-![Tiesto]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-2.jpg)
+![Tiesto]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-2.jpg)  
 [Red Lights]
 
 
