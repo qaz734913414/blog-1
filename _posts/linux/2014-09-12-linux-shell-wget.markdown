@@ -8,7 +8,7 @@ date:   2014-09-12
 category: shell
 tags: linux shell wget
 ---
-最近同事的博客，域名快到期了，同事说用`wget`已经把网站静态化镜像了一份，但是文件头`mimetype`需要批量替换。在这里给朋友们分享一下如何使用wget遍历备份整站目录，并使用`sed`批量替换文件内容。
+最近同事的博客，域名快到期了，同事说用`wget`已经把网站静态化镜像了一份，但是文件头`mimetype`需要批量替换。在这里给朋友们分享一下如何使用`wget`遍历备份整站目录，并使用`sed`批量替换文件内容。
 <!--more-->
 
 命令如下：
@@ -24,12 +24,12 @@ $ wget -r -p -np -k -e robots=off -U "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_
 参数解释:
 {% highlight html %}
 
--r,--recursive 递归下载  
+-r, --recursive 递归下载  
 -p, --page-requisites 下载显示HTML文件的所有图片  
 -np, --no-parent 不追溯到父目录  
 -k, --convert-links 转换非相对链接为相对链接  
--e,–execute=COMMAND 执行一个 “.wgetrc”命令  
-robots=off 无视robots.txt  
+-e, -–execute=COMMAND 执行一个 “.wgetrc”命令  
+robots=off --无视robots.txt  
 -U, --user-agent=AGENT 设定代理的名称为 AGENT  
 "Mozilla/5.0 (Windows; U; Windows NT 5.1; zh-CN; rv:1.9.1.6) Gecko/20091201 Firefox/3.5.6" 伪装agent
 
