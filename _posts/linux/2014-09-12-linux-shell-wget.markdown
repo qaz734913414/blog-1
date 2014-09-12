@@ -36,6 +36,7 @@ robots=off 无视robots.txt
 {% endhighlight %}
 
 不清楚伪装`agent`的朋友往下看截图：  
+
 ![伪装agent]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.png)
 
 -----------------------
