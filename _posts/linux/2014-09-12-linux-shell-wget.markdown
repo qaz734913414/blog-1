@@ -37,4 +37,13 @@ robots=off	--无视robots.txt
 
 ![伪装agent]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)
 
+{% highlight bash %}
+
+# 查找相对目录下后缀为html的文件，把<meta.*>标签全部替换成 <meta http-equiv="content-type" content="text/html;charset=utf-8">
+$ find . -name "*.html" -exec bash -c "sed -e 's/<meta.*>/<meta http-equiv=\"content-type\" content=\"text\/html;charset=utf-8\">/g' {} > {}.tmp; mv -f {}.tmp {}" \;
+
+{% endhighlight %}
+
+
+
 -----------------------
