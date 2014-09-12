@@ -35,15 +35,15 @@ robots=off	--无视robots.txt
 
 不清楚伪装`agent`的朋友往下看截图：  
 
-![伪装agent]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)
+![伪装agent]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)  
 
 {% highlight bash %}
 
-# 查找相对目录下后缀为html的文件，把<meta.*>标签全部替换成 <meta http-equiv="content-type" content="text/html;charset=utf-8">
+# 查找并替换文件
 $ find . -name "*.html" -exec bash -c "sed -e 's/<meta.*>/<meta http-equiv=\"content-type\" content=\"text\/html;charset=utf-8\">/g' {} > {}.tmp; mv -f {}.tmp {}" \;
 
 {% endhighlight %}
 
-
+把根目录下所有`html`文件中的`<meta.*>`标签全部替换成`<meta http-equiv="content-type" content="text/html;charset=utf-8">`。
 
 -----------------------
