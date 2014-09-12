@@ -19,8 +19,6 @@ $ wget -r -p -np -k -e robots=off -U "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_
 
 {% endhighlight %}
 
-![wget遍历下载整站命令]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)
-
 参数解释:
 {% highlight html %}
 
@@ -37,6 +35,6 @@ robots=off --无视robots.txt
 
 不清楚伪装`agent`的朋友往下看截图：  
 
-![伪装agent]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.png)
+![伪装agent]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)
 
 -----------------------
