@@ -22,13 +22,13 @@ $ wget -r -p -np -k -e robots=off -U "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_
 参数解释:
 {% highlight html %}
 
--r,			--recursive 递归下载  
--p,			--page-requisites 下载显示HTML文件的所有图片  
+-r,		--recursive 递归下载  
+-p,		--page-requisites 下载显示HTML文件的所有图片  
 -np,		--no-parent 不追溯到父目录  
--k,			--convert-links 转换非相对链接为相对链接  
--e,			--execute=COMMAND 执行一个 “.wgetrc”命令  
+-k,		--convert-links 转换非相对链接为相对链接  
+-e,		--execute=COMMAND 执行一个 “.wgetrc”命令  
 robots=off	--无视robots.txt  
--U,			--user-agent=AGENT 设定代理的名称为 AGENT  
+-U,		--user-agent=AGENT 设定代理的名称为 AGENT  
 "Mozilla/5.0 (Windows; U; Windows NT 5.1; zh-CN; rv:1.9.1.6) Gecko/20091201 Firefox/3.5.6" 伪装agent
 
 {% endhighlight %}
