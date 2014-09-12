@@ -29,7 +29,7 @@ $ wget -r -p -np -k -e robots=off -U "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_
 -e,		--execute=COMMAND 执行一个 “.wgetrc”命令  
 robots=off	--无视robots.txt  
 -U,		--user-agent=AGENT 设定代理的名称为 AGENT  
-"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.36" 伪装agent
+"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.36"  --伪装agent
 
 {% endhighlight %}
 
