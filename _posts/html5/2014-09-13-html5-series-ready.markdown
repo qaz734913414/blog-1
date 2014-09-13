@@ -11,15 +11,12 @@ tags: html5 javascript webstorm
 最近一直在整理公司培训体制的一些东西，在这里一起分享出来给大家了。本系列主要是针对`html5`开发的相关内容，后面我会一起分享出来。所谓工欲善其事，必先利其器。今天就先说说`html5`开发的工具吧。
 <!--more-->
 
-前端不错的开发的工具有很多像 [Eclipse]、[Edge Animate]、[Aptana]、[IntelliJ IDEA]、[WebStorm] 之后的系列相关截图都是基于`WebStorm`。  
+前端不错的开发的工具有很多像 [Eclipse]、[Edge Animate]、[Aptana]、[IntelliJ IDEA]、[WebStorm] 之后的系列相关截图都是基于`WebStorm`。至于安装过程，就不具体贴出来了。  
 
 ![WebStorm工具]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)  
 
-{% highlight html %}
-
-
-
-{% endhighlight %}
+简单说一下html5的性特性：`canvas`、`离线存储`、`多媒体（音频、视频）`、`新内容标签`、`表单空间`。  
+至于浏览器，IE（9版本以下不支持）、Safari、Chrome、Firefox、Opera等新代浏览器。
 
 -----------------------
 
