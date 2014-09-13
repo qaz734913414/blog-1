@@ -38,22 +38,30 @@ robots=off	--无视robots.txt
 
 ![伪装agent]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)  
 
+
+首先把非`html`文件的文件批量替换成后缀为`.html`的文件
+
 {% highlight bash %}
 
-# 查找并替换非目录文件
-$ find . -type f -name "*" -exec bash -c "sed -e 's/<meta.*charset.*>/<meta http-equiv=\"content-type\" content=\"text\/html;charset=utf-8\">/g' {} > {}.tmp; mv -f {}.tmp {}" \;
-
-# 出现以下错误
-sed: RE error: illegal byte sequence
-
-# 加上LC_CTYPE=C属性
-$ find . -type f -name "*" -exec bash -c "LC_CTYPE=C sed -e 's/<meta.*charset.*>/<meta http-equiv=\"content-type\" content=\"text\/html;charset=utf-8\">/g' {} > {}.tmp; mv -f {}.tmp {}" \;
+# 批量替换符合类型的文件
+$ find . -type f ! -name "*.html" -exec bash -c "mv -f {} {}.html" \;
 
 {% endhighlight %}
 
 把所有文件中的`<meta.*charset.*>`标签全部替换成`<meta http-equiv="content-type" content="text/html;charset=utf-8">`。  
 
-接下来就很简单了，把非`html`文件的文件批量替换成后缀为`.html`的文件
+{% highlight bash %}
+
+# 查找并替换非目录文件
+$ find . -type f -name "*.html" -exec bash -c "sed -e 's/<meta.*charset.*>/<meta http-equiv=\"content-type\" content=\"text\/html;charset=utf-8\">/g' {} > {}.tmp; mv -f {}.tmp {}" \;
+
+# 出现以下错误
+sed: RE error: illegal byte sequence
+
+# 加上LC_CTYPE=C属性
+$ find . -type f -name "*.html" -exec bash -c "LC_CTYPE=C sed -e 's/<meta.*charset.*>/<meta http-equiv=\"content-type\" content=\"text\/html;charset=utf-8\">/g' {} > {}.tmp; mv -f {}.tmp {}" \;
+
+{% endhighlight %}
 
 -----------------------
 
