@@ -30,15 +30,6 @@ layout: default
 			<a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
 			<a href="#" class="bds_hi" data-cmd="hi" title="分享到百度空间"></a>
 		</div>
-		<script>
-			window._bd_share_config={
-				"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"32"},
-				"share":{},
-				"image":{"viewList":["qzone","tsina","tqq","renren","weixin","douban","hi"],"viewText":"分享到：","viewSize":"16"},
-				"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban","hi"]}
-			};
-			with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-		</script>
 	</div>
 	<div class="detail-ud">
 		{% if page.previous %}
@@ -48,7 +39,18 @@ layout: default
 			<p>下一篇:<a href="{{ page.next.url }}" ><b class="mobile-ignore">{{ page.next.title }}</b></a></p>
 		{% endif %}
 	</div>
+	
+	<script async="true" type="text/javascript">
+		window._bd_share_config={
+			"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"32"},
+			"share":{},
+			"image":{"viewList":["qzone","tsina","tqq","renren","weixin","douban","hi"],"viewText":"分享到：","viewSize":"16"},
+			"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban","hi"]}
+		};
+		with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+	</script>
 </div>
+
 
 <!--相关文章 -->
 <div class="detail-xg">
