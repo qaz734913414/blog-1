@@ -39,7 +39,7 @@ robots=off	--无视robots.txt
 ![伪装agent]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)  
 
 
-首先把非`html`文件的文件批量替换成后缀为`.html`的文件
+首先把非`html`文件的文件批量替换成后缀为`.html`的文件。
 
 {% highlight bash %}
 
@@ -62,6 +62,8 @@ sed: RE error: illegal byte sequence
 $ find . -type f -name "*.html" -exec bash -c "LC_CTYPE=C sed -e 's/<meta.*charset.*>/<meta http-equiv=\"content-type\" content=\"text\/html;charset=utf-8\">/g' {} > {}.tmp; mv -f {}.tmp {}" \;
 
 {% endhighlight %}
+
+###到这里基本就完成了。注意`find`查找的文件路径就好了。:)
 
 -----------------------
 
