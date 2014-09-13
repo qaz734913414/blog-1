@@ -11,9 +11,12 @@ tags: html5 javascript webstorm
 最近一直在整理公司培训体制的一些东西，在这里一起分享出来给大家了。本系列主要是针对`html5`开发的相关内容，后面我会一起分享出来。所谓工欲善其事，必先利其器。今天就先说说`html5`开发的工具吧。
 <!--more-->
 
-前端不错的开发的工具有很多像 [Eclipse] [Edge Animate]、[Aptana]、[IntelliJ IDEA]、[WebStorm] 之后的相关截图和使用是都是基于`WebStorm`。  
+前端不错的开发的工具有很多像 [Eclipse]、[Edge Animate]、[Aptana]、[IntelliJ IDEA]、[WebStorm] 之后的系列相关截图都是基于`WebStorm`。  
 
-{% highlight bash %}
+![WebStorm工具]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)  
+
+{% highlight html %}
+
 
 
 {% endhighlight %}
@@ -23,7 +26,7 @@ tags: html5 javascript webstorm
 相关参考文章地址：
 
 Eclipse - <http://www.eclipse.org/downloads/>  
-Edge-Animate - <https://creative.adobe.com/products/animate>  
+Edge-Animate - <https://creative.adobe.com/products/animate/>  
 Aptana - <http://www.aptana.com/products/studio3/>  
 WebStorm - <http://www.jetbrains.com/webstorm/>  
 IntelliJ-IDEA - <http://www.jetbrains.com/idea/>
@@ -31,7 +34,7 @@ IntelliJ-IDEA - <http://www.jetbrains.com/idea/>
 -----------------------
 
 [Eclipse]: http://www.eclipse.org/downloads/
-[Edge Animate]: https://creative.adobe.com/products/animate	
+[Edge Animate]: https://creative.adobe.com/products/animate/
 [Aptana]: http://www.aptana.com/products/studio3/
 [WebStorm]: http://www.jetbrains.com/webstorm/
 [IntelliJ IDEA]: http://www.jetbrains.com/idea/
