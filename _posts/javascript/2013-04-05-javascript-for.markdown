@@ -16,50 +16,50 @@ tags: javascript 高效率
 
 function log(out){ console.log(out);  }
 if (typeof String.prototype.format !== "function") {
-    /* 字符串模板 */
-    String.prototype.format = function () {
-        var s = this, //字符串指针
-            length = arguments.length; //参数长度
-        while (--length >= 0){
-            s = s.replace(new RegExp('\\{' + length + '\\}', 'g'), arguments[length]);
-        }
-        return s;
-    };
+	/* 字符串模板 */
+	String.prototype.format = function () {
+		var s = this, //字符串指针
+			length = arguments.length; //参数长度
+		while (--length >= 0){
+			s = s.replace(new RegExp('\\{' + length + '\\}', 'g'), arguments[length]);
+		}
+		return s;
+	};
 }
 /* 执行计时器 */
 function Timer(){
-    var _beginTime; //开始时间
-    //开始计时函数
-    this.begin = function(){
-        _beginTime = new Date().getTime(); //初始化开始时间
-    };
-    //结束及时函数
-    this.end = function(out){
-        var _outStr = out || "";
-        var _endTime = new Date().getTime() - _beginTime; //初始化结束时间（新时间-开始时间）
-        log("[执行时间为{0}毫秒...] {1}".format(_endTime,_outStr));
-    };
+	var _beginTime; //开始时间
+	//开始计时函数
+	this.begin = function(){
+		_beginTime = new Date().getTime(); //初始化开始时间
+	};
+	//结束及时函数
+	this.end = function(out){
+		var _outStr = out || "";
+		var _endTime = new Date().getTime() - _beginTime; //初始化结束时间（新时间-开始时间）
+		log("[执行时间为{0}毫秒...] {1}".format(_endTime,_outStr));
+	};
 }
 
 /* 构造空数组 */
 function makeArr(num) {
-    var arr = [];
-    for (var i = num; i--;){
-        arr.push('test');
-    }
-    arr.join('');
-    return arr;
+	var arr = [];
+	for (var i = num; i--;){
+		arr.push('test');
+	}
+	arr.join('');
+	return arr;
 }
 var arr = makeArr(10000000);//创建测试数组
 var time = new Timer(); //创建计时对象
 
 //循环表达式模板（五种类型的循环，不执行操作，只遍历数组）
 var forTemplates = [
-    "for (var i in arr) {};",
-    "for (var i = 0, a; a = arr[i++];) {}",
-    "for (var i = 0; i < arr.length; i++) {}",
-    "for (var i = 0, len = arr.length; i < len; i++) {}",
-    "for (var i = arr.length; i--;) {}"
+	"for (var i in arr) {};",
+	"for (var i = 0, a; a = arr[i++];) {}",
+	"for (var i = 0; i < arr.length; i++) {}",
+	"for (var i = 0, len = arr.length; i < len; i++) {}",
+	"for (var i = arr.length; i--;) {}"
 ];
 
 //按执行效率测试
