@@ -34,6 +34,7 @@ tags: webkit chrome safari
 Paul-Irish-blog - <http://www.paulirish.com/>  
 WebKit-for-Developers - <http://www.paulirish.com/2013/webkit-for-developers/>  
 淘宝官方博客 - <http://ued.taobao.org/blog/>
+webkitcss3 - <http://ued.ctrip.com/blog/wp-content/webkitcss/index.html>
 
 -----------------------
 
