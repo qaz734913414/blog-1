@@ -15,7 +15,7 @@ tags: html5 javascript webstorm
 
 ![WebStorm工具]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)  
 
-简单说一下html5的性特性：`canvas`、`离线存储`、`多媒体（音频、视频）`、`新内容标签`、`表单控件`。  
+简单说一下html5的性特性：`新内容标签`、`表单控件`、`canvas`、`离线存储`、`多媒体（音频、视频）`。  
 至于浏览器支持方面：IE（9版本以下不支持）、Safari、Chrome、Firefox、Opera等浏览器。
 
 -----------------------
