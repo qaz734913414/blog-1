@@ -81,13 +81,22 @@ tags: html5
 
 {% endhighlight %}
 
-简单
+这里我推荐两款之前常用的视频、音频插件：
+
+<http://html5media.info/>  
+<http://www.videojs.com/>
+
+
+今天就到这儿吧。还有一些其他细节性的新属性，请大家戳这里 （[specification-html5] 、[w3schools-html5]）。
 
 -----------------------
 
 相关参考文章地址：
 
+specification-html5 - <http://www.whatwg.org/specs/web-apps/current-work/multipage/>  
 w3schools-html5 - <http://www.w3schools.com/html/html5_geolocation.asp>
 
 -----------------------
 
+[specification-html5]: http://www.whatwg.org/specs/web-apps/current-work/multipage/
+[w3schools-html5]: http://www.w3schools.com/html/html5_geolocation.asp
