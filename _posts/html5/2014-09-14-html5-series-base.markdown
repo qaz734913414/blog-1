@@ -34,9 +34,9 @@ tags: html5
 
 {% highlight html %}
 
-<datalist> 标签定义可选数据的列表
-<keygen> 标签定义生成密钥
-<output> 标签定义不同类型的输出。
+<datalist>	标签定义可选数据的列表
+<keygen>	标签定义生成密钥
+<output>	标签定义不同类型的输出
 
 {% endhighlight %}
 -----------------------
