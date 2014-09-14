@@ -11,7 +11,7 @@ tags: html5
 简单说一下`html5`的性特性：`新内容标签`、`表单控件`、`多媒体（音频、视频）`、`canvas`、`离线存储`。至于浏览器支持方面：IE（9版本以下不支持）、Safari、Chrome、Firefox、Opera等现代浏览器。
 <!--more-->
 
-> 如何创建一个html5 
+> 创建一个html5页面 
 
 {% highlight html %}
 
@@ -30,7 +30,7 @@ tags: html5
 
 在`html5`中默认的字符编码是`UTF-8`。
 
-> html5的新的表单元素
+> html5新的表单元素
 
 {% highlight html %}
 
