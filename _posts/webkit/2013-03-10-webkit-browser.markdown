@@ -8,7 +8,7 @@ date:   2013-03-10
 category: webkit
 tags: webkit chrome safari
 ---
-关注 [Paul-Irish] 已经很久了，针对大家对WebKit的各种误解，他在博客上发表了篇文章 [WebKit-for-Developers]。这里有淘宝的一个翻译链接 [翻译：WebKit for Developers]。 
+关注 [Paul-Irish] 已经很久了，针对大家对WebKit的各种误解，他在博客上发表了篇文章 [翻译：WebKit for Developers]、[原文：WebKit-for-Developers]。
 <!--more-->
 
 
@@ -30,5 +30,5 @@ Getting-Started-With-the-WebKit-Layout-Code - <http://blogs.adobe.com/webplatfor
 -----------------------
 
 [Paul-Irish]: http://www.paulirish.com/about/
-[WebKit-for-Developers]: http://www.paulirish.com/2013/webkit-for-developers/
+[原文：WebKit-for-Developers]: http://www.paulirish.com/2013/webkit-for-developers/
 [翻译：WebKit for Developers]: http://ued.taobao.org/blog/2013/03/webkit-for-developers/
