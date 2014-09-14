@@ -13,7 +13,7 @@ tags: webkit chrome safari
 
 [翻译：WebKit for Developers]、[原文：WebKit-for-Developers]  
 
-突然想起前几年浏览器打PK，当时搞得比较火的`css画哆啦A梦`。貌似是个日本的大牛写的。
+突然想起前几年浏览器PK，当时搞得比较火的`css画哆啦A梦`。貌似是个日本的大牛写的。大家戳下面的DEMO去吧。
 
 
 
