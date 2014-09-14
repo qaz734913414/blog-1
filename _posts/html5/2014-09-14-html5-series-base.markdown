@@ -17,14 +17,13 @@ tags: html5
 
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title></title>
-</head>
-<body>
-	......
-</body>
-
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+  </head>
+  <body>
+  ......
+  </body>
 </html>
 
 {% endhighlight %}
