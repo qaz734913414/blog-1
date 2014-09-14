@@ -39,6 +39,27 @@ tags: html5
 <output>	标签定义不同类型的输出
 
 {% endhighlight %}
+
+> html5新的<input type="???" />元素
+
+{% highlight html %}
+
+<input type="number" name="quantity" min="1" max="5">
+<input type="number" name="points" min="0" max="100" step="10" value="30">
+<input type="date" name="bday">
+<input type="date" name="bday" max="1985-03-23">
+<input type="color" name="favcolor">
+<input type="range" name="points" min="0" max="10">
+<input type="month" name="bdaymonth">
+<input type="week" name="week_year">
+<input type="datetime" name="bdaytime">
+<input type="datetime-local" name="bdaytime">
+<input type="email" name="email">
+<input type="search" name="googlesearch">
+<input type="tel" name="usrtel">
+<input type="url" name="homepage">
+
+{% endhighlight %}
 -----------------------
 
 相关参考文章地址：
