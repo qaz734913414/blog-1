@@ -40,7 +40,7 @@ tags: html5
 
 {% endhighlight %}
 
-> html5新的<input type="???" />元素
+> html5新的 (input type="???") 元素
 
 {% highlight html %}
 
