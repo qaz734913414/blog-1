@@ -28,13 +28,37 @@ tags: html5
 
 {% endhighlight %}
 
-> html5新的表单元素
+> html5新元素
 
 {% highlight html %}
 
-<datalist>	标签定义可选数据的列表
-<keygen>	标签定义生成密钥
-<output>	标签定义不同类型的输出
+<datalist> 标签定义可选数据的列表。
+<keygen> 标签定义生成密钥。
+<output> 标签定义不同类型的输出。
+<article> 标签定义外部的内容。
+<aside> 标签定义 article 以外的内容。aside 的内容应该与 article 的内容相关。
+<details> 标签定义元素的细节，通过点击进行隐藏。
+<dialog> 标签定义对话框或窗口。
+<figcaption> 标签定义 figure 元素的标题。
+<figure> 标签用于对元素进行组合。使用 figcaption 元素为元素组添加标题。
+<footer> 标签定义 section 或 document 的页脚。
+<header> 标签定义 section 或 document 的页眉。
+<main> 标签定义文档的主要内容。
+<meter> 标签定义度量衡。可在 min/max 属性中定义。
+<nav> 标签定义导航链接的部分。
+<rp> 标签定义在 ruby 注释中使用。
+<rt> 标签定义字符（中文注音或字符）。
+<ruby> 标签定义 ruby 注释（中文注音或字符）。
+<section> 标签定义文档中的章节、页眉、页脚或文档中的其他部分。
+<summary> 标签定义包含 details 元素的标题。
+<time> 标签定义日期或时间。
+<mark>	标签定义标记或高亮显示文本。此标签很常用，在搜索中可以高亮显示搜索关键词。
+<progress> 标签运行中的进程。此标签来显示 JavaScript 中耗费时间的函数的进程。
+
+<video> 标签定义视频。
+<audio> 标签定义声音。
+<source> 标签为媒介元素（<video>、<audio>）定义媒介资源。
+<canvas> 标签定义图形。
 
 {% endhighlight %}
 
