@@ -15,7 +15,9 @@ tags: webkit chrome safari
 
 突然想起前几年浏览器PK，当时搞得比较火的`css画哆啦A梦`。貌似是个日本的大牛写的。大家戳下面的DEMO去吧。
 
+下面是个浏览器访问的截图：  
 
+![css画哆啦A梦]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)
 
 -----------------------
 
