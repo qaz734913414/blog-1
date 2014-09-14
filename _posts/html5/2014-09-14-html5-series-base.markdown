@@ -28,6 +28,25 @@ tags: html5
 
 {% endhighlight %}
 
+> html5新的 (input type=类型) 元素
+
+{% highlight html %}
+
+<input type="number" name="quantity" />
+<input type="date" name="bday" />
+<input type="color" name="favcolor" />
+<input type="range" name="points" />
+<input type="month" name="bdaymonth" />
+<input type="week" name="week_year" />
+<input type="datetime" name="bdaytime" />
+<input type="datetime-local" name="bdaytime" />
+<input type="email" name="email" />
+<input type="search" name="googlesearch" />
+<input type="tel" name="usrtel" />
+<input type="url" name="homepage" />
+
+{% endhighlight %}
+
 > html5新元素
 
 {% highlight html %}
@@ -53,8 +72,8 @@ tags: html5
 <summary>	标签定义包含 details 元素的标题。
 <time>		标签定义日期或时间。
 <mark>		标签定义标记或高亮显示文本。此标签很常用，在搜索中可以高亮显示搜索关键词。
-<progress>	标签运行中的进程。此标签来显示 JavaScript 中耗费时间的函数的进程。
-
+<progress>	标签运行中的进程。此标签来显示 javascript 中耗费时间的函数的进程。
+--------------------------------------------------------------------------
 <video>		标签定义视频。
 <audio>		标签定义声音。
 <source>	标签为媒介元素（<video>、<audio>）定义媒介资源。
@@ -62,24 +81,8 @@ tags: html5
 
 {% endhighlight %}
 
-> html5新的 (input type=类型) 元素
+简单
 
-{% highlight html %}
-
-<input type="number" name="quantity" />
-<input type="date" name="bday" />
-<input type="color" name="favcolor" />
-<input type="range" name="points" />
-<input type="month" name="bdaymonth" />
-<input type="week" name="week_year" />
-<input type="datetime" name="bdaytime" />
-<input type="datetime-local" name="bdaytime" />
-<input type="email" name="email" />
-<input type="search" name="googlesearch" />
-<input type="tel" name="usrtel" />
-<input type="url" name="homepage" />
-
-{% endhighlight %}
 -----------------------
 
 相关参考文章地址：
