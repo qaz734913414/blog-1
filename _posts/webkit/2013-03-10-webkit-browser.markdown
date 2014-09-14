@@ -19,7 +19,7 @@ tags: webkit chrome safari
 
 ![css画哆啦A梦]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)
 
-补一张IE下比较全的截图：  
+补一张IE下比较全的截图：（依次顺序IE9、IE8、IE7、IE6）  
 
 ![css画哆啦A梦]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.png)
 
