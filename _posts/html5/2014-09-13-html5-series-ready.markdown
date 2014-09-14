@@ -17,7 +17,7 @@ tags: html5 javascript webstorm
 
 -----------------------
 
-相关参考文章地址：
+工具下载地址：
 
 Eclipse - <http://www.eclipse.org/downloads/>  
 Edge-Animate - <https://creative.adobe.com/products/animate/>  
