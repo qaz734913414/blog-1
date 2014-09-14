@@ -30,4 +30,4 @@ Getting-Started-With-the-WebKit-Layout-Code - <http://blogs.adobe.com/webplatfor
 -----------------------
 
 [Paul-Irish]: http://www.paulirish.com/about/
-[WebKit-for-Developers]]: http://www.paulirish.com/2013/webkit-for-developers/
+[WebKit-for-Developers]: http://www.paulirish.com/2013/webkit-for-developers/
