@@ -1,0 +1,37 @@
+---
+layout: page
+title:  "YUI声明停止继续开发"
+description: "YUI声明停止继续开发"
+keywords: yahoo,YUI,javascript
+origin: 张嘉杰.原创
+date:   2014-09-01
+category: life
+tags: yahoo,YUI,javascript
+---
+曾经辉煌的`YUI`看来是快要落幕了，学习`javascript`是从`YUI`开始的，缅怀啊，太可惜了！因为各类新技术，新`js`库的兴起（新东西层出不穷），浏览器将越来越标准化，新的思想和开发模式的快速迭代，`YUI`已经跟不上了。还是把重担留给`Dojo`、`Extjs`吧。
+<!--more-->
+其实雅虎已经说的很实在了，大而全已经不是`javascript`开发的典范。如 App Framework 之于 `Backbone`，Test 之于 `Mocha`，CSS 之于 `Bootstrap`，`YUI` 都做的不够出色，也注定很难做的更好。文中也提到了`nodejs`，允许`javascript`在服务器端使用，可能是固化思维原因吧，大多数人普遍还是都认为前端和后端无关。  
+
+我理解的`nodejs`：
+
+{% highlight html %}
+
+1. 完全改变了javascript的编程习惯，环境搭建等。  
+2. 模块化思路，影响了requirejs、seajs等模块加载器框架的设计。  
+3. 依赖包处理npm，前端也就拥有了bower依赖管理。
+
+{% endhighlight %}
+
+顺便提一下`AngularJS`，实现了数据到视图的双向绑定，让用户不操作`Dom`结构，官方不建议使用`jQuery`，而操作`Dom`结构，正是`jQuery`的核心。
+
+时代在发展，历史在进步。个人认为已经朝着web components 的方向在迈进了。
+
+###以上都是个人拙见 :)
+
+-----------------------
+
+相关参考文章地址：
+
+Important-Announcement-Regarding-YUI - <http://yahooeng.tumblr.com/post/96098168666/important-announcement-regarding-yui>  
+
+-----------------------
