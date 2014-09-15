@@ -110,6 +110,7 @@ a:hover{color:#3399cc;}
 /*文章详情页*/
 .detail{}
 .detail-bd{background-color:#fff;}
+.detail-bd img {width:100%;}
 .detail h1{padding:15px 10px 10px 10px;font-size:16px;font-weight:bold;}
 .deatil-t-hd{padding-left:10px;border-bottom:1px solid #dfdfdf;padding-bottom:10px;}
 .deatil-t-hd span{padding-right:15px;}
