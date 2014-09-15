@@ -24,7 +24,7 @@ tags: yahoo,YUI,javascript
 
 顺便提一下`AngularJS`，实现了数据到视图的双向绑定，让用户不操作`Dom`结构，官方不建议使用`jQuery`，而操作`Dom`结构，正是`jQuery`的核心。
 
-###时代在发展，历史在进步。个人认为已经朝着`web components`的方向在迈进了。:)
+###时代在发展，历史在进步，已经朝着`web components`的方向在迈进了。:)
 
 -----------------------
 
