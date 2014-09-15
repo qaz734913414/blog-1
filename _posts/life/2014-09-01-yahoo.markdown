@@ -6,7 +6,7 @@ keywords: yahoo,YUI,javascript
 origin: 张嘉杰.原创
 date:   2014-09-01
 category: life
-tags: yahoo,YUI,javascript
+tags: yahoo YUI javascript
 ---
 曾经辉煌的`YUI`看来是快要落幕了，学习`javascript`是从`YUI`开始的，缅怀啊，太可惜了！因为各类新技术，新`js`库的兴起（新东西层出不穷），浏览器将越来越标准化，新的思想和开发模式的快速迭代，`YUI`已经跟不上了。还是把重担留给`Dojo`、`Extjs`吧。  
 <!--more-->
