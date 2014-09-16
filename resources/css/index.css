@@ -88,7 +88,7 @@ h1,h2,h3,h4,h5,h6{font-size:14px;margin:0;padding:0;}
 .asks-dd{padding-top:3px;max-height:35px;overflow:hidden;}
 
 /* 友情链接 */
-.links{height:225px;}
+.links{height:100%;}
 .links a{float:left;display:block;margin-top:5px;margin-right:20px;margin-bottom:10px;white-space:nowrap;color:#666;}
 .links a.red{color:#cc0001;}
 .links a.blue{color:#3399cc;}
