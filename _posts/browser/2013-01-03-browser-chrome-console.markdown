@@ -26,7 +26,7 @@ console.error("error...");
 
 {% endhighlight %}
 
-![console-log]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.jpg)  
+![console-log]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.jpg)    
 
 > <font color="#fa8072">console.group、console.groupEnd组合使用</font>
 
@@ -43,7 +43,7 @@ console.groupEnd();
 
 {% endhighlight %}
 
-![console-log]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.jpg) 
+![console-log]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.jpg)   
 
 > <font color="#fa8072">console.assert 断言</font>
 
@@ -53,7 +53,7 @@ console.assert(1==="1",'1==="1"，条件不成立...');
 
 {% endhighlight %}
 
-![console-log]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-2.jpg) 
+![console-log]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-2.jpg)   
 
 > <font color="#fa8072">console.table 表格形式</font>
 
@@ -64,7 +64,20 @@ console.table([{'用户': '测试用户1', '访问': 74}, {'用户': '测试用�
 
 {% endhighlight %}
 
-![console-log]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-3.jpg) 
+![console-log]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-3.jpg)   
+
+{% highlight html %}
+
+# 执行次数
+function test(){ console.count('test函数被执行的次数：'); }
+test();test();test();test();
+
+{% endhighlight %}
+
+![console-log]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-4.jpg)   
+
+
+
 
 不清楚`Chrome DevTools` 是什么的朋友，先来上个课，[Chrome DevTools School]。  
 
