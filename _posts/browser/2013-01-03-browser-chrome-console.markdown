@@ -17,15 +17,12 @@ tags: chrome console
 
 # 输出普通信息
 console.log("log...");
-
 # 输出提示信息
 console.info("info...");
-
 # 输出警示信息
-console.error("error...");
-
-# 输出错误信息
 console.warn("warn...");
+# 输出错误信息
+console.error("error...");
 
 {% endhighlight %}
 
