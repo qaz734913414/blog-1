@@ -66,6 +66,8 @@ console.table([{'用户': '测试用户1', '访问': 74}, {'用户': '测试用�
 
 ![console-log]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-3.jpg)   
 
+> <font color="#fa8072">console.count 计数器</font>
+
 {% highlight html %}
 
 # 执行次数
