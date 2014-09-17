@@ -11,7 +11,7 @@ tags: chrome console
 `Chrome DevTools`已经强大到没有朋友的地步了。适时的运用它，可以有效的提高开发效率，让BUG无处遁形。先说说`console`的具体用法吧。  
 <!--more-->
 
-> console.log 用法
+> <font color="#fa8072">console.log 用法</font>
 
 {% highlight html %}
 
@@ -28,7 +28,7 @@ console.error("error...");
 
 ![console-log]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.jpg)  
 
-> console.group、console.groupEnd组合使用
+> <font color="#fa8072">console.group、console.groupEnd组合使用</font>
 
 {% highlight html %}
 
@@ -44,7 +44,7 @@ console.groupEnd();
 
 ![console-log]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.jpg) 
 
-> <font color="black">console.assert 断言</font>
+> <font color="#fa8072">console.assert 断言</font>
 
 {% highlight html %}
 
