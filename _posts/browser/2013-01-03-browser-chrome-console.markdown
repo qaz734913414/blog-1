@@ -32,6 +32,7 @@ console.error("error...");
 
 {% highlight html %}
 
+# 分组输出
 console.group("core.dom");
 console.log("core.dom begin...");
 console.log("core.dom end...");
@@ -53,6 +54,17 @@ console.assert(1==="1",'1==="1"，条件不成立...');
 {% endhighlight %}
 
 ![console-log]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-2.jpg) 
+
+> <font color="#fa8072">console.table 表格形式</font>
+
+{% highlight html %}
+
+# 表格输出
+console.table([{'用户': '测试用户1', '访问': 74}, {'用户': '测试用户2', '访问': 90}]);
+
+{% endhighlight %}
+
+![console-log]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-3.jpg) 
 
 不清楚`Chrome DevTools` 是什么的朋友，先来上个课，[Chrome DevTools School]。  
 
