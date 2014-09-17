@@ -1,2 +1,2 @@
 User-agent: *
-Allow: /
+Allow: http://www.jcore.cn/sitemap.xml
