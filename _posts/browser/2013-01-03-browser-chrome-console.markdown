@@ -4,7 +4,7 @@ title:  "话.chrome之console的使用技巧"
 description: "话.chrome之console的使用技巧"
 keywords: chrome,console
 origin: 张嘉杰.原创
-date:   2014-07-03
+date:   2013-01-03
 category: browser
 tags: chrome console
 ---
