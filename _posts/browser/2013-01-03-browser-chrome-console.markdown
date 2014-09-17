@@ -52,7 +52,7 @@ console.assert(1==="1",'1==="1"，条件不成立...');
 
 {% endhighlight %}
 
-![console-log]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.jpg) 
+![console-log]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-2.jpg) 
 
 不清楚`Chrome DevTools` 是什么的朋友，先来上个课，[Chrome DevTools School]。  
 
