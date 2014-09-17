@@ -11,7 +11,7 @@ tags: chrome console
 `Chrome DevTools`已经强大到没有朋友的地步了。适时的运用它，可以有效的提高开发效率，让BUG无处遁形。先说说`console`的具体用法吧。  
 <!--more-->
 
-> <font color="#fa8072">console.log 用法</font>
+> <font color="#fa8072">console.log</font>
 
 {% highlight html %}
 
@@ -28,7 +28,7 @@ console.error("error...");
 
 ![console-log]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.jpg)    
 
-> <font color="#fa8072">console.group、console.groupEnd组合使用</font>
+> <font color="#fa8072">console.group & console.groupEnd</font>
 
 {% highlight html %}
 
@@ -45,7 +45,7 @@ console.groupEnd();
 
 ![console-log]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.jpg)   
 
-> <font color="#fa8072">console.assert 断言</font>
+> <font color="#fa8072">console.assert</font>
 
 {% highlight html %}
 
@@ -55,7 +55,7 @@ console.assert(1==="1",'1==="1"，条件不成立...');
 
 ![console-log]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-2.jpg)   
 
-> <font color="#fa8072">console.table 表格形式</font>
+> <font color="#fa8072">console.table</font>
 
 {% highlight html %}
 
@@ -66,7 +66,7 @@ console.table([{'用户': '测试用户1', '访问': 74}, {'用户': '测试用�
 
 ![console-log]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-3.jpg)   
 
-> <font color="#fa8072">console.count 计数器</font>
+> <font color="#fa8072">console.count</font>
 
 {% highlight html %}
 
@@ -79,7 +79,7 @@ test();test();test();test();
 ![console-log]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-4.jpg)   
 
 
-> <font color="#fa8072">console.dir、console.dirxml 节点输出</font>
+> <font color="#fa8072">console.dir | console.dirxml</font>
 
 {% highlight html %}
 
@@ -91,6 +91,20 @@ console.dirxml(document.body);
 
 ![console-log]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-5.jpg)   
 
+> <font color="#fa8072">console.time & console.timeEnd</font>
+
+{% highlight html %}
+
+# 执行时间
+console.time("执行时间");
+var arr = new Array(10000);
+for (var i = arr.length; i > 0; i--) {}
+console.timeEnd("执行时间");
+
+{% endhighlight %}
+
+![console-log]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-6.jpg)  
+
 
 
 不清楚`Chrome DevTools` 是什么的朋友，先来上个课，[Chrome DevTools School]。  
@@ -101,7 +115,7 @@ console.dirxml(document.body);
 
 相关参考文章地址：
 
-chrome-devTools-school - <http://discover-devtools.codeschool.com/>
+chrome-devTools-school - <http://discover-devtools.codeschool.com/>  
 console-api - <https://developer.chrome.com/devtools/docs/console-api/>  
 commandline-api - <https://developer.chrome.com/devtools/docs/commandline-api/>  
 
