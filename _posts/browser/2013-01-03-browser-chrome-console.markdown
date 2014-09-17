@@ -43,7 +43,7 @@ console.groupEnd();
 
 {% endhighlight %}
 
-![console-log]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.jpg)   
+![console-group-groupEnd]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.jpg)   
 
 > <font color="#fa8072">console.assert</font>
 
@@ -53,7 +53,7 @@ console.assert(1==="1",'1==="1"，条件不成立...');
 
 {% endhighlight %}
 
-![console-log]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-2.jpg)   
+![console-assert]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-2.jpg)   
 
 > <font color="#fa8072">console.table</font>
 
@@ -64,7 +64,7 @@ console.table([{'用户': '测试用户1', '访问': 74}, {'用户': '测试用�
 
 {% endhighlight %}
 
-![console-log]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-3.jpg)   
+![console-table]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-3.jpg)   
 
 > <font color="#fa8072">console.count</font>
 
@@ -76,7 +76,7 @@ test();test();test();test();
 
 {% endhighlight %}
 
-![console-log]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-4.jpg)   
+![console-count]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-4.jpg)   
 
 
 > <font color="#fa8072">console.dir | console.dirxml</font>
@@ -89,7 +89,7 @@ console.dirxml(document.body);
 
 {% endhighlight %}
 
-![console-log]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-5.jpg)   
+![console-dir-dirxml]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-5.jpg)   
 
 > <font color="#fa8072">console.time & console.timeEnd</font>
 
@@ -103,7 +103,7 @@ console.timeEnd("执行时间");
 
 {% endhighlight %}
 
-![console-log]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-6.jpg)  
+![console-time-timeEnd]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-6.jpg)  
 
 
 
