@@ -5,7 +5,7 @@ description: "关于webkit内核浏览器"
 keywords: webkit,chrome,safari
 origin: 张嘉杰.原创
 date:   2013-03-10
-category: webkit
+category: browser
 tags: webkit chrome safari
 ---
 关注 [Paul-Irish] 已经很久了，针对大家对WebKit的各种误解，他在博客上发表了篇文章，看完以后有个疑问？`WebKit` 究竟是一个黑盒子，还是白盒子呢。`chrome`、`safari`都用了`WebKit`内核浏览器。`WebKit`内核浏览器应该是未来浏览器的标准。
