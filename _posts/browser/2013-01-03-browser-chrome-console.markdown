@@ -44,7 +44,7 @@ console.groupEnd();
 
 ![console-log]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.jpg) 
 
-> console.assert 断言
+> <font color="black">console.assert 断言</font>
 
 {% highlight html %}
 
