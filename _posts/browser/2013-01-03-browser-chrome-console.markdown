@@ -1,7 +1,7 @@
 ---
 layout: page
-title:  "ChromeDevTools之console"
-description: "ChromeDevTools之console"
+title:  "Chrome DevTools之console"
+description: "Chrome DevTools之console"
 keywords: chrome,console
 origin: 张嘉杰.原创
 date:   2013-01-03
