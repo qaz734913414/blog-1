@@ -79,6 +79,18 @@ test();test();test();test();
 ![console-log]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-4.jpg)   
 
 
+> <font color="#fa8072">console.dir、console.dirxml 节点输出</font>
+
+{% highlight html %}
+
+# 节点输出
+console.dir(document.body);
+console.dirxml(document.body);
+
+{% endhighlight %}
+
+![console-log]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-5.jpg)   
+
 
 
 不清楚`Chrome DevTools` 是什么的朋友，先来上个课，[Chrome DevTools School]。  
