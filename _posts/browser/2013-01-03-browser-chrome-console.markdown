@@ -15,14 +15,21 @@ tags: chrome console
 
 {% highlight bash %}
 
+# 输出普通信息
 console.log("log...");
-console.debug("debug...");
-console.warn("warn...");
+
+# 输出提示信息
+console.info("info...");
+
+# 输出警示信息
 console.error("error...");
+
+# 输出错误信息
+console.warn("warn...");
 
 {% endhighlight %}
 
-
+![console-log]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.jpg)
 
 不清楚`Chrome DevTools` 是什么的朋友，先来上个课，[Chrome DevTools School]。  
 
