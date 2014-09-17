@@ -26,7 +26,23 @@ console.error("error...");
 
 {% endhighlight %}
 
-![console-log]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.jpg)
+![console-log]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.jpg)  
+
+> console.group、console.groupEnd组合使用
+
+{% highlight bash %}
+
+console.group("core.dom");
+console.log("core.dom begin...");
+console.log("core.dom end...");
+console.groupEnd();
+console.group("core.init");
+console.log("core.init...");
+console.groupEnd();
+
+{% endhighlight %}
+
+![console-log]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.jpg) 
 
 不清楚`Chrome DevTools` 是什么的朋友，先来上个课，[Chrome DevTools School]。  
 
