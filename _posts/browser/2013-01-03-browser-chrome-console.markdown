@@ -26,7 +26,7 @@ console.error("error...");
 
 不清楚`Chrome DevTools` 是什么的朋友，先来上个课，[Chrome DevTools School]。  
 
-好了先到这里了。:)
+###好了今天先到这里了 :)
 
 -----------------------
 

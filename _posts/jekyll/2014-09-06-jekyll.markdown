@@ -91,8 +91,8 @@ Liquid-Help - <https://github.com/shopify/liquid/wiki/liquid-for-designers>
 Markdown - <http://daringfireball.net/projects/markdown/syntax>  
 Markdown 预览 - <https://stackedit.io/editor>
 
+-----------------------
+
 [Github]:		http://github.com/jcores
 [Github Pages]:	http://pages.github.com
 [Jekyll]:		http://jekyllrb.com
-
------------------------
