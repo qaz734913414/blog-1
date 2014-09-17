@@ -13,7 +13,7 @@ tags: chrome console
 
 > console.log 用法
 
-{% highlight bash %}
+{% highlight html %}
 
 # 输出普通信息
 console.log("log...");
@@ -30,7 +30,7 @@ console.error("error...");
 
 > console.group、console.groupEnd组合使用
 
-{% highlight bash %}
+{% highlight html %}
 
 console.group("core.dom");
 console.log("core.dom begin...");
@@ -39,6 +39,16 @@ console.groupEnd();
 console.group("core.init");
 console.log("core.init...");
 console.groupEnd();
+
+{% endhighlight %}
+
+![console-log]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.jpg) 
+
+> console.assert 断言
+
+{% highlight html %}
+
+console.assert(1==="1",'1==="1"，条件不成立...');
 
 {% endhighlight %}
 
