@@ -17,13 +17,13 @@ tags: console
 知乎：  （这个很有立体感呐。）
 ![console-job-zhihu]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.jpg)
 
-百度：  
+百度：  （招聘信息也很犀利。）
 ![console-job-baidu]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.jpg)  
 
-豆瓣：  
+豆瓣：  （简单而朴素的一句话。）
 ![console-job-douban]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-2.jpg)
 
-DNSPod：  
+DNSPod：  （动感超人。）
 ![console-job-alibaba]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-4.jpg)  
 
 ---------------------------------------
