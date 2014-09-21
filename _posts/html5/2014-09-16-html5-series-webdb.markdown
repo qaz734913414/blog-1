@@ -16,14 +16,19 @@ tags: html5,localStroage,sessionStroage
 {% highlight html %}
 #存储value到指定key
 setItem : function(key, value)
+
 #获取指定key的value
 getItem : function(key)
+
 #删除指定key的value
 removeItem : function(key)
+
 #清除所有的key/value
 clear : function()
+
 #数据所有的key
 key : function(i)
+
 #数据长度
 length : int
 
