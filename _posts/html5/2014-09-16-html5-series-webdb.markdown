@@ -18,9 +18,9 @@ tags: html5,localStroage,sessionStroage
 localStorage.setItem 	: function(key, value)
 localStorage.getItem 	: function(key)
 localStorage.removeItem : function(key)
-localStorage.clear 		: function()
+localStorage.clear 	: function()
 localStorage.length 	: int
-localStorage.key 		: function(i)
+localStorage.key 	: function(i)
 
 {% endhighlight %}
 
