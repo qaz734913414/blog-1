@@ -15,12 +15,12 @@ tags: html5,localStroage,sessionStroage
 
 {% highlight html %}
 
-setItem 	: function(key, value)
-getItem 	: function(key)
+setItem : function(key, value)
+getItem : function(key)
 removeItem : function(key)
-clear 	: function()
-length 	: int
-key 	: function(i)
+clear 		: function()
+length 		: int
+key 		: function(i)
 
 {% endhighlight %}
 
