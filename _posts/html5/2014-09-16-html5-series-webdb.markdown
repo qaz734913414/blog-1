@@ -18,9 +18,9 @@ tags: html5,localStroage,sessionStroage
 setItem : function(key, value)
 getItem : function(key)
 removeItem : function(key)
-clear 		: function()
-length 		: int
-key 		: function(i)
+clear : function()
+length : int
+key : function(i)
 
 {% endhighlight %}
 
