@@ -15,12 +15,12 @@ tags: html5,localStroage,sessionStroage
 
 {% highlight html %}
 
-localStorage.setItem 	: function(key, value)
-localStorage.getItem 	: function(key)
-localStorage.removeItem : function(key)
-localStorage.clear 	: function()
-localStorage.length 	: int
-localStorage.key 	: function(i)
+setItem 	: function(key, value)
+getItem 	: function(key)
+removeItem : function(key)
+clear 	: function()
+length 	: int
+key 	: function(i)
 
 {% endhighlight %}
 
