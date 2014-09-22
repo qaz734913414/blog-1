@@ -15,27 +15,27 @@ tags: html5
 
 {% highlight html %}
 
-#存储value到指定key
+# 存储value到指定key
 setItem : function(key, value)
 
-#获取指定key的value
+# 获取指定key的value
 getItem : function(key)
 
-#删除指定key的value
+# 删除指定key的value
 removeItem : function(key)
 
-#清除所有的key/value
+# 清除所有的key/value
 clear : function()
 
-#数据所有的key
+# 数据所有的key
 key : function(i)
 
-#数据长度
+# 数据长度
 length : int
 
 {% endhighlight %}
 
-###下面有简单的例子 :)
+# # # 下面有简单的例子 :)
 
 -----------------------
 
@@ -43,7 +43,7 @@ length : int
 
 -----------------------
 
-> <font color="#fa8072">封装了个简单逻辑的脚本</font>
+> <font color="# fa8072">封装了个简单逻辑的脚本</font>
 
 判断浏览器端是否支持`Storage`对象，支持则默认使用`localStore`，不支持则使用`Cookie`。  
 
@@ -158,25 +158,25 @@ length : int
 
 {% highlight html %}
 
-#存储类型 localStore、sessionStore、cookie
+# 存储类型 localStore、sessionStore、cookie
 store.type : string
 
-#存储原型方法 window.localStorage、window.sessionStore、document.cookie
+# 存储原型方法 window.localStorage、window.sessionStore、document.cookie
 store.proto : function()
 
-#存储value到指定key
+# 存储value到指定key
 store.set : function(key, value)
 
-#获取指定key的value
+# 获取指定key的value
 store.get : function(key)
 
-#删除指定key的value
+# 删除指定key的value
 store.remove : function(key)
 
-#删除所有的key/value
+# 删除所有的key/value
 store.removeAll : function()
 
-#获取所有存储对象
+# 获取所有存储对象
 store.getAll : function()
 	
 {% endhighlight %}
