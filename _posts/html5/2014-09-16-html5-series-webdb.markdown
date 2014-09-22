@@ -123,9 +123,9 @@ getAll : function()
 					valueToUse = encodeURIComponent(value);
 				}
 				document.cookie = name + "=" + valueToUse +
-						(expires ? ("; expires=" + new Date(expires).toUTCString()) : '') +
-						"; path=" + (path || '/') +
-						(secure ? "; secure" : '');
+					(expires ? ("; expires=" + new Date(expires).toUTCString()) : '') +
+					"; path=" + (path || '/') +
+					(secure ? "; secure" : '');
 			},
 			get: function (name) {
 				var cookies = this.getAllRawOrProcessed(false);
