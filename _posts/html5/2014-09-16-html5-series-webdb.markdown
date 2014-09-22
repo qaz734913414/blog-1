@@ -35,6 +35,10 @@ length : int
 
 {% endhighlight %}
 
+> 浏览器查看方式
+
+![console-resources]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)    
+
 # # # 下面有简单的例子 :)
 
 -----------------------
