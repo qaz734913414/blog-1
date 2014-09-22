@@ -47,35 +47,6 @@ length : int
 
 ###判断浏览器端是否支持`Storage`对象，支持则默认使用`localStore`，不支持则使用`Cookie`。  
 
-
-使用方法：
-
-{% highlight html %}
-
-#存储类型 localStore、sessionStore、cookie
-store.type : string
-
-#存储原型方法 window.localStorage、window.sessionStore、document.cookie
-store.proto : function()
-
-#存储value到指定key
-store.set : function(key, value)
-
-#获取指定key的value
-store.get : function(key)
-
-#删除指定key的value
-store.remove : function(key)
-
-#删除所有的key/value
-store.removeAll : function()
-
-#获取所有存储对象
-store.getAll : function()
-	
-{% endhighlight %}
-
-下面是完整代码
 {% highlight html %}
 
 (function(win){
@@ -181,4 +152,31 @@ store.getAll : function()
 	win.Store = Store;
 })(window)
 
+{% endhighlight %}
+
+使用方法：
+
+{% highlight html %}
+
+#存储类型 localStore、sessionStore、cookie
+store.type : string
+
+#存储原型方法 window.localStorage、window.sessionStore、document.cookie
+store.proto : function()
+
+#存储value到指定key
+store.set : function(key, value)
+
+#获取指定key的value
+store.get : function(key)
+
+#删除指定key的value
+store.remove : function(key)
+
+#删除所有的key/value
+store.removeAll : function()
+
+#获取所有存储对象
+store.getAll : function()
+	
 {% endhighlight %}
