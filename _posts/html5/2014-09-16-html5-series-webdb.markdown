@@ -45,7 +45,7 @@ length : int
 
 > <font color="#fa8072">封装了个简单逻辑的脚本</font>
 
-###判断浏览器端是否支持`Storage`对象，支持则默认使用`localStore`，不支持则使用`Cookie`。  
+判断浏览器端是否支持`Storage`对象，支持则默认使用`localStore`，不支持则使用`Cookie`。  
 
 {% highlight html %}
 
