@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=A193jIOSIxdQ8jKRMgDLqsK6"></script>
+    <script type="text/javascript">
+
+        window.onload = function(){
+
+            (function(){
+                function load_script(xyUrl, callback){
+                    var head = document.getElementsByTagName('head')[0];
+                    var script = document.createElement('script');
+                    script.type = 'text/javascript';
+                    script.src = xyUrl;
+                    script.onload = script.onreadystatechange = function(){
+                        if((!this.readyState || this.readyState === "loaded" || this.readyState === "complete")){
+                            callback && callback();
+                            script.onload = script.onreadystatechange = null;
+                            if ( head && script.parentNode ) {
+                                head.removeChild( script );
+                            }
+                        }
+                    };
+                    head.insertBefore( script, head.firstChild );
+                }
+                function translate(point,type,callback){
+                    var callbackName = 'cbk_' + Math.round(Math.random() * 10000);    //随机函数名
+                    var xyUrl = "http://api.map.baidu.com/ag/coord/convert?from="+ type + "&to=4&x=" + point.lng + "&y=" + point.lat + "&callback=BMap.Convertor." + callbackName;
+                    //动态创建script标签
+                    load_script(xyUrl);
+                    BMap.Convertor[callbackName] = function(xyResult){
+                        delete BMap.Convertor[callbackName];    //调用完需要删除改函数
+                        var point = new BMap.Point(xyResult.x, xyResult.y);
+                        callback && callback(point);
+                    }
+                }
+
+                window.BMap = window.BMap || {};
+                BMap.Convertor = {};
+                BMap.Convertor.translate = translate;
+                alert(0);
+            })();
+            alert(1);
+            console.log(navigator.geolocation.getCurrentPosition);
+            navigator.geolocation.getCurrentPosition(function (position) {
+                alert(position);
+                var lon = position.coords.longitude;
+                var lat = position.coords.latitude;
+                console.log(lon + "," + lat);
+                // 百度地图API功能
+                //GPS坐标
+                var xx = lon;
+                var yy = lat;
+                var gpsPoint = new BMap.Point(xx,yy);
+
+                //地图初始化
+                var bm = new BMap.Map("allmap");
+                bm.centerAndZoom(gpsPoint, 15);
+                bm.addControl(new BMap.NavigationControl());
+
+                //坐标转换完之后的回调函数
+                var translateCallback = function (point){
+                    var marker = new BMap.Marker(point);
+                    bm.addOverlay(marker);
+                    var label = new BMap.Label("亲，女神的位置哦",{offset:new BMap.Size(20,-10)});
+                    marker.setLabel(label); //添加百度label
+                    bm.setCenter(point);
+                    alert(point.lng + "," + point.lat);
+                }
+
+                setTimeout(function(){
+                    new BMap.Convertor.translate(gpsPoint,0,translateCallback);     //真实经纬度转成百度坐标
+                }, 2000);
+            }, function (error) {
+                var type = {
+                    1: '位置服务被拒绝',
+                    2: '获取不到信息',
+                    3: '超时'
+                }
+                alert('获取数据失败：' + type[error.code]);
+            });
+        }
+    </script>
+</head>
+<body>
+<button onclick="init();">显示</button>
+<div id="map" style="width:520px;height:340px;border:1px solid gray" ></div>
+<div id="result"></div>
+
+<div id="allmap" style="width:520px;height:340px;border:1px solid gray" ></div>
+</body>
+</html>
+
+
+
+
