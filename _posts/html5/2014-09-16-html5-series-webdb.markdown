@@ -13,7 +13,7 @@ tags: html5
 
 > localStroage、sessionStroage 使用方法
 
-{% highlight html %}
+{% highlight javascript %}
 
 # 存储value到指定key
 setItem : function(key, value)
@@ -47,7 +47,7 @@ length : int
 
 判断浏览器端是否支持`Storage`对象，支持则默认使用`localStore`，不支持则使用`Cookie`。  
 
-{% highlight html %}
+{% highlight javascript %}
 
 (function(win){
 	
@@ -156,7 +156,7 @@ length : int
 
 使用方法：
 
-{% highlight html %}
+{% highlight javascript %}
 
 # 存储类型 localStore、sessionStore、cookie
 store.type : string
