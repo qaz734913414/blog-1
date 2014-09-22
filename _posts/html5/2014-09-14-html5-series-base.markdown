@@ -13,7 +13,7 @@ tags: html5
 
 > 兼容性问题 
 
-![html5标签兼容性]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)    
+![html5标签兼容]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)    
 
 > 创建一个html5页面 
 

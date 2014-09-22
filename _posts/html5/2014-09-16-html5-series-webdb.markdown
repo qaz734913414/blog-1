@@ -184,3 +184,12 @@ store.removeAll : function()
 store.getAll : function()
 	
 {% endhighlight %}
+
+-----------------------
+
+相关参考文章地址：
+
+DOM-Storage-guide - <https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Storage>
+
+-----------------------
+
