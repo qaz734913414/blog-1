@@ -78,105 +78,105 @@ getAll : function()
 
 (function(win){
 	
-		var Store = function(type) {
-			var localstore = {
-				proto: window.localStorage,
-				type: 'localStorage',
-				set: function(key, val) {
-					this.s.setItem(key, JSON.stringify(val));
-					return val;
-				},
-				get: function(key) {
-					var value = this.proto.getItem(key);
-					if (typeof value != 'string') { return undefined }
-					try { return JSON.parse(value) }
-					catch(e) { return value || undefined }
-				},
-				remove: function(key) { this.proto.removeItem(key) },
-				removeAll: function() { this.proto.clear() },
-				getAll: function() {
-					var ret = {};
-					for (var i=0; i<this.proto.length; i++) {
-						var key = this.proto.key(i);
-						ret[key] = this.get(key);
-					}
-					return ret;
+	var Store = function(type) {
+		var localstore = {
+			proto: window.localStorage,
+			type: 'localStorage',
+			set: function(key, val) {
+				this.s.setItem(key, JSON.stringify(val));
+				return val;
+			},
+			get: function(key) {
+				var value = this.proto.getItem(key);
+				if (typeof value != 'string') { return undefined }
+				try { return JSON.parse(value) }
+				catch(e) { return value || undefined }
+			},
+			remove: function(key) { this.proto.removeItem(key) },
+			removeAll: function() { this.proto.clear() },
+			getAll: function() {
+				var ret = {};
+				for (var i=0; i<this.proto.length; i++) {
+					var key = this.proto.key(i);
+					ret[key] = this.get(key);
 				}
-			};
-			var sessionstore = {
-				proto: window.sessionStorage,
-				type: 'sessionStorage',
-				set: localstore.set,
-				get: localstore.get,
-				remove: localstore.remove,
-				removeAll: localstore.removeAll,
-				getAll: localstore.getAll
-			};
-			var cookiestore = {
-				proto: document.cookie,
-				type: 'cookie',
-				set: function (name, value, expires, path, secure) {
-					var valueToUse;
-					if (value !== undefined && typeof(value) === "object"){
-						valueToUse = JSON.stringify(value);
-					}else{
-						valueToUse = encodeURIComponent(value);
-					}
-					document.cookie = name + "=" + valueToUse +
-							(expires ? ("; expires=" + new Date(expires).toUTCString()) : '') +
-							"; path=" + (path || '/') +
-							(secure ? "; secure" : '');
-				},
-				get: function (name) {
-					var cookies = this.getAllRawOrProcessed(false);
-					if (cookies.hasOwnProperty(name)) return this.processValue(cookies[name]);
-					else return undefined;
-				},
-				processValue: function(value) {
-					if (value.substring(0, 1) == "{") {
-						try {
-							return JSON.parse(value);
-						}catch(e) {return value;}
-					}
-					if (value == "undefined") return undefined;
-					return decodeURIComponent(value);
-				},
-				getAllRawOrProcessed: function(process) {
-					var cookies = document.cookie.split('; '), s = {};
-					if (cookies.length === 1 && cookies[0] === '') return s;
-					for (var i = 0 ; i < cookies.length; i++) {
-						var cookie = cookies[i].split('=');
-						if (process) s[cookie[0]] = this.processValue(cookie[1]);
-						else s[cookie[0]] = cookie[1];
-					}
-					return s;
-				},
-				getAll: function() {
-					return this.getAllRawOrProcessed(true);
-				},
-				remove: function (name) {
-					this.set(name, "", -1);
-				},
-				removeAll: function() {
-					var cookies = this.getAll();
-					for (var i in cookies) {
-						this.remove(i);
-					}
-					return this.getAll();
-				}
-			}
-
-			if(type == 'local'){ //local
-				return localstore;
-			}else if(type == 'session'){ //session
-				return sessionstore;
-			}else{ //cookie
-				return cookiestore;
+				return ret;
 			}
 		};
+		var sessionstore = {
+			proto: window.sessionStorage,
+			type: 'sessionStorage',
+			set: localstore.set,
+			get: localstore.get,
+			remove: localstore.remove,
+			removeAll: localstore.removeAll,
+			getAll: localstore.getAll
+		};
+		var cookiestore = {
+			proto: document.cookie,
+			type: 'cookie',
+			set: function (name, value, expires, path, secure) {
+				var valueToUse;
+				if (value !== undefined && typeof(value) === "object"){
+					valueToUse = JSON.stringify(value);
+				}else{
+					valueToUse = encodeURIComponent(value);
+				}
+				document.cookie = name + "=" + valueToUse +
+						(expires ? ("; expires=" + new Date(expires).toUTCString()) : '') +
+						"; path=" + (path || '/') +
+						(secure ? "; secure" : '');
+			},
+			get: function (name) {
+				var cookies = this.getAllRawOrProcessed(false);
+				if (cookies.hasOwnProperty(name)) return this.processValue(cookies[name]);
+				else return undefined;
+			},
+			processValue: function(value) {
+				if (value.substring(0, 1) == "{") {
+					try {
+						return JSON.parse(value);
+					}catch(e) {return value;}
+				}
+				if (value == "undefined") return undefined;
+				return decodeURIComponent(value);
+			},
+			getAllRawOrProcessed: function(process) {
+				var cookies = document.cookie.split('; '), s = {};
+				if (cookies.length === 1 && cookies[0] === '') return s;
+				for (var i = 0 ; i < cookies.length; i++) {
+					var cookie = cookies[i].split('=');
+					if (process) s[cookie[0]] = this.processValue(cookie[1]);
+					else s[cookie[0]] = cookie[1];
+				}
+				return s;
+			},
+			getAll: function() {
+				return this.getAllRawOrProcessed(true);
+			},
+			remove: function (name) {
+				this.set(name, "", -1);
+			},
+			removeAll: function() {
+				var cookies = this.getAll();
+				for (var i in cookies) {
+					this.remove(i);
+				}
+				return this.getAll();
+			}
+		}
 
-		win.store = new Store((typeof Storage !== "undefined") ? 'local' : 'cookie');
-		win.Store = Store;
-	})(window)
+		if(type == 'local'){ //local
+			return localstore;
+		}else if(type == 'session'){ //session
+			return sessionstore;
+		}else{ //cookie
+			return cookiestore;
+		}
+	};
+
+	win.store = new Store((typeof Storage !== "undefined") ? 'local' : 'cookie');
+	win.Store = Store;
+})(window)
 
 {% endhighlight %}
