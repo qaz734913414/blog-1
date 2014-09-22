@@ -47,7 +47,9 @@ length : int
 
 ###判断浏览器端是否支持`Storage`对象，支持则默认使用`localStore`，不支持则使用`Cookie`。  
 
+
 使用方法：
+
 {% highlight html %}
 
 #存储类型 localStore、sessionStore、cookie
