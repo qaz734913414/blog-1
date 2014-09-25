@@ -39,12 +39,8 @@ if(navigator.geolocation){
 				var _a = position.address;
 				address =  "(" + (_a.country + _a.province + _a.city) + ")";
 			}
-			message = ( "lat=" + lat + "&lon=" + lon );
-            return {
-                isSuccess : true,
-                subject : "女神地址获取成功，速速查看^0^...",
-                html : "<a href=\"http://jcore.cn/getaddress.html?\" "+message+" target=\"_blank\" >戳我..."+ address +"</a>"
-            }
+			message = (lon + "," + lat);
+			//发送短信
 		}, 
 		function (error) {
 			var type = {
@@ -52,16 +48,10 @@ if(navigator.geolocation){
 				2: '获取不到女神位置信息（爱莫能助啊）',
 				3: '超时（多访问几次，或者过段时间再次尝试）'
 			}
-			message = ('获取数据失败：' + type[error.code]);
-            return {
-                isSuccess : false,
-                subject : "女神地址获取失败，不哭不哭T_T...",
-                html : message
-            }
+			console.log('获取数据失败：' + type[error.code]);
 		}
 	);
 }
-
 {% endhighlight %}
 
 ###未完待续... :)
