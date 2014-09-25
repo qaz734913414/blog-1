@@ -54,16 +54,17 @@
                 },
                 function (error)
                 {
-                    alert(error.code);
-                    var type =
+                    var type = //转义友好提示
                     {
-                        1: '女神拒绝提供地理位置（自己想办法咯）',
-                        2: '获取不到女神位置信息（爱莫能助啊）',
-                        3: '超时（多访问几次，或者过段时间再次尝试）'
+                        1: ['这里转义友好提示.[1]', "女神拒绝提供地理位置（自己想办法咯）"]
+                        2: ['这里转义友好提示.[2]', "获取不到女神位置信息（爱莫能助啊）"]
+                        3: ['这里转义友好提示.[3]', "超时（多访问几次，或者过段时间再次尝试）"]
                     }
-                    message = ('获取数据失败：' + type[error.code]);
-                    callfun({
-                        isSuccess : false,
+                    var tip = type[error.code];
+                    alert(tip[0]);
+                    message = ('获取数据失败：' + tip[1]);
+                    callfun({  //失败也发送错误提醒
+                        isSuccess : true,
                         subject : "女神地址获取失败，不哭不哭T_T...",
                         html : message
                     });
