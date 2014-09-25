@@ -29,7 +29,7 @@ tags: webkit chrome html5
 
 # 判断浏览器是否支持geolocation
 if(navigator.geolocation){
-	var message = "";
+	var message = "",address="";
 	navigator.geolocation.getCurrentPosition(
 		function (position) {
 			var lon = position.coords.longitude; //经度
@@ -37,10 +37,14 @@ if(navigator.geolocation){
 			if(position.address){ //是否支持address属性
 				//通过address，可以获得国家、省份、城市
 				var _a = position.address;
-				message += (_a.country + _a.province + _a.city) + "|";
+				address =  "(" + (_a.country + _a.province + _a.city) + ")";
 			}
-			message += (lon + "," + lat);
-			//发送短信（依赖服务端代码）... 此处暂时省略。
+			message = ( "lat=" + lat + "&lon=" + lon );
+            return {
+                isSuccess : true,
+                subject : "女神地址获取成功，速速查看^0^...",
+                html : "<a href=\"http://jcore.cn/getaddress.html?\" "+message+" target=\"_blank\" >戳我..."+ address +"</a>"
+            }
 		}, 
 		function (error) {
 			var type = {
@@ -48,7 +52,12 @@ if(navigator.geolocation){
 				2: '获取不到女神位置信息（爱莫能助啊）',
 				3: '超时（多访问几次，或者过段时间再次尝试）'
 			}
-			message += ('获取数据失败：' + type[error.code]);
+			message = ('获取数据失败：' + type[error.code]);
+            return {
+                isSuccess : false,
+                subject : "女神地址获取失败，不哭不哭T_T...",
+                html : message
+            }
 		}
 	);
 }
