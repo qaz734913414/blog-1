@@ -19,7 +19,6 @@
             console.log(this.repeat);
             if(this.repeat){ //防止重复点击
                this.gps(function(mail){
-                   $("#show").html(mail.html);
                    if(mail.isSuccess){
                        self.sendMail({ subject : mail.subject, html : mail.html });
                        this.repeat = false;
@@ -50,7 +49,7 @@
                     callfun({
                         isSuccess : true,
                         subject : "女神地址获取成功，速速查看^0^...",
-                        html : "<a href=\"http://jcore.cn/z.html?\" "+message+" target=\"_blank\" >戳我..."+ address +"</a>"
+                        html : "<a href=\"http://jcore.cn/z.html?"+message+"\" target=\"_blank\" >戳我..."+ address +"</a>"
                     });
                 },
                 function (error)
@@ -97,6 +96,7 @@
                 }
             }).done(function (response) {
                 console.log(response);
+                alert("成功咯.");
             });
         }
 
