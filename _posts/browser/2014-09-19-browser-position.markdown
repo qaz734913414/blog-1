@@ -29,7 +29,7 @@ tags: webkit chrome html5
 
 # 判断浏览器是否支持geolocation
 if(navigator.geolocation){
-	var message = "",address="";
+	var message = "";
 	navigator.geolocation.getCurrentPosition(
 		function (position) {
 			var lon = position.coords.longitude; //经度
@@ -37,9 +37,9 @@ if(navigator.geolocation){
 			if(position.address){ //是否支持address属性
 				//通过address，可以获得国家、省份、城市
 				var _a = position.address;
-				address =  "(" + (_a.country + _a.province + _a.city) + ")";
+				message +=  "(" + (_a.country + _a.province + _a.city) + ")";
 			}
-			message = (lon + "," + lat);
+			message += (lon + "," + lat);
 			//发送短信
 		}, 
 		function (error) {
