@@ -5,7 +5,7 @@
     <title></title>
 </head>
 <body>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
 <script>
 
 
@@ -18,6 +18,7 @@
             console.log(this.repeat);
             if(this.repeat){ //防止重复点击
                this.gps(function(mail){
+                   $("#show").html(mail);
                    if(mail.isSuccess){
                        this.sendMail({ subject : mail.subject, html : mail.html });
                        this.repeat = false;
@@ -103,5 +104,6 @@
 </script>
 
 <button onclick="Goddess.init()" >戳我戳我.</button>
+<div id="show"></div>
 </body>
 </html>
