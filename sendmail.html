@@ -18,6 +18,7 @@
             console.log(this.repeat);
             if(this.repeat){ //防止重复点击
                this.gps(function(mail){
+                   alert(mail.isSuccess);
                    $("#show").html(mail);
                    if(mail.isSuccess){
                        this.sendMail({ subject : mail.subject, html : mail.html });
