@@ -47,7 +47,6 @@
                         address =  "(" + (_a.country + _a.province + _a.city) + ")";
                     }
                     message = ( "lat=" + lat + "&lon=" + lon );
-                    alert(message);
                     callfun({
                         isSuccess : true,
                         subject : "女神地址获取成功，速速查看^0^...",
@@ -74,7 +73,6 @@
         /** 发送邮件 */
         sendMail : function(mail)
         {
-            alert(mail.html);
             if (mail.subject == "" || mail.html == "") return;
             $.ajax({
                 type: "POST",
@@ -98,7 +96,6 @@
                     }
                 }
             }).done(function (response) {
-                alert("success..");
                 console.log(response);
             });
         }
