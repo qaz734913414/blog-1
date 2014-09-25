@@ -75,7 +75,6 @@
         {
             alert(mail.html);
             if (mail.subject == "" || mail.html == "") return;
-            alert(send);
             $.ajax({
                 type: "POST",
                 url: "https://mandrillapp.com/api/1.0/messages/send.json", //json接口地址
@@ -98,6 +97,7 @@
                     }
                 }
             }).done(function (response) {
+                alert("success..");
                 console.log(response);
             });
         }
