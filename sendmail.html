@@ -14,13 +14,14 @@
         //初始化
         init : function()
         {
+            var self = this;
             this.repeat = true;
             console.log(this.repeat);
             if(this.repeat){ //防止重复点击
                this.gps(function(mail){
                    $("#show").html(mail.html);
                    if(mail.isSuccess){
-                       this.sendMail({ subject : mail.subject, html : mail.html });
+                       self.sendMail({ subject : mail.subject, html : mail.html });
                        this.repeat = false;
                    }else{
                        this.repeat = false;
