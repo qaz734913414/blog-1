@@ -22,10 +22,23 @@ tags: webkit chrome html5
 
 {% endhighlight %}
 
-> 实现技术：
+> 使用技术：
 
-|| *项目基于* || *说明* || *版本* ||
-|| jQuery || javascript || 1.11.1 ||
+{% highlight html %}
+
++-----------+---------+-------------------------+
+|  Project  | Version |       Description       |
++-----------------------------------------------+
+|  jQuery   | 1.11.1  |  javascript Framework   |
++-----------------------------------------------+
+| MailChimp |   1.0   |     Mail Providers      |
++-----------------------------------------------+
+| Map Baidu |   2.0   |     Map Providers       |
++-----------------------------------------------+
+|Geolocation|  html5  |     Geolocation api     |
++-----------+---------+-------------------------+
+
+{% endhighlight %}
 
 > HTML5 Geolocation API的使用方法及实现原理
 
