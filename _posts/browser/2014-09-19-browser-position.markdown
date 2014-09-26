@@ -65,6 +65,8 @@ Mandrill 创建API keys：
 
 ![Mail_Mandrill_2]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-2.jpg)
 
+
+
 > HTML5 Geolocation API的使用方法及实现原理
 
 女神访问页面脚本：
