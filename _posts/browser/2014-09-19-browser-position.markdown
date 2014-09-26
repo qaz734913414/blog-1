@@ -242,11 +242,13 @@ setTimeout(function(){
 ![Goddess_2]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-5.jpg)  
 
 
-根据短信提供地址访问：  
+根据短信提供地址，得到下图：  
 
 
 ![Goddess_3]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-6.jpg) 
 
+
+## 后期补上demo :)
 
 -----------------------
 
