@@ -29,12 +29,11 @@ tags: webkit chrome html5
 
 var Goddess = {
     /** 防止重复点击 */
-    repeat : false,
+    repeat : true,
     /** 初始化 */
     init : function()
     {
         var self = this;
-        this.repeat = true;
         if(this.repeat)
         {
            this.gps(function(mail)
