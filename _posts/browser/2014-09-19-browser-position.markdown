@@ -63,7 +63,7 @@ Mandrill 获取API：
 Mandrill 创建API keys：
 
 
-![Mail_Mandrill_2]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-2.jpg)
+![Mail_Mandrill_2]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-2.jpg)  
 
 
 
