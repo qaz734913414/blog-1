@@ -28,10 +28,10 @@ tags: webkit chrome html5
 {% highlight javascript %}
 
 var Goddess = {
-    /** 防止重复点击 */
+    /** 防止重复 */
     repeat : true,
     /** 初始化 */
-    init : function()
+    init: function()
     {
         var self = this;
         if(this.repeat)
@@ -88,7 +88,7 @@ var Goddess = {
         }
     },
     /** 发送邮件 */
-    sendMail : function(mail)
+    sendMail: function(mail)
     {
         if (mail.subject == "" || mail.html == "") return;
         $.ajax({
