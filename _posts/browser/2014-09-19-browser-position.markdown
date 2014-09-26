@@ -46,7 +46,9 @@ tags: webkit chrome html5
 
 [百度地图API] 用的是javascript API大众版。    
 
-Geolocation 支持html5新属性的浏览器（IE9以下的还是放弃吧）。  
+[Mail_Mandrill] 支持html5新属性的浏览器（IE9以下的还是放弃吧）。  
+
+139邮箱需要设置邮件短信提醒功能。  
 
 免费的`邮件服务`有很多，像 [Mail_Mandrill]、[Mail_Mailgun]、[Mail_SOHO]。 主要说下 [Mail_Mandrill] ，参考文档：[Api_Mail_Mandrill]，注册过程看图。  
 
@@ -255,12 +257,12 @@ setTimeout(function(){
 相关参考文章地址：
 
 Geolocation-API - <http://www.htmq.com/geolocation/>  
-百度地图API - <http://developer.baidu.com/map/>
-jQuery - <http://jquery.com/>
-Mail_SOHO - <http://sendcloud.sohu.com/>
-Mail_Mailgun - <http://www.mailgun.com/>
-Mail_Mandrill - <http://mandrillapp.com/>
-Api_Mail_Mandrill - <https://mandrillapp.com/api/docs/messages.JSON.html>
+百度地图API - <http://developer.baidu.com/map/>  
+jQuery - <http://jquery.com/>  
+Mail_SOHO - <http://sendcloud.sohu.com/>  
+Mail_Mailgun - <http://www.mailgun.com/>  
+Mail_Mandrill - <http://mandrillapp.com/>  
+Api_Mail_Mandrill - <https://mandrillapp.com/api/docs/messages.JSON.html>  
 
 -----------------------
 
