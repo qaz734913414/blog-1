@@ -29,7 +29,7 @@ tags: webkit chrome html5
 +-----------+---------+-------------------------+
 |  Project  | Version |       Description       |
 +-----------------------------------------------+
-|  jQuery   | 1.11.1  |  javascript Framework   |
+|  jQuery   | 1.11.1  |  javaScript Framework   |
 +-----------------------------------------------+
 | MailChimp |   1.0   |     Mail Providers      |
 +-----------------------------------------------+
