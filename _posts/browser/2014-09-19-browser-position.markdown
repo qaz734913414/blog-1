@@ -27,97 +27,31 @@ tags: webkit chrome html5
 女神访问页面脚本：
 {% highlight javascript %}
 
-var Goddess = {
-    repeat : false,
-    //初始化
-    init : function()
-    {
-        var self = this;
-        this.repeat = true;
-        if(this.repeat) //防止重复点击
-        {
-           this.gps(function(mail)
-           {
-                self.sendMail({ subject : mail.subject, html : mail.html });
-                this.repeat = false;
-           });
-        }
-    },
-    //获取gps经度纬度坐标
-    gps: function(callfun)
-    {
-        if(navigator.geolocation)
-        {
-            var message = "", address="";
-            navigator.geolocation.getCurrentPosition(function (position)
-            {
-                var lon = position.coords.longitude; //经度
-                var lat = position.coords.latitude;  //纬度
-
-                if(position.address) //是否支持address属性
-                {
-                    //通过address，可以获得国家、省份、城市
-                    var _a = position.address;
-                    address =  "(" + (_a.country + _a.province + _a.city) + ")";
-                }
-                message = ( "lat=" + lat + "&lon=" + lon );
-                callfun({
-                    tip : true,
-                    subject : "女神地址获取成功，速速查看^0^...",
-                    html : "<a href=\"http://jcore.cn/getaddress.html?"+message+"\" target=\"_blank\" >戳我..."+ address +"</a>"
-                });
-            },
-            function (error)
-            {
-                var type = //转义友好提示
-                {
-                    1: ['这里转义友好提示.[1]', "女神拒绝提供地理位置（自己想办法咯）"],
-                    2: ['这里转义友好提示.[2]', "获取不到女神位置信息（爱莫能助啊）"],
-                    3: ['这里转义友好提示.[3]', "超时（多访问几次，或者过段时间再次尝试）"]
-                }
-                var tip = type[error.code];
-                alert(tip[0]);
-                message = ('获取数据失败：' + tip[1]);
-                callfun({  //失败也发送错误提醒
-                    tip : true,
-                    subject : "女神地址获取失败，不哭不哭T_T...",
-                    html : message
-                });
-            });
-        }
-    },
-    /** 发送邮件 */
-    sendMail : function(mail)
-    {
-        if (mail.subject == "" || mail.html == "") return;
-        $.ajax({
-            type: "POST",
-            url: "https://mandrillapp.com/api/1.0/messages/send.json", //json接口地址
-            data:
-            {
-                "key": "xuMao7xRBKlImfxtfl3IlA", //服务允许key
-                "message":
-                {
-                    "from_email": "zj7687362@gmail.com", //发送邮件地址
-                    "to": //发送信息(可多个同时发送)
-                    [
-                        {
-                            "email": "zhangjiajie1314@139.com",
-                            "name": "张嘉杰",
-                            "type": "to"
-                        }
-                    ],
-                    "subject": mail.subject || "", //邮件标题
-                    "html": mail.html || "" //邮件内容
-                }
-            }
-        }).done(function (response) {
-            console.log(response);
-            alert("成功咯.");
-        });
-    }
+# 判断浏览器是否支持geolocation
+if(navigator.geolocation){
+	var message = "";
+	navigator.geolocation.getCurrentPosition(
+		function (position) {
+			var lon = position.coords.longitude; //经度
+			var lat = position.coords.latitude; //纬度
+			if(position.address){ //是否支持address属性
+				//通过address，可以获得国家、省份、城市
+				var _a = position.address;
+				message +=  "(" + (_a.country + _a.province + _a.city) + ")";
+			}
+			message += (lon + "," + lat);
+			//发送短信
+		},
+		function (error) {
+			var type = {
+				1: '女神拒绝提供地理位置（自己想办法咯）',
+				2: '获取不到女神位置信息（爱莫能助啊）',
+				3: '超时（多访问几次，或者过段时间再次尝试）'
+			}
+			console.log('获取数据失败：' + type[error.code]);
+		}
+	);
 }
-
 {% endhighlight %}
 
 ###未完待续... :)

@@ -8,15 +8,15 @@
 <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
 <script>
 
-
     var Goddess = {
+        /** 防止重复点击 */
         repeat : false,
-        //初始化
+        /** 初始化 */
         init : function()
         {
             var self = this;
             this.repeat = true;
-            if(this.repeat) //防止重复点击
+            if(this.repeat)
             {
                this.gps(function(mail)
                {
@@ -25,9 +25,10 @@
                });
             }
         },
-        //获取gps经度纬度坐标
+        /** 获取gps经度纬度坐标 */
         gps: function(callfun)
         {
+            //判断浏览器是否支持geolocation
             if(navigator.geolocation)
             {
                 var message = "", address="";
@@ -98,7 +99,6 @@
                 alert("成功咯.");
             });
         }
-
     }
 
 </script>
