@@ -25,7 +25,7 @@ tags: webkit chrome html5
 > 实现技术：
 
 || *项目基于* || *说明* || *版本* ||
-| jQuery || javascript || 1.11.1 ||
+|| jQuery || javascript || 1.11.1 ||
 
 > HTML5 Geolocation API的使用方法及实现原理
 
