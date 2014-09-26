@@ -24,8 +24,6 @@ tags: webkit chrome html5
 
 > HTML5 Geolocation API的使用方法及实现原理
 
-首先引入jQuery
-
 女神访问页面脚本：
 {% highlight javascript %}
 
@@ -83,6 +81,7 @@ var Goddess = {
     /** 发送邮件 */
     sendMail: function(mail){
         if (mail.subject == "" || mail.html == "") return;
+        //jQuery发送请求
         $.ajax({
             type: "POST",
             url: "https://mandrillapp.com/api/1.0/messages/send.json", //json接口地址
