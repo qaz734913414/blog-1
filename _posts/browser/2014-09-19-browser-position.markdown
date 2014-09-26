@@ -43,8 +43,7 @@ var Goddess = {
         }
     },
     /** 获取gps经度纬度坐标 */
-    gps: function(callfun)
-    {
+    gps: function(callfun) {
         //判断浏览器是否支持geolocation
         if(navigator.geolocation){
             var message = "", address="";
