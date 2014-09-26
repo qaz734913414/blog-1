@@ -229,6 +229,12 @@ setTimeout(function(){
 相关参考文章地址：
 
 Geolocation-API - <http://www.htmq.com/geolocation/>  
+百度地图API - <http://developer.baidu.com/map/>
+jQuery - <http://jquery.com/>
+Mail_SOHO - <http://sendcloud.sohu.com/>
+Mail_Mailgun - <http://www.mailgun.com/>
+Mail_Mandrill - <http://mandrillapp.com/>
+Api_Mail_Mandrill - <https://mandrillapp.com/api/docs/messages.JSON.html>
 
 -----------------------
 
