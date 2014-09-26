@@ -40,7 +40,7 @@ tags: webkit chrome html5
 
 {% endhighlight %}
 
-> 技术介绍下载、注册。
+> 技术介绍
 
 [jQuery] 具体就不说啦 大家可以去官网方站。  
 
