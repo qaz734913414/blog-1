@@ -224,19 +224,19 @@ setTimeout(function(){
 
 > 演示操作流程截图：(演示使用iphone5s默认浏览器Safari)
 
-女神初次访问地址未开权限提示：
+女神初次访问地址未开权限提示：（记得修改友好提示）
 
 
 ![Goddess_0]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-3.jpg)  
 
 
-打开浏览器Safari定位服务：  
+打开浏览器Safari定位服务：
 
 
 ![Goddess_1]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-4.jpg)  
 
 
-允许使用当前位置：  
+允许使用当前位置：
 
 
 ![Goddess_2]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-5.jpg)  
@@ -245,10 +245,10 @@ setTimeout(function(){
 根据短信提供地址，得到下图：  
 
 
-![Goddess_3]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-6.jpg) 
+![Goddess_3]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-6.jpg)   
 
 
-## 后期补上demo :)
+## 到这里基本就完成了。后期补上demo :)
 
 -----------------------
 
