@@ -40,6 +40,12 @@ tags: webkit chrome html5
 
 {% endhighlight %}
 
+> 技术介绍下载、注册。
+1. [jQuery] 具体就不说啦 大家可以去官网网站，直接下载 <http://jquery.com/>
+2. 关于`邮件服务`有很多，像 [Mail_Mandrill]、[Mail_Mailgun]、[Mail_SOHO]。 主要介绍下 [Mail_Mandrill] ，支持很多种语言，像`python`、`ruby`、`nodejs`、`JSON`、`curl`、`php`等等，参考文档：[Api_Mail_Mandrill]。
+下面来说一下注册过程。
+
+
 > HTML5 Geolocation API的使用方法及实现原理
 
 女神访问页面脚本：
@@ -206,3 +212,10 @@ setTimeout(function(){
 Geolocation-API - <http://www.htmq.com/geolocation/>  
 
 -----------------------
+
+
+[jQuery]: http://jquery.com/
+[Mail_SOHO]: http://sendcloud.sohu.com/
+[Mail_Mailgun]: http://www.mailgun.com/
+[Mail_Mandrill]: http://mandrillapp.com/
+[Api_Mail_Mandrill]: https://mandrillapp.com/api/docs/messages.JSON.html
