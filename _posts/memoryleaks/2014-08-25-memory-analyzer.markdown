@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "关于内存工具MemoryAnalyzer的分析和使用"
-description: "关于内存工具MemoryAnalyzer的分析和使用"
+description: "内存工具,内存分析工具,关于内存工具MemoryAnalyzer的分析和使用"
 keywords: MemoryAnalyzer,dump,architect
 origin: 张嘉杰.原创
 date:   2014-08-25

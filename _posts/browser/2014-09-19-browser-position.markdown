@@ -1,8 +1,8 @@
 ---
 layout: page
-title:  "定位女神在哪里"
-description: "浏览器定位,女神在哪里,定位女神"
-keywords: 浏览器定位,女神在哪里,定位女神,webkit,chrome,safari
+title:  "屌丝的福音.定位女神在哪里"
+description: "屌丝的福音,浏览器定位,女神在哪里,定位女神"
+keywords: 屌丝的福音,浏览器定位,女神在哪里,定位女神,webkit,chrome,safari
 origin: 张嘉杰.原创
 date:   2014-09-19
 category: browser

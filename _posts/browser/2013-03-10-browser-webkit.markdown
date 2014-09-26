@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "关于webkit内核浏览器"
-description: "关于webkit内核浏览器"
+description: "浏览器的秘密,关于webkit内核浏览器"
 keywords: webkit,chrome,safari
 origin: 张嘉杰.原创
 date:   2013-03-10
