@@ -45,7 +45,7 @@ tags: webkit chrome html5
  *[jQuery] 具体就不说啦 大家可以去官网方站，直接下载 <http://jquery.com/>
  *关于`邮件服务`有很多，像 [Mail_Mandrill]、[Mail_Mailgun]、[Mail_SOHO]。 主要说下 [Mail_Mandrill] ，参考文档：[Api_Mail_Mandrill]。注册过程看图。
 
-注册：
+注册账号：
 ![Mail_Mandrill_0]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.jpg)
 获取API：
 ![Mail_Mandrill_1]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.jpg)
