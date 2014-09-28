@@ -1,18 +1,18 @@
 /**!
- * Î¢ĞÅÄÚÖÃä¯ÀÀÆ÷µÄJavascript API£¬¹¦ÄÜ°üÀ¨£º
+ * å¾®ä¿¡å†…ç½®æµè§ˆå™¨çš„Javascript APIï¼ŒåŠŸèƒ½åŒ…æ‹¬ï¼š
  *
- * 1¡¢·ÖÏíµ½Î¢ĞÅÅóÓÑÈ¦
- * 2¡¢·ÖÏí¸øÎ¢ĞÅºÃÓÑ
- * 3¡¢·ÖÏíµ½ÌÚÑ¶Î¢²©
- * 4¡¢ĞÂµÄ·ÖÏí½Ó¿Ú£¬°üº¬ÅóÓÑÈ¦¡¢ºÃÓÑ¡¢Î¢²©µÄ·ÖÏí£¨for iOS£©
- * 5¡¢Òş²Ø/ÏÔÊ¾ÓÒÉÏ½ÇµÄ²Ëµ¥Èë¿Ú
- * 6¡¢Òş²Ø/ÏÔÊ¾µ×²¿ä¯ÀÀÆ÷¹¤¾ßÀ¸
- * 7¡¢»ñÈ¡µ±Ç°µÄÍøÂç×´Ì¬
- * 8¡¢µ÷ÆğÎ¢ĞÅ¿Í»§¶ËµÄÍ¼Æ¬²¥·Å×é¼ş
- * 9¡¢¹Ø±Õ¹«ÖÚÆ½Ì¨WebÒ³Ãæ
- * 10¡¢ÅĞ¶Ïµ±Ç°ÍøÒ³ÊÇ·ñÔÚÎ¢ĞÅÄÚÖÃä¯ÀÀÆ÷ÖĞ´ò¿ª
- * 11¡¢Ôö¼Ó´ò¿ªÉ¨Ãè¶şÎ¬Âë
- * 12¡¢Ö§³ÖWeixinApiµÄ´íÎó¼à¿Ø
+ * 1ã€åˆ†äº«åˆ°å¾®ä¿¡æœ‹å‹åœˆ
+ * 2ã€åˆ†äº«ç»™å¾®ä¿¡å¥½å‹
+ * 3ã€åˆ†äº«åˆ°è…¾è®¯å¾®åš
+ * 4ã€æ–°çš„åˆ†äº«æ¥å£ï¼ŒåŒ…å«æœ‹å‹åœˆã€å¥½å‹ã€å¾®åšçš„åˆ†äº«ï¼ˆfor iOSï¼‰
+ * 5ã€éšè—/æ˜¾ç¤ºå³ä¸Šè§’çš„èœå•å…¥å£
+ * 6ã€éšè—/æ˜¾ç¤ºåº•éƒ¨æµè§ˆå™¨å·¥å…·æ 
+ * 7ã€è·å–å½“å‰çš„ç½‘ç»œçŠ¶æ€
+ * 8ã€è°ƒèµ·å¾®ä¿¡å®¢æˆ·ç«¯çš„å›¾ç‰‡æ’­æ”¾ç»„ä»¶
+ * 9ã€å…³é—­å…¬ä¼—å¹³å°Webé¡µé¢
+ * 10ã€åˆ¤æ–­å½“å‰ç½‘é¡µæ˜¯å¦åœ¨å¾®ä¿¡å†…ç½®æµè§ˆå™¨ä¸­æ‰“å¼€
+ * 11ã€å¢åŠ æ‰“å¼€æ‰«æäºŒç»´ç 
+ * 12ã€æ”¯æŒWeixinApiçš„é”™è¯¯ç›‘æ§
  *
  * @author zhaoxianlie(http://www.baidufe.com)
  */
@@ -21,22 +21,22 @@ var WeixinApi = (function () {
     "use strict";
 
     /**
-     * ·ÖÏíµ½Î¢ĞÅÅóÓÑÈ¦
-     * @param       {Object}    data       ´ı·ÖÏíµÄĞÅÏ¢
-     * @p-config    {String}    appId      ¹«ÖÚÆ½Ì¨µÄappId£¨·şÎñºÅ¿ÉÓÃ£©
-     * @p-config    {String}    imgUrl     Í¼Æ¬µØÖ·
-     * @p-config    {String}    link       Á´½ÓµØÖ·
-     * @p-config    {String}    desc       ÃèÊö
-     * @p-config    {String}    title      ·ÖÏíµÄ±êÌâ
+     * åˆ†äº«åˆ°å¾®ä¿¡æœ‹å‹åœˆ
+     * @param       {Object}    data       å¾…åˆ†äº«çš„ä¿¡æ¯
+     * @p-config    {String}    appId      å…¬ä¼—å¹³å°çš„appIdï¼ˆæœåŠ¡å·å¯ç”¨ï¼‰
+     * @p-config    {String}    imgUrl     å›¾ç‰‡åœ°å€
+     * @p-config    {String}    link       é“¾æ¥åœ°å€
+     * @p-config    {String}    desc       æè¿°
+     * @p-config    {String}    title      åˆ†äº«çš„æ ‡é¢˜
      *
-     * @param       {Object}    callbacks  Ïà¹Ø»Øµ÷·½·¨
-     * @p-config    {Boolean}   async                   ready·½·¨ÊÇ·ñĞèÒªÒì²½Ö´ĞĞ£¬Ä¬ÈÏfalse
-     * @p-config    {Function}  ready(argv)             ¾ÍĞ÷×´Ì¬
-     * @p-config    {Function}  dataLoaded(data)        Êı¾İ¼ÓÔØÍê³Éºóµ÷ÓÃ£¬asyncÎªtrueÊ±ÓĞÓÃ£¬Ò²¿ÉÒÔÎª¿Õ
-     * @p-config    {Function}  cancel(resp)    È¡Ïû
-     * @p-config    {Function}  fail(resp)      Ê§°Ü
-     * @p-config    {Function}  confirm(resp)   ³É¹¦
-     * @p-config    {Function}  all(resp)       ÎŞÂÛ³É¹¦Ê§°Ü¶¼»áÖ´ĞĞµÄ»Øµ÷
+     * @param       {Object}    callbacks  ç›¸å…³å›è°ƒæ–¹æ³•
+     * @p-config    {Boolean}   async                   readyæ–¹æ³•æ˜¯å¦éœ€è¦å¼‚æ­¥æ‰§è¡Œï¼Œé»˜è®¤false
+     * @p-config    {Function}  ready(argv)             å°±ç»ªçŠ¶æ€
+     * @p-config    {Function}  dataLoaded(data)        æ•°æ®åŠ è½½å®Œæˆåè°ƒç”¨ï¼Œasyncä¸ºtrueæ—¶æœ‰ç”¨ï¼Œä¹Ÿå¯ä»¥ä¸ºç©º
+     * @p-config    {Function}  cancel(resp)    å–æ¶ˆ
+     * @p-config    {Function}  fail(resp)      å¤±è´¥
+     * @p-config    {Function}  confirm(resp)   æˆåŠŸ
+     * @p-config    {Function}  all(resp)       æ— è®ºæˆåŠŸå¤±è´¥éƒ½ä¼šæ‰§è¡Œçš„å›è°ƒ
      */
     function weixinShareTimeline(data, callbacks) {
         callbacks = callbacks || {};
@@ -46,27 +46,27 @@ var WeixinApi = (function () {
                 "img_url":theData.imgUrl,
                 "link":theData.link,
                 "desc":theData.title,
-                "title":theData.desc, // ×¢ÒâÕâÀïÒª·ÖÏí³öÈ¥µÄÄÚÈİÊÇdesc
+                "title":theData.desc, // æ³¨æ„è¿™é‡Œè¦åˆ†äº«å‡ºå»çš„å†…å®¹æ˜¯desc
                 "img_width":"640",
                 "img_height":"640"
             }, function (resp) {
                 switch (resp.err_msg) {
-                    // share_timeline:cancel ÓÃ»§È¡Ïû
+                    // share_timeline:cancel ç”¨æˆ·å–æ¶ˆ
                     case 'share_timeline:cancel':
                         callbacks.cancel && callbacks.cancel(resp);
                         break;
-                    // share_timeline:confirm ·¢ËÍ³É¹¦
+                    // share_timeline:confirm å‘é€æˆåŠŸ
                     case 'share_timeline:confirm':
                     case 'share_timeline:ok':
                         callbacks.confirm && callbacks.confirm(resp);
                         break;
-                    // share_timeline:fail¡¡·¢ËÍÊ§°Ü
+                    // share_timeline:failã€€å‘é€å¤±è´¥
                     case 'share_timeline:fail':
                     default:
                         callbacks.fail && callbacks.fail(resp);
                         break;
                 }
-                // ÎŞÂÛ³É¹¦Ê§°Ü¶¼»áÖ´ĞĞµÄ»Øµ÷
+                // æ— è®ºæˆåŠŸå¤±è´¥éƒ½ä¼šæ‰§è¡Œçš„å›è°ƒ
                 callbacks.all && callbacks.all(resp);
             });
         };
@@ -80,10 +80,10 @@ var WeixinApi = (function () {
                     window["_wx_loadedCb_"](newData);
                     shareTimeline(newData);
                 };
-                // È»ºó¾ÍĞ÷
+                // ç„¶åå°±ç»ª
                 callbacks.ready && callbacks.ready(argv);
             } else {
-                // ¾ÍĞ÷×´Ì¬
+                // å°±ç»ªçŠ¶æ€
                 callbacks.ready && callbacks.ready(argv);
                 shareTimeline(data);
             }
@@ -91,22 +91,22 @@ var WeixinApi = (function () {
     }
 
     /**
-     * ·¢ËÍ¸øÎ¢ĞÅÉÏµÄºÃÓÑ
-     * @param       {Object}    data       ´ı·ÖÏíµÄĞÅÏ¢
-     * @p-config    {String}    appId      ¹«ÖÚÆ½Ì¨µÄappId£¨·şÎñºÅ¿ÉÓÃ£©
-     * @p-config    {String}    imgUrl     Í¼Æ¬µØÖ·
-     * @p-config    {String}    link       Á´½ÓµØÖ·
-     * @p-config    {String}    desc       ÃèÊö
-     * @p-config    {String}    title      ·ÖÏíµÄ±êÌâ
+     * å‘é€ç»™å¾®ä¿¡ä¸Šçš„å¥½å‹
+     * @param       {Object}    data       å¾…åˆ†äº«çš„ä¿¡æ¯
+     * @p-config    {String}    appId      å…¬ä¼—å¹³å°çš„appIdï¼ˆæœåŠ¡å·å¯ç”¨ï¼‰
+     * @p-config    {String}    imgUrl     å›¾ç‰‡åœ°å€
+     * @p-config    {String}    link       é“¾æ¥åœ°å€
+     * @p-config    {String}    desc       æè¿°
+     * @p-config    {String}    title      åˆ†äº«çš„æ ‡é¢˜
      *
-     * @param       {Object}    callbacks  Ïà¹Ø»Øµ÷·½·¨
-     * @p-config    {Boolean}   async                   ready·½·¨ÊÇ·ñĞèÒªÒì²½Ö´ĞĞ£¬Ä¬ÈÏfalse
-     * @p-config    {Function}  ready(argv)             ¾ÍĞ÷×´Ì¬
-     * @p-config    {Function}  dataLoaded(data)        Êı¾İ¼ÓÔØÍê³Éºóµ÷ÓÃ£¬asyncÎªtrueÊ±ÓĞÓÃ£¬Ò²¿ÉÒÔÎª¿Õ
-     * @p-config    {Function}  cancel(resp)    È¡Ïû
-     * @p-config    {Function}  fail(resp)      Ê§°Ü
-     * @p-config    {Function}  confirm(resp)   ³É¹¦
-     * @p-config    {Function}  all(resp)       ÎŞÂÛ³É¹¦Ê§°Ü¶¼»áÖ´ĞĞµÄ»Øµ÷
+     * @param       {Object}    callbacks  ç›¸å…³å›è°ƒæ–¹æ³•
+     * @p-config    {Boolean}   async                   readyæ–¹æ³•æ˜¯å¦éœ€è¦å¼‚æ­¥æ‰§è¡Œï¼Œé»˜è®¤false
+     * @p-config    {Function}  ready(argv)             å°±ç»ªçŠ¶æ€
+     * @p-config    {Function}  dataLoaded(data)        æ•°æ®åŠ è½½å®Œæˆåè°ƒç”¨ï¼Œasyncä¸ºtrueæ—¶æœ‰ç”¨ï¼Œä¹Ÿå¯ä»¥ä¸ºç©º
+     * @p-config    {Function}  cancel(resp)    å–æ¶ˆ
+     * @p-config    {Function}  fail(resp)      å¤±è´¥
+     * @p-config    {Function}  confirm(resp)   æˆåŠŸ
+     * @p-config    {Function}  all(resp)       æ— è®ºæˆåŠŸå¤±è´¥éƒ½ä¼šæ‰§è¡Œçš„å›è°ƒ
      */
     function weixinSendAppMessage(data, callbacks) {
         callbacks = callbacks || {};
@@ -121,22 +121,22 @@ var WeixinApi = (function () {
                 "img_height":"640"
             }, function (resp) {
                 switch (resp.err_msg) {
-                    // send_app_msg:cancel ÓÃ»§È¡Ïû
+                    // send_app_msg:cancel ç”¨æˆ·å–æ¶ˆ
                     case 'send_app_msg:cancel':
                         callbacks.cancel && callbacks.cancel(resp);
                         break;
-                    // send_app_msg:confirm ·¢ËÍ³É¹¦
+                    // send_app_msg:confirm å‘é€æˆåŠŸ
                     case 'send_app_msg:confirm':
                     case 'send_app_msg:ok':
                         callbacks.confirm && callbacks.confirm(resp);
                         break;
-                    // send_app_msg:fail¡¡·¢ËÍÊ§°Ü
+                    // send_app_msg:failã€€å‘é€å¤±è´¥
                     case 'send_app_msg:fail':
                     default:
                         callbacks.fail && callbacks.fail(resp);
                         break;
                 }
-                // ÎŞÂÛ³É¹¦Ê§°Ü¶¼»áÖ´ĞĞµÄ»Øµ÷
+                // æ— è®ºæˆåŠŸå¤±è´¥éƒ½ä¼šæ‰§è¡Œçš„å›è°ƒ
                 callbacks.all && callbacks.all(resp);
             });
         };
@@ -150,10 +150,10 @@ var WeixinApi = (function () {
                     window["_wx_loadedCb_"](newData);
                     sendAppMessage(newData);
                 };
-                // È»ºó¾ÍĞ÷
+                // ç„¶åå°±ç»ª
                 callbacks.ready && callbacks.ready(argv);
             } else {
-                // ¾ÍĞ÷×´Ì¬
+                // å°±ç»ªçŠ¶æ€
                 callbacks.ready && callbacks.ready(argv);
                 sendAppMessage(data);
             }
@@ -161,19 +161,19 @@ var WeixinApi = (function () {
     }
 
     /**
-     * ·ÖÏíµ½ÌÚÑ¶Î¢²©
-     * @param       {Object}    data       ´ı·ÖÏíµÄĞÅÏ¢
-     * @p-config    {String}    link       Á´½ÓµØÖ·
-     * @p-config    {String}    desc       ÃèÊö
+     * åˆ†äº«åˆ°è…¾è®¯å¾®åš
+     * @param       {Object}    data       å¾…åˆ†äº«çš„ä¿¡æ¯
+     * @p-config    {String}    link       é“¾æ¥åœ°å€
+     * @p-config    {String}    desc       æè¿°
      *
-     * @param       {Object}    callbacks  Ïà¹Ø»Øµ÷·½·¨
-     * @p-config    {Boolean}   async                   ready·½·¨ÊÇ·ñĞèÒªÒì²½Ö´ĞĞ£¬Ä¬ÈÏfalse
-     * @p-config    {Function}  ready(argv)             ¾ÍĞ÷×´Ì¬
-     * @p-config    {Function}  dataLoaded(data)        Êı¾İ¼ÓÔØÍê³Éºóµ÷ÓÃ£¬asyncÎªtrueÊ±ÓĞÓÃ£¬Ò²¿ÉÒÔÎª¿Õ
-     * @p-config    {Function}  cancel(resp)    È¡Ïû
-     * @p-config    {Function}  fail(resp)      Ê§°Ü
-     * @p-config    {Function}  confirm(resp)   ³É¹¦
-     * @p-config    {Function}  all(resp)       ÎŞÂÛ³É¹¦Ê§°Ü¶¼»áÖ´ĞĞµÄ»Øµ÷
+     * @param       {Object}    callbacks  ç›¸å…³å›è°ƒæ–¹æ³•
+     * @p-config    {Boolean}   async                   readyæ–¹æ³•æ˜¯å¦éœ€è¦å¼‚æ­¥æ‰§è¡Œï¼Œé»˜è®¤false
+     * @p-config    {Function}  ready(argv)             å°±ç»ªçŠ¶æ€
+     * @p-config    {Function}  dataLoaded(data)        æ•°æ®åŠ è½½å®Œæˆåè°ƒç”¨ï¼Œasyncä¸ºtrueæ—¶æœ‰ç”¨ï¼Œä¹Ÿå¯ä»¥ä¸ºç©º
+     * @p-config    {Function}  cancel(resp)    å–æ¶ˆ
+     * @p-config    {Function}  fail(resp)      å¤±è´¥
+     * @p-config    {Function}  confirm(resp)   æˆåŠŸ
+     * @p-config    {Function}  all(resp)       æ— è®ºæˆåŠŸå¤±è´¥éƒ½ä¼šæ‰§è¡Œçš„å›è°ƒ
      */
     function weixinShareWeibo(data, callbacks) {
         callbacks = callbacks || {};
@@ -183,22 +183,22 @@ var WeixinApi = (function () {
                 "url":theData.link
             }, function (resp) {
                 switch (resp.err_msg) {
-                    // share_weibo:cancel ÓÃ»§È¡Ïû
+                    // share_weibo:cancel ç”¨æˆ·å–æ¶ˆ
                     case 'share_weibo:cancel':
                         callbacks.cancel && callbacks.cancel(resp);
                         break;
-                    // share_weibo:confirm ·¢ËÍ³É¹¦
+                    // share_weibo:confirm å‘é€æˆåŠŸ
                     case 'share_weibo:confirm':
                     case 'share_weibo:ok':
                         callbacks.confirm && callbacks.confirm(resp);
                         break;
-                    // share_weibo:fail¡¡·¢ËÍÊ§°Ü
+                    // share_weibo:failã€€å‘é€å¤±è´¥
                     case 'share_weibo:fail':
                     default:
                         callbacks.fail && callbacks.fail(resp);
                         break;
                 }
-                // ÎŞÂÛ³É¹¦Ê§°Ü¶¼»áÖ´ĞĞµÄ»Øµ÷
+                // æ— è®ºæˆåŠŸå¤±è´¥éƒ½ä¼šæ‰§è¡Œçš„å›è°ƒ
                 callbacks.all && callbacks.all(resp);
             });
         };
@@ -212,10 +212,10 @@ var WeixinApi = (function () {
                     window["_wx_loadedCb_"](newData);
                     shareWeibo(newData);
                 };
-                // È»ºó¾ÍĞ÷
+                // ç„¶åå°±ç»ª
                 callbacks.ready && callbacks.ready(argv);
             } else {
-                // ¾ÍĞ÷×´Ì¬
+                // å°±ç»ªçŠ¶æ€
                 callbacks.ready && callbacks.ready(argv);
                 shareWeibo(data);
             }
@@ -224,35 +224,35 @@ var WeixinApi = (function () {
 
 
     /**
-     * ĞÂµÄ·ÖÏí½Ó¿Ú
-     * @param       {Object}    data       ´ı·ÖÏíµÄĞÅÏ¢
-     * @p-config    {String}    appId      ¹«ÖÚÆ½Ì¨µÄappId£¨·şÎñºÅ¿ÉÓÃ£©
-     * @p-config    {String}    imgUrl     Í¼Æ¬µØÖ·
-     * @p-config    {String}    link       Á´½ÓµØÖ·
-     * @p-config    {String}    desc       ÃèÊö
-     * @p-config    {String}    title      ·ÖÏíµÄ±êÌâ
+     * æ–°çš„åˆ†äº«æ¥å£
+     * @param       {Object}    data       å¾…åˆ†äº«çš„ä¿¡æ¯
+     * @p-config    {String}    appId      å…¬ä¼—å¹³å°çš„appIdï¼ˆæœåŠ¡å·å¯ç”¨ï¼‰
+     * @p-config    {String}    imgUrl     å›¾ç‰‡åœ°å€
+     * @p-config    {String}    link       é“¾æ¥åœ°å€
+     * @p-config    {String}    desc       æè¿°
+     * @p-config    {String}    title      åˆ†äº«çš„æ ‡é¢˜
      *
-     * @param       {Object}    callbacks  Ïà¹Ø»Øµ÷·½·¨
-     * @p-config    {Boolean}   async                   ready·½·¨ÊÇ·ñĞèÒªÒì²½Ö´ĞĞ£¬Ä¬ÈÏfalse
-     * @p-config    {Function}  ready(argv,shareTo)             ¾ÍĞ÷×´Ì¬
-     * @p-config    {Function}  dataLoaded(data)        Êı¾İ¼ÓÔØÍê³Éºóµ÷ÓÃ£¬asyncÎªtrueÊ±ÓĞÓÃ£¬Ò²¿ÉÒÔÎª¿Õ
-     * @p-config    {Function}  cancel(resp,shareTo)    È¡Ïû
-     * @p-config    {Function}  fail(resp,shareTo)      Ê§°Ü
-     * @p-config    {Function}  confirm(resp,shareTo)   ³É¹¦
-     * @p-config    {Function}  all(resp,shareTo)       ÎŞÂÛ³É¹¦Ê§°Ü¶¼»áÖ´ĞĞµÄ»Øµ÷
+     * @param       {Object}    callbacks  ç›¸å…³å›è°ƒæ–¹æ³•
+     * @p-config    {Boolean}   async                   readyæ–¹æ³•æ˜¯å¦éœ€è¦å¼‚æ­¥æ‰§è¡Œï¼Œé»˜è®¤false
+     * @p-config    {Function}  ready(argv,shareTo)             å°±ç»ªçŠ¶æ€
+     * @p-config    {Function}  dataLoaded(data)        æ•°æ®åŠ è½½å®Œæˆåè°ƒç”¨ï¼Œasyncä¸ºtrueæ—¶æœ‰ç”¨ï¼Œä¹Ÿå¯ä»¥ä¸ºç©º
+     * @p-config    {Function}  cancel(resp,shareTo)    å–æ¶ˆ
+     * @p-config    {Function}  fail(resp,shareTo)      å¤±è´¥
+     * @p-config    {Function}  confirm(resp,shareTo)   æˆåŠŸ
+     * @p-config    {Function}  all(resp,shareTo)       æ— è®ºæˆåŠŸå¤±è´¥éƒ½ä¼šæ‰§è¡Œçš„å›è°ƒ
      */
     function weixinGeneralShare(data, callbacks) {
         callbacks = callbacks || {};
         var generalShare = function (general,theData) {
 
-            // Èç¹ûÊÇ·ÖÏíµ½ÅóÓÑÈ¦£¬ÔòĞèÒª°ÑtitleºÍdesc½»»»Ò»ÏÂ
+            // å¦‚æœæ˜¯åˆ†äº«åˆ°æœ‹å‹åœˆï¼Œåˆ™éœ€è¦æŠŠtitleå’Œdescäº¤æ¢ä¸€ä¸‹
             if(general.shareTo == 'timeline') {
                 var title = theData.title;
                 theData.title = theData.desc || title;
                 theData.desc = title;
             }
 
-            // ·ÖÏí³öÈ¥
+            // åˆ†äº«å‡ºå»
             general.generalShare({
                 "appid":theData.appId ? theData.appId : '',
                 "img_url":theData.imgUrl,
@@ -263,22 +263,22 @@ var WeixinApi = (function () {
                 "img_height":"640"
             }, function (resp) {
                 switch (resp.err_msg) {
-                    // general_share:cancel ÓÃ»§È¡Ïû
+                    // general_share:cancel ç”¨æˆ·å–æ¶ˆ
                     case 'general_share:cancel':
                         callbacks.cancel && callbacks.cancel(resp ,general.shareTo);
                         break;
-                    // general_share:confirm ·¢ËÍ³É¹¦
+                    // general_share:confirm å‘é€æˆåŠŸ
                     case 'general_share:confirm':
                     case 'general_share:ok':
                         callbacks.confirm && callbacks.confirm(resp ,general.shareTo);
                         break;
-                    // general_share:fail¡¡·¢ËÍÊ§°Ü
+                    // general_share:failã€€å‘é€å¤±è´¥
                     case 'general_share:fail':
                     default:
                         callbacks.fail && callbacks.fail(resp ,general.shareTo);
                         break;
                 }
-                // ÎŞÂÛ³É¹¦Ê§°Ü¶¼»áÖ´ĞĞµÄ»Øµ÷
+                // æ— è®ºæˆåŠŸå¤±è´¥éƒ½ä¼šæ‰§è¡Œçš„å›è°ƒ
                 callbacks.all && callbacks.all(resp ,general.shareTo);
             });
         };
@@ -292,10 +292,10 @@ var WeixinApi = (function () {
                     window["_wx_loadedCb_"](newData);
                     generalShare(general,newData);
                 };
-                // È»ºó¾ÍĞ÷
+                // ç„¶åå°±ç»ª
                 callbacks.ready && callbacks.ready(general,general.shareTo);
             } else {
-                // ¾ÍĞ÷×´Ì¬
+                // å°±ç»ªçŠ¶æ€
                 callbacks.ready && callbacks.ready(general,general.shareTo);
                 generalShare(general,data);
             }
@@ -303,11 +303,11 @@ var WeixinApi = (function () {
     }
 
     /**
-     * ¼Ó¹Ø×¢£¨´Ë¹¦ÄÜÖ»ÊÇÔİÊ±ÏÈ¼ÓÉÏ£¬²»¹ıÒòÎªÈ¨ÏŞÏŞÖÆÎÊÌâ£¬²»ÄÜÓÃ£¬Èç¹ûÄãµÄÕ¾µãÊÇ²¿ÊğÔÚ*.qq.comÏÂ£¬Ò²Ğí¿ÉĞĞ£©
-     * @param       {String}    appWeixinId     Î¢ĞÅ¹«ÖÚºÅID
-     * @param       {Object}    callbacks       »Øµ÷·½·¨
-     * @p-config    {Function}  fail(resp)      Ê§°Ü
-     * @p-config    {Function}  confirm(resp)   ³É¹¦
+     * åŠ å…³æ³¨ï¼ˆæ­¤åŠŸèƒ½åªæ˜¯æš‚æ—¶å…ˆåŠ ä¸Šï¼Œä¸è¿‡å› ä¸ºæƒé™é™åˆ¶é—®é¢˜ï¼Œä¸èƒ½ç”¨ï¼Œå¦‚æœä½ çš„ç«™ç‚¹æ˜¯éƒ¨ç½²åœ¨*.qq.comä¸‹ï¼Œä¹Ÿè®¸å¯è¡Œï¼‰
+     * @param       {String}    appWeixinId     å¾®ä¿¡å…¬ä¼—å·ID
+     * @param       {Object}    callbacks       å›è°ƒæ–¹æ³•
+     * @p-config    {Function}  fail(resp)      å¤±è´¥
+     * @p-config    {Function}  confirm(resp)   æˆåŠŸ
      */
     function addContact(appWeixinId,callbacks){
         callbacks = callbacks || {};
@@ -325,11 +325,11 @@ var WeixinApi = (function () {
     }
 
     /**
-     * µ÷ÆğÎ¢ĞÅNativeµÄÍ¼Æ¬²¥·Å×é¼ş¡£
-     * ÕâÀï±ØĞë¶Ô²ÎÊı½øĞĞÇ¿¼ì²â£¬Èç¹û²ÎÊı²»ºÏ·¨£¬Ö±½Ó»áµ¼ÖÂÎ¢ĞÅ¿Í»§¶Ëcrash
+     * è°ƒèµ·å¾®ä¿¡Nativeçš„å›¾ç‰‡æ’­æ”¾ç»„ä»¶ã€‚
+     * è¿™é‡Œå¿…é¡»å¯¹å‚æ•°è¿›è¡Œå¼ºæ£€æµ‹ï¼Œå¦‚æœå‚æ•°ä¸åˆæ³•ï¼Œç›´æ¥ä¼šå¯¼è‡´å¾®ä¿¡å®¢æˆ·ç«¯crash
      *
-     * @param {String} curSrc µ±Ç°²¥·ÅµÄÍ¼Æ¬µØÖ·
-     * @param {Array} srcList Í¼Æ¬µØÖ·ÁĞ±í
+     * @param {String} curSrc å½“å‰æ’­æ”¾çš„å›¾ç‰‡åœ°å€
+     * @param {Array} srcList å›¾ç‰‡åœ°å€åˆ—è¡¨
      */
     function imagePreview(curSrc,srcList) {
         if(!curSrc || !srcList || srcList.length == 0) {
@@ -342,7 +342,7 @@ var WeixinApi = (function () {
     }
 
     /**
-     * ÏÔÊ¾ÍøÒ³ÓÒÉÏ½ÇµÄ°´Å¥
+     * æ˜¾ç¤ºç½‘é¡µå³ä¸Šè§’çš„æŒ‰é’®
      */
     function showOptionMenu() {
         WeixinJSBridge.call('showOptionMenu');
@@ -350,35 +350,35 @@ var WeixinApi = (function () {
 
 
     /**
-     * Òş²ØÍøÒ³ÓÒÉÏ½ÇµÄ°´Å¥
+     * éšè—ç½‘é¡µå³ä¸Šè§’çš„æŒ‰é’®
      */
     function hideOptionMenu() {
         WeixinJSBridge.call('hideOptionMenu');
     }
 
     /**
-     * ÏÔÊ¾µ×²¿¹¤¾ßÀ¸
+     * æ˜¾ç¤ºåº•éƒ¨å·¥å…·æ 
      */
     function showToolbar() {
         WeixinJSBridge.call('showToolbar');
     }
 
     /**
-     * Òş²Øµ×²¿¹¤¾ßÀ¸
+     * éšè—åº•éƒ¨å·¥å…·æ 
      */
     function hideToolbar() {
         WeixinJSBridge.call('hideToolbar');
     }
 
     /**
-     * ·µ»ØÈçÏÂ¼¸ÖÖÀàĞÍ£º
+     * è¿”å›å¦‚ä¸‹å‡ ç§ç±»å‹ï¼š
      *
-     * network_type:wifi     wifiÍøÂç
-     * network_type:edge     ·Çwifi,°üº¬3G/2G
-     * network_type:fail     ÍøÂç¶Ï¿ªÁ¬½Ó
-     * network_type:wwan     2g»òÕß3g
+     * network_type:wifi     wifiç½‘ç»œ
+     * network_type:edge     éwifi,åŒ…å«3G/2G
+     * network_type:fail     ç½‘ç»œæ–­å¼€è¿æ¥
+     * network_type:wwan     2gæˆ–è€…3g
      *
-     * Ê¹ÓÃ·½·¨£º
+     * ä½¿ç”¨æ–¹æ³•ï¼š
      * WeixinApi.getNetworkType(function(networkType){
      *
      * });
@@ -388,28 +388,28 @@ var WeixinApi = (function () {
     function getNetworkType(callback) {
         if (callback && typeof callback == 'function') {
             WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
-                // ÔÚÕâÀïÄÃµ½e.err_msg£¬ÕâÀïÃæ¾Í°üº¬ÁËËùÓĞµÄÍøÂçÀàĞÍ
+                // åœ¨è¿™é‡Œæ‹¿åˆ°e.err_msgï¼Œè¿™é‡Œé¢å°±åŒ…å«äº†æ‰€æœ‰çš„ç½‘ç»œç±»å‹
                 callback(e.err_msg);
             });
         }
     }
 
     /**
-     * ¹Ø±Õµ±Ç°Î¢ĞÅ¹«ÖÚÆ½Ì¨Ò³Ãæ
-     * @param       {Object}    callbacks       »Øµ÷·½·¨
-     * @p-config    {Function}  fail(resp)      Ê§°Ü
-     * @p-config    {Function}  success(resp)   ³É¹¦
+     * å…³é—­å½“å‰å¾®ä¿¡å…¬ä¼—å¹³å°é¡µé¢
+     * @param       {Object}    callbacks       å›è°ƒæ–¹æ³•
+     * @p-config    {Function}  fail(resp)      å¤±è´¥
+     * @p-config    {Function}  success(resp)   æˆåŠŸ
      */
     function closeWindow(callbacks) {
         callbacks = callbacks || {};
         WeixinJSBridge.invoke("closeWindow",{},function(resp){
             switch (resp.err_msg) {
-                // ¹Ø±Õ³É¹¦
+                // å…³é—­æˆåŠŸ
                 case 'close_window:ok':
                     callbacks.success && callbacks.success(resp);
                     break;
 
-                // ¹Ø±ÕÊ§°Ü
+                // å…³é—­å¤±è´¥
                 default :
                     callbacks.fail && callbacks.fail(resp);
                     break;
@@ -418,9 +418,9 @@ var WeixinApi = (function () {
     }
 
     /**
-     * µ±Ò³Ãæ¼ÓÔØÍê±ÏºóÖ´ĞĞ£¬Ê¹ÓÃ·½·¨£º
+     * å½“é¡µé¢åŠ è½½å®Œæ¯•åæ‰§è¡Œï¼Œä½¿ç”¨æ–¹æ³•ï¼š
      * WeixinApi.ready(function(Api){
-     *     // ´ÓÕâÀïÖ»ÓÃApi¼´ÊÇWeixinApi
+     *     // ä»è¿™é‡Œåªç”¨Apiå³æ˜¯WeixinApi
      * });
      * @param readyCallback
      */
@@ -444,28 +444,28 @@ var WeixinApi = (function () {
     }
 
     /**
-     * ÅĞ¶Ïµ±Ç°ÍøÒ³ÊÇ·ñÔÚÎ¢ĞÅÄÚÖÃä¯ÀÀÆ÷ÖĞ´ò¿ª
+     * åˆ¤æ–­å½“å‰ç½‘é¡µæ˜¯å¦åœ¨å¾®ä¿¡å†…ç½®æµè§ˆå™¨ä¸­æ‰“å¼€
      */
     function openInWeixin(){
         return /MicroMessenger/i.test(navigator.userAgent);
     }
 
     /*
-     * ´ò¿ªÉ¨Ãè¶şÎ¬Âë
-     * @param       {Object}    callbacks       »Øµ÷·½·¨
-     * @p-config    {Function}  fail(resp)      Ê§°Ü
-     * @p-config    {Function}  success(resp)   ³É¹¦
+     * æ‰“å¼€æ‰«æäºŒç»´ç 
+     * @param       {Object}    callbacks       å›è°ƒæ–¹æ³•
+     * @p-config    {Function}  fail(resp)      å¤±è´¥
+     * @p-config    {Function}  success(resp)   æˆåŠŸ
      */
     function scanQRCode (callbacks) {
         callbacks = callbacks || {};
         WeixinJSBridge.invoke("scanQRCode",{},function(resp){
             switch (resp.err_msg) {
-                // ´ò¿ªÉ¨ÃèÆ÷³É¹¦
+                // æ‰“å¼€æ‰«æå™¨æˆåŠŸ
                 case 'scan_qrcode:ok':
                     callbacks.success && callbacks.success(resp);
                     break;
 
-                // ´ò¿ªÉ¨ÃèÆ÷Ê§°Ü
+                // æ‰“å¼€æ‰«æå™¨å¤±è´¥
                 default :
                     callbacks.fail && callbacks.fail(resp);
                     break;
@@ -474,19 +474,19 @@ var WeixinApi = (function () {
     }
 
     /**
-     * ¿ªÆôApiµÄdebugÄ£Ê½£¬±ÈÈç³öÁË¸öÊ²Ã´´íÎó£¬ÄÜalert¸æËßÄã£¬¶ø²»ÊÇÒ»Ö±ºÜ¿à±ÆµÄÔÚÏëÄÄ¶ù³öÎÊÌâÁË
-     * @param    {Function}  callback(error) ³ö´íºóµÄ»Øµ÷£¬Ä¬ÈÏÊÇalert
+     * å¼€å¯Apiçš„debugæ¨¡å¼ï¼Œæ¯”å¦‚å‡ºäº†ä¸ªä»€ä¹ˆé”™è¯¯ï¼Œèƒ½alertå‘Šè¯‰ä½ ï¼Œè€Œä¸æ˜¯ä¸€ç›´å¾ˆè‹¦é€¼çš„åœ¨æƒ³å“ªå„¿å‡ºé—®é¢˜äº†
+     * @param    {Function}  callback(error) å‡ºé”™åçš„å›è°ƒï¼Œé»˜è®¤æ˜¯alert
      */
     function enableDebugMode(callback){
         /**
-         * @param {String}  errorMessage   ´íÎóĞÅÏ¢
-         * @param {String}  scriptURI      ³ö´íµÄÎÄ¼ş
-         * @param {Long}    lineNumber     ³ö´í´úÂëµÄĞĞºÅ
-         * @param {Long}    columnNumber   ³ö´í´úÂëµÄÁĞºÅ
+         * @param {String}  errorMessage   é”™è¯¯ä¿¡æ¯
+         * @param {String}  scriptURI      å‡ºé”™çš„æ–‡ä»¶
+         * @param {Long}    lineNumber     å‡ºé”™ä»£ç çš„è¡Œå·
+         * @param {Long}    columnNumber   å‡ºé”™ä»£ç çš„åˆ—å·
          */
         window.onerror = function(errorMessage, scriptURI, lineNumber,columnNumber) {
 
-            // ÓĞcallbackµÄÇé¿öÏÂ£¬½«´íÎóĞÅÏ¢´«µİµ½options.callbackÖĞ
+            // æœ‰callbackçš„æƒ…å†µä¸‹ï¼Œå°†é”™è¯¯ä¿¡æ¯ä¼ é€’åˆ°options.callbackä¸­
             if(typeof callback === 'function'){
                 callback({
                     message : errorMessage,
@@ -495,12 +495,12 @@ var WeixinApi = (function () {
                     column : columnNumber
                 });
             }else{
-                // ÆäËûÇé¿ö£¬¶¼ÒÔalert·½Ê½Ö±½ÓÌáÊ¾´íÎóĞÅÏ¢
+                // å…¶ä»–æƒ…å†µï¼Œéƒ½ä»¥alertæ–¹å¼ç›´æ¥æç¤ºé”™è¯¯ä¿¡æ¯
                 var msgs = [];
-                msgs.push("¶î£¬´úÂëÓĞ´í¡£¡£¡£");
-                msgs.push("\n´íÎóĞÅÏ¢£º" , errorMessage);
-                msgs.push("\n³ö´íÎÄ¼ş£º" , scriptURI);
-                msgs.push("\n³ö´íÎ»ÖÃ£º" , lineNumber + 'ĞĞ£¬' + columnNumber + 'ÁĞ');
+                msgs.push("é¢ï¼Œä»£ç æœ‰é”™ã€‚ã€‚ã€‚");
+                msgs.push("\né”™è¯¯ä¿¡æ¯ï¼š" , errorMessage);
+                msgs.push("\nå‡ºé”™æ–‡ä»¶ï¼š" , scriptURI);
+                msgs.push("\nå‡ºé”™ä½ç½®ï¼š" , lineNumber + 'è¡Œï¼Œ' + columnNumber + 'åˆ—');
                 alert(msgs.join(''));
             }
         }
