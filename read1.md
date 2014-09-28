@@ -3,7 +3,7 @@ layout: default1
 title: jcore豆瓣读书
 keywords:	 "Jcore,douban,豆瓣读书"
 description: "jcore豆瓣读书"
-permalink: /read/
+permalink: /read1/
 menu: read
 ---
 
