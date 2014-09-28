@@ -9,8 +9,10 @@ menu: read
 
 <hr/>
 
+{% raw %}
+
 <div class="douban-books">
-	
+
 	<!-- 读过的 -->
 	<div class="db-status-read">
 		<div class="loading"></div>
@@ -72,6 +74,8 @@ menu: read
 	</div>
 	
 </div>
+	
+{% endraw %}
 	
 <hr/>	
 
