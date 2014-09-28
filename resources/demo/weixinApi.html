@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Î¢ĞÅJs API Demo</title>
+		<title>å¾®ä¿¡Js API Demo</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="dns-prefetch" href="http://mmbiz.qpic.cn">
         <link rel="dns-prefetch" href="http://res.wx.qq.com">
@@ -14,11 +14,11 @@
 				padding: 5px 10px;
 			}
 		</style>
-		<script type="text/javascript" src="../js/WeixinApi.js"></script>
+		<script type="text/javascript" src="WeixinApi.js"></script>
 	</head>
 	<body>
-		<p>ÕâÊÇÒ»¸ö²âÊÔÒ³Ãæ£¡ÇëÖ±½Ó·ÖÏíµ½Î¢ĞÅºÃÓÑ¡¢ÅóÓÑÈ¦¡¢ÌÚÑ¶Î¢²©¿´Ğ§¹û°É£¡</p>
-		<p>Èç¹ûÄãÊÇÉ¨Ò»É¨¹ıÀ´µÄ£¬¿ÉÒÔ¸´ÖÆÁ¬½Ó£¬È»ºó·¢¸øÈÎºÎÒ»¸öÎ¢ĞÅºÃÓÑ£¬ÔÙµã»÷Á¬½Ó½øÈë²âÊÔ</p>
+		<p>è¿™æ˜¯ä¸€ä¸ªæµ‹è¯•é¡µé¢ï¼è¯·ç›´æ¥åˆ†äº«åˆ°å¾®ä¿¡å¥½å‹ã€æœ‹å‹åœˆã€è…¾è®¯å¾®åšçœ‹æ•ˆæœå§ï¼</p>
+		<p>å¦‚æœä½ æ˜¯æ‰«ä¸€æ‰«è¿‡æ¥çš„ï¼Œå¯ä»¥å¤åˆ¶è¿æ¥ï¼Œç„¶åå‘ç»™ä»»ä½•ä¸€ä¸ªå¾®ä¿¡å¥½å‹ï¼Œå†ç‚¹å‡»è¿æ¥è¿›å…¥æµ‹è¯•</p>
 		<p>
 		    <button id="optionMenu">WeixinApi.hideOptionMenu</button>
 		</p>
@@ -39,17 +39,17 @@
 		</p>
 
         <p>
-            <a href="?">µã»÷ÕâÀïË¢ĞÂ£¡£¡£¡£¡</a>
+            <a href="?">ç‚¹å‡»è¿™é‡Œåˆ·æ–°ï¼ï¼ï¼ï¼</a>
         </p>
 
 		<script type="text/javascript">
 
-		    // ¸ø°´Å¥Ôö¼ÓclickÊÂ¼ş£ºÇë²»ÒªÌ«¾À½áÕâ¸öĞ´·¨£¬demo¶øÒÑ
+		    // ç»™æŒ‰é’®å¢åŠ clickäº‹ä»¶ï¼šè¯·ä¸è¦å¤ªçº ç»“è¿™ä¸ªå†™æ³•ï¼Œdemoè€Œå·²
 		    var addEvent = function(elId,listener){
 		        document.getElementById(elId)
 		                .addEventListener('click',function(e){
 		                    if(!window.WeixinApi || !window.WeixinJSBridge) {
-		                        alert('ÇëÈ·ÈÏÄúÊÇÔÚÎ¢ĞÅÄÚÖÃä¯ÀÀÆ÷ÖĞ´ò¿ªµÄ£¬²¢ÇÒWeixinApi.jsÒÑÕıÈ·ÒıÓÃ');
+		                        alert('è¯·ç¡®è®¤æ‚¨æ˜¯åœ¨å¾®ä¿¡å†…ç½®æµè§ˆå™¨ä¸­æ‰“å¼€çš„ï¼Œå¹¶ä¸”WeixinApi.jså·²æ­£ç¡®å¼•ç”¨');
 		                        e.preventDefault();
 		                        return false;
 		                    }
@@ -57,11 +57,11 @@
 		                },false);
 		    };
 
-		    // Á½¸öFlag
+		    // ä¸¤ä¸ªFlag
 		    var optionMenuOn = true;
 		    var toolbarOn = true;
 
-		    // optionMenuµÄ¿ØÖÆ
+		    // optionMenuçš„æ§åˆ¶
 		    addEvent('optionMenu',function(el,e){
 		        if(optionMenuOn) {
 		            el.innerHTML = "WeixinApi.showOptionMenu";
@@ -73,7 +73,7 @@
 		        optionMenuOn = !optionMenuOn;
 		    });
 
-		    // toolbarµÄ¿ØÖÆ
+		    // toolbarçš„æ§åˆ¶
 		    addEvent('toolbar',function(el,e){
 		        if(toolbarOn) {
 		            el.textContent = "WeixinApi.showToolbar";
@@ -85,108 +85,108 @@
 		        toolbarOn = !toolbarOn;
 		    });
 
-		    // »ñÈ¡ÍøÂçÀàĞÍ
+		    // è·å–ç½‘ç»œç±»å‹
 		    addEvent('networkType',function(el,e){
 		        WeixinApi.getNetworkType(function(network) {
-		            alert("µ±Ç°ÍøÂçÀàĞÍ£º" + network);
+		            alert("å½“å‰ç½‘ç»œç±»å‹ï¼š" + network);
 		        });
 		    });
 
-		    // µ÷Æğ¿Í»§¶ËµÄÍ¼Æ¬²¥·Å×é¼ş
+		    // è°ƒèµ·å®¢æˆ·ç«¯çš„å›¾ç‰‡æ’­æ”¾ç»„ä»¶
 		    addEvent('imagePreview',function(el,e){
 		        location.href = "http://www.baidufe.com/wximage?tag=%E7%BE%8E%E5%A5%B3";
 		    });
 
-		    // ¹Ø±Õ´°¿Ú
+		    // å…³é—­çª—å£
 		    addEvent('closeWindow',function(el,e){
 		        WeixinApi.closeWindow({
                     success : function(resp){
-                        alert('¹Ø±Õ´°¿Ú³É¹¦£¡');
+                        alert('å…³é—­çª—å£æˆåŠŸï¼');
                     },
                     fail : function(resp){
-                        alert('¹Ø±Õ´°¿ÚÊ§°Ü');
+                        alert('å…³é—­çª—å£å¤±è´¥');
                     }
                 });
 		    });
 
-		    // ´ò¿ªÉ¨Âë
+		    // æ‰“å¼€æ‰«ç 
 		    addEvent('scanQRCode',function(el,e){
 		        WeixinApi.scanQRCode({
                     success : function(resp){
-                        alert('É¨ÃèÆ÷ÒÑ´ò¿ª£¡');
+                        alert('æ‰«æå™¨å·²æ‰“å¼€ï¼');
                     },
                     fail : function(resp){
-                        alert('É¨ÃèÆ÷ÎŞ·¨´ò¿ª');
+                        alert('æ‰«æå™¨æ— æ³•æ‰“å¼€');
                     }
                 });
 		    });
 
-            // ¿ªÆôApiµÄdebugÄ£Ê½
+            // å¼€å¯Apiçš„debugæ¨¡å¼
             WeixinApi.enableDebugMode();
 
-		    // ĞèÒª·ÖÏíµÄÄÚÈİ£¬Çë·Åµ½readyÀï
+		    // éœ€è¦åˆ†äº«çš„å†…å®¹ï¼Œè¯·æ”¾åˆ°readyé‡Œ
 		    WeixinApi.ready(function(Api) {
 
-		        // Î¢ĞÅ·ÖÏíµÄÊı¾İ
+		        // å¾®ä¿¡åˆ†äº«çš„æ•°æ®
 		        var wxData = {
-		            "appId": "", // ·şÎñºÅ¿ÉÒÔÌîĞ´appId
+		            "appId": "", // æœåŠ¡å·å¯ä»¥å¡«å†™appId
 		            "imgUrl" : 'http://www.baidufe.com/fe/blog/static/img/weixin-qrcode-2.jpg',
 		            "link" : 'http://www.baidufe.com',
-		            "desc" : '´ó¼ÒºÃ£¬ÎÒÊÇAlien£¬WebÇ°¶Ë&Android¿Í»§¶ËÂëÅ©£¬Ï²»¶¼¼ÊõÉÏµÄÏ¹µ¹ÌÚ£¡»¶Ó­¶à½»Á÷',
-		            "title" : "´ó¼ÒºÃ£¬ÎÒÊÇÕÔÏÈÁÒ"
+		            "desc" : 'å¤§å®¶å¥½ï¼Œæˆ‘æ˜¯Alienï¼ŒWebå‰ç«¯&Androidå®¢æˆ·ç«¯ç å†œï¼Œå–œæ¬¢æŠ€æœ¯ä¸Šçš„çå€’è…¾ï¼æ¬¢è¿å¤šäº¤æµ',
+		            "title" : "å¤§å®¶å¥½ï¼Œæˆ‘æ˜¯èµµå…ˆçƒˆ"
 		        };
 
-		        // ·ÖÏíµÄ»Øµ÷
+		        // åˆ†äº«çš„å›è°ƒ
 		        var wxCallbacks = {
-		            // ·ÖÏí²Ù×÷¿ªÊ¼Ö®Ç°
+		            // åˆ†äº«æ“ä½œå¼€å§‹ä¹‹å‰
 		            ready : function() {
-		                // Äã¿ÉÒÔÔÚÕâÀï¶Ô·ÖÏíµÄÊı¾İ½øĞĞÖØ×é
-		                alert("×¼±¸·ÖÏí");
+		                // ä½ å¯ä»¥åœ¨è¿™é‡Œå¯¹åˆ†äº«çš„æ•°æ®è¿›è¡Œé‡ç»„
+		                alert("å‡†å¤‡åˆ†äº«");
 		            },
-		            // ·ÖÏí±»ÓÃ»§×Ô¶¯È¡Ïû
+		            // åˆ†äº«è¢«ç”¨æˆ·è‡ªåŠ¨å–æ¶ˆ
 		            cancel : function(resp) {
-		                // Äã¿ÉÒÔÔÚÄãµÄÒ³ÃæÉÏ¸øÓÃ»§Ò»¸öĞ¡Tip£¬ÎªÊ²Ã´ÒªÈ¡ÏûÄØ£¿
-		                alert("·ÖÏí±»È¡Ïû£¬msg=" + resp.err_msg);
+		                // ä½ å¯ä»¥åœ¨ä½ çš„é¡µé¢ä¸Šç»™ç”¨æˆ·ä¸€ä¸ªå°Tipï¼Œä¸ºä»€ä¹ˆè¦å–æ¶ˆå‘¢ï¼Ÿ
+		                alert("åˆ†äº«è¢«å–æ¶ˆï¼Œmsg=" + resp.err_msg);
 		            },
-		            // ·ÖÏíÊ§°ÜÁË
+		            // åˆ†äº«å¤±è´¥äº†
 		            fail : function(resp) {
-		                // ·ÖÏíÊ§°ÜÁË£¬ÊÇ²»ÊÇ¿ÉÒÔ¸æËßÓÃ»§£º²»Òª½ô£¬¿ÉÄÜÊÇÍøÂçÎÊÌâ£¬Ò»»á¶ùÔÙÊÔÊÔ£¿
-		                alert("·ÖÏíÊ§°Ü£¬msg=" + resp.err_msg);
+		                // åˆ†äº«å¤±è´¥äº†ï¼Œæ˜¯ä¸æ˜¯å¯ä»¥å‘Šè¯‰ç”¨æˆ·ï¼šä¸è¦ç´§ï¼Œå¯èƒ½æ˜¯ç½‘ç»œé—®é¢˜ï¼Œä¸€ä¼šå„¿å†è¯•è¯•ï¼Ÿ
+		                alert("åˆ†äº«å¤±è´¥ï¼Œmsg=" + resp.err_msg);
 		            },
-		            // ·ÖÏí³É¹¦
+		            // åˆ†äº«æˆåŠŸ
 		            confirm : function(resp) {
-		                // ·ÖÏí³É¹¦ÁË£¬ÎÒÃÇÊÇ²»ÊÇ¿ÉÒÔ×öÒ»Ğ©·ÖÏíÍ³¼ÆÄØ£¿
-		                alert("·ÖÏí³É¹¦£¬msg=" + resp.err_msg);
+		                // åˆ†äº«æˆåŠŸäº†ï¼Œæˆ‘ä»¬æ˜¯ä¸æ˜¯å¯ä»¥åšä¸€äº›åˆ†äº«ç»Ÿè®¡å‘¢ï¼Ÿ
+		                alert("åˆ†äº«æˆåŠŸï¼Œmsg=" + resp.err_msg);
 		            },
-		            // Õû¸ö·ÖÏí¹ı³Ì½áÊø
+		            // æ•´ä¸ªåˆ†äº«è¿‡ç¨‹ç»“æŸ
 		            all : function(resp,shareTo) {
-		                // Èç¹ûÄã×öµÄÊÇÒ»¸ö¹ÄÀøÓÃ»§½øĞĞ·ÖÏíµÄ²úÆ·£¬ÔÚÕâÀïÊÇ²»ÊÇ¿ÉÒÔ¸øÓÃ»§Ò»Ğ©·´À¡ÁË£¿
-		                alert("·ÖÏí" + (shareTo ? "µ½" + shareTo : "") + "½áÊø£¬msg=" + resp.err_msg);
+		                // å¦‚æœä½ åšçš„æ˜¯ä¸€ä¸ªé¼“åŠ±ç”¨æˆ·è¿›è¡Œåˆ†äº«çš„äº§å“ï¼Œåœ¨è¿™é‡Œæ˜¯ä¸æ˜¯å¯ä»¥ç»™ç”¨æˆ·ä¸€äº›åé¦ˆäº†ï¼Ÿ
+		                alert("åˆ†äº«" + (shareTo ? "åˆ°" + shareTo : "") + "ç»“æŸï¼Œmsg=" + resp.err_msg);
 		            }
 		        };
 
-		        // ÓÃ»§µã¿ªÓÒÉÏ½Çpopup²Ëµ¥ºó£¬µã»÷·ÖÏí¸øºÃÓÑ£¬»áÖ´ĞĞÏÂÃæÕâ¸ö´úÂë
+		        // ç”¨æˆ·ç‚¹å¼€å³ä¸Šè§’popupèœå•åï¼Œç‚¹å‡»åˆ†äº«ç»™å¥½å‹ï¼Œä¼šæ‰§è¡Œä¸‹é¢è¿™ä¸ªä»£ç 
 		        Api.shareToFriend(wxData, wxCallbacks);
 
-		        // µã»÷·ÖÏíµ½ÅóÓÑÈ¦£¬»áÖ´ĞĞÏÂÃæÕâ¸ö´úÂë
+		        // ç‚¹å‡»åˆ†äº«åˆ°æœ‹å‹åœˆï¼Œä¼šæ‰§è¡Œä¸‹é¢è¿™ä¸ªä»£ç 
 		        Api.shareToTimeline(wxData, wxCallbacks);
 
-		        // µã»÷·ÖÏíµ½ÌÚÑ¶Î¢²©£¬»áÖ´ĞĞÏÂÃæÕâ¸ö´úÂë
+		        // ç‚¹å‡»åˆ†äº«åˆ°è…¾è®¯å¾®åšï¼Œä¼šæ‰§è¡Œä¸‹é¢è¿™ä¸ªä»£ç 
 		        Api.shareToWeibo(wxData, wxCallbacks);
 
-                // iOSÉÏ£¬¿ÉÒÔÖ±½Óµ÷ÓÃÕâ¸öAPI½øĞĞ·ÖÏí£¬Ò»¾ä»°¸ã¶¨
+                // iOSä¸Šï¼Œå¯ä»¥ç›´æ¥è°ƒç”¨è¿™ä¸ªAPIè¿›è¡Œåˆ†äº«ï¼Œä¸€å¥è¯æå®š
                 Api.generalShare(wxData,wxCallbacks);
 
-		        // ÓĞ¿ÉÄÜÓÃ»§ÊÇÖ±½ÓÓÃÎ¢ĞÅ¡°É¨Ò»É¨¡±´ò¿ªµÄ£¬Õâ¸öÇé¿öÏÂ£¬optionMenu¡¢toolbar¶¼ÊÇoff×´Ì¬
-		        // ÎªÁË·½±ãÓÃ»§²âÊÔ£¬ÎÒÏÈÀ´trigger showÒ»ÏÂ
+		        // æœ‰å¯èƒ½ç”¨æˆ·æ˜¯ç›´æ¥ç”¨å¾®ä¿¡â€œæ‰«ä¸€æ‰«â€æ‰“å¼€çš„ï¼Œè¿™ä¸ªæƒ…å†µä¸‹ï¼ŒoptionMenuã€toolbaréƒ½æ˜¯offçŠ¶æ€
+		        // ä¸ºäº†æ–¹ä¾¿ç”¨æˆ·æµ‹è¯•ï¼Œæˆ‘å…ˆæ¥trigger showä¸€ä¸‹
 		        // optionMenu
 		        var elOptionMenu = document.getElementById('optionMenu');
-		        elOptionMenu.click(); // ÏÈÒş²Ø
-		        elOptionMenu.click(); // ÔÙÏÔÊ¾
+		        elOptionMenu.click(); // å…ˆéšè—
+		        elOptionMenu.click(); // å†æ˜¾ç¤º
 		        // toolbar
 		        var elToolbar = document.getElementById('toolbar');
-		        elToolbar.click(); // ÏÈÒş²Ø
-		        elToolbar.click(); // ÔÙÏÔÊ¾
+		        elToolbar.click(); // å…ˆéšè—
+		        elToolbar.click(); // å†æ˜¾ç¤º
 		    });
 
 		</script>
