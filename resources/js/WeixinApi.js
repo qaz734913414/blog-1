@@ -505,7 +505,7 @@ var WeixinApi = (function () {
             }
         }
     }
-
+ 
     return {
         version         :"2.4",
         enableDebugMode :enableDebugMode,
