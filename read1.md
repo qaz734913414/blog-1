@@ -90,7 +90,7 @@ menu: read
 	
 </article>
 <script type="text/javascript">
-(function() {
+window.onload = function(){
   var DoubanBooks = {
     init: function(opt) {
       var apikey = opt.apikey ? '&apikey=' + opt.apikey : '';
@@ -134,7 +134,7 @@ menu: read
     username: '70894126', // 豆瓣用户名
     apikey: '0c6613784f53b1f425323a68edfb15dc'
   });
-})();
+}
 </script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0-rc.4/handlebars.min.js"></script>
 
