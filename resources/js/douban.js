@@ -1,101 +1,44 @@
-function DoubanApi() {
-	this.defaults = {
-		place:"douban",
-		user:"70894126",
-		api:"0c6613784f53b1f425323a68edfb15dc",
-		book:[{status:"reading",maxnum:20},{status:"read",maxnum:100},{status:"wish",maxnum:100}],
-		bookreadingtitle:"在读...",
-		bookreadtitle:"读过...",
-		bookwishtitle:"想读..."
-	};
-}
-
-DoubanApi.prototype.make_api_url = function(type,user,key,status,begin,end) {
-	var url = "http://api.douban.com/people/" + user + "/collection?cat=" + type 
-		+ "&start-index=" + begin + "&max-results=" + end + "&status=" + status 
-		+ "&alt=xd&callback=dbapi." + type + status + "_show";
-	if (key.lenght > 0) {
-		url += "&apikey=" + key;
-	}
-	return url;
-}
-
-DoubanApi.prototype.make_list_item = function(items) {
-	var html = '';
-	$.each(items,function(i,item){
-		html += '<li><a href="'
-			+ item.link + '" target="_blank"><img src="'
-			+ item.src + '" alt="' + item.title
-			+ '" title="' + item.title + '" /></a></li>';
-	});
-	return html;
-};
-
-DoubanApi.prototype.parse_json = function(json) {
-	var items = [];
-	$.each(json.entry,function(i,item) {
-		var link = {};
-		link.title = item["db:subject"]["title"]["$t"];
-		link.link = item["db:subject"]["link"][1]["@href"];	//硬编码
-		link.src = item["db:subject"]["link"][2]["@href"];	//硬编码
-		items.push(link);
-	});
-	return items;
-};
-
-DoubanApi.prototype.fix_num = function(num) {
-	var index = 1;
-	var fixnums = [];
-	if (50 > num && num  > 0) {
-		fixnums.push({begin:index,end:num});
-	}
-	else {
-		while (num > 0) {
-			fixnums.push({begin:index,end:index + 49});
-			num -= 50;
-			index += 50;
+(function() {
+	var DoubanBooks = {
+		init: function(opt) {
+			var apikey = opt.apikey ? '&apikey=' + opt.apikey : '';
+			this.url = 'https://api.douban.com/v2/book/user/' + opt.username + '/collections?count=100' + apikey + '&callback=?';
+			this.fetch(); 
+		},
+		template: function(type, obj) {
+			var tmpl = $('#' + type + '-template').html(),
+				ctnr = $('#db-' + type + '-books');
+			// 编译模版
+			var _tmpl = Handlebars.compile(tmpl);
+			$(".loading").hide();
+			ctnr.append(_tmpl(obj));
+		},
+		fetch: function() {
+			var self = this;
+			// 获取 JSON 数据
+			$.getJSON(this.url, function(data) {
+				data = data.collections;
+				$.map(data, function(book) {
+					switch(book.status) {
+						case "wish":
+							self.wishBooks = [book];
+							self.template('wish', self.wishBooks);
+							break;
+						case "reading":
+							self.readingBooks = [book];
+							self.template('reading', self.readingBooks);
+							break;
+						case "read":
+							self.readBooks = [book];
+							self.template('read', self.readBooks);
+							break;
+					};
+				});
+			});
 		}
-	}
-	return fixnums;
-};
-
-DoubanApi.prototype.show = function() {
-	var books = [];
-	var tmpthis = this;
-	$.each(this.defaults.book,function(i,item) {
-		var fixnums = tmpthis.fix_num(item.maxnum);
-		books.push({status:item.status,indexs:fixnums});
+	};
+	DoubanBooks.init({
+		username: '70894126', // 豆瓣用户名
+		apikey: '0c6613784f53b1f425323a68edfb15dc' //豆瓣API KEY
 	});
-
-	$.each(books,function(i,item) {
-		$.each(item.indexs,function(t,idx) {
-			tmpthis.appendScript(tmpthis.all_url("book",item.status,idx.begin,idx.end));
-		});
-	});
-};
-
-DoubanApi.prototype.appendScript = function(url) {
-	if (url && url.length > 0) {
-		$("<script/>").attr("src",url).attr("charset","utf-8").appendTo($("head")[0]);
-	}
-};
-
-DoubanApi.prototype.all_url = function(type,status,begin,end) {
-	if (end === 0 ) return;
-	if (!this[type + status + "_show"]) {
-		this[type + status + "_show"] = function(json) {
-			var mainplace = $("#" + this.defaults.place);
-			if (mainplace.length === 0) {
-				mainplace = $('<div id="' + this.defaults.place + '"></div>').prependTo($("body"));
-			}
-			if ($("#" + type + status).length === 0) {
-				var title = this.defaults[type + status + "title"];
-				$('<h4 class="douban-title">' + title + '</h4>').appendTo(mainplace);
-				$('<div id="' + type + status + '" class="douban-list"><ul></ul></div>').appendTo(mainplace);
-				$('<div class="clear"></div>').appendTo(mainplace);
-			}
-			$("#" + type + status + " > ul").append(this.make_list_item(this.parse_json(json)));
-		};
-	}
-	return this.make_api_url(type,this.defaults.user,this.defaults.api,status,begin,end);
-};
+})();
