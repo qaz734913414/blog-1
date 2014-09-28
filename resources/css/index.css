@@ -282,15 +282,14 @@ pre {}
 	overflow: hidden;
 }
 .douban-books .db-books li a h3 {
-	position: absolute;
-	padding: 110px 6px 6px;
+	padding: 8px;
 	left: 0;
 	bottom: 0;
 	height: 59px;
-	color: #333;
 	font-size: 12px;
 	line-height: 20px;
 	margin: 0;
+	text-align: center;
 }
 .douban-books .db-books li a:hover {
 	background-color: #FFF8DA;
