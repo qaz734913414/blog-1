@@ -102,7 +102,18 @@ tags: linux j2ee web database 高并发
 
 > 剖析架构
 
+<font color="#fa8072">1）CDN</font>
+<font color="#fa8072">2）负载均衡、反向代理</font>
+<font color="#fa8072">3）App接入</font>
+<font color="#fa8072">4）业务服务</font>
+<font color="#fa8072">5）基础服务中间件</font>
+<font color="#fa8072">6）数据存储</font>
+<font color="#fa8072">7）管理与部署配置</font>
+<font color="#fa8072">8）监控、统计</font>
 
+{% highlight html %}
+
+{% endhighlight %}
 
 
 -----------------------
