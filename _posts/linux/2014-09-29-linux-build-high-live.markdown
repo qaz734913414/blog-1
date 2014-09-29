@@ -26,6 +26,26 @@ tags: linux j2ee web database 高并发
 
 {% endhighlight %}
 
+<font color="#fa8072">2）高可用</font>
+
+{% highlight html %}
+1. 负载均衡、容灾、备份
+2. 读写分离
+3. 依赖关系（低耦合）
+4. 监控
+
+{% endhighlight %}
+
+<font color="#fa8072">3）伸缩性</font>
+
+{% highlight html %}
+1. 对业务、数据库的拆分（异步非阻塞，可提高吞吐量）
+2. 无状态（不依赖模块状态，可提高吞吐量）
+3. 原子操作与并发控制（乐观锁、mutex、写时复制等等）
+4. 容错隔离
+
+{% endhighlight %}
+
 
 > 应用架构
 
