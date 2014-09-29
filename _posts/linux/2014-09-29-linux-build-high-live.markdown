@@ -15,9 +15,10 @@ tags: linux j2ee web database 高并发
 
 > 设计思路
 
-{% highlight text %}
+<font color="#fa8072">1）多级缓存、静态化</font>
 
-// 1）多级缓存、静态化
+{% highlight html %}
+
 1. 客户端页面缓存
 2. 应用缓存（memcache）
 3. 内存数据库（mongodb、redis）
@@ -25,9 +26,10 @@ tags: linux j2ee web database 高并发
 
 {% endhighlight %}
 
-{% highlight text %}
+<font color="#fa8072">2）高可用</font>
 
-// 2）高可用
+{% highlight html %}
+
 1. 负载均衡、容灾、备份
 2. 读写分离
 3. 依赖关系（低耦合）
@@ -35,9 +37,10 @@ tags: linux j2ee web database 高并发
 
 {% endhighlight %}
 
-{% highlight text %}
+<font color="#fa8072">3）伸缩性</font>
 
-// 3）伸缩性
+{% highlight html %}
+
 1. 对业务、数据库的拆分（异步非阻塞，可提高吞吐量）
 2. 无状态（不依赖模块状态，可提高吞吐量）
 3. 原子操作与并发控制（乐观锁、mutex、写时复制等等）
