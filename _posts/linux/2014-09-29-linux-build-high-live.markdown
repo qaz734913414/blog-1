@@ -182,7 +182,7 @@ key/value数据库 Redis、Memcached等；
 文档型数据库 Mongodb等；  
 列式数据库 HBase等；  
 还有图形数据库、对象数据库、xml数据库等。  
-我们公司数据库是oracle10g，规划准备迁到oracle11g上。
+我们公司主业务数据库是oracle10g，规划准备迁到oracle11g上，相关业务也用到了Mysql。
 
 {% endhighlight %}
 
