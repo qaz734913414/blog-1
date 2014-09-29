@@ -107,7 +107,7 @@ tags: linux j2ee web database 高并发
 
 {% highlight html %}
 
-
+一般电子商务网站都会用CDN做网络服务。我们公司使用的是第三方CND，第三方CDN有很多，如蓝汛、网宿、快网等。
 
 {% endhighlight %}
 
