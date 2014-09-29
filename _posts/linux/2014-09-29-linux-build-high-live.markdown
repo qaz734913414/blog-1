@@ -15,7 +15,7 @@ tags: linux j2ee web database 高并发
 
 > 设计思路
 
-<font color="# fa8072">1）多级缓存、静态化</font>
+<font color="#fa8072">1）多级缓存、静态化</font>
 
 {% highlight html %}
 
