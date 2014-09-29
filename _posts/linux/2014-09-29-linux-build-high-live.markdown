@@ -107,7 +107,7 @@ tags: linux j2ee web database 高并发
 
 {% highlight html %}
 
-一般电子商务网站都会用CDN做网络服务。我们公司使用的是第三方CND，第三方CDN有很多，如蓝汛、网宿、快网等。
+一般电子商务平台都会用CDN做网络服务。我们公司使用的是第三方CND，第三方CDN有很多种，如蓝汛、网宿、快网等。
 
 {% endhighlight %}
 
@@ -115,7 +115,7 @@ tags: linux j2ee web database 高并发
 
 {% highlight html %}
 
-
+一般大型的电子商务平台都会有不同的业务域和不同的集群服务。一般都是DNS做域名解析的分发或轮询，DNS方式简单，但因为有cache而缺乏灵活性；一般基于商用的硬件F5或者LVS等开源负载做分发，都采取主备方式。
 
 {% endhighlight %}
 
