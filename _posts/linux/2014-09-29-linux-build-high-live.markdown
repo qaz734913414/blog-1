@@ -209,4 +209,6 @@ key/value数据库 Redis、Memcached等；
 
 {% endhighlight %}
 
+###OK，今天先到这儿了 :) 
+
 -----------------------
