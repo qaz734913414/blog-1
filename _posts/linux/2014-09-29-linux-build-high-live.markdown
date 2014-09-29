@@ -175,7 +175,7 @@ tags: linux j2ee web database 高并发
 
 {% highlight html %}
 
-
+统一的配置库，部署平台。我们公司使用的是Ant+Svn做的自动化部署平台。
 
 {% endhighlight %}
 
