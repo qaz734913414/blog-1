@@ -122,8 +122,9 @@ tags: linux j2ee web database 高并发
 关于负载，需要综合考虑的几个因素：  
 1. 是否满足高并发高性能  
 2. Session如何保持  
-3. 支持压缩  
+3. 是否支持压缩  
 4. 负载均衡的算法如何  
+常用的负载均衡软件，如LVS、Nginx、HAProxy等。就不具体介绍了。我们公司使用的是LVS+Nginx这种方式，nginx基于iphash的session黏贴。
 
 {% endhighlight %}
 
@@ -131,7 +132,13 @@ tags: linux j2ee web database 高并发
 
 {% highlight html %}
 
-
+应用层运行在jboss或者tomcat容器中，代表独立的系统，比如前端购物、后端系统、手机端服务等等。  
+---------------------------------------------------------------------------------------------------------------------
+关于应用层容器，需要综合考虑的几个因素：
+1. 是否采用servlet3.0异步servlet来提高整个系统的吞吐量  
+2. app接入节点宕机，session随之丢失问题  
+3. session的集中式存储如何水平扩展  
+我们公司应用层容器之前是使用的weblogic，现在使用的是tomcat。多个tomcat之间集群。
 
 {% endhighlight %}
 
