@@ -17,7 +17,7 @@ menu: time
 .event_list li p{width:680px;margin-left:24px;display:inline-block;padding-left:10px;background:url('./resources/images/base/jian.png') -21px 0 no-repeat;line-height:25px;_float:left;}
 .event_list li p span{width:650px;text-align:left;border-bottom:2px solid #DDD;padding:10px 15px;background:#FFF;margin:0;}
 </style>
-<div class="box">
+<div class="box"> 
 	<ul class="event_year">
 		<li class="current"><label for="2013">2013</label></li>
 		<li><label for="2012">2012</label></li>
