@@ -9,7 +9,6 @@ menu: time
 
 <div class="archive" >
 	{% for post in site.posts reverse %}
-    {% if post.layout == 'post' %}
     <article>
         <h3 class="year">{{ post.date | date: "%Y" }}</h3>
         <section>
@@ -23,7 +22,6 @@ menu: time
             <p class="things"><a href="{{ post.url }}">{{post.title}}</a></p>
         </aside>
     </section>
-    {% endif %}
     {% endfor %}
     </article>
 </div>
