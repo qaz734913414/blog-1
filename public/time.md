@@ -8,17 +8,22 @@ menu: time
 ---
 
 <div class="archive" >
-	<article>
-		<h3 class="year">2014</h3>
-		<section>
-		<span class="point-time "></span>
-		<time datetime="09-14">
+	{% for post in site.posts reverse %}
+    {% if post.layout == 'post' %}
+    <article>
+        <h3 class="year">{{ post.date | date: "%Y" }}</h3>
+        <section>
+        <span class="point-time "></span>
+        <time datetime="{{ post.date | date: "%m" }}-{{ post.date | date: "%d" }}">
 
-		<span>09月14日</span>
-		<span></span>
-		</time>
-		<aside>
-			<p class="things"><a href="/java/how-to-build-j2ee-application-using-intellij-idea.html">IntelliJ IDEA  Guide</a></p>
-		</aside>
-	</section>
+        <span>{{ post.date | date: "%m" }}月{{ post.date | date: "%d" }}日</span>
+        <span></span>
+        </time>
+        <aside>
+            <p class="things"><a href="{{ post.url }}">{{post.title}}</a></p>
+        </aside>
+    </section>
+    {% endif %}
+    {% endfor %}
+    </article>
 </div>

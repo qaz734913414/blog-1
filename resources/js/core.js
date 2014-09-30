@@ -73,13 +73,11 @@ $('#search-form').submit(function() {
 $("pre").addClass("prettyprint");
 prettyPrint();
 
-$('ul.event_year label').click(function(){
-	$('.event_year>li').removeClass('current');
-	$(this).parent('li').addClass('current');
-	var year = $(this).attr('for');
-	$('#'+year).parent().prevAll('div').slideUp(800);
-	$('#'+year).parent().slideDown(800).nextAll('div').slideDown(800);
-});
-
+$(".point-time").each(function(){
+	var x = 5;
+	var y = 0;
+	var rand = parseInt(Math.random() * (x - y + 1) + y);
+	$(this).addClass("point"+rand);
+})
 
 NProgress.done();
