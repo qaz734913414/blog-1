@@ -107,7 +107,8 @@ tags: linux j2ee web database 高并发
 
 {% highlight html %}
 
-一般电子商务平台都会用CDN做网络服务。我们公司使用的是第三方CND，第三方CDN有很多种，如蓝汛、网宿、快网等。
+一般电子商务平台都会用CDN做网络服务。  
+我们公司使用的是第三方CND，第三方CDN有很多种，如蓝汛、网宿、快网等。
 
 {% endhighlight %}
 
@@ -124,7 +125,8 @@ tags: linux j2ee web database 高并发
 2. Session如何保持  
 3. 是否支持压缩  
 4. 负载均衡的算法如何  
-常用的负载均衡软件，如LVS、Nginx、HAProxy等。我们公司使用的是LVS+Nginx这种方式，Nginx基于iphash的Session黏贴。
+常用的负载均衡软件，如LVS、Nginx、HAProxy等。  
+我们公司使用的是LVS+Nginx这种方式，Nginx基于iphash的Session黏贴。
 
 {% endhighlight %}
 
@@ -168,7 +170,7 @@ tags: linux j2ee web database 高并发
 6. 数据分析（Hadoop[流量统计、推荐引擎、趋势分析、用户行为分析、数据挖掘分类器、分布式索引等等]）  
 7. 数据同步  
 8. 日志收集  
-公司平台使用到的中间件 ActiveMQ、Memcached、Lucene、Nginx、应用级日志Log4j、mount挂载项目。
+我们公司平台使用到的中间件 ActiveMQ、Memcached、Lucene、Nginx、应用级日志Log4j、mount挂载项目。
 
 {% endhighlight %}
 
