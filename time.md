@@ -1,224 +1,82 @@
 ---
 layout: default1
-title: jcoreÊ±¹âÖá
-keywords:	 "Jcore,jcoreÊ±¹âÖá"
-description: "jcoreÊ±¹âÖá"
+title: jcoreæ—¶å…‰è½´
+keywords:	 "Jcore,jcore,æ—¶å…‰è½´"
+description: "jcoreæ—¶å…‰è½´"
 permalink: /time/
 menu: time
 ---
-<style>
-.box{width:940px;margin:18px auto 0 auto;}
-.event_year{width:60px;border-bottom:2px solid #DDD;text-align:center;float:left;margin-top:10px;}
-.event_year li{height:40px;line-height:40px;background:#FFF;margin-bottom:1px;font-size:18px;color:#828282;cursor:pointer;}
-.event_year li.current{width:61px;background:#0066ff url('./resources/images/base/jian.png') 60px 0 no-repeat;color:#FFF;text-align:left;padding-left:9px;}
-.event_list h3{margin:0 0 10px 132px;font-size:24px;font-family:Georgia;color:#0066ff;padding-left:25px;background:url('./resources/images/base/jian.png') 0 -45px no-repeat;height:38px;line-height:30px;font-style:italic;}
-.event_list li{background:url('./resources/images/base/jian.png') 136px -80px no-repeat;}
-.event_list li span{width:127px;text-align:right;display:block;float:left;margin-top:10px;}
-.event_list li p{width:680px;margin-left:24px;display:inline-block;padding-left:10px;background:url('./resources/images/base/jian.png') -21px 0 no-repeat;line-height:25px;_float:left;}
-.event_list li p span{width:650px;text-align:left;border-bottom:2px solid #DDD;padding:10px 15px;background:#FFF;margin:0;}
-</style>
-<div class="box"> 
-	<ul class="event_year">
-		<li class="current"><label for="2013">2013</label></li>
-		<li><label for="2012">2012</label></li>
-		<li><label for="2011">2011</label></li>
-		<li><label for="2010">2010</label></li>
-		<li><label for="2009">2009</label></li>
-		<li><label for="2008">2008</label></li>
-		<li><label for="2007">2007</label></li>
-		<li><label for="2006">2006</label></li>
-		<li><label for="2005">2005</label></li>
-		<li><label for="2004">2004</label></li>
-		<li><label for="2003">2003</label></li>
-		<li><label for="2002">2002</label></li>
-	</ul>
+
+<hr/>
+
+{% raw %}
+
+<div class="douban-books">
+
+	<!-- è¯»è¿‡çš„ -->
+	<div class="db-status-read">
+		<div class="loading"></div>
+		<div class="db-status-title">è¯»è¿‡çš„ä¹¦</div>
+		<ul id="db-read-books" class="db-books">
+			<script id="read-template" type="text/x-handlebars-template">
+				{{#each this}}
+					<li>
+						<a href="{{book.alt}}" target="_blank">
+							<img src="{{book.images.medium}}" />
+							<h3>
+								<span>{{book.title}}</span>
+							</h3>
+						</a>
+					</li>
+				{{/each}}
+			</script>
+		</ul>
+	</div>
 	
-	<ul class="event_list">
-		<div>
-			<h3 id="2013">2013</h3>
-			<li>
-			<span>5ÔÂ</span>
-			<p><span>Õ¾³¤Ö®¼Ò×¨À¸¸Ä°æÉÏÏß</span></p>
-			</li>
-			<li>
-			<span>4ÔÂ</span>
-			<p><span>Õ¾³¤¹¤¾ßÆìÏÂ²úÆ·£¬³¬¼¶¼à¿ØÉÏÏß</span></p>
-			</li>
-			<li>
-			<span>3ÔÂ</span>
-			<p><span>Õ¾³¤Ö®¼Ò´´ÒµÀ¸Ä¿ÉÏÏß</span></p>
-			</li>
-		</div>
-		
-		<div>
-			<h3 id="2012">2012</h3>
-			<li>
-			<span>9ÔÂ</span>
-			<p><span>Õ¾³¤Ö®¼Ò±±¾©·Ö¹«Ë¾³ÉÁ¢</span></p>
-			</li>
-		</div>
-		
-		<div>
-			<h3 id="2011">2011</h3>
-			<li><span>3ÔÂ13ÈÕ</span><p><span><a href="http://www.313.com/" target="_blank">½¨Õ¾´óÊ¦£¨www.313.com£©ÉÏÏß</a></span></p></li>
-			<li><span>3ÔÂ26ÈÕ</span><p><span>Õ¾³¤ÂÛÌ³ÈÙ»ñ<a href="http://bbs.ifeng.com/special/bbs100/" target="_blank">2010ÄêµÚ¶ş½ìÖĞÎÄÂÛÌ³100Ç¿³ÆºÅ£¨ÃûÁĞµÚ50Î»£©</a></span></p></li>
-			<li><span>4ÔÂ-11ÔÂ</span><p><span>4ÔÂ-11ÔÂ Õ¾³¤Ö®¼Ò<a href="http://9th.chinaz.com/" target="_blank">¾ÅÖÜÄêÈ«¹ú½»Á÷»áÆô¶¯£¨ÏÃÃÅ¡¢ÄÏ¾©¡¢º¼Öİ¡¢¹ãÖİ¡¢ºÏ·Ê¡¢Îäºº¡¢Î÷°²¡¢ÖØÇì¡¢ÉÏº£µÈµØ£©</a>£¬Í¬Ê±Ğû²¼ÓëĞÂÀËÎ¢²©´ï³É<a href="http://9th.chinaz.com/tianshijijin.aspx" target="_blank">Î¢²©´´ĞÂ»ù½ğºÏ×÷£¬Æô¶¯ÖĞĞ¡Õ¾³¤×¨ÏîÍ¶×Ê</a></span></p></li>
-			<li><span>6ÔÂ11ÈÕ</span><p><span><a href="http://open.313.com" target="_blank">ÍÆ³ö½¨Õ¾´óÊ¦¿ª·ÅÆ½Ì¨open.313.com</a></span></p></li>
-			<li><span>9ÔÂ10ÈÕ</span><p><span>Õ¾³¤Ö®¼Ò±±¾©·Ö¹«Ë¾³ÉÁ¢</span></p></li>
-		</div>
+	<!-- æ­£åœ¨è¯» -->
+	<div class="db-status-reading">
+		<div class="loading"></div>
+		<div class="db-status-title">åœ¨è¯»çš„ä¹¦</div>
+		<ul id="db-reading-books" class="db-books">
+			<script id="reading-template" type="text/x-handlebars-template">
+				{{#each this}}
+					<li>
+						<a href="{{book.alt}}" target="_blank">
+							<img src="{{book.images.medium}}" />
+							<h3>
+								<span>{{book.title}}</span>
+							</h3>
+						</a>
+					</li>
+				{{/each}}
+			</script>
+		</ul>
+	</div>
 	
-		<div>
-		<h3 id="2010">2010</h3>
-			<li><span>5ÔÂ21ÈÕ</span><p><span><a href="http://my.chinaz.com/" target="_blank">È«Õ¾ÓÃ»§ÖĞĞÄÉÏÏß</a></span></p></li>
-			
-			<li><span>5ÔÂ26ÈÕ</span><p><span>C2C½»Ò×Æ½Ì¨<a href="http://jy.chinaz.com/" target="_blank">Õ¾³¤½»Ò×ÉÏÏß</a></span></p></li>
-			
-			
-			<li><span>6ÔÂ11ÈÕ</span><p><span><a href="http://bbs.chinaz.com/" target="_blank">Õ¾³¤ÂÛÌ³ĞÂ°æÉÏÏß</a></span></p></li>
-			
-			<li><span>9ÔÂ10ÈÕ</span><p><span><a href="http://bbs.chinaz.com/" target="_blank">Õ¾³¤ÂÛÌ³·¢Ìû³¬¹ıÇ§Íò</a></span></p></li>
-			
-			<li><span>10ÔÂ8ÈÕ</span><p><span><a href="http://mytool.chinaz.com" target="_blank">ÎÒµÄ¹¤¾ß(Mytool.chinaz.com)ĞÂ°æÉÏÏß</a></span></p></li>
-			
-			<li><span>10ÔÂ14ÈÕ</span><p><span><a href="http://down.chinaz.com" target="_blank">Õ¾³¤ÏÂÔØµÚÈı´Î¸Ä°æÍê³É</a></span></p></li>
-			
-			<li><span>10ÔÂ18ÈÕ</span><p><span><a href="http://www.bbsmax.com/" target="_blank">È«×ÊÊÕ¹ºÉçÇø¿ª·¢ÉÌBBSMAX</a>£¬<a href="http://www.microsoft.com/web/gallery/bbsmax.aspx" target="_blank">²¢ÓëÎ¢ÈíWebÓ¦ÓÃÆ½Ì¨´ï³ÉºÏ×÷</a></span></p></li>
-			
-			<li> 
-			<span>12ÔÂ4ÈÕ</span><p><span>ÔÚ°¢Àï°Í°ÍÖ÷°ìµÄ¡°µÚ¶ş½ìÖĞ¹úµØ·½ÓëĞĞÒµÍøÕ¾·å»á¡±ÉÏ»ñ</a><a href="http://www.chinaz.com/news/2010/1204/147210_3.shtml" target="_blank">×îÊÜ»¶Ó­µÄÕ¾³¤·şÎñÉÌ</a></span></p></li>
-		</div>
-
-		<div>
-			<h3 id="2009">2009</h3>
-			<li><span>3ÔÂ20ÈÕ</span><p><span>¾Ù°ì<a href="http://vote.chinaz.com/" target="_blank">ÖĞ¹úÕ¾³¤Õ¾7ÖÜÄêÕ¾³¤µ÷²é»î¶¯</a></span></p></li>
-			
-			<li><span>3ÔÂ23ÈÕ</span><p><span>ÕıÊ½ÍÆ³ö<a href="http://www.cnidc.com" target="_blank">IDCĞĞÒµµÄB2CÆ½Ì¨</a> - <a href="http://www.cnidc.com" target="_blank">Ö÷»úÍø</a>£¡</span></p></li>
-			
-			<li><span>7ÔÂ8ÈÕ</span><p><span><a href="http://www.chinaz.com/news/zt/dc/" target="_blank">·¢²¼ÖĞ¹úÕ¾³¤ĞĞÒµµ÷²é±¨¸æ</a></span></p></li>
-			
-			<li><span>9ÔÂ8ÈÕ</span><p><span>ÕıÊ½ÍÆ³ö¼¯<a href="http://www.idc123.com" target="_blank">ĞéÄâÖ÷»úÆÀ²â</a>ºÍIDCµ¼º½ÓÚÒ»ÌåµÄ<a href="http://www.idc123.com" target="_blank">Ö÷»úÖ®¼Ò</a>£¡</span></p></li>
-			<li><span>11ÔÂ26ÈÕ</span><p><span><a href="http://mytool.chinaz.com/" target="_blank">ÎÒµÄ¹¤¾ß(MYtool.chinaz.com)·¢²¼</a></span></p></li>
-		</div>
-	
-		<div>
-			<h3 id="2008">2008</h3>
-			<li><span>1ÔÂ8ÈÕ</span><p><span><a href="http://www.cnzz.com" target="_blank">Õ¾³¤Í³¼Æ</a>ÓÃ»§ÊıÍ»ÆÆ60Íò£¡</span></p></li>
-			<li><span>2ÔÂ2ÈÕ</span><p><span><a href="http://bbs.chinaz.com/Club/thread-1060455-1-1.html" target="_blank">Ğû²¼ÓëBBSmax½á³ÉÕ½ÂÔºÏ×÷»ï°é!</a></span></p></li>
-			<li><span>2ÔÂ15ÈÕ</span><p><span><a href="http://tool.chinaz.com/client/" target="_blank">ÍÆ³öÕ¾³¤¹¤¾ßÈí¼şv1.0²âÊÔ°æ</a></span></p></li>
-			<li><span>4ÔÂ16ÈÕ</span><p><span><a href="http://bbs.chinaz.com/Club/thread-1088776-1-1.html" target="_blank">ÍÆ³öÒ»¸öĞ¡¹¤¾ß-ÍøÕ¾²âËÙ v1.0²âÊÔ°æ</a></span></p></li>
-			<li><span>4ÔÂ23ÈÕ</span><p><span><a href="http://www.chinaz.com" target="_blank">Õ¾³¤×ÊÑ¶ÍÆ³öv2008ĞÂ°æ</a></span></p></li>
-			<li><span>4ÔÂ28ÈÕ</span><p><span><a href="http://www.chinaz.cn" target="_blank">ÍÆ³öÈí¼şÏÂÔØ×ÓÕ¾-¾«Æ·Èí¼şÕ¾ chinaz.cn</a></span></p></li>
-			<li><span>5ÔÂ5ÈÕ</span><p><span><a href="http://helper.chinaz.com" target="_blank">Õ¾³¤¹¤¾ßÈí¼şÕıÊ½¸üÃûÎªÕ¾³¤ÖúÊÖ</a></span></p></li>
-			<li><span>5ÔÂ6ÈÕ</span><p><span><a href="http://bm.chinaz.com" target="_blank">ÍÆ³öÒ»¸öĞ¡¹¤¾ß£¬ÍøÕ¾±£Ä·</a></span></p></li>
-			<li><span>5ÔÂ22ÈÕ</span><p><span>ÍÆ³ö"ÍòÕ¾Ç©ÃûÓ­°ÂÔË"»î¶¯£¡</span></p></li>
-			<li><span>6ÔÂ1ÈÕ</span><p><span><a href="http://down.chinaz.com" target="_blank">Õ¾³¤ÏÂÔØµÚ¶ş´Î¸Ä°æÍê³É</a></span></p></li>
-		</div>
-
-		<div>
-			<h3 id="2007">2007</h3>
-			<li><span>1ÔÂ29ÈÕ</span><p><span>ÍÆ³ö<a href="http://desk.chinaz.com" target="_blank">±ÚÖ½</a>À¸Ä¿ Desk.chinaz.com</span></p></li>
-			<li><span>3ÔÂ3ÈÕ</span><p><span><a href="http://tech.sina.com.cn/i/2007-03-07/10341405010.shtml" target="_blank">ÎåÖÜÄêÕ¾³¤¾Û»á»î¶¯ ÏÃÃÅÕ¾Ë³ÀûÕÙ¿ª</a></span></p></li>
-			<li><span>3ÔÂ17ÈÕ</span><p><span><a href="http://tech.163.com/07/0320/11/3A195A7Q000915I3.html" target="_blank">ÎåÖÜÄêÕ¾³¤¾Û»á»î¶¯ ÉÏº£Õ¾Ë³ÀûÕÙ¿ª</a></span></p></li>
-			<li><span>3ÔÂ31ÈÕ</span><p><span><a href="http://5th.chinaz.com" target="_blank">ÎåÖÜÄê¾Û»á-Ç§Î»Õ¾³¤Æë¾Û¹ãÖİ</a></span></p></li>
-			<li><span>4ÔÂ7ÈÕ</span><p><span><a href="http://5th.chinaz.com" target="_blank">ÎåÖÜÄê¾Û»á°²»ÕºÏ·ÊÕ¾Ë³ÀûÕÙ¿ª</a></span></p></li>
-			
-			<li><span>4ÔÂ22ÈÕ</span><p><span><a href="http://tech.sina.com.cn/i/2007-04-22/17121477057.shtml" target="_blank">CNZZÈÙ»ñµÚÈı½ìÕ¾³¤´ó»á07ÄêÊ®´ó´´ĞÂÍøÕ¾</a></span></p></li>
-			
-			<li><span>8ÔÂ13ÈÕ</span><p><span>Õ¾³¤Í³¼Æµ±ÈÕÍ³¼ÆÁ÷Á¿Í»ÆÆ10ÒÚ!</span></p></li>
-			<li><span>9ÔÂ14ÈÕ</span><p><span><a href="http://down.chinaz.com" target="_blank">Õ¾³¤ÏÂÔØ</a>À¸Ä¿¸Ä°æÍê³É</span></p></li>
-		</div>
-	
-		<div>
-			<h3 id="2006">2006</h3>
-			
-			<li><span>4ÔÂ8ÈÕ</span><p><span>ÖĞ¹úÕ¾³¤ÁªÃË(cnzz.com)µÄÃâ·ÑÍ³¼Æ·ÖÎö·şÎñµ±ÈÕÍ³¼ÆÁ¿Í»ÆÆ4ÒÚ´Î£¡</span></p></li>
-			<li><span>5ÔÂ25ÈÕ</span><p><span>ÍÆ³öËØ²ÄÏÂÔØÀ¸Ä¿(sc.chinaz.com)£¡</span></p></li>
-			<li><span>8ÔÂ8ÈÕ</span><p><span>ÖĞ¹úÕ¾³¤ÁªÃË(cnzz.com)µÄÃâ·ÑÍ³¼Æ·ÖÎö·şÎñµ±ÈÕÍ³¼ÆÁ¿Í»ÆÆ5ÒÚ´Î£¡</span></p></li>
-		</div>
-
-		<div>
-			<h3 id="2005">2005</h3>
-			<li><span>1ÔÂ23ÈÕ</span><p><span>ÍøÕ¾ÂÛÌ³Ìû×ÓÍ»ÆÆ200Íò£¡</span></p></li>
-			<li><span>2ÔÂ20ÈÕ</span><p><span>Ãâ·ÑÓòÃû×¢²áÁ¿Í»ÆÆ20Íò£¡</span></p></li>
-			<li><span>3ÔÂ10ÈÕ</span><p><span>Õ¾³¤Ñ§ÔºÀ¸Ä¿ÕıÊ½¿ªÍ¨(edu.chinaz.com)£¡</span></p></li>
-			<li><span>5ÔÂ20ÈÕ</span><p><span>ÓòÃû½»Ò×À¸Ä¿ÒÑÓĞ1Íò¸öÓòÃûÔÚ½øĞĞ³öÊÛ£¡</span></p></li>
-			<li><span>5ÔÂ24ÈÕ</span><p><span>ÕıÊ½½øÈëALEXAÖĞÎÄÍøÕ¾ÅÅÃû100Ç¿(µÚ98Ãû)!</span></p></li>
-			<li><span>6ÔÂ3ÈÕ</span><p><span>ÍøÕ¾ÓÃ»§´ïµ½20Íò£¡</span></p></li>
-			<li><span>7ÔÂ1ÈÕ</span><p><span>ÕıÊ½½øÈëALEXAÈ«ÇòÍøÕ¾500Ç¿£¡£¡(µÚ499Ãû)</span></p></li>
-			<li><span>7ÔÂ16ÈÕ</span><p><span>ÍÆ³öÕ¾³¤²©¿ÍÀ¸Ä¿¡£blog.chinaz.com</span></p></li>
-			<li><span>8ÔÂ28ÈÕ</span><p><span>ÍøÕ¾ÔÚAlexa.comµÄÈ«ÇòÍøÕ¾µ±ÈÕÅÅÃû½øÈë200ÃûÄÚ(199Ãû)£¡</span></p></li>
-			<li><span>9ÔÂ1ÈÕ</span><p><span>ÖĞ¹úÕ¾³¤ÁªÃË(cnzz.com)ÍÆ³ö£¬¿ªÊ¼Ìá¹©Í³¼Æ·şÎñ£¡</span></p></li>
-			<li><span>10ÔÂ9ÈÕ</span><p><span>×ÓÕ¾µãÖĞ¹úÕ¾³¤ÁªÃË(cnzz.com)µ±ÈÕÅÅÃû½øÈë1000ÃûÄÚ(890)£¡</span></p></li>
-			<li><span>11ÔÂ5ÈÕ</span><p><span>×ÓÕ¾µãÖĞ¹úÕ¾³¤ÁªÃË(cnzz.com)µ±ÈÕÅÅÃû½øÈë500ÃûÄÚ(485)£¡</span></p></li>
-			<li><span>12ÔÂ16ÈÕ</span><p><span>chinaz.comÕıÊ½½øÈëalexaÈ«Çò×ÜÅÅÃû200ÃûÒÔÄÚ¡£(µÚ195Ãû)</span></p></li>
-			<li><span>12ÔÂ23ÈÕ</span><p><span>ÖĞ¹úÕ¾³¤ÁªÃË(cnzz.com)µÄÃâ·ÑÍ³¼Æ·ÖÎö·şÎñµ±ÈÕÍ³¼ÆÁ¿Í»ÆÆ1.8ÒÚ´Î£¡</span></p></li>
-			<li><span>12ÔÂ27ÈÕ</span><p><span>ÍøÕ¾ÔÚAlexa.comµÄÈ«ÇòÍøÕ¾µ±ÈÕÅÅÃû½øÈë100ÃûÄÚ(97Ãû)£¡</span></p></li>
-		</div>
-	
-		<div>
-			<h3 id="2004">2004</h3>
-			<li><span>3ÔÂ2ÈÕ</span><p><span>ÍøÕ¾ÂÛÌ³Ìû×ÓÍ»ÆÆ100Íò£¡</span></p></li>
-			<li><span>4ÔÂ18ÈÕ</span><p><span>ÏÂÔØÀ¸Ä¿Ìá¹©ÏÂÔØ´ÎÊıÍ»ÆÆ2000Íò£¡</span></p></li>
-			<li><span>4ÔÂ20ÈÕ</span><p><span>9126.comÃâ·Ñ×ªÏòÓòÃûÏµÍ³ÎªÓÃ»§Ìá¹©×ªÏò´ÎÊıÍ»ÆÆ1ÒÚ´Î£¡</span></p></li>
-			<li><span>5ÔÂ7ÈÕ</span><p><span>ÍøÕ¾ÔÚAlexa.comµÄÈ«ÇòÍøÕ¾ÅÅÃûÖĞÕıÊ½½øÈë1000ÃûÄÚ(È«ÇòµÚ958Ãû)£¡</span></p></li>
-			<li><span>8ÔÂ3ÈÕ</span><p><span>ÍøÕ¾ÔÚAlexa.comµÄÈ«ÇòÍøÕ¾µ±ÈÕÅÅÃû½øÈë500ÃûÄÚ(495Ãû)£¡</span></p></li>
-			<li><span>9ÔÂ3ÈÕ</span><p><span>ÓòÃû½»Ò×À¸Ä¿²âÊÔ¿ªÍ¨£¡</span></p></li>
-		</div>
-
-		<div>
-			<h3 id="2003">2003</h3>
-			<li><span>3ÔÂ22ÈÕ</span><p><span>ÍøÕ¾×¢²áÓÃ»§´ïµ½50000</span></p></li>
-			<li><span>4ÔÂ12ÈÕ</span><p><span>9126.comÃâ·Ñ×ªÏòÓòÃûÏµÍ³ÎªÕ¾³¤ÃÇÌá¹©µÄ×ªÏò´ÎÊıÍ»ÆÆ2000Íò£¡</span></p></li>
-			<li><span>5ÔÂ13ÈÕ</span><p><span>ÏÂÔØÀ¸Ä¿Ìá¹©ÏÂÔØ´ÎÊıÍ»ÆÆ1000Íò£¡</span></p></li>
-			<li><span>6ÔÂ13ÈÕ</span><p><span>ĞéÄâÖ÷»úÀ¸Ä¿ÕıÊ½¿ªÍ¨£¡(idc.chinaz.com)</span></p></li>
-			<li><span>6ÔÂ25ÈÕ</span><p><span>ÍøÕ¾ÈÕ·ÃÎÊÁ¿Í»ÆÆ20Íò!</span></p></li>
-			<li><span>7ÔÂ3ÈÕ</span><p><span>ÔÚAlexa.comµÄÈ«ÇòÍøÕ¾ÅÅÃû½øÈë1ÍòÃûÒÔÄÚ(9826)!</span></p></li>
-			<li><span>7ÔÂ9ÈÕ</span><p><span>9126.comÃâ·Ñ×ªÏòÓòÃûÏµÍ³×¢²áÓÃ»§Í»ÆÆ10Íò£¡</span></p> </li>
-			<li><span>10ÔÂ19ÈÕ</span><p><span>ÍøÕ¾ÂÛÌ³Ìû×ÓÍ»ÆÆ50Íò£¡</span></p></li>
-			<li><span>11ÔÂ2ÈÕ</span><p><span>ÍøÕ¾ÔÚAlexa.comµÄÈ«ÇòÍøÕ¾µ±ÈÕÅÅÃû½øÈë1000ÃûÄÚ(974Ãû)£¡</span></p></li>
-			<li><span>11ÔÂ3ÈÕ</span><p><span>ÍøÕ¾×¢²áÓÃ»§Í»ÆÆ10Íò£¡</span></p></li>
-			<li><span>12ÔÂ26ÈÕ</span><p><span>ÍøÕ¾ÔÚAlexa.comµÄÈ«ÇòÍøÕ¾µ±ÈÕÅÅÃûÔÙ´´ĞÂ¸ß£¡£¡(636Ãû)</span></p></li>
-		</div>
-
-		<div>
-			<h3 id="2002">2002</h3>
-			
-			<li>
-			<span>12ÔÂ28</span>
-			<p><span>ÍøÕ¾Ö÷ÓòÃû¸ü¸ÄÎªchinaz.com</span></p>
-			</li>
-			
-			<li>
-			<span>12ÔÂ27ÈÕ</span>
-			<p><span>ÍøÕ¾×¢²áÓÃ»§´ïµ½20000</span></p>
-			</li>
-			
-			
-			<li>
-			<span>11ÔÂ20ÈÕ</span>
-			<p><span>ÍøÕ¾ÈÕ·ÃÎÊÁ¿Í»ÆÆ10Íò!</span></p>
-			</li>
-			
-			<li>
-			<span>10ÔÂ21ÈÕ</span>
-			<p><span>Ãâ·Ñ×ªÏòÓòÃûÀ¸Ä¿¿ªÊ¼Ìá¹©·şÎñ(9126.com) </span></p>
-			</li>
-			
-			<li>
-			<span>5ÔÂ1ÈÕ</span>
-			<p><span>ÍøÕ¾ÕıÊ½¶ÔÍâ¹«²¼£¬ÏÂÔØÀ¸Ä¿ÕıÊ½¿ªÍ¨</span></p>
-			</li>
-			<li>
-			<span>4ÔÂ1ÈÕ</span>
-			<p><span>ÍøÕ¾Ö÷ÓòÃû¸ü¸ÄÎªcnzzz.com</span></p>
-			</li>
-			<li>
-			<span>3ÔÂ3ÈÕ</span>
-			<p><span>ÍøÕ¾¿ªÊ¼³ï½¨(chinazzz.com)</span></p>
-			</li>
-		</div>
-	</ul>
-
-	<div class="clearfix"></div>
+	<!-- æƒ³è¯»çš„ -->
+	<div class="db-status-wish">
+		<div class="loading"></div>
+		<div class="db-status-title">æƒ³è¯»çš„ä¹¦</div>
+		<ul id="db-wish-books" class="db-books">
+			<script id="wish-template" type="text/x-handlebars-template">
+				{{#each this}}
+					<li>
+						<a href="{{book.alt}}" target="_blank">
+							<img src="{{book.images.medium}}" />
+							<h3>
+								<span>{{book.title}}</span>
+							</h3>
+						</a>
+					</li>
+				{{/each}}
+			</script>
+		</ul>
+	</div>
 	
 </div>
+	
+{% endraw %}
+	
+<hr/>	
+
+
