@@ -10,7 +10,7 @@ staticurl:      "http://jcore.cn"
 
 baseurl:        ""
 
-paginate:       8
+paginate:       10
 paginate_path:  "page:num"
 
 markdown:       kramdown
