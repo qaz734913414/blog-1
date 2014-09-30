@@ -12,6 +12,7 @@ menu: time
 .event_year{width:60px;border-bottom:2px solid #DDD;text-align:center;float:left;margin-top:10px;}
 .event_year li{height:40px;line-height:40px;background:#FFF;margin-bottom:1px;font-size:18px;color:#828282;cursor:pointer;}
 .event_year li.current{width:61px;background:#0066ff url('./resources/images/base/jian.png') 60px 0 no-repeat;color:#FFF;text-align:left;padding-left:9px;}
+.event_list{width:850px;float:right;margin:10px 0 20px 0;}
 .event_list h3{margin:0 0 10px 132px;font-size:24px;font-family:Georgia;color:#0066ff;padding-left:25px;background:url('./resources/images/base/jian.png') 0 -45px no-repeat;height:38px;line-height:30px;font-style:italic;}
 .event_list li{background:url('./resources/images/base/jian.png') 136px -80px no-repeat;}
 .event_list li span{width:127px;text-align:right;display:block;float:left;margin-top:10px;}
