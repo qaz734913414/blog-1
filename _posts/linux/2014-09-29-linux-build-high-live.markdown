@@ -192,7 +192,8 @@ key/value数据库 Redis、Memcached等；
 
 {% highlight html %}
 
-统一的配置库，部署平台。我们公司使用的是Ant+Svn做的自动化部署平台。
+统一的配置库，部署平台。  
+我们公司使用的是Ant+Svn做的自动化部署平台。
 
 {% endhighlight %}
 
