@@ -73,7 +73,7 @@ $('#search-form').submit(function() {
 $("pre").addClass("prettyprint");
 prettyPrint();
 
-$('ul.event_year>label').click(function(){
+$('ul.event_year label').click(function(){
 	$('.event_year>li').removeClass('current');
 	$(this).parent('li').addClass('current');
 	var year = $(this).attr('for');
