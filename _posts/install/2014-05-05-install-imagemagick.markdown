@@ -1,7 +1,7 @@
 ---
 layout: page
-title:  "imagemagick 安装"
-description: "linux安装,mac安装,imagemagick 安装"
+title:  "安装.imagemagick"
+description: "linux安装,mac安装,安装imagemagick"
 keywords: imagemagick,jmagick,linux,mac
 origin: 张嘉杰.原创
 date:   2014-05-05
