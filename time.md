@@ -1,3 +1,11 @@
+---
+layout: default1
+title: jcore时光轴
+keywords:	 "Jcore,jcore时光轴"
+description: "jcore时光轴"
+permalink: /time/
+menu: time
+---
 <style>
 .box{width:940px;margin:18px auto 0 auto;}
 .event_year{width:60px;border-bottom:2px solid #DDD;text-align:center;float:left;margin-top:10px;}
