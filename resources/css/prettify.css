@@ -1,24 +1,4 @@
-/* 
-Mellow, A Google Prettify Theme 
-A clean theme for displaying code with Google Prettify
 
-Created by: Jesse Jones
-http://jessejones.me
-@jessedesigns
-
-*/
-
-/* Pretty printing styles. Used with prettify.js. */
-
-/* SPAN elements with the classes below are added by prettyprint. */
-
-
-/* Specify class=linenums on a pre to get line numbering */
-ol.linenums { margin-top: 0; margin-bottom: 0 } /* IE indents via margin-left */
-li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { list-style-type: none }
-
-/* Alternate shading for lines */
-li.L1,li.L3,li.L5,li.L7,li.L9 { }
 
 
 /*****/
