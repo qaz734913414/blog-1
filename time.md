@@ -8,7 +8,7 @@ menu: time
 ---
 
 <style>
-.box{width:940px;margin:18px auto 0 auto;}
+.box{width:940px;display:table;margin:0 auto;}
 .event_year{width:60px;border-bottom:2px solid #DDD;text-align:center;float:left;margin-top:10px;}
 .event_year li{height:40px;line-height:40px;background:#FFF;margin-bottom:1px;font-size:18px;color:#828282;cursor:pointer;}
 .event_year li.current{width:61px;background:#0066ff url('/resources/images/base/time.png') 60px 0 no-repeat;color:#FFF;text-align:left;padding-left:9px;}
