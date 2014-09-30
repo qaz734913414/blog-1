@@ -5,7 +5,7 @@ description: "屌丝的福音,浏览器定位,女神在哪里,定位女神"
 keywords: 屌丝的福音,浏览器定位,女神在哪里,定位女神,webkit,chrome,safari
 origin: 张嘉杰.原创
 date:   2014-09-19
-categorys: [browser,html5]
+categorys: browser
 tags: webkit chrome html5
 ---
 周五下班回家路上，接到了一位很久未联系的朋友打过来的电话（省略一些敏感话题），切入主题：哥们儿想知道自己的女神住哪儿，又不方便直接问。我想到了一个自己在`2012`年做项目的时候，使用过的一个方法，在这里分享给需要的朋友。
