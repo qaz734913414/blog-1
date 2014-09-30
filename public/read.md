@@ -7,6 +7,8 @@ permalink: /read/
 menu: read
 ---
 
+<script type="text/javascript" src="http://cdn.bootcss.com/handlebars.js/1.0.0-rc.4/handlebars.min.js"></script>
+
 <hr/>
 
 {% raw %}
@@ -74,7 +76,7 @@ menu: read
 	</div>
 	
 </div>
-	
+
 {% endraw %}
 	
 <hr/>	
