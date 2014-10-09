@@ -20,11 +20,28 @@ tags: html5
 
 {% endhighlight %}
 
-> 浏览器查看方式
+> javascript绘制
 
-![console-resources]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)    
+{% highlight javascript %}
 
-# # # 下面有简单的例子 :)
+# canvas 元素
+var canvas = document.body.appendChild(document.getElementById("myCanvas"));
+
+# 创建 context 对象
+var context = canvas.getContext("2d");
+
+# 创建图片对象
+var img = new Image();
+
+# 设置图片路径
+img.src = "http://www.jcore.cn/resources/images/demo/map.png";
+
+# 图片加载以后绘图，否则为空白图片
+img.onload = function(){
+	cxt.drawImage(img,0,0);
+}
+
+{% endhighlight %}
 
 -----------------------
 
