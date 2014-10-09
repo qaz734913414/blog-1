@@ -16,7 +16,7 @@ tags: html5
 {% highlight html %}
 
 # 创建canvas标签
-<canvas id="myCanvas" width="200" height="200"></canvas>
+<canvas id="myCanvas" width="400" height="400"></canvas>
 
 {% endhighlight %}
 
@@ -43,28 +43,12 @@ img.onload = function(){
 
 {% endhighlight %}
 
------------------------
-
-<a class="btn btn-primary btn-sm" href="/resources/demo{{ page.url}}.html" target="_blank">查看DEMO</a>   
+### OK,今天就先说到这儿很简单，也很基础，下面有简单的例子 :)
 
 -----------------------
 
-> <font color="# fa8072">封装了个简单逻辑的脚本</font>
-
-判断浏览器端是否支持`Storage`对象，支持则默认使用`localStore`，不支持则使用`Cookie`。  
-
-{% highlight javascript %}
-
-
-
-{% endhighlight %}
-
-使用方法：
-
-{% highlight javascript %}
-
-
-	
-{% endhighlight %}
+<a class="btn btn-primary btn-sm" href="/resources/demo{{ page.url}}.html" target="_blank">查看DEMO</a> 
 
 -----------------------
+
+

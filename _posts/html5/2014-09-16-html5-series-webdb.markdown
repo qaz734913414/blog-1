@@ -39,7 +39,7 @@ length : int
 
 ![console-resources]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)    
 
-# # # 下面有简单的例子 :)
+### 下面有简单的例子 :)
 
 -----------------------
 
