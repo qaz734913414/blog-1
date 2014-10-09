@@ -38,7 +38,7 @@ img.src = "http://www.jcore.cn/resources/images/demo/map.png";
 
 // 图片加载以后绘图，否则为空白图片
 img.onload = function(){
-	cxt.drawImage(img,0,0);
+	context.drawImage(img,0,0);
 }
 
 {% endhighlight %}
