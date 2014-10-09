@@ -22,7 +22,7 @@ tags: html5
 
 > 通过 JavaScript 来绘制
 
-{% highlight javascript %}
+{% highlight javascript %} 
 
 // canvas 元素
 var canvas = document.body.appendChild(document.getElementById("myCanvas"));
