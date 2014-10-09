@@ -11,7 +11,7 @@ tags: html5
 `<canvas>`标签主要用于图形绘制，`canvas`通过`javascript`来绘制`2D`图形。`canvas`拥有多种绘制路径、矩形、圆形、字符以及添加图像的方法。在`canvas`中，一旦图形被绘制完成，它就不会继续得到浏览器的关注。如果其位置发生变化，那么整个场景也需要重新绘制，包括任何或许已被图形覆盖的对象。
 <!--more-->
 
-> 创建 canvas 元素
+> 创建 Canvas 元素
 
 {% highlight html %}
 
@@ -20,7 +20,7 @@ tags: html5
 
 {% endhighlight %}
 
-> javascript绘制
+> 通过 JavaScript 来绘制
 
 {% highlight javascript %}
 
