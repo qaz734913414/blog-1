@@ -50,7 +50,7 @@ function findEntries(q) {
 	html += '</ul>';
 	
 	NProgress.done();
-	$('.main-l,.default404').html(html);
+	$('div.main > div:eq(0)').html(html);
 }
 $('#search-form').submit(function() {
 	NProgress.start();
