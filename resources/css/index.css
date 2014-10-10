@@ -236,6 +236,17 @@ pre {}
 	-ms-transform: rotate(720deg);
 	border-radius: 30px !important; 
 }
+#ds-reset .ds-avatar img, #ds-thread #ds-reset ul.ds-children .ds-avatar img {
+	width: 50px !important;
+	height: 50px !important;
+	-webkit-transition: .8s;
+	-moz-transition: .8s;
+	-o-transition: .8s;
+	-ms-transition: .8s;
+	padding: 3px;
+	border: 1px solid #ddd;
+	background: #fff;
+}
 
 /* douban */
 .douban-books {
