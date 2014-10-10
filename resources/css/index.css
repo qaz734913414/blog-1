@@ -236,14 +236,6 @@ pre {}
 	-ms-transform: rotate(720deg);
 	border-radius: 30px !important; 
 }
-#ds-recent-visitors .ds-avatar img:hover {
-	transform: rotate(720deg);
-	-webkit-transform: rotate(720deg);
-	-moz-transform: rotate(720deg);
-	-o-transform: rotate(720deg);
-	-ms-transform: rotate(720deg);
-	border-radius: 30px !important;
-}
 
 /* douban */
 .douban-books {
