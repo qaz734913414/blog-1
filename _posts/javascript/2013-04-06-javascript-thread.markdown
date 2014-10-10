@@ -85,6 +85,10 @@ function Thread(_task, _delay, _times){
 
 {% endhighlight %}
 
+执行结果截了张图，供大家参考： 
+
+![javascript多线程]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.jpg)
+
 -----------------------
 
 <a class="btn btn-primary btn-sm" href="/resources/demo{{ page.url}}.html" target="_blank">查看DEMO</a> 
