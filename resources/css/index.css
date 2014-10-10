@@ -217,6 +217,18 @@ pre {}
 	border-top-right-radius: 7px 7px;
 }
 
+/*duoshuo*/
+.ds-recent-visitors .ds-avatar {
+	display: inline-block !important;
+	margin: 0 7px 7px 0 !important;
+	padding: 3px !important;
+	box-shadow: 0 0 3px rgba(0,0,0,0.2);
+	width: 32px;
+	height: 32px;
+	float: left;
+}
+.ds-recent-visitors .ds-avatar:hover {box-shadow: 0 0 3px rgba(0,0,0,0.4);background-color: #FFF;}
+
 /* douban */
 .douban-books {
 	font-family: Lucida Grande,Helvetica neue,Helvetica,Tahoma,Arial,STHeiti,Hiragino Sans GB,'宋体';
