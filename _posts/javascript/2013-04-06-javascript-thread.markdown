@@ -16,8 +16,8 @@ tags: javascript 多线程
 {% highlight html %}
 
 1. command模式
-2. setTimeout
-3. setInterval
+2. setTimeout函数
+3. setInterval函数
 
 {% endhighlight %}
 
