@@ -16,8 +16,8 @@ tags: html5 在线选座
 
 {% highlight html %}
 
-1. 
-2. 
+1. 设置可售区域座位
+2. 设置座位票价、是否套票、情侣票
 3. 
 
 {% endhighlight %}
