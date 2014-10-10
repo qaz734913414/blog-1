@@ -219,6 +219,23 @@ pre {}
 
 /*duoshuo*/
 #ds-recent-visitors .ds-avatar { display: inline-block !important; }
+#ds-recent-visitors img { 
+	-webkit-transition: .8s;
+	-moz-transition: .8s;
+	-o-transition: .8s;
+	-ms-transition: .8s;
+	padding: 3px;
+	border: 1px solid #ddd;
+	background: #fff; 
+}
+#ds-recent-visitors img:hover { 
+	transform: rotate(720deg);
+	-webkit-transform: rotate(720deg);
+	-moz-transform: rotate(720deg);
+	-o-transform: rotate(720deg);
+	-ms-transform: rotate(720deg);
+	border-radius: 30px !important; 
+}
 
 /* douban */
 .douban-books {
