@@ -179,11 +179,12 @@ tags: linux j2ee web database 高并发 架构
 {% highlight html %}
 
 数据库存储大体分为以下几类：  
-关系型（事务型）数据库 Oracle、Mysql等；  
-key/value数据库 Redis、Memcached等；  
-文档型数据库 Mongodb等；  
-列式数据库 HBase等；  
-还有图形数据库、对象数据库、xml数据库等。  
+----------------------------------------------------------------------------------------------
+1. 关系型（事务型）数据库 Oracle、Mysql等  
+2. key/value数据库 Redis、Memcached等  
+3. 文档型数据库 Mongodb等  
+4. 列式数据库 HBase等  
+5. 还有图形数据库、对象数据库、xml数据库等  
 我们公司主业务数据库是oracle10g，规划准备迁到oracle11g上，相关业务也用到了Mysql。
 
 {% endhighlight %}
