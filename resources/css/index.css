@@ -151,9 +151,13 @@ a:hover{color:#3399cc;}
 .detail-pl dl.detail-df{margin:0 10px 10px 70px;padding:5px 10px;background-color:#fbfbfb;}
 
 /* top */
-.topfade { position: fixed; _position: absolute; bottom: 20px; right: 50px; display: none;}
-.topfade a, .topfade a:link { width: 50px; height: 65px; display: inline-block; background: url(../images/base/top.png) no-repeat; outline: none;}
-.topfade a:hover { outline: none;}
+#rocket-to-top {
+	background: url("../images/base/top.png") no-repeat scroll 0 0 transparent; 
+	cursor: default; display: block; height: 250px; margin: -100px 0 0; overflow: hidden; padding: 0; position: fixed; right: 0; top: 80%; width: 149px; z-index: 11;
+}
+#rocket-to-top div { left: 0; margin: 0; overflow: hidden; padding: 0; position: absolute; top: 0; width: 149px; }
+#rocket-to-top .level-2 { background: url("../images/base/top.png") no-repeat scroll -149px 0 transparent; display: none; height: 250px; opacity: 0; z-index: 1; }
+#rocket-to-top .level-3 { background: none repeat scroll 0 0 transparent; cursor: pointer; display: block; height: 150px; z-index: 2; }
 
 /*窗口 缩小后宽度小于990调整*/
 @media screen and (max-width: 990px){
