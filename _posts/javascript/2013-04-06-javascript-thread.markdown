@@ -64,7 +64,7 @@ function Thread(_task, _delay, _times){
                     window.clearInterval(this.timerID); 
                 }
             }
-		}
+        }
     }
     
 	// 休眠函数
