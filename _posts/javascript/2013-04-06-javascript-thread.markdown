@@ -41,7 +41,7 @@ function Thread(_task, _delay, _times){
     
     this.timerID = -1; // 定时器内部标识
     
-	// 开始函数
+    // 开始函数
     this.start = function(){
         if (this.runFlag == false) {
             this.timerID = window.setInterval(_point.run, _delay);
@@ -49,7 +49,7 @@ function Thread(_task, _delay, _times){
         }
     }
     
-	// 执行函数
+    // 执行函数
     this.run = function(){
         if (_point.busyFlag) 
             return;
@@ -67,17 +67,17 @@ function Thread(_task, _delay, _times){
         }
     }
     
-	// 休眠函数
+    // 休眠函数
     this.sleep = function(){
         this.busyFlag = true;
     }
     
-	// 恢复函数
+    // 恢复函数
     this.resume = function(){
         this.busyFlag = false;
     }
     
-	// 终止函数
+    // 终止函数
     this.abort = function(){
         window.clearInterval(this.timerID);
     }
