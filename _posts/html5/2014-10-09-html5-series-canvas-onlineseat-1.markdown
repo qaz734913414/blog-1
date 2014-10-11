@@ -42,15 +42,15 @@ tags: html5 在线选座
 
 {% endhighlight %}
 
-> 产品设计图：
+> 设计图稿：
 
 后端：  
 
-![onlineseat-0]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.jpg) 
+![onlineseat-0]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.jpg)  
 
 前端：  
 
-![onlineseat-1]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.jpg) 
+![onlineseat-1]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.jpg)  
 
 > 后端实现：
 
