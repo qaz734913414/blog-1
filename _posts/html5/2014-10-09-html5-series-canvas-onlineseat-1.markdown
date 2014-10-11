@@ -42,6 +42,18 @@ tags: html5 在线选座
 
 {% endhighlight %}
 
+> 产品设计图：
+
+后端：  
+
+![onlineseat-0]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.jpg) 
+
+前端：  
+
+![onlineseat-0]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.jpg) 
+
+
+
 ### OK,今天就先说到这儿，未完待续 :)
 
 -----------------------
