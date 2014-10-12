@@ -13,8 +13,88 @@ tags: html5 在线选座
 
 > 设置影院场馆（影院场馆可售区域）：
 
-首先先说一下`canvas`网格布局，往下看代码。
+首先来说一下`canvas`来画场馆热点闭合区域。
 {% highlight html %}
+
+# html 标签
+<canvas id="canvas" width=300 height=300 style="border:1px solid #000; background-color: ivory;"></canvas>
+
+{% endhighlight %}
+
+{% highlight javascript %}
+
+var canvas = document.getElementById("canvas"),
+    ctx = canvas.getContext("2d"),
+    canvasOffset = canvas.getBoundingClientRect(),
+    offsetX = canvasOffset.left,
+    offsetY = canvasOffset.top,
+    storedLines = [],
+    startX = 0,
+    startY = 0,
+    radius = 4,
+    canvasMouseX,
+    canvasMouseY;
+
+ctx.strokeStyle = "orange";
+
+//按下鼠标事件函数
+canvas.onmousedown = function (e) {
+  handleMouseDown(e);
+};
+
+//按下鼠标函数
+function handleMouseDown(e) {
+  canvasMouseX = parseInt(e.clientX - offsetX);
+  canvasMouseY = parseInt(e.clientY - offsetY);
+
+  if (hitStartCircle(canvasMouseX, canvasMouseY)) {
+    fillPolyline();
+    return;
+  }
+  storedLines.push({
+    x: canvasMouseX,
+    y: canvasMouseY
+  });
+  if (storedLines.length == 1) {
+    startX = canvasMouseX;
+    startY = canvasMouseY;
+    ctx.fillStyle = "green";
+    ctx.beginPath();
+    ctx.arc(canvasMouseX, canvasMouseY, radius, 0, 2 * Math.PI, false);
+    ctx.fill();
+  } else {
+    var c = storedLines.length - 2;
+    ctx.strokeStyle = "orange";
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(storedLines[c].x, storedLines[c].y);
+    ctx.lineTo(canvasMouseX, canvasMouseY);
+    ctx.stroke();
+  }
+}
+
+function hitStartCircle(x, y) {
+  var dx = x - startX;
+  var dy = y - startY;
+  return (dx * dx + dy * dy < radius * radius)
+}
+
+//闭合折线填充函数
+function fillPolyline() {
+  ctx.strokeStyle = "red";
+  ctx.fillStyle = "blue";
+  ctx.lineWidth = 1;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.beginPath();
+  ctx.moveTo(storedLines[0].x, storedLines[0].y);
+  for (var i = 0; i < storedLines.length; i++) {
+    ctx.lineTo(storedLines[i].x, storedLines[i].y);
+  }
+  ctx.closePath();
+  ctx.fill();
+  ctx.stroke();
+  storedLines = [];
+}
 
 {% endhighlight %}
 
