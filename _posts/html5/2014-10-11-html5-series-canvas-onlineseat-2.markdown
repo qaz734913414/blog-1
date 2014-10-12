@@ -104,9 +104,7 @@ function fillPolyline() {
 
 -----------------------
 
-下面有闭合区域的简单例子：
-
-<a class="btn btn-primary btn-sm" href="/resources/demo{{ page.url}}-polygon.html" target="_blank">查看DEMO</a> 
+这里是`javascript`闭合区域的简单例子：<a class="btn btn-primary btn-sm" href="/resources/demo{{ page.url}}-polygon.html" target="_blank">查看DEMO</a> 
 
 -----------------------
 
