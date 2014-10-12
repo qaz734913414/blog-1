@@ -25,6 +25,7 @@ tags: html5 在线选座
 
 {% highlight javascript %}
 
+//闭合区域简单实现
 var canvas = document.getElementById("canvas"),
     ctx = canvas.getContext("2d"),
     canvasOffset = canvas.getBoundingClientRect(),
@@ -62,6 +63,7 @@ function handleMouseDown(e) {
     startY = canvasMouseY;
     ctx.fillStyle = "green";
     ctx.beginPath();
+    //画原点
     ctx.arc(canvasMouseX, canvasMouseY, radius, 0, 2 * Math.PI, false);
     ctx.fill();
   } else {
