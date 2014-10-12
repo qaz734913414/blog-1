@@ -102,6 +102,12 @@ function fillPolyline() {
 
 {% endhighlight %}
 
+-----------------------
+
+<a class="btn btn-primary btn-sm" href="/resources/demo{{ page.url}}-polygon.html" target="_blank">闭合区域DEMO</a> 
+
+-----------------------
+
 > 设置可售区域座位：
 
 {% highlight html %}
