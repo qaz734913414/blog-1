@@ -52,11 +52,7 @@ tags: html5 在线选座
 
 ![onlineseat-1]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.jpg)  
 
-> 后端实现：
-
-
-
-### OK,今天就先说到这儿，未完待续 :)
+### OK,今天就先说到这儿 :)
 
 -----------------------
 
