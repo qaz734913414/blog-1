@@ -8,11 +8,12 @@ date:   2014-10-11
 category: html5
 tags: html5 在线选座
 ---
-`html5 canvas+javascript`在线选座购票后端实现步骤。
+`html+javascript`在线选座购票后端实现，利用`map`、`area`标签标出场馆热点区域，框选热点区域座位设置票价。
 <!--more-->
 
 > 设置影院场馆（影院场馆可售区域）：
 
+首先先说一下`canvas`网格布局，往下看代码。
 {% highlight html %}
 
 {% endhighlight %}
