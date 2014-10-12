@@ -13,13 +13,15 @@ tags: html5 在线选座
 
 > 设置影院场馆（影院场馆可售区域）：
 
-首先来说一下`canvas`来画场馆热点闭合区域。
+首先来说一下`canvas`来画场馆热点闭合区域。  
+`html`部分：
 {% highlight html %}
 
-# html 标签
 <canvas id="canvas" width=300 height=300 style="border:1px solid #000; background-color: ivory;"></canvas>
 
 {% endhighlight %}
+
+`javascript`部分：
 
 {% highlight javascript %}
 
