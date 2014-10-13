@@ -26,8 +26,7 @@ tags: html5 在线选座
 {% highlight javascript %}
 
 //闭合区域简单实现
-
-var canvas = document.body.appendChild(document.getElementById("myCanvas")), // canvas 元素
+var canvas = document.getElementById("myCanvas"), // canvas 元素
     context = canvas.getContext("2d"), // 创建 context 对象
     canvasOffset = canvas.getBoundingClientRect(),
     offsetX = canvasOffset.left,
