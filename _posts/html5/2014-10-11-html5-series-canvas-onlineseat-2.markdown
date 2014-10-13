@@ -26,8 +26,9 @@ tags: html5 在线选座
 {% highlight javascript %}
 
 //闭合区域简单实现
-var canvas = document.getElementById("canvas"),
-    ctx = canvas.getContext("2d"),
+
+var canvas = document.body.appendChild(document.getElementById("myCanvas")), // canvas 元素
+    context = canvas.getContext("2d"), // 创建 context 对象
     canvasOffset = canvas.getBoundingClientRect(),
     offsetX = canvasOffset.left,
     offsetY = canvasOffset.top,
@@ -38,7 +39,18 @@ var canvas = document.getElementById("canvas"),
     canvasMouseX,
     canvasMouseY;
 
-ctx.strokeStyle = "orange";
+// 创建图片对象
+var img = new Image();
+
+// 设置图片路径
+img.src = "http://www.jcore.cn/resources/images/demo/onlineseat.jpg";
+
+// 图片加载以后绘图，否则为空白图片
+img.onload = function(){
+	context.drawImage(img,0,0);
+}
+
+context.strokeStyle = "orange";
 
 //按下鼠标事件函数
 canvas.onmousedown = function (e) {
@@ -61,19 +73,18 @@ function handleMouseDown(e) {
   if (storedLines.length == 1) {
     startX = canvasMouseX;
     startY = canvasMouseY;
-    ctx.fillStyle = "green";
-    ctx.beginPath();
-    //画原点
-    ctx.arc(canvasMouseX, canvasMouseY, radius, 0, 2 * Math.PI, false);
-    ctx.fill();
+    context.fillStyle = "green";
+    context.beginPath();
+    context.arc(canvasMouseX, canvasMouseY, radius, 0, 2 * Math.PI, false);
+    context.fill();
   } else {
     var c = storedLines.length - 2;
-    ctx.strokeStyle = "orange";
-    ctx.lineWidth = 1;
-    ctx.beginPath();
-    ctx.moveTo(storedLines[c].x, storedLines[c].y);
-    ctx.lineTo(canvasMouseX, canvasMouseY);
-    ctx.stroke();
+    context.strokeStyle = "orange";
+    context.lineWidth = 1;
+    context.beginPath();
+    context.moveTo(storedLines[c].x, storedLines[c].y);
+    context.lineTo(canvasMouseX, canvasMouseY);
+    context.stroke();
   }
 }
 
@@ -85,18 +96,19 @@ function hitStartCircle(x, y) {
 
 //闭合折线填充函数
 function fillPolyline() {
-  ctx.strokeStyle = "red";
-  ctx.fillStyle = "blue";
-  ctx.lineWidth = 1;
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.beginPath();
-  ctx.moveTo(storedLines[0].x, storedLines[0].y);
+  context.strokeStyle = "red";
+  context.fillStyle = "blue";
+  context.lineWidth = 1;
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  context.drawImage(img,0,0);
+  context.beginPath();
+  context.moveTo(storedLines[0].x, storedLines[0].y);
   for (var i = 0; i < storedLines.length; i++) {
-    ctx.lineTo(storedLines[i].x, storedLines[i].y);
+    context.lineTo(storedLines[i].x, storedLines[i].y);
   }
-  ctx.closePath();
-  ctx.fill();
-  ctx.stroke();
+  context.closePath();
+  context.fill();
+  context.stroke();
   storedLines = [];
 }
 
