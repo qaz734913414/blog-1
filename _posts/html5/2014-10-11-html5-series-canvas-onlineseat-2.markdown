@@ -143,7 +143,15 @@ var canvas = document.getElementById("canvas"), // canvas 元素
     ynum = 10, // Y轴座位个数
     width = 20, // 座位宽
     height = 20, // 座位高
-    space = 2; // 座位间距
+    space = 2, // 座位间距
+    imageURL = "http://www.jcore.cn/resources/images/demo/", // 图片默认路径
+    seatImgs = { // 座位图片对象数组
+        s1 : imageURL + "icon-seat-1.png", //舞台方向
+        s2 : imageURL + "icon-seat-2.png", //可选座位
+        s3 : imageURL + "icon-seat-3.png", //不可选座位
+        s4 : imageURL + "icon-seat-4.png", //锁住座位
+        s5 : imageURL + "icon-seat-5.png", //套票座位
+    };
 
 // 座位x，y轴间距
 function surface(_a, _b) {  
@@ -153,14 +161,39 @@ function surface(_a, _b) {
     };
 }
 
-//遍历画座位
-for (a = 0; a < xnum; a += 1) {
-    for (b = 0; b < ynum; b += 1) {
-        position = surface(a, b);
-        context.fillStyle = "#ccc"; // 设置默认座位颜色
-        context.fillRect(position.x, position.y, width, height);
+// 多图片的预加载函数
+function loadImages(sources, callback){
+  var count = 0, images ={}, imgNum = 0;
+  for(src in sources){ imgNum++; }
+  for(src in sources){
+    images[src] = new Image();
+    images[src].src = sources[src];
+    if(images[src].complete){  //是否有缓冲存在
+      if(++count >= imgNum){
+        callback(images); //满足数量直接返回
+      }
+      continue;
     }
+    images[src].onload = function(){
+      if(++count >= imgNum){
+        callback(images);
+      }
+    };
+  }
 }
+
+// 图片加载以后绘图，否则为空白图片
+loadImages(seatImgs,function(images){
+  //遍历画座位
+  for (a = 0; a < xnum; a += 1) {
+      for (b = 0; b < ynum; b += 1) {
+          position = surface(a, b);
+          context.fillStyle = "#008899"; // 设置默认座位颜色
+          context.fillRect(position.x, position.y, width, height);
+          context.drawImage(images["s1"], position.x, position.y, width, height);
+      }
+  }
+});
 
 {% endhighlight %}
 
