@@ -122,7 +122,7 @@ function fillPolyline() {
 > 设置可售区域座位：
 
 {% highlight html %}
-
+ 
 {% endhighlight %}
 
 > 设置座位票价、是否套票、情侣票：
