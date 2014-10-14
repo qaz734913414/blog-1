@@ -13,8 +13,9 @@ tags: html5 在线选座
 
 > 设置影院场馆（影院场馆可售区域）：
 
-首先来说一下`canvas`来画场馆热点闭合区域。  
+简单的`canvas`来画场馆热点闭合区域。  
 `html`部分：
+
 {% highlight html %}
 
 <canvas id="canvas" width=300 height=300 style="border:1px solid #000; background-color: ivory;"></canvas>
@@ -121,9 +122,53 @@ function fillPolyline() {
 
 > 设置可售区域座位：
 
+简单的`canvas`来画所有座位区域（10x10的格子）。  
+`html`部分：
+
 {% highlight html %}
- 
+
+<canvas id="myCanvas" width="500" height="500" style="border:1px solid #000; background-color: ivory;"></canvas>
+
 {% endhighlight %}
+
+`javascript`部分：
+
+{% highlight javascript %}
+
+var canvas = document.getElementById("myCanvas"), // canvas 元素
+    context = canvas.getContext("2d"), // 创建 context 对象
+    position,
+    a, b,
+    xnum = 10, // X轴座位个数
+    ynum = 10, // Y轴座位个数
+    width = 20, // 座位宽
+    height = 20, // 座位高
+    space = 2; // 座位间距
+
+// 座位x，y轴间距
+function surface(_a, _b) {  
+    return {
+        x: _a * (width + space),
+        y: _b * (height + space)
+    };
+}
+
+//遍历画座位
+for (a = 0; a < xnum; a += 1) {
+    for (b = 0; b < ynum; b += 1) {
+        position = surface(a, b);
+        context.fillStyle = "#ccc"; // 设置默认座位颜色
+        context.fillRect(position.x, position.y, width, height);
+    }
+}
+
+{% endhighlight %}
+
+-----------------------
+
+<a class="btn btn-primary btn-sm" href="/resources/demo{{ page.url}}-seatarea.html" target="_blank">查看DEMO</a> 
+
+-----------------------
 
 > 设置座位票价、是否套票、情侣票：
 
