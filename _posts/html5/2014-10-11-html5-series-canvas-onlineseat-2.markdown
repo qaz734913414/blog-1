@@ -27,7 +27,7 @@ tags: html5 在线选座
 {% highlight javascript %}
 
 //闭合区域简单实现
-var canvas = document.getElementById("myCanvas"), // canvas 元素
+var canvas = document.getElementById("canvas"), // canvas 元素
     context = canvas.getContext("2d"), // 创建 context 对象
     canvasOffset = canvas.getBoundingClientRect(),
     offsetX = canvasOffset.left,
@@ -127,7 +127,7 @@ function fillPolyline() {
 
 {% highlight html %}
 
-<canvas id="myCanvas" width="500" height="500" style="border:1px solid #000; background-color: ivory;"></canvas>
+<canvas id="canvas" width="500" height="500" style="border:1px solid #000; background-color: ivory;"></canvas>
 
 {% endhighlight %}
 
@@ -135,7 +135,7 @@ function fillPolyline() {
 
 {% highlight javascript %}
 
-var canvas = document.getElementById("myCanvas"), // canvas 元素
+var canvas = document.getElementById("canvas"), // canvas 元素
     context = canvas.getContext("2d"), // 创建 context 对象
     position,
     a, b,
