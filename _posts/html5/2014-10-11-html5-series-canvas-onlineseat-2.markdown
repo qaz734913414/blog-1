@@ -146,11 +146,11 @@ var canvas = document.getElementById("canvas"), // canvas 元素
     space = 2, // 座位间距
     imageURL = "http://www.jcore.cn/resources/images/demo/", // 图片默认路径
     seatImgs = { // 座位图片对象数组
-        s1 : imageURL + "icon-seat-1.png", //舞台方向
-        s2 : imageURL + "icon-seat-2.png", //可选座位
-        s3 : imageURL + "icon-seat-3.png", //不可选座位
-        s4 : imageURL + "icon-seat-4.png", //锁住座位
-        s5 : imageURL + "icon-seat-5.png", //套票座位
+        s1 : imageURL + "icon-seat-1.png", //可选座位
+        s2 : imageURL + "icon-seat-2.png", //不可选座位
+        s3 : imageURL + "icon-seat-3.png", //锁住座位
+        s4 : imageURL + "icon-seat-4.png", //套票座位
+        s5 : imageURL + "icon-seat-5.png", //选中座位
     };
 
 // 座位x，y轴间距
