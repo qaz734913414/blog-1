@@ -203,12 +203,6 @@ loadImages(seatImgs,function(images){
 
 -----------------------
 
-> 设置座位票价、是否套票、情侣票：
-
-{% highlight html %}
-
-{% endhighlight %}
-
 ### OK,今天就先说到这儿 :)
 
 -----------------------
