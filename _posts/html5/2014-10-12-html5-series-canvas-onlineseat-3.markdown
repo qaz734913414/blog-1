@@ -124,9 +124,9 @@ img.onload = function(){
 
 {% endhighlight %}
 
------------------------
-
 ###DEMO中暂未展示缩放和点击事件。:)   
+
+-----------------------
 
 <a class="btn btn-primary btn-sm" href="/resources/demo{{ page.url}}-seatarea.html" target="_blank">查看DEMO</a> 
 
