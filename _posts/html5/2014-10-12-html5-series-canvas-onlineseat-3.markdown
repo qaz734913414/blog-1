@@ -100,9 +100,9 @@ img.src = baseResult["img"];
 
 // 图片加载以后绘图，否则为空白图片
 img.onload = function(){
-	context.drawImage(img,0,0);
+  context.drawImage(img,0,0);
   var areas = baseResult["areas"];
-	for(var i=areas.length;i--;){
+  for(var i=areas.length;i--;){
     var area = areas[i];
     var _rect = area["rect"];
     context.beginPath();  // 画图开始
