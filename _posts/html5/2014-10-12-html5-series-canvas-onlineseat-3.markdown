@@ -115,7 +115,7 @@ img.onload = function(){
     } 
     if(area["remain"] == 0){ // 无座位可售区域
         context.fillStyle = "#cccccc"; // 默认半透明灰色
-        context.globalAlpha = .9;
+        context.globalAlpha = .9; // 透明度
         context.fill(); 	// 闭合区域填充颜色
     }
     context.stroke(); // 画图结束
