@@ -18,7 +18,7 @@ tags: html5 在线选座
 
 {% highlight html %}
 
-<canvas id="canvas" width=300 height=300 style="border:1px solid #000; background-color: ivory;"></canvas>
+<canvas id="canvas" width=650 height=600 style="border:1px solid #000; background-color: ivory;"></canvas>
 
 {% endhighlight %}
 
