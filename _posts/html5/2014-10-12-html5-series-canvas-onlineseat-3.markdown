@@ -13,7 +13,7 @@ tags: html5 在线选座
 
 这里就不写`java`服务端请求返回接口的方法了，直接给出返回`JSON`数据：
 
-{% highlight javascript %} 
+{% highlight javascript %}
 
 // 接口返回的json数据
 { // 基础数据接口
