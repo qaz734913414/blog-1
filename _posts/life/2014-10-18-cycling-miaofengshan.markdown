@@ -11,7 +11,7 @@ tags: 骑行
 昨儿个第二次骑行妙峰山，和同学`赖宝`一起，骑车一半儿是为了锻炼身体，一半儿是休闲看景，以休闲为主吧，边骑边看边玩儿。
 <!--more-->
 
-> 座驾
+> 座驾（Giant TCR SL2）
 
 ![launchrocket]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)
 
