@@ -11,7 +11,7 @@ tags: javascript ajax nodejs
 前几年`Ajax`流行的时候，刮起了一阵异步风暴，随着`Node.js`的流行，又刮来一大波异步风暴。随着页面异步功能的相互依赖，代码逻辑如果控制的不合理，就会陷入无穷的回调地狱中。
 <!--more-->
 
-> 经典的callback异步队列实现（金字塔回调模式）
+> 金字塔回调模式
 
 {% highlight html %}
 
@@ -25,11 +25,19 @@ loadImg('a.jpg', function() {
 
 {% endhighlight %}
 
+当异步的任务很多的时候，维护大量的callback将是一场灾难。
+
+> Promise
+
+Promise规范已经出来一段时间了，流行的Promise类库也不少，不清楚的朋友，[戳这里](http://qed.dk/poul-foged/2014/03/03/en-sammenligning-af-JavaScript-promise-biblioteker/)。  
+
+
+
 -----------------------
 
 相关参考文章地址：
 
-Callback-Hell - <http://www.callbackhell.com/>
+Callback-Hell - <http://www.callbackhell.com/>  
 JavaScript-Promises - <http://qed.dk/poul-foged/2014/03/03/en-sammenligning-af-JavaScript-promise-biblioteker/>
 
 -----------------------
