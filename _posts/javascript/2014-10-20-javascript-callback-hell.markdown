@@ -79,6 +79,10 @@ function Queue(){
 
 -----------------------
 
+<a class="btn btn-primary btn-sm" href="/resources/demo{{ page.url}}.html" target="_blank">查看DEMO</a> 
+
+-----------------------
+
 相关参考文章地址：
 
 Callback-Hell - <http://www.callbackhell.com/>  
