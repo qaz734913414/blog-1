@@ -37,7 +37,43 @@ loadImg('a.jpg', function() {
 
 {% highlight javascript %}
 
-
+// 队列函数
+function Queue(){
+  
+  var _queueArray = [], // 队列数组
+      _errorQueueName = null // 错误队列名称消息
+  
+  // 添加执行队列函数
+  this.add = function(queueName,queueFun){
+    _queueArray.push({ // 添加队列
+      name : queueName,
+      fun  : queueFun
+    });
+    return this;
+  }
+  // 执行队列函数
+  this.run = function(){ // 执行队列
+    var _queue = _queueArray.shift(); // 队列函数
+    if(!_queue) return; // 函数不存在，直接返回
+    try{
+      _queue.fun(); // 依次执行函数
+      this.run(); // 回调自己
+    }catch(e){ // 异常处理
+      _errorQueueName = _queue.name; 
+    }
+    
+  }
+  // 全部成功，执行函数
+  this.done = function(doneFun){
+    this.run();
+    if(!_errorQueueName) doneFun();
+    return this; 
+  }
+  // 一个失败输出函数
+  this.fail = function(failFun){
+    if(_errorQueueName) failFun(_errorQueueName);
+  };
+}
 
 {% endhighlight %}
 
