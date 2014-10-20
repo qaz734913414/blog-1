@@ -13,7 +13,7 @@ tags: javascript ajax nodejs
 
 > 金字塔回调模式
 
-{% highlight html %}
+{% highlight javascript %}
 
 loadImg('a.jpg', function() {
     loadImg('b.jpg', function() {
