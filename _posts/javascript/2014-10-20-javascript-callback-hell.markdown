@@ -11,7 +11,7 @@ tags: javascript ajax nodejs
 前几年`Ajax`流行的时候，刮起了一阵异步风暴，随着`Node.js`的流行，又刮来一大波异步风暴。随着页面异步功能的相互依赖，代码逻辑如果控制的不合理，就会陷入无穷的回调地狱中。
 <!--more-->
 
-> 经典的callback异步队列实现
+> 经典的callback异步队列实现（金字塔回调模式）
 
 {% highlight html %}
 
@@ -24,8 +24,6 @@ loadImg('a.jpg', function() {
 });
 
 {% endhighlight %}
-
-这也是我们常说的金字塔回调模式。
 
 -----------------------
 
