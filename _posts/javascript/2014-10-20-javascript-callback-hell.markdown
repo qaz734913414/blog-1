@@ -31,7 +31,7 @@ loadImg('a.jpg', function() {
 
 `Promise`规范已经出来一段时间了，流行的`Promise`类库也不少，不清楚的朋友，[戳这里](http://qed.dk/poul-foged/2014/03/03/en-sammenligning-af-JavaScript-promise-biblioteker/)。  
 
-在`Promises`规范中，每个任务都有三种状态：默认(pending)、完成(fulfilled)、失败(rejected)。  
+`Promise`规范中，每个任务都有三种状态：默认(`pending`)、完成(`fulfilled`)、失败(`rejected`)。  
 
 > 简单的事件队列管理实现
 
