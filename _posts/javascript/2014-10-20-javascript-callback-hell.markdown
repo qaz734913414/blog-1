@@ -25,11 +25,11 @@ loadImg('a.jpg', function() {
 
 {% endhighlight %}
 
-当异步的任务很多的时候，维护大量的callback将是一场灾难。
+当异步的任务很多的时候，维护大量的`callback`将是一场灾难。
 
 > Promise
 
-Promise规范已经出来一段时间了，流行的Promise类库也不少，不清楚的朋友，[戳这里](http://qed.dk/poul-foged/2014/03/03/en-sammenligning-af-JavaScript-promise-biblioteker/)。  
+`Promise`规范已经出来一段时间了，流行的`Promise`类库也不少，不清楚的朋友，[戳这里](http://qed.dk/poul-foged/2014/03/03/en-sammenligning-af-JavaScript-promise-biblioteker/)。  
 
 
 
