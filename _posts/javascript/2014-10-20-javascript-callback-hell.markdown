@@ -76,11 +76,13 @@ function Queue(){
 
 {% endhighlight %}
 
-### OK，今儿先到这儿了，后续会用`Generator`对象来重构`Queue`函数 :)
-
 -----------------------
 
 <a class="btn btn-primary btn-sm" href="/resources/demo{{ page.url}}.html" target="_blank">查看DEMO</a> 
+
+-----------------------
+
+### OK，今儿先到这儿了，后续会用`Generator`对象来重构`Queue`函数 :)
 
 -----------------------
 
