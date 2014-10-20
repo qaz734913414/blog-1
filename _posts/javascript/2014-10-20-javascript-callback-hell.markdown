@@ -61,7 +61,6 @@ function Queue(){
     }catch(e){ // 异常处理
       _errorQueueName = _queue.name; 
     }
-    
   }
   // 全部成功，执行函数
   this.done = function(doneFun){
