@@ -76,6 +76,23 @@ function Queue(){
 
 {% endhighlight %}
 
+使用方法：
+
+{% highlight javascript %}
+
+var queue = new Queue();
+queue1.add("queue_fun1",function(){
+  //...
+}).add("queue_fun2",function(){
+  //...
+}).done(function(){
+  alert("所有函数,执行成功...");
+}).fail(function(name){
+  alert(name + "函数,执行失败...");
+});
+
+{% endhighlight %}
+
 -----------------------
 
 <a class="btn btn-primary btn-sm" href="/resources/demo{{ page.url}}.html" target="_blank">查看DEMO</a> 
