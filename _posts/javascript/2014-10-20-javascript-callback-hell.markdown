@@ -80,16 +80,23 @@ function Queue(){
 
 {% highlight javascript %}
 
-var queue = new Queue();
-queue1.add("queue_fun1",function(){
-  //...
-}).add("queue_fun2",function(){
-  //...
-}).done(function(){
-  alert("所有函数,执行成功...");
-}).fail(function(name){
-  alert(name + "函数,执行失败...");
-});
+// 函数集合
+var funs = {
+  test1 : function(){ ... },
+  test2 : function(){ ... },
+  test3 : function(){ ... },
+  fun_done : function(){ alert("所有函数,执行成功..."); },
+  fun_fail : function(name){ alert(name + "函数,执行失败..."); }
+}
+
+var queue = new Queue(); //初始化Queue对象
+
+queue
+.add("queue_fun1",funs.test1) //队列函数1
+.add("queue_fun2",funs.test2) //队列函数2
+.add("queue_fun3",funs.test3) //队列函数3
+.done(funs.fun_done) // 执行成功函数
+.fail(funs.fun_fail); // 执行失败函数
 
 {% endhighlight %}
 
