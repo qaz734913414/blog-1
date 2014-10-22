@@ -11,17 +11,31 @@ tags: html5 game 大话西游 媚灵狐
 还依稀记得高中那会儿特别火爆的网易游戏回合制游戏`大话西游`吗？这儿先不讨论游戏中的各种怀念的细节了。今儿打算用`canvas+javascript`来循环播放多个随机位置，八方向人物移动的动画效果。
 <!--more-->
 
-> 大话西游（媚灵狐）缅怀一下。
+> 大话西游（媚灵狐）
 
 先来一张当年特别喜欢的游戏中的人物。
 
-![媚灵狐]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.jpg)  
+![媚灵狐]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)  
 
-> 八方向（媚灵狐）ps:图片来自大话西游官方网站。
+> 八方向（媚灵狐）
 
 ![媚灵狐-八方向]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.png)  
 
+> 动画实现过程
+
+`html`部分：
+
+{% highlight html %}
+
+
+
+{% endhighlight %}
+
+`javascript`部分：
+
 {% highlight javascript %}
+
+
 
 {% endhighlight %}
 
