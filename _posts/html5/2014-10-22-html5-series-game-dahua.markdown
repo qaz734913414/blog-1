@@ -103,8 +103,8 @@ function initSprites(images,callback){
   var padding = 200; // 人物活动范围
   for (var i=0;i<20;++i){ // 创建多个人物
     sprites[i] = {
-      x : Math.random() * (bg.width-padding) + padding/2, // 随机x轴
-      y : Math.random() * (bg.height-padding) + padding/2, // 随机y轴
+      x : Math.random() * (bg.width-padding) + padding/2, // 人物活动范围内，随机x轴
+      y : Math.random() * (bg.height-padding) + padding/2, // 人物活动范围内，随机y轴
       f : Math.round( Math.random() * 3 ) // 随机偏移值
     };
   }
@@ -118,8 +118,8 @@ function drawFrame(images){
     var s = sprites[i];
     s.x += Math.random() * 4 - 2; // 随机设置人物x轴
     s.y += Math.random() * 4 - 2; // 随机设置人物y轴
-    if (s.x+size.w >= bg.width) s.x -= 10; // 控制x轴不超出预定边界
-    if (s.y+size.h >= bg.height) s.y -= 10; // 控制y轴不超出预定边界
+    if (s.x+size.w >= bg.width) s.x -= 10; // 控制x轴不超出活动范围
+    if (s.y+size.h >= bg.height) s.y -= 10; // 控制y轴不超出活动范围
     var offset = (s.f++ % size.frames)*size.w; // 偏移值
     ctx.save();
     ctx.scale(.8,.8); // 人物大小
