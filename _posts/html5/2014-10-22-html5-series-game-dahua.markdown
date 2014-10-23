@@ -1,8 +1,8 @@
 ---
 layout: page
-title:  "html5系列.画布进阶.游戏.大话西游（媚灵狐）"
-description: "html5系列.画布进阶.游戏.大话西游（媚灵狐）"
-keywords: html5,html5进阶,canvas,画布,游戏,大话西游,媚灵狐
+title:  "html5系列.画布进阶.游戏.人物移动（媚灵狐）"
+description: "html5系列.画布进阶.游戏.人物移动（媚灵狐）"
+keywords: html5,html5进阶,canvas,画布,游戏,人物移动,大话西游,媚灵狐
 origin: 张嘉杰.原创
 date:   2014-10-22
 category: html5
