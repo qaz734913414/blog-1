@@ -97,6 +97,7 @@ loadImages(gameImgs,function(images){
   
 });
 
+// 初始化人物函数
 function initSprites(images,callback){
   var bg = images["bg"]
   // 画出人物
@@ -111,7 +112,8 @@ function initSprites(images,callback){
   if(callback) callback();
 }
 
-var drawFrame = function(images){
+// 画帧数动画
+function drawFrame(images){
   var bg = images["bg"], mlh = images["mlh"];
   ctx.drawImage(bg,0,0); // 清空背景画布
   for (var i=0,len=sprites.length;i<len;++i){ // 遍历人物
