@@ -13,8 +13,20 @@ tags: vpn mac
 `云梯 VPN`（收费）是之前的同事推荐，还算是比较稳定的，而且国内的网页不走代理流量。
 <!--more-->  
 
-下面给大家推荐一个免费的 VPN，速度还不错哦。
+下面给大家推荐一个免费获取`VPN`的国外网站。  
 
-[海盗船 VPN]( http://www.4a8a.net/ )
+先来看截图：
+
+![freevpn-0]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)  
+
+![freevpn-1]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.png)  
+
+-----------------------
+
+<a class="btn btn-primary btn-sm" href="http://www.freevpn.cc/" target="_blank">传送门</a> 
+
+-----------------------
+
+##OK，今儿就先到这儿了 :)
 
 -----------------------
