@@ -23,7 +23,7 @@ tags: vpn mac
 
 -----------------------
 
-当然不会忘记网站地址：<a class="btn btn-primary btn-sm" href="http://www.freevpn.cc/" target="_blank">传送门</a> 
+当然不会忘记网站地址：<a class="btn btn-primary btn-sm" href="http://www.freevpn.cc/account/" target="_blank">传送门</a> 
 
 -----------------------
 
