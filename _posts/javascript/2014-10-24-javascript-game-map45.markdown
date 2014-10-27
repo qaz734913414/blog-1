@@ -27,46 +27,44 @@ tags: javascript game
 
 {% highlight css %}
 
-	* { font-size: 9pt }
-	div.tile {
-		position: absolute;
-		background-image: url(http://www.jcore.cn/resources/images/2014/10/24/javascript-game-map45-0.png);
-		width: 64px;
-		height: 32px;
-		line-height: 32px;
-		text-align: center;
-		border: 1px solid #000;
-	}
+* { font-size: 9pt }
+div.tile {
+	position: absolute;
+	background-image: url(http://www.jcore.cn/resources/images/2014/10/24/javascript-game-map45-0.png);
+	width: 64px;
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+	border: 1px solid #000;
+}
 
-	.d1 { background-position: -0px -0px; }
-	.d2 { background-position: -64px -0px; }
-	.d3 { background-position: -128px -0px; }
-	.d4 { background-position: -192px -0px; }
-	.d5 { background-position: -256px -0px; }
-	.d6 { background-position: -0px -32px; }
-	.d7 { background-position: -64px -32px; }
-	.d8 { background-position: -128px -32px; }
-	.d9 { background-position: -192px -32px; }
-	.d10 { background-position: -256px -32px; }
-	.d11 { background-position: -0px -64px; }
-	.d12 { background-position: -64px -64px; }
-	.d13 { background-position: -128px -64px; }
-	.d14 { background-position: -192px -64px; }
-	.d15 { background-position: -256px -64px; }
-	.d16 { background-position: -0px -96px; }
-	.d17 { background-position: -64px -96px; }
-	.d18 { background-position: -128px -96px; }
-	.d19 { background-position: -192px -96px; }
-	.d20 { background-position: -256px -96px; }
-	.d21 { background-position: -0px -128px; }
-	.d22 { background-position: -64px -128px; }
-	.d23 { background-position: -128px -128px; }
-	.d24 { background-position: -192px -128px; }
-	.d25 { background-position: -256px -128px; }
+.d1 { background-position: -0px -0px; }
+.d2 { background-position: -64px -0px; }
+.d3 { background-position: -128px -0px; }
+.d4 { background-position: -192px -0px; }
+.d5 { background-position: -256px -0px; }
+.d6 { background-position: -0px -32px; }
+.d7 { background-position: -64px -32px; }
+.d8 { background-position: -128px -32px; }
+.d9 { background-position: -192px -32px; }
+.d10 { background-position: -256px -32px; }
+.d11 { background-position: -0px -64px; }
+.d12 { background-position: -64px -64px; }
+.d13 { background-position: -128px -64px; }
+.d14 { background-position: -192px -64px; }
+.d15 { background-position: -256px -64px; }
+.d16 { background-position: -0px -96px; }
+.d17 { background-position: -64px -96px; }
+.d18 { background-position: -128px -96px; }
+.d19 { background-position: -192px -96px; }
+.d20 { background-position: -256px -96px; }
+.d21 { background-position: -0px -128px; }
+.d22 { background-position: -64px -128px; }
+.d23 { background-position: -128px -128px; }
+.d24 { background-position: -192px -128px; }
+.d25 { background-position: -256px -128px; }
 	
 {% endhighlight %}
-
-`html`部分
 
 `html`部分
 
@@ -78,16 +76,16 @@ tags: javascript game
 
 {% highlight javascript %}
 
-    if (typeof String.prototype.format !== "function") {
-		/* 字符串模板 */
-		String.prototype.format = function () {
-			var s = this, //字符串指针
-				length = arguments.length; //参数长度
-			while (--length >= 0){
-				s = s.replace(new RegExp('\\{' + length + '\\}', 'g'), arguments[length]);
-			}
-			return s;
-		};
+	if (typeof String.prototype.format !== "function") {
+	    /* 字符串模板 */
+	    String.prototype.format = function () {
+	    var s = this, //字符串指针
+	        length = arguments.length; //参数长度
+	    while (--length >= 0){
+	      s = s.replace(new RegExp('\\{' + length + '\\}', 'g'), arguments[length]);
+	    }
+	    return s;
+	  };
 	}
 
   var vptx = 0, // x轴
@@ -115,10 +113,10 @@ tags: javascript game
         }
     }
 	
-	var viewport = document.getElementById("viewport");
-        viewport.style.width = "" + viewportWidth + "px"; // 设置显示区域宽
-        viewport.style.height = "" + viewportHeight + "px"; // 设置显示区域高
-        viewport.innerHTML = tilePool.join("");
+var viewport = document.getElementById("viewport");
+	viewport.style.width = "" + viewportWidth + "px"; // 设置显示区域宽
+	viewport.style.height = "" + viewportHeight + "px"; // 设置显示区域高
+	viewport.innerHTML = tilePool.join("");
 {% endhighlight %}	
 
 -----------------------
