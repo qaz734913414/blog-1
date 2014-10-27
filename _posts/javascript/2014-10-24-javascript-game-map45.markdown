@@ -19,7 +19,7 @@ tags: javascript game
  
 -----------------------
 
-<a class="btn btn-primary btn-sm" href="/resources/demo{{ page.url}}-.html" target="_blank">查看DEMO</a> 
+<a class="btn btn-primary btn-sm" href="/resources/demo{{ page.url}}-position.html" target="_blank">查看DEMO</a> 
 
 -----------------------
 
