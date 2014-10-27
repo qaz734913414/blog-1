@@ -76,17 +76,17 @@ div.tile {
 
 {% highlight javascript %}
 
-	if (typeof String.prototype.format !== "function") {
-	    /* 字符串模板 */
-	    String.prototype.format = function () {
-	    var s = this, //字符串指针
-	        length = arguments.length; //参数长度
-	    while (--length >= 0){
-	      s = s.replace(new RegExp('\\{' + length + '\\}', 'g'), arguments[length]);
-	    }
-	    return s;
-	  };
-	}
+if (typeof String.prototype.format !== "function") {
+    /* 字符串模板 */
+    String.prototype.format = function () {
+      var s = this, //字符串指针
+          length = arguments.length; //参数长度
+      while (--length >= 0){
+        s = s.replace(new RegExp('\\{' + length + '\\}', 'g'), arguments[length]);
+      }
+      return s;
+    };
+}
 
   var vptx = 0, // x轴
       vpty = 0; // y轴
@@ -114,9 +114,9 @@ div.tile {
     }
 	
 var viewport = document.getElementById("viewport");
-	viewport.style.width = "" + viewportWidth + "px"; // 设置显示区域宽
-	viewport.style.height = "" + viewportHeight + "px"; // 设置显示区域高
-	viewport.innerHTML = tilePool.join("");
+viewport.style.width = "" + viewportWidth + "px"; // 设置显示区域宽
+viewport.style.height = "" + viewportHeight + "px"; // 设置显示区域高
+viewport.innerHTML = tilePool.join("");
 {% endhighlight %}	
 
 -----------------------
