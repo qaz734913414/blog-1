@@ -29,13 +29,13 @@ tags: javascript game
 
 * { font-size: 9pt }
 div.tile {
-	position: absolute;
-	background-image: url(http://www.jcore.cn/resources/images/2014/10/24/javascript-game-map45-0.png);
-	width: 64px;
-	height: 32px;
-	line-height: 32px;
-	text-align: center;
-	border: 1px solid #000;
+    position: absolute;
+    background-image: url(http://www.jcore.cn/resources/images/2014/10/24/javascript-game-map45-0.png);
+    width: 64px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border: 1px solid #000;
 }
 
 .d1 { background-position: -0px -0px; }
@@ -114,9 +114,10 @@ if (typeof String.prototype.format !== "function") {
     }
 	
 var viewport = document.getElementById("viewport");
-viewport.style.width = "" + viewportWidth + "px"; // 设置显示区域宽
-viewport.style.height = "" + viewportHeight + "px"; // 设置显示区域高
-viewport.innerHTML = tilePool.join("");
+    viewport.style.width = "" + viewportWidth + "px"; // 设置显示区域宽
+    viewport.style.height = "" + viewportHeight + "px"; // 设置显示区域高
+    viewport.innerHTML = tilePool.join("");
+	
 {% endhighlight %}	
 
 -----------------------
