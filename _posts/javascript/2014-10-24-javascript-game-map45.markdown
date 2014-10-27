@@ -15,16 +15,13 @@ tags: javascript game
 
 ![多色菱形]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)  
 
+下面有切图的例子：  
+ 
+-----------------------
 
-`css`部分
+<a class="btn btn-primary btn-sm" href="/resources/demo{{ page.url}}-.html" target="_blank">查看DEMO</a> 
 
-{% highlight html %}
-	
-	<div background:transparent url(http://www.jcore.cn/resources/images/2014/10/24/bg.png) no-repeat scroll 0px 0px; >
-
-{% endhighlight %}
-
-
+-----------------------
 
 ### OK，今儿先到这儿了，后续会用`css3`来实现斜45度地图。:)
 
