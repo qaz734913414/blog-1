@@ -74,6 +74,8 @@ div.tile {
 
 {% endhighlight %}
 
+`javascript`部分
+
 {% highlight javascript %}
 
 if (typeof String.prototype.format !== "function") {
