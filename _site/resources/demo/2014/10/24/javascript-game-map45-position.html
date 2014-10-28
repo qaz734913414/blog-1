@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta content="width=device-width; initial-scale=1.0" name="viewport" />
+	<title>javascript进阶.游戏.斜45度地图拼接</title>
+	<meta name="keywords" content="javascript,game,map,斜45度地图拼接" />
+	<meta name="description" content="javascript game map 斜45度地图拼接" />
+	<meta name="author" content="jcore" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+	
+	<link rel="stylesheet" type="text/css" href="/resources/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/resources/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/resources/css/prettify.css">
+
+	<script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.0.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="header cl">
+        <h1>
+            <a href="/"><img src="/resources/images/base/logonew2.png" width="100" height="30"></a>
+        </h1>
+        <!--div class="login">
+            <a href="#">登录</a>
+        </div-->
+        <ul class="nav">
+            <li><a class="on" href="/">首&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;页</a></li>
+            <!-- 公共用菜单 -->
+            <li><a href="#">技术专区</a></li>
+<li><a href="#">日志随笔</a></li>
+<li><a href="/reading/">阅读书籍</a></li>
+<!--li><a href="#">常用资源</a></li-->
+<li><a href="/time/">时光轴</a></li>
+<li><a href="/guest/">留言板</a></li>
+<!--li><a href="/about/">个人介绍</a></li-->
+        </ul>
+        <a class="pos-nav" href="#">菜单</a>
+    </div>
+
+<!-- 主体 -->
+<div class="main">
+    <div class="main-l">
+        <!-- 搜索 -->
+        <div class="widget">
+    <form action="/pages/" method="get" >
+        <input name="q" type="text" id="searchbar" class="fl" value="" placeholder="搜索" />
+        <input type="submit" id="searchsubmit" class="fl" value="提交" />
+    </form>
+</div>
+        <!-- 编码经验 -->
+        <div class="widget">
+    <h2 class="member">编码经验</h2>
+    <div class="item-avatar mymembers">
+        <ul>
+            <img alt="Java" title="Java" src="/resources/images/coding/java.png">
+
+            <img alt="Oracle" title="Oracle" src="/resources/images/coding/oracle.png">
+            <img alt="MySQL" title="MySQL" src="/resources/images/coding/mysql.png">
+
+            <img alt="Bash" title="Bash" src="/resources/images/coding/bash.png">
+            <img alt="Python" title="Python" src="/resources/images/coding/python.png">
+
+            <img alt="Nginx" title="Nginx" src="/resources/images/coding/nginx.png">
+            <img alt="Apache" title="Apache" src="/resources/images/coding/apache.png">
+            <img alt="Redis" title="Redis" src="/resources/images/coding/redis.png">
+            <img alt="MongoDB" title="MongoDB" src="/resources/images/coding/mongodb.png">
+
+            <img alt="Git" title="Git" src="/resources/images/coding/git.png">
+            <img alt="HTML" title="HTML" src="/resources/images/coding/html5.png">
+            <img alt="Javascript" title="Javascript" src="/resources/images/coding/javascript.png">
+            <img alt="Node" title="Node" src="/resources/images/coding/node.png">
+            <img alt="CSS" title="CSS" src="/resources/images/coding/css3.png">
+        </ul>
+    </div>
+</div>
+        <!-- 归类统计 -->
+        <div class="widget">
+    <h2 class="member">分类统计</h2>
+    <div class="item-avatar dates">
+        <ul>
+            
+            
+            
+                
+                <a href="/categories/#life"><li><span class="community-count">9</span>life</li><a>
+            
+                
+                <a href="/categories/#html5"><li><span class="community-count">8</span>html5</li><a>
+            
+                
+                <a href="/categories/#javascript"><li><span class="community-count">4</span>javascript</li><a>
+            
+                
+                <a href="/categories/#browser"><li><span class="community-count">3</span>browser</li><a>
+            
+                
+                <a href="/categories/#architect"><li><span class="community-count">3</span>architect</li><a>
+            
+                
+                <a href="/categories/#shell"><li><span class="community-count">2</span>shell</li><a>
+            
+                
+                <a href="/categories/#mac"><li><span class="community-count">2</span>mac</li><a>
+            
+                
+                <a href="/categories/#jekyll"><li><span class="community-count">1</span>jekyll</li><a>
+            
+                
+                <a href="/categories/#install"><li><span class="community-count">1</span>install</li><a>
+            
+        </ul>
+    </div>
+    <h2 class="member"></h2>
+    <div class="item-avatar dates">
+        <ul>
+            <a href="/pages/"><li><span class="community-count">33</span>总文章数</li></a>
+        </ul>
+    </div>
+</div>
+
+        <!-- 最近访问 -->
+        <div class="widget">
+                <h2 class="member">最近访问</h2>
+                <div class="item-avatar mymembers">
+					<ul class="ds-recent-visitors" data-num-items="20" ></ul>
+                </div>
+            </div>
+        <!-- 友情链接 -->
+        <div class="widget">
+                <h2 class="member">友情链接</h2>
+                <ul class="links">
+                    <li><a href="http://www.sentsin.com/" target="_blank">闲心</a></li>
+                    <li><a href="http://www.ido321.com/" target="_blank">淡忘~浅思</a></li>
+                </ul>
+            </div>
+    </div>
+    <div class="main-m">
+        <div class="main-m3-cont main-g-2  radius-top">
+            <h1 class="main-m3-h1">javascript进阶.游戏.斜45度地图拼接</h1>
+            <hr />
+            <ul class="main-ua">
+	<li>
+		<p data-height="395" data-theme-id="8417" data-slug-hash="vmljG" data-default-tab="result" data-user="jcores" class='codepen'>See the Pen <a href='http://codepen.io/jcores/pen/HrKlf/'>HrKlf</a> by JakeZhang (<a href='http://codepen.io/jcores'>@jcores</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async="true" src="http://codepen.io/assets/embed/ei.js"> </script>
+	</li>
+</ul>
+<div class=p"detail-xg p10">
+	<div class="ds-thread" data-thread-key="" data-title="javascript进阶.游戏.斜45度地图拼接" ></div>
+</div>
+        </div>
+    </div>
+</div>
+
+<!-- 页底 -->
+    <div class="foot">
+        <div class="foot-cont cl">
+            <div class="foot-conta footer-fifth">
+                <a href="/"><img src="/resources/images/base/bokelogo1.jpg"  width="200" height="60"></a>
+                <p>努力的人还是有机会的...</p>
+            </div>
+            <div class="font-widget footer-fifth foot-contb">
+                <h2>最新文章</h2>
+                <ul>
+                    
+                        <li><a href="/2014/10/24/javascript-game-map45">javascript进阶.游戏.斜45度地图拼接</a></li>
+                    
+                        <li><a href="/2014/10/22/html5-series-game-dahua">html5系列.画布进阶.游戏.人物移动（媚灵狐）</a></li>
+                    
+                        <li><a href="/2014/10/20/javascript-callback-hell">javascript进阶.callback回调地狱</a></li>
+                    
+                        <li><a href="/2014/10/19/first-game">话.比赛第一,友谊第二</a></li>
+                    
+                        <li><a href="/2014/10/18/cycling-miaofengshan">骑行笔记.妙峰山</a></li>
+                    
+                </ul>
+            </div>
+            <div class="font-widget footer-fifth foot-contc">
+                <h2>推荐网站</h2>
+                <ul>
+                    <li><a href="http://www.iteye.com/">IT EYE</a> </li>
+                    <li><a href="http://www.oschina.net/">中国开源</a> </li>
+                    <li><a href="https://ruby-china.org/">Ruby China</a> </li>
+                    <li><a href="https://github.com/">Github</a> </li>
+                    <li><a href="#">关于我们</a> </li>
+                </ul>
+            </div>
+            <div class="font-widget footer-fifth foot-contd">
+                <h2>网站标签</h2>
+                <ul>
+                    
+
+
+
+
+    
+    
+        
+            <li>
+        
+
+        
+        <a href="/tags/#html5">html5</a>
+
+        
+    
+
+    
+    
+        
+
+        
+        <a href="/tags/#mac">mac</a>
+
+        
+    
+
+    
+    
+        
+
+        
+        <a href="/tags/#javascript">javascript</a>
+
+        
+            </li>
+        
+    
+
+    
+    
+        
+            <li>
+        
+
+        
+        <a href="/tags/#linux">linux</a>
+
+        
+    
+
+    
+    
+        
+
+        
+        <a href="/tags/#在线选座">在线选座</a>
+
+        
+    
+
+    
+    
+        
+
+        
+        <a href="/tags/#北漂">北漂</a>
+
+        
+            </li>
+        
+    
+
+    
+    
+        
+            <li>
+        
+
+        
+        <a href="/tags/#chrome">chrome</a>
+
+        
+    
+
+    
+    
+        
+
+        
+        <a href="/tags/#webkit">webkit</a>
+
+        
+    
+
+    
+    
+        
+
+        
+        <a href="/tags/#shell">shell</a>
+
+        
+            </li>
+        
+    
+
+    
+    
+        
+            <li>
+        
+
+        
+        <a href="/tags/#game">game</a>
+
+        
+    
+
+    
+    
+        
+
+        
+        <a href="/tags/#console">console</a>
+
+        
+    
+
+    
+    
+        
+
+        
+        <a href="/tags/#高效率">高效率</a>
+
+        
+            </li>
+        
+    
+
+    
+    
+        
+            <li>
+        
+
+        
+        <a href="/tags/#高并发">高并发</a>
+
+        
+    
+
+    
+    
+        
+
+        
+        <a href="/tags/#骑行">骑行</a>
+
+        
+    
+
+    
+    
+        
+
+        
+        <a href="/tags/#架构">架构</a>
+
+        
+            </li>
+        
+    
+
+    
+    
+        
+            <li>
+        
+
+        
+        <a href="/tags/#媚灵狐">媚灵狐</a>
+
+        
+    
+
+    
+    
+        
+
+        
+        <a href="/tags/#大话西游">大话西游</a>
+
+        
+    
+
+    
+    
+        
+
+        
+        <a href="/tags/#多线程">多线程</a>
+
+        
+            </li>
+        
+    
+
+    
+    
+        
+            <li>
+        
+
+        
+        <a href="/tags/#七牛">七牛</a>
+
+        
+    
+
+    
+    
+        
+
+        
+        <a href="/tags/#yahoo">yahoo</a>
+
+        
+    
+
+    
+    
+        
+
+        
+        <a href="/tags/#wget">wget</a>
+
+        
+            </li>
+        
+    
+
+    
+    
+        
+            <li>
+        
+
+        
+        <a href="/tags/#webstorm">webstorm</a>
+
+        
+    
+
+    
+    
+        
+
+        
+        <a href="/tags/#web">web</a>
+
+        
+    
+
+    
+    
+        
+
+        
+        <a href="/tags/#vpn">vpn</a>
+
+        
+            </li>
+        
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+
+                </ul>
+
+            </div>
+            <div class="font-widget footer-fifth foot-conte">
+                <h2>网站导航</h2>
+                <ul>
+                    <!-- 公共用菜单 -->
+                    <li><a href="#">技术专区</a></li>
+<li><a href="#">日志随笔</a></li>
+<li><a href="/reading/">阅读书籍</a></li>
+<!--li><a href="#">常用资源</a></li-->
+<li><a href="/time/">时光轴</a></li>
+<li><a href="/guest/">留言板</a></li>
+<!--li><a href="/about/">个人介绍</a></li-->
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            版权所有，保留一切权利！
+			<span>
+				<script async="true" type="text/javascript">
+					var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+					document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fde8f68407bbc165071d066f45c6005fc' type='text/javascript'%3E%3C/script%3E"));
+				</script>
+			</span>
+        </div>
+    </div>
+<div style="display: none;" id="rocket-to-top">
+	<div style="display: block; opacity: 0;" class="level-2"></div>
+	<div class="level-3"></div>
+</div>
+<script type="text/javascript" src="/resources/js/prettify.js"></script>
+<script type="text/javascript" src="/resources/js/core.js"></script>
+<script type="text/javascript">
+	var duoshuoQuery = {short_name:"jcore"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.charset = 'UTF-8';
+		ds.type = 'text/javascript';ds.async = true;
+		//ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.src = '/resources/duoshuo/duoshuo.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+</script>
+
+
+</body>
+
+</html>

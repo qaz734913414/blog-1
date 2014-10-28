@@ -1,0 +1,2 @@
+User-agent: *
+Allow: http://www.jcore.cn/sitemap.txt

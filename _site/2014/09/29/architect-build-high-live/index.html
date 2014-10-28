@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta content="width=device-width; initial-scale=1.0" name="viewport" />
+	<title>架构实践.高负载高并发电商网站</title>
+	<meta name="keywords" content="架构实践,缓存,分布式,大数据" />
+	<meta name="description" content="架构实践,高负载高并发电商网站," />
+	<meta name="author" content="jcore" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+	
+	<link rel="stylesheet" type="text/css" href="/resources/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/resources/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/resources/css/prettify.css">
+
+	<script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.0.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="header cl">
+        <h1>
+            <a href="/"><img src="/resources/images/base/logonew2.png" width="100" height="30"></a>
+        </h1>
+        <!--div class="login">
+            <a href="#">登录</a>
+        </div-->
+        <ul class="nav">
+            <li><a class="on" href="/">首&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;页</a></li>
+            <!-- 公共用菜单 -->
+            <li><a href="#">技术专区</a></li>
+<li><a href="#">日志随笔</a></li>
+<li><a href="/reading/">阅读书籍</a></li>
+<!--li><a href="#">常用资源</a></li-->
+<li><a href="/time/">时光轴</a></li>
+<li><a href="/guest/">留言板</a></li>
+<!--li><a href="/about/">个人介绍</a></li-->
+        </ul>
+        <a class="pos-nav" href="#">菜单</a>
+    </div>
+
+<!-- 主体 -->
+<div class="main">
+    <div class="main-l">
+        <!-- 搜索 -->
+        <div class="widget">
+    <form action="/pages/" method="get" >
+        <input name="q" type="text" id="searchbar" class="fl" value="" placeholder="搜索" />
+        <input type="submit" id="searchsubmit" class="fl" value="提交" />
+    </form>
+</div>
+        <!-- 编码经验 -->
+        <div class="widget">
+    <h2 class="member">编码经验</h2>
+    <div class="item-avatar mymembers">
+        <ul>
+            <img alt="Java" title="Java" src="/resources/images/coding/java.png">
+
+            <img alt="Oracle" title="Oracle" src="/resources/images/coding/oracle.png">
+            <img alt="MySQL" title="MySQL" src="/resources/images/coding/mysql.png">
+
+            <img alt="Bash" title="Bash" src="/resources/images/coding/bash.png">
+            <img alt="Python" title="Python" src="/resources/images/coding/python.png">
+
+            <img alt="Nginx" title="Nginx" src="/resources/images/coding/nginx.png">
+            <img alt="Apache" title="Apache" src="/resources/images/coding/apache.png">
+            <img alt="Redis" title="Redis" src="/resources/images/coding/redis.png">
+            <img alt="MongoDB" title="MongoDB" src="/resources/images/coding/mongodb.png">
+
+            <img alt="Git" title="Git" src="/resources/images/coding/git.png">
+            <img alt="HTML" title="HTML" src="/resources/images/coding/html5.png">
+            <img alt="Javascript" title="Javascript" src="/resources/images/coding/javascript.png">
+            <img alt="Node" title="Node" src="/resources/images/coding/node.png">
+            <img alt="CSS" title="CSS" src="/resources/images/coding/css3.png">
+        </ul>
+    </div>
+</div>
+        <!-- 归类统计 -->
+        <div class="widget">
+    <h2 class="member">分类统计</h2>
+    <div class="item-avatar dates">
+        <ul>
+            
+            
+            
+                
+                <a href="/categories/#life"><li><span class="community-count">9</span>life</li><a>
+            
+                
+                <a href="/categories/#html5"><li><span class="community-count">8</span>html5</li><a>
+            
+                
+                <a href="/categories/#javascript"><li><span class="community-count">4</span>javascript</li><a>
+            
+                
+                <a href="/categories/#browser"><li><span class="community-count">3</span>browser</li><a>
+            
+                
+                <a href="/categories/#architect"><li><span class="community-count">3</span>architect</li><a>
+            
+                
+                <a href="/categories/#shell"><li><span class="community-count">2</span>shell</li><a>
+            
+                
+                <a href="/categories/#mac"><li><span class="community-count">2</span>mac</li><a>
+            
+                
+                <a href="/categories/#jekyll"><li><span class="community-count">1</span>jekyll</li><a>
+            
+                
+                <a href="/categories/#install"><li><span class="community-count">1</span>install</li><a>
+            
+        </ul>
+    </div>
+    <h2 class="member"></h2>
+    <div class="item-avatar dates">
+        <ul>
+            <a href="/pages/"><li><span class="community-count">33</span>总文章数</li></a>
+        </ul>
+    </div>
+</div>
+
+        <!-- 最近访问 -->
+        <div class="widget">
+                <h2 class="member">最近访问</h2>
+                <div class="item-avatar mymembers">
+					<ul class="ds-recent-visitors" data-num-items="20" ></ul>
+                </div>
+            </div>
+        <!-- 友情链接 -->
+        <div class="widget">
+                <h2 class="member">友情链接</h2>
+                <ul class="links">
+                    <li><a href="http://www.sentsin.com/" target="_blank">闲心</a></li>
+                    <li><a href="http://www.ido321.com/" target="_blank">淡忘~浅思</a></li>
+                </ul>
+            </div>
+    </div>
+    <div class="main-m">
+        <!-- 1-2两列详情页 -->
+        <div class="main-m3-cont main-g-2  radius-top">
+    <h1 class="main-m3-h1">架构实践.高负载高并发电商网站</h1>
+    <div class="mini-icon">
+        <span>
+            <i class="fa fa-user"></i>
+            张嘉杰.原创
+        </span>
+        <span>
+            <i class="fa fa-calendar"></i>
+            2014-09-29
+        </span>
+        <span>
+            <i class="fa fa-folder-open"></i>
+            <a href="/categories.html#architect">architect</a>
+        </span>
+        <span>
+            <i class="fa fa-comments"></i>
+            <a href="#ds-reset"><span class="ds-thread-count" data-thread-key="/2014/09/29/architect-build-high-live" ></span></a>
+        </span>
+    </div>
+    <div class="contents">
+        <p>最近公司面临改革（日事日毕，日清日高），从以前的点对点的开发模式，转战到平台的开发模式上来，显然是一次大变动呐。<code>基础代码架构</code>、<code>服务器</code>、<code>数据库</code>、<code>缓存</code>、<code>监控</code>、<code>搜索</code>、<code>服务</code>、<code>日志</code>都需要从新规划，下面我来说说关于架构一些想法。
+<!--more--></p>
+
+<hr />
+
+<blockquote>
+  <p>设计思路</p>
+</blockquote>
+
+<font color="#fa8072">1）多级缓存、静态化</font>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html">1. 客户端页面缓存
+2. 应用缓存（memcache）
+3. 内存数据库（mongodb、redis）
+4. cache机制（数据库、中间件）</code></pre></div>
+
+<font color="#fa8072">2）高可用</font>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html">1. 负载均衡、容灾、备份
+2. 读写分离
+3. 依赖关系（低耦合）
+4. 监控</code></pre></div>
+
+<font color="#fa8072">3）伸缩性</font>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html">1. 对业务、数据库的拆分（异步非阻塞，可提高吞吐量）
+2. 无状态（不依赖模块状态，可提高吞吐量）
+3. 原子操作与并发控制（乐观锁、mutex、写时复制等等）
+4. 容错隔离</code></pre></div>
+
+<blockquote>
+  <p>应用架构</p>
+</blockquote>
+
+<p>整个架构是分层的分布式的架构，纵向包括<code>CDN</code>，<code>反向代理</code>，<code>web应用</code>，<code>业务层</code>，<code>基础服务层</code>，<code>数据存储层</code>。水平方向包括对整个平台的<code>配置管理部署</code>和<code>监控</code>。</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html">+--------------------------------------------+ +--------+ +---------+
+|                    CDN                     | | Config | | Monitor |
++--------------------------------------------+ +--------+ +---------+
++--------------------------------------------+ |        | |         |
+|                   Nginx                    | | Deploy | |   Log   |
++--------------------------------------------+ |        | |         |
++--------------------------------------------+ +--------+ +---------+
+|                    App                     | |        | |         |
++---+--------+--+------------+--+--------+---+ |        | |         |
+|   +--------+  +------------+  +--------+   | |        | |         |
+|   |Tomcat  |  |   Jboss    |  | Spring |   | |        | |         |
+|   +--------+  +------------+  +--------+   | |        | |         |
++--------------------------------------------+ |        | | System  |
++--------------------------------------------+ |        | |         |
+|                  Service                   | |   Z    | |         |
++---+--------+--+------------+--+---------+--+ |   o    | |         |
+|   +--------+  +------------+  +---------+  | |   o    | |         |
+|   | Mina   |  |   Spring   |  |Hibernate|  | |   k    | +---------+
+|   +--------+  +------------+  +---------+  | |   e    | |         |
++--------------------------------------------+ |   e    | |         |
++--------------------------------------------+ |   p    | |         |
+|                Base Service                | |   e    | |         |
++-+---------+--+---------------+-+---------+-+ |   r    | |   App   |
+| +---------+  +---------------+ +---------+ | |        | |         |
+| |   MQ    |  |     Cache     | |  Data   | | |        | |         |
+| +---------+  +---------------+ +---------+ | |        | |         |
+| |ActiveMQ |  |   Mencache    | |  Flume  | | |        | |         |
+| +---------+  +--+--+---------+ +---------+ | |        | +---------+
+| +---------+--+--+  +---------+-+---------+ | |        | |         |
+| |    Search     |  |         HA          | | |        | |         |
+| +---------------+  +---------------------+ | |        | |         |
+| |  Solr/Lucene  |  | Zookeeper/Heartbeat | | |        | |         |
+| +---------------+  +---------------------+ | |        | |         |
++--------------------------------------------+ |        | | Service |
++--------------------------------------------+ |        | |         |
+|                  Database                  | |        | |         |
++--+--------------+-----+-----------------+--+ |        | |         |
+|  +--------------+     +-----------------+  | |        | |         |
+|  | Oracle/MySql |     |  mongodb/redis  |  | |        | |         |
+|  +--------------+     +-----------------+  | |        | |         |
++--+--------------+-----+-----------------+--+ +--------+ +---------+</code></pre></div>
+
+<blockquote>
+  <p>剖析架构</p>
+</blockquote>
+
+<font color="#fa8072">1）CDN</font>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html">一般电子商务平台都会用CDN做网络服务。  
+我们公司使用的是第三方CND，第三方CDN有很多种，如蓝汛、网宿、快网等。</code></pre></div>
+
+<font color="#fa8072">2）负载均衡、反向代理</font>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html">一般大型的电子商务平台都会有不同的业务域和不同的集群服务。一般都是DNS做域名解析的分发、轮询，DNS方式简单，因为Cache而缺乏灵活性。  
+一般基于商用的硬件F5或者LVS等开源负载做分发，都采取主备方式。  
+分发到业务集群上后，会经过web服务器如nginx做负载均衡或者反向代理分发到集群中的应用节点。  
+----------------------------------------------------------------------------------------------
+关于负载，需要综合考虑的几个因素：  
+1. 是否满足高并发高性能  
+2. Session如何保持  
+3. 是否支持压缩  
+4. 负载均衡的算法如何  
+常用的负载均衡软件，如LVS、Nginx、HAProxy等。  
+我们公司使用的是LVS+Nginx这种方式，Nginx基于iphash的Session黏贴。</code></pre></div>
+
+<font color="#fa8072">3）App接入</font>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html">应用层运行在Jboss或者Tomcat容器中，代表独立的系统，比如前端购物、后端系统、手机端服务等等。  
+----------------------------------------------------------------------------------------------
+关于应用层容器，需要综合考虑的几个因素：
+1. 是否采用servlet3.0异步servlet来提高整个系统的吞吐量  
+2. app接入节点宕机，session随之丢失问题  
+3. session的集中式存储如何水平扩展  
+我们公司应用层容器之前是使用的weblogic，现在使用的是tomcat。多个tomcat之间集群Session共享。</code></pre></div>
+
+<font color="#fa8072">4）业务服务</font>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html">对于电子商务平台而言，涉及的领域有用户、商品、订单、红包、活动、秒杀、支付业务等等，模块划分和接口设计非常重要。
+----------------------------------------------------------------------------------------------
+关于服务层，需要综合考虑的几个因素：
+1. 是否使用NIO通讯框架netty、mina等，实现高并发  
+2. 是否部署多个节点做冗余，从而提高服务层的高可用性，并自动进行负载转发和失效转移  
+我们公司的业务是混合在一起的，没有一个个都做到模块化。</code></pre></div>
+
+<font color="#fa8072">5）基础服务中间件</font>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html">对于电子商务平台，一般是由一个或多个基础服务中间件组成。这里罗列了一些常用的基础中间件。
+----------------------------------------------------------------------------------------------
+1. 消息队列（RabbitMQ、ActiveMQ等，推荐使用 RabbitMQ ）  
+2. 事件驱动（EventBus机制）  
+3. 缓存系统（Memcached[关系型数据库]；redis、mongodb、redis[内存型数据库]）  
+4. 搜索平台（Solr、Lucene需考虑：索引的实时性、读写分离、全量索引和内存增量索引合并）  
+5. HA（Heartbeat[类似HAProxy、Nginx]、keepalived 可用 zookeeper 做集群方案）  
+6. 数据分析（Hadoop[流量统计、推荐引擎、趋势分析、用户行为分析、数据挖掘分类器、分布式索引等等]）  
+7. 数据同步  
+8. 日志收集  
+我们公司平台使用到的中间件 ActiveMQ、Memcached、Lucene、Nginx、应用级日志Log4j、mount挂载项目。</code></pre></div>
+
+<font color="#fa8072">6）数据存储</font>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html">数据库存储大体分为以下几类：  
+----------------------------------------------------------------------------------------------
+1. 关系型（事务型）数据库 Oracle、Mysql等  
+2. key/value数据库 Redis、Memcached等  
+3. 文档型数据库 Mongodb等  
+4. 列式数据库 HBase等  
+5. 还有图形数据库、对象数据库、xml数据库等  
+我们公司主业务数据库是oracle10g，规划准备迁到oracle11g上，相关业务也用到了Mysql。</code></pre></div>
+
+<font color="#fa8072">7）管理与部署配置</font>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html">统一的配置库，部署平台。  
+我们公司使用的是Ant+Svn做的自动化部署平台。</code></pre></div>
+
+<font color="#fa8072">8）监控、统计</font>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html">一般电子商务平台分布式系统涉及各种设备，如网络交换机、各种型号的网卡，硬盘，内存等等。  
+监控平台的性能、吞吐量、以及可用性比较重要，需规划统一的一体化的监控平台对系统进行各个层次的监控。  
+----------------------------------------------------------------------------------------------
+关于监控、统计，需要考虑到的几个监控范围：
+1. 系统级别（CPU、内存、网络、IO）
+2. 应用级别（业务日志、请求日志、异常日志）
+3. 时效性（阀值告警、按小时/天离线分析、实时查询、业务监控、容器监控）
+我们公司日志分析使用的是逆火，流量监控使用的是Graphs（仙人掌）。</code></pre></div>
+
+<h3 id="ok-">OK，今天先到这儿了 :)</h3>
+
+<hr />
+
+
+        <div class="detail-ud" >
+            
+                <p>上一篇:<a href="/2014/09/19/browser-position" ><b class="mobile-ignore">&nbsp;&nbsp;屌丝的福音.定位女神在哪里</b></a></p>
+            
+            
+                <p>下一篇:<a href="/2014/10/08/html5-series-canvas" ><b class="mobile-ignore">&nbsp;&nbsp;html5系列.画布</b></a></p>
+            
+        </div>
+    </div>
+
+
+
+
+    <div class="more-article">
+        <span class="fenx">分享文章到：</span>
+        <div class="bdsharebuttonbox fl bdshare-button-style0-32" data-bd-bind="1414306729753"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a><a href="#" class="bds_hi" data-cmd="hi" title="分享到百度空间"></a></div>
+        <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"32"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin","douban","hi"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban","hi"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+    </div>
+    <div class="more-article new-article">
+        <h3>热门推荐文章</h3>
+        <div class="pics-cont main-g-2-cont">
+
+            
+                <dl>
+                    <dt><a href="/2014/09/29/architect-build-high-live"><img src="/resources/images/2014/09/29/architect-build-high-live.png" width="138" height="105" data-bd-imgshare-binded="1"></a></dt>
+                    <dd><a href="/2014/09/29/architect-build-high-live">架构实践.高负载高并发电商网站</a></dd>
+                </dl>
+            
+                <dl>
+                    <dt><a href="/2014/08/25/architect-memory-analyzer"><img src="/resources/images/2014/08/25/architect-memory-analyzer.png" width="138" height="105" data-bd-imgshare-binded="1"></a></dt>
+                    <dd><a href="/2014/08/25/architect-memory-analyzer">架构实践.内存工具MemoryAnalyzer的分析和使用</a></dd>
+                </dl>
+            
+                <dl>
+                    <dt><a href="/2014/05/29/architect-sso-cas"><img src="/resources/images/2014/05/29/architect-sso-cas.png" width="138" height="105" data-bd-imgshare-binded="1"></a></dt>
+                    <dd><a href="/2014/05/29/architect-sso-cas">架构实践.CAS单点登录实现过程</a></dd>
+                </dl>
+            
+
+        </div>
+    </div>
+    <div class="more-article">
+        <div class="detail-xg p10">
+            <div class="ds-thread" data-thread-key="/2014/09/29/architect-build-high-live" data-title="架构实践.高负载高并发电商网站" id="ds-thread"></div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+
+<!-- 页底 -->
+    <div class="foot">
+        <div class="foot-cont cl">
+            <div class="foot-conta footer-fifth">
+                <a href="/"><img src="/resources/images/base/bokelogo1.jpg"  width="200" height="60"></a>
+                <p>努力的人还是有机会的...</p>
+            </div>
+            <div class="font-widget footer-fifth foot-contb">
+                <h2>最新文章</h2>
+                <ul>
+                    
+                        <li><a href="/2014/10/24/javascript-game-map45">javascript进阶.游戏.斜45度地图拼接</a></li>
+                    
+                        <li><a href="/2014/10/22/html5-series-game-dahua">html5系列.画布进阶.游戏.人物移动（媚灵狐）</a></li>
+                    
+                        <li><a href="/2014/10/20/javascript-callback-hell">javascript进阶.callback回调地狱</a></li>
+                    
+                        <li><a href="/2014/10/19/first-game">话.比赛第一,友谊第二</a></li>
+                    
+                        <li><a href="/2014/10/18/cycling-miaofengshan">骑行笔记.妙峰山</a></li>
+                    
+                </ul>
+            </div>
+            <div class="font-widget footer-fifth foot-contc">
+                <h2>推荐网站</h2>
+                <ul>
+                    <li><a href="http://www.iteye.com/">IT EYE</a> </li>
+                    <li><a href="http://www.oschina.net/">中国开源</a> </li>
+                    <li><a href="https://ruby-china.org/">Ruby China</a> </li>
+                    <li><a href="https://github.com/">Github</a> </li>
+                    <li><a href="#">关于我们</a> </li>
+                </ul>
+            </div>
+            <div class="font-widget footer-fifth foot-contd">
+                <h2>网站标签</h2>
+                <ul>
+                    
+
+
+
+
+    
+    
+        
+            <li>
+        
+
+        
+        <a href="/tags/#html5">html5</a>
+
+        
+    
+
+    
+    
+        
+
+        
+        <a href="/tags/#mac">mac</a>
+
+        
+    
+
+    
+    
+        
+
+        
+        <a href="/tags/#javascript">javascript</a>
+
+        
+            </li>
+        
+    
+
+    
+    
+        
+            <li>
+        
+
+        
+        <a href="/tags/#linux">linux</a>
+
+        
+    
+
+    
+    
+        
+
+        
+        <a href="/tags/#在线选座">在线选座</a>
+
+        
+    
+
+    
+    
+        
+
+        
+        <a href="/tags/#北漂">北漂</a>
+
+        
+            </li>
+        
+    
+
+    
+    
+        
+            <li>
+        
+
+        
+        <a href="/tags/#chrome">chrome</a>
+
+        
+    
+
+    
+    
+        
+
+        
+        <a href="/tags/#webkit">webkit</a>
+
+        
+    
+
+    
+    
+        
+
+        
+        <a href="/tags/#shell">shell</a>
+
+        
+            </li>
+        
+    
+
+    
+    
+        
+            <li>
+        
+
+        
+        <a href="/tags/#game">game</a>
+
+        
+    
+
+    
+    
+        
+
+        
+        <a href="/tags/#console">console</a>
+
+        
+    
+
+    
+    
+        
+
+        
+        <a href="/tags/#高效率">高效率</a>
+
+        
+            </li>
+        
+    
+
+    
+    
+        
+            <li>
+        
+
+        
+        <a href="/tags/#高并发">高并发</a>
+
+        
+    
+
+    
+    
+        
+
+        
+        <a href="/tags/#骑行">骑行</a>
+
+        
+    
+
+    
+    
+        
+
+        
+        <a href="/tags/#架构">架构</a>
+
+        
+            </li>
+        
+    
+
+    
+    
+        
+            <li>
+        
+
+        
+        <a href="/tags/#媚灵狐">媚灵狐</a>
+
+        
+    
+
+    
+    
+        
+
+        
+        <a href="/tags/#大话西游">大话西游</a>
+
+        
+    
+
+    
+    
+        
+
+        
+        <a href="/tags/#多线程">多线程</a>
+
+        
+            </li>
+        
+    
+
+    
+    
+        
+            <li>
+        
+
+        
+        <a href="/tags/#七牛">七牛</a>
+
+        
+    
+
+    
+    
+        
+
+        
+        <a href="/tags/#yahoo">yahoo</a>
+
+        
+    
+
+    
+    
+        
+
+        
+        <a href="/tags/#wget">wget</a>
+
+        
+            </li>
+        
+    
+
+    
+    
+        
+            <li>
+        
+
+        
+        <a href="/tags/#webstorm">webstorm</a>
+
+        
+    
+
+    
+    
+        
+
+        
+        <a href="/tags/#web">web</a>
+
+        
+    
+
+    
+    
+        
+
+        
+        <a href="/tags/#vpn">vpn</a>
+
+        
+            </li>
+        
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+
+                </ul>
+
+            </div>
+            <div class="font-widget footer-fifth foot-conte">
+                <h2>网站导航</h2>
+                <ul>
+                    <!-- 公共用菜单 -->
+                    <li><a href="#">技术专区</a></li>
+<li><a href="#">日志随笔</a></li>
+<li><a href="/reading/">阅读书籍</a></li>
+<!--li><a href="#">常用资源</a></li-->
+<li><a href="/time/">时光轴</a></li>
+<li><a href="/guest/">留言板</a></li>
+<!--li><a href="/about/">个人介绍</a></li-->
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            版权所有，保留一切权利！
+			<span>
+				<script async="true" type="text/javascript">
+					var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+					document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fde8f68407bbc165071d066f45c6005fc' type='text/javascript'%3E%3C/script%3E"));
+				</script>
+			</span>
+        </div>
+    </div>
+<div style="display: none;" id="rocket-to-top">
+	<div style="display: block; opacity: 0;" class="level-2"></div>
+	<div class="level-3"></div>
+</div>
+<script type="text/javascript" src="/resources/js/prettify.js"></script>
+<script type="text/javascript" src="/resources/js/core.js"></script>
+<script type="text/javascript">
+	var duoshuoQuery = {short_name:"jcore"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.charset = 'UTF-8';
+		ds.type = 'text/javascript';ds.async = true;
+		//ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.src = '/resources/duoshuo/duoshuo.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+</script>
+
+
+</body>
+
+</html>

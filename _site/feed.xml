@@ -1,0 +1,1128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <description></description>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>2014-10-29</pubDate>
+    <lastBuildDate>2014-10-29</lastBuildDate>
+    <generator>Jekyll v2.3.0</generator>
+    
+      <item>
+        <title>javascript进阶.游戏.斜45度地图拼接</title>
+        <description>很多玩过大话西游的朋友都知道，游戏的场景基本都是基于斜45度视角来的，这是一种增强立体感的技术，今儿打算用html+javascript实现斜45度地图（后续会用css3来实现）。
+
+
+
+  实现过程
+
+
+  
+
+下面有切图的例子：  
+
+
+
+查看DEMO
+
+
+
+css部分
+
+* { font-size: 9pt }
+div.tile {
+    position: absolute;
+    background-image: url(http://www.jcore.cn/resources/images/2014/10/24/javascript-game-map45-0.png);
+    width: 64px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border: 1px solid #000;
+}
+
+.d1 { background-position: -0px -0px; }
+.d2 { background-position: -64px -0px; }
+.d3 { background-position: -128px -0px; }
+.d4 { background-position: -192px -0px; }
+.d5 { background-position: -256px -0px; }
+.d6 { background-position: -0px -32px; }
+.d7 { background-position: -64px -32px; }
+.d8 { background-position: -128px -32px; }
+.d9 { background-position: -192px -32px; }
+.d10 { background-position: -256px -32px; }
+.d11 { background-position: -0px -64px; }
+.d12 { background-position: -64px -64px; }
+.d13 { background-position: -128px -64px; }
+.d14 { background-position: -192px -64px; }
+.d15 { background-position: -256px -64px; }
+.d16 { background-position: -0px -96px; }
+.d17 { background-position: -64px -96px; }
+.d18 { background-position: -128px -96px; }
+.d19 { background-position: -192px -96px; }
+.d20 { background-position: -256px -96px; }
+.d21 { background-position: -0px -128px; }
+.d22 { background-position: -64px -128px; }
+.d23 { background-position: -128px -128px; }
+.d24 { background-position: -192px -128px; }
+.d25 { background-position: -256px -128px; }
+
+html部分
+
+&amp;lt;div id=&amp;quot;viewport&amp;quot; &amp;gt;&amp;lt;/div&amp;gt;
+
+javascript部分
+
+if (typeof String.prototype.format !== &amp;quot;function&amp;quot;) {
+    /* 字符串模板 */
+    String.prototype.format = function () {
+      var s = this, //字符串指针
+          length = arguments.length; //参数长度
+      while (--length &amp;gt;= 0){
+        s = s.replace(new RegExp(&amp;#39;\\{&amp;#39; + length + &amp;#39;\\}&amp;#39;, &amp;#39;g&amp;#39;), arguments[length]);
+      }
+      return s;
+    };
+}
+
+  var vptx = 0, // x轴
+      vpty = 0; // y轴
+      tilePool = []; // 格子数量
+      tileWidth = 64,  // 格子图片宽
+      tileHeight = 32, // 格子图片高
+      viewportTileWidth = 10,  // 地图宽数量
+      viewportTileHeight = 10, // 地图高数量
+      viewportWidth = (viewportTileWidth + 1) * tileWidth;    // 地图实际宽
+      viewportHeight = (viewportTileHeight + 1) * tileHeight, // 地图实际高
+      viewportOffsetX = viewportWidth / 2 - tileWidth / 2; // 修正地图显示x区域
+      viewportOffsetY = 0; // 默认地图显示y区域
+
+    for (var i = 0; i &amp;lt;= viewportTileHeight; i++) {
+        for (var j = 0; j &amp;lt;= viewportTileWidth; j++) {
+          var tx = vptx + j, // x坐标
+              ty = vpty + i, // y坐标
+              tl = (viewportOffsetX + (tx - ty) * tileWidth / 2),  // 左距离
+              tr = (viewportOffsetY + (tx + ty) * tileHeight / 2), // 右距离
+               d = Math.round(Math.random()*24)+1; // 随机显示颜色格子
+             tml = &amp;#39;&amp;lt;div class=&amp;quot;tile d{0}&amp;quot; id=&amp;quot;t_{1}_{2}&amp;quot; style=&amp;quot;display: block; left: {3}px; top: {4}px;&amp;quot;&amp;gt;[{5},{6}]&amp;lt;/div&amp;gt;&amp;#39;
+                  .format(d,tx,ty,tl,tr,tx,ty); // 替换模板
+          tilePool.push( tml ); // 加入数组
+        }
+    }
+	
+var viewport = document.getElementById(&amp;quot;viewport&amp;quot;);
+    viewport.style.width = &amp;quot;&amp;quot; + viewportWidth + &amp;quot;px&amp;quot;; // 设置显示区域宽
+    viewport.style.height = &amp;quot;&amp;quot; + viewportHeight + &amp;quot;px&amp;quot;; // 设置显示区域高
+    viewport.innerHTML = tilePool.join(&amp;quot;&amp;quot;);
+
+
+
+查看DEMO
+
+
+
+OK，今儿先到这儿了，后续会用css3来实现斜45度地图。:)
+
+
+
+</description>
+        <pubDate>2014-10-24</pubDate>
+        <link>/2014/10/24/javascript-game-map45</link>
+        <guid isPermaLink="true">/2014/10/24/javascript-game-map45</guid>
+        
+        <category>javascript</category>
+        
+        <category>game</category>
+        
+        
+        <category>javascript</category>
+        
+      </item>
+    
+      <item>
+        <title>html5系列.画布进阶.游戏.人物移动（媚灵狐）</title>
+        <description>还依稀记得高中那会儿特别火爆的网易游戏回合制游戏大话西游吗？这儿先不讨论游戏中的各种怀念的细节了。今儿打算用canvas+javascript来循环播放多个随机位置，八方向人物移动的动画效果。
+
+
+
+  大话西游（媚灵狐）
+
+
+先来一张当年特别喜欢的游戏中的人物。
+
+  
+
+
+  八方向（媚灵狐）
+
+
+  
+
+
+  动画实现过程
+
+
+css样式
+
+&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;
+  body { margin:1em; background:#eee; }
+  #game {border:1px solid black;width:786px; height:793px; }
+  #game canvas { display:block;  }
+&amp;lt;/style&amp;gt;
+
+html部分：
+
+&amp;lt;p id=&amp;quot;fps&amp;quot;&amp;gt;--- fps&amp;lt;/p&amp;gt; 
+&amp;lt;div id=&amp;quot;game&amp;quot;&amp;gt;
+  &amp;lt;canvas id=&amp;quot;gameCanvas&amp;quot;&amp;gt;&amp;lt;/canvas&amp;gt;
+&amp;lt;/div&amp;gt;
+
+javascript部分：
+
+// 多图片的预加载函数
+function loadImages(sources, callback){
+  var count = 0, images ={}, imgNum = 0;
+  for(src in sources){ imgNum++; }
+  for(src in sources){
+    images[src] = new Image();
+    images[src].src = sources[src];
+    if(images[src].complete){  //是否有缓冲存在
+      if(++count &amp;gt;= imgNum){
+        callback(images); //满足数量直接返回
+      }
+      continue;
+    }
+    images[src].onload = function(){ // 图片加载完成
+      if(++count &amp;gt;= imgNum){
+        callback(images);
+      }
+    };
+  }
+}
+
+var game = document.getElementById(&amp;#39;game&amp;#39;), 
+    fps  = document.getElementById(&amp;#39;fps&amp;#39;), // 动画帧数
+    canv = document.getElementById(&amp;#39;gameCanvas&amp;#39;), // canvas 元素
+    ctx  = canv.getContext(&amp;#39;2d&amp;#39;), // 创建 context 对象
+    gameImgs = { //背景图、八方向动画图
+      bg : &amp;quot;http://www.jcore.cn/resources/images/2014/10/22/html5-series-game-dahua-0.png&amp;quot;,
+      mlh : &amp;quot;http://www.jcore.cn/resources/images/2014/10/22/html5-series-game-dahua-1.png&amp;quot;
+    },
+    sprites = [], // 人物数组
+    size = { w:206, h:160, frames:8 }, // 帧数宽、高、帧个数
+    avgDelay = 0, lastDraw = new Date;
+// 图片加载以后绘图，否则为空白图片
+loadImages(gameImgs,function(images){
+  var bg = images[&amp;quot;bg&amp;quot;];
+  canv.width = bg.width; // 设置画布宽
+  canv.height = bg.height; // 设置画布高
+  ctx.drawImage(bg,0,0); // 画出背景图
+  
+  initSprites(images,function(){ // 初始化人物函数
+    setInterval(function(){ 
+      drawFrame(images); // 绘图函数
+    },1000/30);
+  });
+  
+});
+// 初始化人物函数
+function initSprites(images,callback){
+  var bg = images[&amp;quot;bg&amp;quot;]
+  // 画出人物
+  var padding = 200; // 人物活动范围
+  for (var i=0;i&amp;lt;20;++i){ // 创建多个人物
+    sprites[i] = {
+      x : Math.random() * (bg.width-padding) + padding/2, // 随机x轴
+      y : Math.random() * (bg.height-padding) + padding/2, // 随机y轴
+      f : Math.round( Math.random() * 3 ) // 随机偏移值
+    };
+  }
+  if(callback) callback();
+}
+// 绘图函数
+function drawFrame(images){
+  var bg = images[&amp;quot;bg&amp;quot;], mlh = images[&amp;quot;mlh&amp;quot;]; // 图片对象
+  ctx.drawImage(bg,0,0); // 清空背景画布
+  for (var i=0,len=sprites.length;i&amp;lt;len;++i){ // 遍历人物
+    var s = sprites[i];
+    s.x += Math.random() * 4 - 2; // 随机设置人物x轴
+    s.y += Math.random() * 4 - 2; // 随机设置人物y轴
+    if (s.x+size.w &amp;gt;= bg.width) s.x -= 10; // 控制x轴不超出预定边界
+    if (s.y+size.h &amp;gt;= bg.height) s.y -= 10; // 控制y轴不超出预定边界
+    var offset = (s.f++ % size.frames)*size.w; // 偏移值
+    ctx.save();
+    ctx.scale(.8,.8); // 人物大小
+    ctx.drawImage(mlh, offset, 0, size.w, size.h, s.x, s.y, size.w, size.h ); // 人物按帧数播放
+    ctx.restore();
+  }
+  // FPS
+  var now = new Date, delay = (now - lastDraw);
+  avgDelay += (delay - avgDelay) / 10;
+  lastDraw = now;
+  fps.innerHTML = (1000/avgDelay).toFixed(1) + &amp;quot; fps&amp;quot;;
+};
+
+
+
+查看DEMO
+
+
+
+OK,今天就先说到这儿 :)
+
+
+</description>
+        <pubDate>2014-10-22</pubDate>
+        <link>/2014/10/22/html5-series-game-dahua</link>
+        <guid isPermaLink="true">/2014/10/22/html5-series-game-dahua</guid>
+        
+        <category>html5</category>
+        
+        <category>game</category>
+        
+        <category>大话西游</category>
+        
+        <category>媚灵狐</category>
+        
+        
+        <category>html5</category>
+        
+      </item>
+    
+      <item>
+        <title>javascript进阶.callback回调地狱</title>
+        <description>前几年Ajax流行的时候，刮起了一阵异步风暴，随着Node.js的流行，又刮来一大波异步风暴。随着页面异步功能的相互依赖，代码逻辑如果控制的不合理，就会陷入无穷的 回调地狱 中。
+
+
+
+  金字塔回调模式
+
+
+loadImg(&amp;#39;a.jpg&amp;#39;, function() {
+    loadImg(&amp;#39;b.jpg&amp;#39;, function() {
+        loadImg(&amp;#39;c.jpg&amp;#39;, function() {
+            //...
+        });
+    });
+});
+
+当异步的任务很多的时候，维护大量的callback将是一场灾难。
+
+
+  Promise
+
+
+Promise规范已经出来一段时间了，流行的Promise类库也不少，不清楚的朋友，戳这里。  
+
+Promise规范中，每个任务都有三种状态：默认(pending)、完成(fulfilled)、失败(rejected)。  
+
+
+  简单的事件队列管理实现
+
+
+// 队列函数
+function Queue(){
+  
+  var _queueArray = [], // 队列数组
+      _errorQueueName = null // 错误队列名称消息
+  
+  // 添加执行队列函数
+  this.add = function(queueName,queueFun){
+    _queueArray.push({ // 添加队列
+      name : queueName,
+      fun  : queueFun
+    });
+    return this;
+  }
+  // 执行队列函数
+  this.run = function(){ // 执行队列
+    var _queue = _queueArray.shift(); // 队列函数
+    if(!_queue) return; // 函数不存在，直接返回
+    try{
+      _queue.fun(); // 依次执行函数
+      this.run(); // 回调自己
+    }catch(e){ // 异常处理
+      _errorQueueName = _queue.name; 
+    }
+  }
+  // 全部成功，执行函数
+  this.done = function(doneFun){
+    this.run();
+    if(!_errorQueueName) doneFun();
+    return this; 
+  }
+  // 一个失败输出函数
+  this.fail = function(failFun){
+    if(_errorQueueName) failFun(_errorQueueName);
+  };
+}
+
+使用方法：
+
+// 函数集合
+var funs = {
+  test1 : function(){ ... },
+  test2 : function(){ ... },
+  test3 : function(){ ... },
+  fun_done : function(){ alert(&amp;quot;所有函数,执行成功...&amp;quot;); },
+  fun_fail : function(name){ alert(name + &amp;quot;函数,执行失败...&amp;quot;); }
+}
+
+var queue = new Queue(); //初始化Queue对象
+
+queue
+.add(&amp;quot;queue_fun1&amp;quot;,funs.test1) //队列函数1
+.add(&amp;quot;queue_fun2&amp;quot;,funs.test2) //队列函数2
+.add(&amp;quot;queue_fun3&amp;quot;,funs.test3) //队列函数3
+.done(funs.fun_done) // 执行成功函数
+.fail(funs.fun_fail); // 执行失败函数
+
+
+
+查看DEMO
+
+
+
+OK，今儿先到这儿了，后续会用Generator对象来重构Queue函数 :)
+
+
+
+相关参考文章地址：
+
+Callback-Hell - http://www.callbackhell.com/
+JavaScript-Promises - http://qed.dk/poul-foged/2014/03/03/en-sammenligning-af-JavaScript-promise-biblioteker/
+
+
+
+</description>
+        <pubDate>2014-10-20</pubDate>
+        <link>/2014/10/20/javascript-callback-hell</link>
+        <guid isPermaLink="true">/2014/10/20/javascript-callback-hell</guid>
+        
+        <category>javascript</category>
+        
+        <category>ajax</category>
+        
+        <category>nodejs</category>
+        
+        
+        <category>javascript</category>
+        
+      </item>
+    
+      <item>
+        <title>话.比赛第一,友谊第二</title>
+        <description>置身于中国，一个巨大的Shopping Mall，活下来的，都是身经百战抗压力抗忧郁症抗过劳的高手。“起得比鸡早，睡得比狗晚，吃得比猪香，干得比驴多”，这种上班族的调侃，成为某种软性抗议。
+
+
+突飞猛进的大时代让整个社会充满了不稳定感，发展机遇突然涌现、行为规则尚未明晰，一夜成名、一夕暴富的神话屡屡出现，人脉、家庭、财富、学历、能力、智商、情商、心态、健康等等方面不确定因素都会让人觉得任何一个时间点都可能成为节点、拐点、起点和终点。  
+
+找工作很难，可加班也辛苦；办公室政治激烈，可学业竞争同样激烈；事业难以成就，可感情同样贫瘠；有压力累，没压力怕。  
+
+毕业等于失业，考研等于死缓的失业。每个人都渴望充电，增强竞争力，各式培训班从外语到营销、从心灵培育到思维解放，五花八门。  
+
+整个时代都患有竞争焦虑症，人人都唯恐被时代所抛弃。在这样的病态压力之下，再要提友谊第一，比赛第二恐怕是奢谈。
+
+OK，今儿就先到这儿了 :)
+
+
+</description>
+        <pubDate>2014-10-19</pubDate>
+        <link>/2014/10/19/first-game</link>
+        <guid isPermaLink="true">/2014/10/19/first-game</guid>
+        
+        <category>北漂</category>
+        
+        
+        <category>life</category>
+        
+      </item>
+    
+      <item>
+        <title>骑行笔记.妙峰山</title>
+        <description>昨儿个第二次骑行妙峰山，和同学赖宝一起，骑车一半儿是为了锻炼身体，一半儿是休闲看景，以休闲为主吧，边骑边看边玩儿。
+
+
+
+  座驾（Giant TCR SL2）
+
+
+
+
+
+  妙峰山
+
+
+对于骑行爱好者来说，妙峰山都象征着一个坎，迈过了这个坎，意味着你骑行的强度就上了一个新的台阶，以后再征服强度更大的例如东大高双向等也只是时间问题。  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+今儿就先到这儿了，有喜欢骑行的朋友可以一起 :)
+
+
+</description>
+        <pubDate>2014-10-18</pubDate>
+        <link>/2014/10/18/cycling-miaofengshan</link>
+        <guid isPermaLink="true">/2014/10/18/cycling-miaofengshan</guid>
+        
+        <category>骑行</category>
+        
+        
+        <category>life</category>
+        
+      </item>
+    
+      <item>
+        <title>html5系列.画布进阶.在线选座购票实现（三）</title>
+        <description>canvas+javascript在线选座购票前端实现，利用canvas画出场馆图、区域座位（普通票、套票、情侣票）。都具备拖动及缩放功能。
+
+
+这里就不写java服务端请求返回接口的方法了，直接给出返回JSON数据：
+
+// 接口返回的json数据
+{ // 基础数据接口
+  &amp;quot;result&amp;quot; : {
+    &amp;quot;img&amp;quot; : &amp;quot;http://www.jcore.cn/resources/images/demo/onlineseat.jpg&amp;quot;, // 场馆区域图
+    &amp;quot;prices&amp;quot; : [ // 票价
+      {&amp;quot;name&amp;quot;:&amp;quot;A&amp;quot;,&amp;quot;color&amp;quot;:&amp;quot;FF6432&amp;quot;,&amp;quot;price&amp;quot;:3000,&amp;quot;istp&amp;quot;:false,&amp;quot;ticketTypeInfo&amp;quot;:&amp;quot;3000&amp;quot;},
+      {&amp;quot;name&amp;quot;:&amp;quot;B&amp;quot;,&amp;quot;color&amp;quot;:&amp;quot;FFCD32&amp;quot;,&amp;quot;price&amp;quot;:1680,&amp;quot;istp&amp;quot;:false,&amp;quot;ticketTypeInfo&amp;quot;:&amp;quot;1680&amp;quot;},
+      {&amp;quot;name&amp;quot;:&amp;quot;C&amp;quot;,&amp;quot;color&amp;quot;:&amp;quot;96CD69&amp;quot;,&amp;quot;price&amp;quot;:1280,&amp;quot;istp&amp;quot;:false,&amp;quot;ticketTypeInfo&amp;quot;:&amp;quot;1280&amp;quot;},
+      {&amp;quot;name&amp;quot;:&amp;quot;D&amp;quot;,&amp;quot;color&amp;quot;:&amp;quot;008000&amp;quot;,&amp;quot;price&amp;quot;:1000,&amp;quot;istp&amp;quot;:false,&amp;quot;ticketTypeInfo&amp;quot;:&amp;quot;1000&amp;quot;},
+      {&amp;quot;name&amp;quot;:&amp;quot;E&amp;quot;,&amp;quot;color&amp;quot;:&amp;quot;64CDFF&amp;quot;,&amp;quot;price&amp;quot;:880,&amp;quot;istp&amp;quot;:false,&amp;quot;ticketTypeInfo&amp;quot;:&amp;quot;880&amp;quot;},
+      {&amp;quot;name&amp;quot;:&amp;quot;F&amp;quot;,&amp;quot;color&amp;quot;:&amp;quot;008080&amp;quot;,&amp;quot;price&amp;quot;:580,&amp;quot;istp&amp;quot;:false,&amp;quot;ticketTypeInfo&amp;quot;:&amp;quot;580&amp;quot;},
+      {&amp;quot;name&amp;quot;:&amp;quot;G&amp;quot;,&amp;quot;color&amp;quot;:&amp;quot;CD9BCD&amp;quot;,&amp;quot;price&amp;quot;:380,&amp;quot;istp&amp;quot;:false,&amp;quot;ticketTypeInfo&amp;quot;:&amp;quot;380&amp;quot;},
+      {&amp;quot;name&amp;quot;:&amp;quot;H&amp;quot;,&amp;quot;color&amp;quot;:&amp;quot;9B649B&amp;quot;,&amp;quot;price&amp;quot;:180,&amp;quot;istp&amp;quot;:false,&amp;quot;ticketTypeInfo&amp;quot;:&amp;quot;180&amp;quot;}
+    ],
+    &amp;quot;areas&amp;quot; : [ // 区域
+      {&amp;quot;id&amp;quot;:1,&amp;quot;name&amp;quot;:&amp;quot;1区&amp;quot;,&amp;quot;remain&amp;quot;:0,&amp;quot;rect&amp;quot;:&amp;quot;454,248|459,305|477,307|477,337|457,338|443,394|506,420|527,340|529,286|526,249|498,254|493,238|454,248&amp;quot;},
+      {&amp;quot;id&amp;quot;:2,&amp;quot;name&amp;quot;:&amp;quot;2区&amp;quot;,&amp;quot;remain&amp;quot;:0,&amp;quot;rect&amp;quot;:&amp;quot;441,401|430,424|453,437|441,460|417,447|406,463|386,473|373,485|343,501|350,526|365,522|380,552|420,533|459,499|482,469|504,428|504,426|445,403|441,401&amp;quot;},
+      {&amp;quot;id&amp;quot;:3,&amp;quot;name&amp;quot;:&amp;quot;3区&amp;quot;,&amp;quot;remain&amp;quot;:0,&amp;quot;rect&amp;quot;:&amp;quot;299,501|293,527|274,524|262,552|286,562|307,563|336,563|355,560|375,555|364,523|346,530|338,504|327,504|326,521|313,522|312,505|300,505|299,501&amp;quot;},
+      {&amp;quot;id&amp;quot;:4,&amp;quot;name&amp;quot;:&amp;quot;4区&amp;quot;,&amp;quot;remain&amp;quot;:0,&amp;quot;rect&amp;quot;:&amp;quot;195,401|137,428|164,478|195,513|224,536|257,553|271,521|289,524|295,504|258,485|221,447|202,456|190,433|205,426|195,401&amp;quot;},
+      {&amp;quot;id&amp;quot;:5,&amp;quot;name&amp;quot;:&amp;quot;5区&amp;quot;,&amp;quot;remain&amp;quot;:0,&amp;quot;rect&amp;quot;:&amp;quot;182,245|144,238|141,257|114,252|110,286|112,331|119,374|135,422|192,394|180,336|159,336|160,305|177,305|182,245&amp;quot;},
+      {&amp;quot;id&amp;quot;:6,&amp;quot;name&amp;quot;:&amp;quot;6区&amp;quot;,&amp;quot;remain&amp;quot;:0,&amp;quot;rect&amp;quot;:&amp;quot;531,269|585,260|586,327|577,385|565,414|518,395|528,353|533,309|531,269&amp;quot;},
+      {&amp;quot;id&amp;quot;:7,&amp;quot;name&amp;quot;:&amp;quot;7区&amp;quot;,&amp;quot;remain&amp;quot;:0,&amp;quot;rect&amp;quot;:&amp;quot;517,403|562,421|534,472|496,514|455,548|391,577|382,557|416,540|441,520|468,493|496,453|517,403&amp;quot;},
+      {&amp;quot;id&amp;quot;:8,&amp;quot;name&amp;quot;:&amp;quot;8区&amp;quot;,&amp;quot;remain&amp;quot;:11,&amp;quot;rect&amp;quot;:&amp;quot;377,556|385,577|344,585|339,566|377,556&amp;quot;},
+      {&amp;quot;id&amp;quot;:9,&amp;quot;name&amp;quot;:&amp;quot;9区&amp;quot;,&amp;quot;remain&amp;quot;:0,&amp;quot;rect&amp;quot;:&amp;quot;297,564|295,583|251,577|259,556|297,564&amp;quot;},
+      {&amp;quot;id&amp;quot;:10,&amp;quot;name&amp;quot;:&amp;quot;10区&amp;quot;,&amp;quot;remain&amp;quot;:0,&amp;quot;rect&amp;quot;:&amp;quot;256,554|246,575|187,548|139,510|100,466|71,405|119,393|135,433|157,471|192,512|256,554&amp;quot;},
+      {&amp;quot;id&amp;quot;:11,&amp;quot;name&amp;quot;:&amp;quot;11区&amp;quot;,&amp;quot;remain&amp;quot;:0,&amp;quot;rect&amp;quot;:&amp;quot;108,269|54,260|51,307|57,353|68,400|119,388|108,327|108,269&amp;quot;}
+    ],
+    &amp;quot;tplist&amp;quot;:[] // 套票
+  },
+  &amp;quot;error&amp;quot;:null // 错误提示
+}
+
+{ // 座位数据接口
+  &amp;quot;result&amp;quot;:[
+    {&amp;quot;id&amp;quot;:8,&amp;quot;name&amp;quot;:&amp;quot;A&amp;quot;,&amp;quot;x&amp;quot;:31,&amp;quot;y&amp;quot;:5,&amp;quot;pinfo&amp;quot;:&amp;quot;看台8区1排1座&amp;quot;,&amp;quot;tp&amp;quot;:0,&amp;quot;sale&amp;quot;:0},
+    {&amp;quot;id&amp;quot;:8,&amp;quot;name&amp;quot;:&amp;quot;A&amp;quot;,&amp;quot;x&amp;quot;:30,&amp;quot;y&amp;quot;:5,&amp;quot;pinfo&amp;quot;:&amp;quot;看台8区1排2座&amp;quot;,&amp;quot;tp&amp;quot;:0,&amp;quot;sale&amp;quot;:1},
+    {&amp;quot;id&amp;quot;:8,&amp;quot;name&amp;quot;:&amp;quot;B&amp;quot;,&amp;quot;x&amp;quot;:29,&amp;quot;y&amp;quot;:5,&amp;quot;pinfo&amp;quot;:&amp;quot;看台8区1排3座&amp;quot;,&amp;quot;tp&amp;quot;:0,&amp;quot;sale&amp;quot;:1},
+    {&amp;quot;id&amp;quot;:8,&amp;quot;name&amp;quot;:&amp;quot;B&amp;quot;,&amp;quot;x&amp;quot;:28,&amp;quot;y&amp;quot;:5,&amp;quot;pinfo&amp;quot;:&amp;quot;看台8区1排4座&amp;quot;,&amp;quot;tp&amp;quot;:0,&amp;quot;sale&amp;quot;:0},
+    {&amp;quot;id&amp;quot;:8,&amp;quot;name&amp;quot;:&amp;quot;C&amp;quot;,&amp;quot;x&amp;quot;:27,&amp;quot;y&amp;quot;:5,&amp;quot;pinfo&amp;quot;:&amp;quot;看台8区1排5座&amp;quot;,&amp;quot;tp&amp;quot;:0,&amp;quot;sale&amp;quot;:0},
+    {&amp;quot;id&amp;quot;:8,&amp;quot;name&amp;quot;:&amp;quot;C&amp;quot;,&amp;quot;x&amp;quot;:26,&amp;quot;y&amp;quot;:5,&amp;quot;pinfo&amp;quot;:&amp;quot;看台8区1排6座&amp;quot;,&amp;quot;tp&amp;quot;:0,&amp;quot;sale&amp;quot;:1},
+    {&amp;quot;id&amp;quot;:8,&amp;quot;name&amp;quot;:&amp;quot;D&amp;quot;,&amp;quot;x&amp;quot;:25,&amp;quot;y&amp;quot;:5,&amp;quot;pinfo&amp;quot;:&amp;quot;看台8区1排7座&amp;quot;,&amp;quot;tp&amp;quot;:0,&amp;quot;sale&amp;quot;:1},
+    {&amp;quot;id&amp;quot;:8,&amp;quot;name&amp;quot;:&amp;quot;D&amp;quot;,&amp;quot;x&amp;quot;:31,&amp;quot;y&amp;quot;:7,&amp;quot;pinfo&amp;quot;:&amp;quot;看台10区1排1座&amp;quot;,&amp;quot;tp&amp;quot;:0,&amp;quot;sale&amp;quot;:1},
+    {&amp;quot;id&amp;quot;:8,&amp;quot;name&amp;quot;:&amp;quot;E&amp;quot;,&amp;quot;x&amp;quot;:30,&amp;quot;y&amp;quot;:7,&amp;quot;pinfo&amp;quot;:&amp;quot;看台10区1排2座&amp;quot;,&amp;quot;tp&amp;quot;:0,&amp;quot;sale&amp;quot;:1},
+    {&amp;quot;id&amp;quot;:8,&amp;quot;name&amp;quot;:&amp;quot;E&amp;quot;,&amp;quot;x&amp;quot;:29,&amp;quot;y&amp;quot;:7,&amp;quot;pinfo&amp;quot;:&amp;quot;看台10区1排3座&amp;quot;,&amp;quot;tp&amp;quot;:0,&amp;quot;sale&amp;quot;:1},
+    {&amp;quot;id&amp;quot;:8,&amp;quot;name&amp;quot;:&amp;quot;F&amp;quot;,&amp;quot;x&amp;quot;:28,&amp;quot;y&amp;quot;:7,&amp;quot;pinfo&amp;quot;:&amp;quot;看台10区1排4座&amp;quot;,&amp;quot;tp&amp;quot;:0,&amp;quot;sale&amp;quot;:0},
+    {&amp;quot;id&amp;quot;:8,&amp;quot;name&amp;quot;:&amp;quot;F&amp;quot;,&amp;quot;x&amp;quot;:27,&amp;quot;y&amp;quot;:7,&amp;quot;pinfo&amp;quot;:&amp;quot;看台10区1排5座&amp;quot;,&amp;quot;tp&amp;quot;:0,&amp;quot;sale&amp;quot;:1},
+    {&amp;quot;id&amp;quot;:8,&amp;quot;name&amp;quot;:&amp;quot;G&amp;quot;,&amp;quot;x&amp;quot;:26,&amp;quot;y&amp;quot;:7,&amp;quot;pinfo&amp;quot;:&amp;quot;看台10区1排6座&amp;quot;,&amp;quot;tp&amp;quot;:0,&amp;quot;sale&amp;quot;:1},
+    {&amp;quot;id&amp;quot;:8,&amp;quot;name&amp;quot;:&amp;quot;G&amp;quot;,&amp;quot;x&amp;quot;:25,&amp;quot;y&amp;quot;:7,&amp;quot;pinfo&amp;quot;:&amp;quot;看台10区1排7座&amp;quot;,&amp;quot;tp&amp;quot;:0,&amp;quot;sale&amp;quot;:1},
+    {&amp;quot;id&amp;quot;:8,&amp;quot;name&amp;quot;:&amp;quot;H&amp;quot;,&amp;quot;x&amp;quot;:25,&amp;quot;y&amp;quot;:7,&amp;quot;pinfo&amp;quot;:&amp;quot;看台10区1排7座&amp;quot;,&amp;quot;tp&amp;quot;:0,&amp;quot;sale&amp;quot;:1},
+    {&amp;quot;id&amp;quot;:8,&amp;quot;name&amp;quot;:&amp;quot;H&amp;quot;,&amp;quot;x&amp;quot;:25,&amp;quot;y&amp;quot;:7,&amp;quot;pinfo&amp;quot;:&amp;quot;看台10区1排7座&amp;quot;,&amp;quot;tp&amp;quot;:0,&amp;quot;sale&amp;quot;:0}
+  ],
+  &amp;quot;error&amp;quot;:null // 错误提示
+}
+
+
+  画出影院场馆（影院场馆可售区域）：
+
+
+模拟后端返回JSON数据，画出场馆区域。
+html部分：
+
+&amp;lt;canvas id=&amp;quot;canvas&amp;quot; width=650 height=600 style=&amp;quot;border:1px solid #000; background-color: ivory;&amp;quot;&amp;gt;&amp;lt;/canvas&amp;gt;
+
+javascript部分：
+
+// 根据JSON数据画出场馆及可售区域
+var canvas = document.getElementById(&amp;quot;canvas&amp;quot;), // canvas 元素
+    context = canvas.getContext(&amp;quot;2d&amp;quot;), // 创建 context 对象
+    baseResult = baseJSON[&amp;quot;result&amp;quot;],
+    seatResult = seatJSON[&amp;quot;result&amp;quot;];
+    
+// 创建图片对象
+var img = new Image();
+
+// 设置图片路径
+img.src = baseResult[&amp;quot;img&amp;quot;];
+
+// 图片加载以后绘图，否则为空白图片
+img.onload = function(){
+  context.drawImage(img,0,0);
+  var areas = baseResult[&amp;quot;areas&amp;quot;];
+  for(var i=areas.length;i--;){
+    var area = areas[i];
+    var _rect = area[&amp;quot;rect&amp;quot;];
+    context.beginPath();  // 画图开始
+    var rects = _rect.split(&amp;quot;|&amp;quot;);
+    for (var r=rects.length;r--;) // 遍历画图闭合线坐标
+    {
+      var _rect = rects[r].split(&amp;quot;,&amp;quot;); // 拆分点标
+      context.lineTo(_rect[0], _rect[1]); // 按点画闭合线
+      console.log(area[&amp;quot;remain&amp;quot;]);
+    } 
+    if(area[&amp;quot;remain&amp;quot;] == 0){ // 无座位可售区域
+        context.fillStyle = &amp;quot;#cccccc&amp;quot;; // 默认半透明灰色
+        context.globalAlpha = .9; // 透明度
+        context.fill(); 	// 闭合区域填充颜色
+    }
+    context.stroke(); // 画图结束
+  }
+}
+
+DEMO中暂未展示缩放和点击事件。:)
+
+
+
+查看DEMO
+
+
+
+
+  点击影院场馆可售区域，显示该区域座位：
+
+
+OK,今天就先说到这儿 :) 由于近期比较忙更新相对比较缓慢。完整DEMO还在整理中。
+
+
+
+</description>
+        <pubDate>2014-10-12</pubDate>
+        <link>/2014/10/12/html5-series-canvas-onlineseat-3</link>
+        <guid isPermaLink="true">/2014/10/12/html5-series-canvas-onlineseat-3</guid>
+        
+        <category>html5</category>
+        
+        <category>在线选座</category>
+        
+        
+        <category>html5</category>
+        
+      </item>
+    
+      <item>
+        <title>html5系列.画布进阶.在线选座购票实现（二）</title>
+        <description>canvas+javascript在线选座购票后端实现，利用canvas的绘图方法，标出场馆热点区域，框选热点区域内可售座位，批量设置票价，保存座位数据。
+
+
+
+  设置影院场馆（影院场馆可售区域）：
+
+
+简单的canvas来画场馆热点闭合区域。
+html部分：
+
+&amp;lt;canvas id=&amp;quot;canvas&amp;quot; width=650 height=600 style=&amp;quot;border:1px solid #000; background-color: ivory;&amp;quot;&amp;gt;&amp;lt;/canvas&amp;gt;
+
+javascript部分：
+
+//闭合区域简单实现
+var canvas = document.getElementById(&amp;quot;canvas&amp;quot;), // canvas 元素
+    context = canvas.getContext(&amp;quot;2d&amp;quot;), // 创建 context 对象
+    canvasOffset = canvas.getBoundingClientRect(),
+    offsetX = canvasOffset.left,
+    offsetY = canvasOffset.top,
+    storedLines = [],
+    startX = 0,
+    startY = 0,
+    radius = 4,
+    canvasMouseX,
+    canvasMouseY;
+
+// 创建图片对象
+var img = new Image();
+
+// 设置图片路径
+img.src = &amp;quot;http://www.jcore.cn/resources/images/demo/onlineseat.jpg&amp;quot;;
+
+// 图片加载以后绘图，否则为空白图片
+img.onload = function(){
+	context.drawImage(img,0,0);
+}
+
+context.strokeStyle = &amp;quot;orange&amp;quot;;
+
+//按下鼠标事件函数
+canvas.onmousedown = function (e) {
+  handleMouseDown(e);
+};
+
+//按下鼠标函数
+function handleMouseDown(e) {
+  canvasMouseX = parseInt(e.clientX - offsetX);
+  canvasMouseY = parseInt(e.clientY - offsetY);
+
+  if (hitStartCircle(canvasMouseX, canvasMouseY)) {
+    fillPolyline();
+    return;
+  }
+  storedLines.push({
+    x: canvasMouseX,
+    y: canvasMouseY
+  });
+  if (storedLines.length == 1) {
+    startX = canvasMouseX;
+    startY = canvasMouseY;
+    context.fillStyle = &amp;quot;green&amp;quot;;
+    context.beginPath();
+    context.arc(canvasMouseX, canvasMouseY, radius, 0, 2 * Math.PI, false);
+    context.fill();
+  } else {
+    var c = storedLines.length - 2;
+    context.strokeStyle = &amp;quot;orange&amp;quot;;
+    context.lineWidth = 1;
+    context.beginPath();
+    context.moveTo(storedLines[c].x, storedLines[c].y);
+    context.lineTo(canvasMouseX, canvasMouseY);
+    context.stroke();
+  }
+}
+
+function hitStartCircle(x, y) {
+  var dx = x - startX;
+  var dy = y - startY;
+  return (dx * dx + dy * dy &amp;lt; radius * radius)
+}
+
+//闭合折线填充函数
+function fillPolyline() {
+  context.strokeStyle = &amp;quot;red&amp;quot;;
+  context.fillStyle = &amp;quot;blue&amp;quot;;
+  context.lineWidth = 1;
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  context.drawImage(img,0,0);
+  context.beginPath();
+  context.moveTo(storedLines[0].x, storedLines[0].y);
+  for (var i = 0; i &amp;lt; storedLines.length; i++) {
+    context.lineTo(storedLines[i].x, storedLines[i].y);
+  }
+  context.closePath();
+  context.fill();
+  context.stroke();
+  storedLines = [];
+}
+
+
+
+查看DEMO
+
+
+
+
+  设置可售区域座位：
+
+
+简单的canvas来画所有座位区域（10x10的格子）。
+html部分：
+
+&amp;lt;canvas id=&amp;quot;canvas&amp;quot; width=&amp;quot;500&amp;quot; height=&amp;quot;500&amp;quot; style=&amp;quot;border:1px solid #000; background-color: ivory;&amp;quot;&amp;gt;&amp;lt;/canvas&amp;gt;
+
+javascript部分：
+
+var canvas = document.getElementById(&amp;quot;canvas&amp;quot;), // canvas 元素
+    context = canvas.getContext(&amp;quot;2d&amp;quot;), // 创建 context 对象
+    position,
+    a, b,
+    xnum = 10, // X轴座位个数
+    ynum = 10, // Y轴座位个数
+    width = 20, // 座位宽
+    height = 20, // 座位高
+    space = 2, // 座位间距
+    imageURL = &amp;quot;http://www.jcore.cn/resources/images/demo/&amp;quot;, // 图片默认路径
+    seatImgs = { // 座位图片对象数组
+        s1 : imageURL + &amp;quot;icon-seat-1.png&amp;quot;, //可选座位
+        s2 : imageURL + &amp;quot;icon-seat-2.png&amp;quot;, //不可选座位
+        s3 : imageURL + &amp;quot;icon-seat-3.png&amp;quot;, //锁住座位
+        s4 : imageURL + &amp;quot;icon-seat-4.png&amp;quot;, //套票座位
+        s5 : imageURL + &amp;quot;icon-seat-5.png&amp;quot;, //选中座位
+    };
+
+// 座位x，y轴间距
+function surface(_a, _b) {  
+    return {
+        x: _a * (width + space),
+        y: _b * (height + space)
+    };
+}
+
+// 多图片的预加载函数
+function loadImages(sources, callback){
+  var count = 0, images ={}, imgNum = 0;
+  for(src in sources){ imgNum++; }
+  for(src in sources){
+    images[src] = new Image();
+    images[src].src = sources[src];
+    if(images[src].complete){  //是否有缓冲存在
+      if(++count &amp;gt;= imgNum){
+        callback(images); //满足数量直接返回
+      }
+      continue;
+    }
+    images[src].onload = function(){
+      if(++count &amp;gt;= imgNum){
+        callback(images);
+      }
+    };
+  }
+}
+
+// 图片加载以后绘图，否则为空白图片
+loadImages(seatImgs,function(images){
+  //遍历画座位
+  for (a = 0; a &amp;lt; xnum; a += 1) {
+      for (b = 0; b &amp;lt; ynum; b += 1) {
+          position = surface(a, b);
+          context.fillStyle = &amp;quot;#008899&amp;quot;; // 设置默认座位颜色
+          context.fillRect(position.x, position.y, width, height);
+          context.drawImage(images[&amp;quot;s1&amp;quot;], position.x, position.y, width, height);
+      }
+  }
+});
+
+
+
+查看DEMO
+
+
+
+OK,今天就先说到这儿 :)
+
+
+
+</description>
+        <pubDate>2014-10-11</pubDate>
+        <link>/2014/10/11/html5-series-canvas-onlineseat-2</link>
+        <guid isPermaLink="true">/2014/10/11/html5-series-canvas-onlineseat-2</guid>
+        
+        <category>html5</category>
+        
+        <category>在线选座</category>
+        
+        
+        <category>html5</category>
+        
+      </item>
+    
+      <item>
+        <title>html5系列.画布进阶.在线选座购票实现（一）</title>
+        <description>身边的朋友经常周末都会购买电影票，一般到影院购买经常会出现排长队的囧状，所以有些朋友会选择影院提供的在线选座购票、或者在影院合作的第三方平台购票，像时光网、网票网、美团、糯米等等。在线选座购票的实现方案也各不相同div+javascript、canvas+javascript、flash。
+
+这里我用html5的canvas+javascript来实现在线选座购票过程。
+
+
+  实现思路：
+
+
+# 后端（javascript + java）
+1. 设置影院场馆（影院场馆可售区域）
+2. 设置可售区域座位
+3. 设置座位票价、是否套票、情侣票
+----------------------------------------------------------------------------------------------
+# 前端（javascript + canvas）
+1. 画出影院场馆（影院场馆可售区域）
+2. 点击影院场馆可售区域，显示该区域座位（影院场馆区域、影院场馆座位区域可拖动）
+3. 点击影院场馆座位，跳转支付
+
+
+  使用技术：
+
+
++-----------+---------+-------------------------+
+|  Project  | Version |       Description       |
++-----------------------------------------------+
+|  jQuery   | 1.11.1  |  javaScript Framework   |
++-----------------------------------------------+
+|   Java    | 1.7.55  |           JDK           |
++-----------------------------------------------+
+
+
+  设计图稿：
+
+
+后端：  
+
+  
+
+前端：  
+
+  
+
+OK,今天就先说到这儿 :)
+
+
+
+</description>
+        <pubDate>2014-10-09</pubDate>
+        <link>/2014/10/09/html5-series-canvas-onlineseat-1</link>
+        <guid isPermaLink="true">/2014/10/09/html5-series-canvas-onlineseat-1</guid>
+        
+        <category>html5</category>
+        
+        <category>在线选座</category>
+        
+        
+        <category>html5</category>
+        
+      </item>
+    
+      <item>
+        <title>html5系列.画布</title>
+        <description>&amp;lt;canvas&amp;gt;标签主要用于图形绘制，canvas通过javascript来绘制2D图形。canvas拥有多种绘制路径、矩形、圆形、字符以及添加图像的方法。在canvas中，一旦图形被绘制完成，它就不会继续得到浏览器的关注。如果其位置发生变化，那么整个场景也需要重新绘制，包括任何或许已被图形覆盖的对象。
+
+
+
+  创建 Canvas 元素
+
+
+# 创建canvas标签
+&amp;lt;canvas id=&amp;quot;myCanvas&amp;quot; width=&amp;quot;400&amp;quot; height=&amp;quot;400&amp;quot;&amp;gt;&amp;lt;/canvas&amp;gt;
+
+
+  通过 JavaScript 来绘制
+
+
+// canvas 元素
+var canvas = document.body.appendChild(document.getElementById(&amp;quot;myCanvas&amp;quot;));
+
+// 创建 context 对象
+var context = canvas.getContext(&amp;quot;2d&amp;quot;);
+
+// 创建图片对象
+var img = new Image();
+
+// 设置图片路径
+img.src = &amp;quot;http://www.jcore.cn/resources/images/demo/map.png&amp;quot;;
+
+// 图片加载以后绘图，否则为空白图片
+img.onload = function(){
+	context.drawImage(img,0,0);
+}
+
+OK,今天就先说到这儿很简单，也很基础，下面有简单的例子 :)
+
+
+
+查看DEMO
+
+
+
+</description>
+        <pubDate>2014-10-08</pubDate>
+        <link>/2014/10/08/html5-series-canvas</link>
+        <guid isPermaLink="true">/2014/10/08/html5-series-canvas</guid>
+        
+        <category>html5</category>
+        
+        
+        <category>html5</category>
+        
+      </item>
+    
+      <item>
+        <title>架构实践.高负载高并发电商网站</title>
+        <description>最近公司面临改革（日事日毕，日清日高），从以前的点对点的开发模式，转战到平台的开发模式上来，显然是一次大变动呐。基础代码架构、服务器、数据库、缓存、监控、搜索、服务、日志都需要从新规划，下面我来说说关于架构一些想法。
+
+
+
+
+
+  设计思路
+
+
+1）多级缓存、静态化
+
+1. 客户端页面缓存
+2. 应用缓存（memcache）
+3. 内存数据库（mongodb、redis）
+4. cache机制（数据库、中间件）
+
+2）高可用
+
+1. 负载均衡、容灾、备份
+2. 读写分离
+3. 依赖关系（低耦合）
+4. 监控
+
+3）伸缩性
+
+1. 对业务、数据库的拆分（异步非阻塞，可提高吞吐量）
+2. 无状态（不依赖模块状态，可提高吞吐量）
+3. 原子操作与并发控制（乐观锁、mutex、写时复制等等）
+4. 容错隔离
+
+
+  应用架构
+
+
+整个架构是分层的分布式的架构，纵向包括CDN，反向代理，web应用，业务层，基础服务层，数据存储层。水平方向包括对整个平台的配置管理部署和监控。
+
++--------------------------------------------+ +--------+ +---------+
+|                    CDN                     | | Config | | Monitor |
++--------------------------------------------+ +--------+ +---------+
++--------------------------------------------+ |        | |         |
+|                   Nginx                    | | Deploy | |   Log   |
++--------------------------------------------+ |        | |         |
++--------------------------------------------+ +--------+ +---------+
+|                    App                     | |        | |         |
++---+--------+--+------------+--+--------+---+ |        | |         |
+|   +--------+  +------------+  +--------+   | |        | |         |
+|   |Tomcat  |  |   Jboss    |  | Spring |   | |        | |         |
+|   +--------+  +------------+  +--------+   | |        | |         |
++--------------------------------------------+ |        | | System  |
++--------------------------------------------+ |        | |         |
+|                  Service                   | |   Z    | |         |
++---+--------+--+------------+--+---------+--+ |   o    | |         |
+|   +--------+  +------------+  +---------+  | |   o    | |         |
+|   | Mina   |  |   Spring   |  |Hibernate|  | |   k    | +---------+
+|   +--------+  +------------+  +---------+  | |   e    | |         |
++--------------------------------------------+ |   e    | |         |
++--------------------------------------------+ |   p    | |         |
+|                Base Service                | |   e    | |         |
++-+---------+--+---------------+-+---------+-+ |   r    | |   App   |
+| +---------+  +---------------+ +---------+ | |        | |         |
+| |   MQ    |  |     Cache     | |  Data   | | |        | |         |
+| +---------+  +---------------+ +---------+ | |        | |         |
+| |ActiveMQ |  |   Mencache    | |  Flume  | | |        | |         |
+| +---------+  +--+--+---------+ +---------+ | |        | +---------+
+| +---------+--+--+  +---------+-+---------+ | |        | |         |
+| |    Search     |  |         HA          | | |        | |         |
+| +---------------+  +---------------------+ | |        | |         |
+| |  Solr/Lucene  |  | Zookeeper/Heartbeat | | |        | |         |
+| +---------------+  +---------------------+ | |        | |         |
++--------------------------------------------+ |        | | Service |
++--------------------------------------------+ |        | |         |
+|                  Database                  | |        | |         |
++--+--------------+-----+-----------------+--+ |        | |         |
+|  +--------------+     +-----------------+  | |        | |         |
+|  | Oracle/MySql |     |  mongodb/redis  |  | |        | |         |
+|  +--------------+     +-----------------+  | |        | |         |
++--+--------------+-----+-----------------+--+ +--------+ +---------+
+
+
+  剖析架构
+
+
+1）CDN
+
+一般电子商务平台都会用CDN做网络服务。  
+我们公司使用的是第三方CND，第三方CDN有很多种，如蓝汛、网宿、快网等。
+
+2）负载均衡、反向代理
+
+一般大型的电子商务平台都会有不同的业务域和不同的集群服务。一般都是DNS做域名解析的分发、轮询，DNS方式简单，因为Cache而缺乏灵活性。  
+一般基于商用的硬件F5或者LVS等开源负载做分发，都采取主备方式。  
+分发到业务集群上后，会经过web服务器如nginx做负载均衡或者反向代理分发到集群中的应用节点。  
+----------------------------------------------------------------------------------------------
+关于负载，需要综合考虑的几个因素：  
+1. 是否满足高并发高性能  
+2. Session如何保持  
+3. 是否支持压缩  
+4. 负载均衡的算法如何  
+常用的负载均衡软件，如LVS、Nginx、HAProxy等。  
+我们公司使用的是LVS+Nginx这种方式，Nginx基于iphash的Session黏贴。
+
+3）App接入
+
+应用层运行在Jboss或者Tomcat容器中，代表独立的系统，比如前端购物、后端系统、手机端服务等等。  
+----------------------------------------------------------------------------------------------
+关于应用层容器，需要综合考虑的几个因素：
+1. 是否采用servlet3.0异步servlet来提高整个系统的吞吐量  
+2. app接入节点宕机，session随之丢失问题  
+3. session的集中式存储如何水平扩展  
+我们公司应用层容器之前是使用的weblogic，现在使用的是tomcat。多个tomcat之间集群Session共享。
+
+4）业务服务
+
+对于电子商务平台而言，涉及的领域有用户、商品、订单、红包、活动、秒杀、支付业务等等，模块划分和接口设计非常重要。
+----------------------------------------------------------------------------------------------
+关于服务层，需要综合考虑的几个因素：
+1. 是否使用NIO通讯框架netty、mina等，实现高并发  
+2. 是否部署多个节点做冗余，从而提高服务层的高可用性，并自动进行负载转发和失效转移  
+我们公司的业务是混合在一起的，没有一个个都做到模块化。
+
+5）基础服务中间件
+
+对于电子商务平台，一般是由一个或多个基础服务中间件组成。这里罗列了一些常用的基础中间件。
+----------------------------------------------------------------------------------------------
+1. 消息队列（RabbitMQ、ActiveMQ等，推荐使用 RabbitMQ ）  
+2. 事件驱动（EventBus机制）  
+3. 缓存系统（Memcached[关系型数据库]；redis、mongodb、redis[内存型数据库]）  
+4. 搜索平台（Solr、Lucene需考虑：索引的实时性、读写分离、全量索引和内存增量索引合并）  
+5. HA（Heartbeat[类似HAProxy、Nginx]、keepalived 可用 zookeeper 做集群方案）  
+6. 数据分析（Hadoop[流量统计、推荐引擎、趋势分析、用户行为分析、数据挖掘分类器、分布式索引等等]）  
+7. 数据同步  
+8. 日志收集  
+我们公司平台使用到的中间件 ActiveMQ、Memcached、Lucene、Nginx、应用级日志Log4j、mount挂载项目。
+
+6）数据存储
+
+数据库存储大体分为以下几类：  
+----------------------------------------------------------------------------------------------
+1. 关系型（事务型）数据库 Oracle、Mysql等  
+2. key/value数据库 Redis、Memcached等  
+3. 文档型数据库 Mongodb等  
+4. 列式数据库 HBase等  
+5. 还有图形数据库、对象数据库、xml数据库等  
+我们公司主业务数据库是oracle10g，规划准备迁到oracle11g上，相关业务也用到了Mysql。
+
+7）管理与部署配置
+
+统一的配置库，部署平台。  
+我们公司使用的是Ant+Svn做的自动化部署平台。
+
+8）监控、统计
+
+一般电子商务平台分布式系统涉及各种设备，如网络交换机、各种型号的网卡，硬盘，内存等等。  
+监控平台的性能、吞吐量、以及可用性比较重要，需规划统一的一体化的监控平台对系统进行各个层次的监控。  
+----------------------------------------------------------------------------------------------
+关于监控、统计，需要考虑到的几个监控范围：
+1. 系统级别（CPU、内存、网络、IO）
+2. 应用级别（业务日志、请求日志、异常日志）
+3. 时效性（阀值告警、按小时/天离线分析、实时查询、业务监控、容器监控）
+我们公司日志分析使用的是逆火，流量监控使用的是Graphs（仙人掌）。
+
+OK，今天先到这儿了 :)
+
+
+</description>
+        <pubDate>2014-09-29</pubDate>
+        <link>/2014/09/29/architect-build-high-live</link>
+        <guid isPermaLink="true">/2014/09/29/architect-build-high-live</guid>
+        
+        <category>linux</category>
+        
+        <category>j2ee</category>
+        
+        <category>web</category>
+        
+        <category>database</category>
+        
+        <category>高并发</category>
+        
+        <category>架构</category>
+        
+        
+        <category>architect</category>
+        
+      </item>
+    
+  </channel>
+</rss>

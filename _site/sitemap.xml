@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+	<url>
+		<loc>/404.html</loc>
+		<lastmod></lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/about/</loc>
+		<lastmod></lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/atom.xml</loc>
+		<lastmod></lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/resources/demo/2013/03/10/browser-webkit-css3-duola.html</loc>
+		<lastmod></lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/category/</loc>
+		<lastmod></lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/feed.xml</loc>
+		<lastmod></lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/guest/</loc>
+		<lastmod></lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/resources/demo/2014/10/11/html5-series-canvas-onlineseat-2-polygon.html</loc>
+		<lastmod></lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/resources/demo/2014/10/11/html5-series-canvas-onlineseat-2-seatarea.html</loc>
+		<lastmod></lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/resources/demo/2014/10/12/html5-series-canvas-onlineseat-3-seatarea.html</loc>
+		<lastmod></lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/resources/demo/2014/10/08/html5-series-canvas.html</loc>
+		<lastmod></lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/resources/demo/2014/10/22/html5-series-game-dahua.html</loc>
+		<lastmod></lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/resources/demo/2014/09/16/html5-series-webdb.html</loc>
+		<lastmod></lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/index.html</loc>
+		<lastmod></lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/resources/demo/2014/10/20/javascript-callback-hell.html</loc>
+		<lastmod></lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/resources/demo/2013/04/05/javascript-for.html</loc>
+		<lastmod></lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/resources/demo/2014/10/24/javascript-game-map45-position.html</loc>
+		<lastmod></lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/resources/demo/2014/10/24/javascript-game-map45-tile.html</loc>
+		<lastmod></lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/resources/demo/2013/04/06/javascript-thread.html</loc>
+		<lastmod></lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/lists.json</loc>
+		<lastmod></lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/pages/</loc>
+		<lastmod></lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/reading/</loc>
+		<lastmod></lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/sitemap.txt</loc>
+		<lastmod></lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/sitemap.xml</loc>
+		<lastmod></lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/time/</loc>
+		<lastmod></lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/page2/index.html</loc>
+		<lastmod></lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/page3/index.html</loc>
+		<lastmod></lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/page4/index.html</loc>
+		<lastmod></lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/page5/index.html</loc>
+		<lastmod></lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+
+	<url>
+		<loc>/2014/10/24/javascript-game-map45</loc>
+		<lastmod>2014-10-24</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/2014/10/22/html5-series-game-dahua</loc>
+		<lastmod>2014-10-22</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/2014/10/20/javascript-callback-hell</loc>
+		<lastmod>2014-10-20</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/2014/10/19/first-game</loc>
+		<lastmod>2014-10-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/2014/10/18/cycling-miaofengshan</loc>
+		<lastmod>2014-10-18</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/2014/10/12/html5-series-canvas-onlineseat-3</loc>
+		<lastmod>2014-10-12</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/2014/10/11/html5-series-canvas-onlineseat-2</loc>
+		<lastmod>2014-10-11</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/2014/10/09/html5-series-canvas-onlineseat-1</loc>
+		<lastmod>2014-10-09</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/2014/10/08/html5-series-canvas</loc>
+		<lastmod>2014-10-08</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/2014/09/29/architect-build-high-live</loc>
+		<lastmod>2014-09-29</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/2014/09/19/browser-position</loc>
+		<lastmod>2014-09-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/2014/09/16/html5-series-webdb</loc>
+		<lastmod>2014-09-16</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/2014/09/14/html5-series-base</loc>
+		<lastmod>2014-09-14</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/2014/09/13/html5-series-ready</loc>
+		<lastmod>2014-09-13</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/2014/09/12/linux-shell-wget</loc>
+		<lastmod>2014-09-12</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/2014/09/08/jiaban</loc>
+		<lastmod>2014-09-08</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/2014/09/07/dizhen</loc>
+		<lastmod>2014-09-07</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/2014/09/06/jekyll</loc>
+		<lastmod>2014-09-06</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/2014/09/01/yahoo</loc>
+		<lastmod>2014-09-01</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/2014/08/25/architect-memory-analyzer</loc>
+		<lastmod>2014-08-25</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/2014/07/18/yunti</loc>
+		<lastmod>2014-07-18</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/2014/05/29/architect-sso-cas</loc>
+		<lastmod>2014-05-29</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/2014/05/05/install-imagemagick</loc>
+		<lastmod>2014-05-05</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/2014/05/01/qiniu</loc>
+		<lastmod>2014-05-01</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/2014/02/10/newmac</loc>
+		<lastmod>2014-02-10</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/2014/02/10/launchrocket</loc>
+		<lastmod>2014-02-10</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/2014/02/07/dubstep</loc>
+		<lastmod>2014-02-07</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/2013/09/10/web-job</loc>
+		<lastmod>2013-09-10</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/2013/04/06/javascript-thread</loc>
+		<lastmod>2013-04-06</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/2013/04/05/javascript-for</loc>
+		<lastmod>2013-04-05</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/2013/03/10/browser-webkit</loc>
+		<lastmod>2013-03-10</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/2013/01/03/browser-chrome-console</loc>
+		<lastmod>2013-01-03</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+	<url>
+		<loc>/2011/06/12/linux-shell-multiply9x9</loc>
+		<lastmod>2011-06-12</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+
+</urlset> 
