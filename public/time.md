@@ -4,7 +4,6 @@ title: 时光穿梭
 keywords:	 "jcore,时光穿梭"
 description: "jcore时光穿梭
 permalink: /time/
-comments: false
 ---
 
 <div class="time">
