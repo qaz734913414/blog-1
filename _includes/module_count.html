@@ -10,7 +10,7 @@
 			{% assign sortedcategories = categories | split:' ' | sort %}
 			{% for categorie in sortedcategories reversed %}
 				{% assign categorieitems = categorie | split: '#' %}
-				<a href="/categories/#{{ categorieitems[1] }}"><li><span class="community-count">{{ categorieitems[2] }}</span>{{ categorieitems[1] }}</li><a>
+				<a href="/category/#{{ categorieitems[1] }}"><li><span class="community-count">{{ categorieitems[2] }}</span>{{ categorieitems[1] }}</li><a>
 			{% endfor %}
 		</ul>
 	</div>
