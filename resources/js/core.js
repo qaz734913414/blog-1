@@ -1,9 +1,21 @@
 
+if (typeof String.prototype.format !== "function") {
+    /* 字符串模板 */
+    String.prototype.format = function () {
+        var s = this, //字符串指针
+            length = arguments.length; //参数长度
+        while (--length >= 0){
+            s = s.replace(new RegExp('\\{' + length + '\\}', 'g'), arguments[length]);
+        }
+        return s;
+    };
+}
+
 function getQueryString(name) {
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
     var r = window.location.search.substr(1).match(reg);
     if (r != null) {
-        return unescape(r[2]);
+        return r[2];
     }
     return null;
 }
@@ -161,7 +173,7 @@ function getQueryString(name) {
     };
 
 
-
+    var pageSize = 7;
 
     // http://xxx/pages/?q=11111
     // http://xxx/categories/#life
@@ -173,17 +185,27 @@ function getQueryString(name) {
         {
             $.getJSON("../lists.json", function (data)
             {
-                var q = getQueryString("q");
+                var q = decodeURIComponent(getQueryString("q"));
                 if(q!=null && q!=""){
-                    $(".main-m3-h1").html("搜索详情 > " + encodeURIComponent(q));
+
                     var query = JsonQuery(data);
-                    data = query.where({'title.$li': eval("/" + q + "/i")}).exec();
-                    if(data.length ==0) $("#showPages").html("没有找到结果... :(");
+
+                    try {
+                        data = query.where({'title.$li': eval("/" + q + "/i")}).exec();
+                    }catch(e){}
+
+                    var _nav = "搜索详情 > {0}".format(q);
+                    $(".main-m3-h1").html(_nav);
+
+                    if(data.length ==0) {
+                        $("#showPages").html("没有找到结果...");
+                        return false;
+                    }
                 }
-                var pageSize = Math.round(Object.keys(data).length/7);
+                var _size = Math.ceil(Object.keys(data).length/pageSize);
                 Pagination.Init(document.getElementById("pagination"),
                 {
-                    size: pageSize, // 页面大小
+                    size: _size, // 页面大小
                     page: 1,  // 默认选中分页
                     step: 3,  // 前后省略页码
                     callback: function(num){
@@ -196,11 +218,9 @@ function getQueryString(name) {
 
     function showPages(type,data,num){
 
-        var count = 7;  // 初始文章数
+        var count_sup = num * pageSize; // 循环上界每次增加count
 
-        var count_sup = num * count; // 循环上界每次增加count
-
-        var delta = (num - 1) * count;      // 局部计数器
+        var delta = (num - 1) * pageSize;      // 局部计数器
 
         var tmpl = [];
 
@@ -242,82 +262,6 @@ function getQueryString(name) {
     }
 
 })();
-
-
-(function(){
-
-    var Search = {
-
-        entries : null,
-
-        htmlEscape : function(s){
-            return String(s).replace(/[&<>"'\/]/g, function(s) {
-                var entityMap = {
-                    "&": "&amp;",
-                    "<": "&lt;",
-                    ">": "&gt;",
-                    '"': '&quot;',
-                    "'": '&#39;',
-                    "/": '&#x2F;'
-                };
-                return entityMap[s];
-            });
-        },
-
-        findEntries : function(q){
-            var matches = [];
-            var rq = new RegExp(q, 'im');
-            for (var i = 0; i < entries.length; i++) {
-                var entry = entries[i];
-                var title = $(entry.getElementsByTagName('title')[0]).text();
-                var link = $(entry.getElementsByTagName('link')[0]).attr('href');
-                var content = $(entry.getElementsByTagName('content')[0]).text();
-                if (rq.test(title) || rq.test(content)) {
-                    matches.push({'title': title, 'link': link, 'content': content});
-                }
-            }
-
-            var html = '<div class="bt-hd cl"><span>搜索结果</span><s></s></div>';
-            html += '<ul class="main-ua">';
-            if(matches.length==0) html += '<li>很抱歉！没有找到与 '+q+' 相关文章！</li>';
-            for (var i = 0; i < matches.length; i++) {
-                var match = matches[i];
-                html += '<li>';
-                html += '<header><h4 class="h4 entry-title"><a href="' + match.link + '">' + htmlEscape(match.title) + '</a></h4></header>';
-                html += '<section><p>' + htmlEscape(match.content) + '</p></section>';
-                html += '</li>';
-            }
-            html += '</ul>';
-
-            $('div.main > div:eq(0)').html(html);
-        },
-
-        Init : function(){
-            $('#search-form').submit(function() {
-                var query = $('#query').val();
-                $('#query').blur().attr('disabled', true);
-                $('.main-contenter').hide();
-                $('#search-loader').show();
-                if (entries == null) {
-                    $.ajax({url: '/atom.xml?r=' + (Math.random() * 99999999999), dataType: 'xml', success: function(data) {
-                        entries = data.getElementsByTagName('entry');
-                        findEntries(query);
-                    }});
-                } else {
-                    findEntries(query);
-                }
-                $('#query').blur().attr('disabled', false);
-                return false;
-            });
-        }
-
-    }
-
-})();
-
-
-
-
 
 
 $("pre").addClass("prettyprint");
