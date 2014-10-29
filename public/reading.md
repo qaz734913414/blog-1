@@ -1,8 +1,8 @@
 ---
 layout: column_1_2_default
-title: 阅读书籍
-keywords:	 "jcore,douban,豆瓣读书"
-description: "jcore豆瓣读书"
+title: 书海无涯
+keywords:	 "jcore,douban,豆瓣读书,书海无涯"
+description: "jcore书海无涯"
 permalink: /reading/
 ---
 

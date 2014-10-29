@@ -1,8 +1,8 @@
 ---
 layout: column_1_2_default
-title: 时间轴
-keywords:	 "jcore,时间轴"
-description: "jcore时间轴"
+title: 时光穿梭
+keywords:	 "jcore,时光穿梭"
+description: "jcore时光穿梭
 permalink: /time/
 comments: false
 ---
