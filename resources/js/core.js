@@ -269,9 +269,8 @@ function getQueryString(name) {
 $("pre").addClass("prettyprint");
 prettyPrint();
 
-$(".point-time").each(function(){
-	var x = 5;
-	var y = 0;
-	var rand = parseInt(Math.random() * (x - y + 1) + y);
-	$(this).addClass("point"+rand);
-});
+$("div.fJqueryba").hover(function(){
+	$(this).find("h2").addClass("Highlight");
+},function(){
+	$(this).find("h2").removeClass("Highlight");
+})
