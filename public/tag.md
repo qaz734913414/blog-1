@@ -9,7 +9,7 @@ permalink: /tag/
 <div class="f5">
 	{% for tag in site.tags %}
 	<div class="column fJqueryba">
-		<h2 class=""><a name="{{ tag[0] }}"></a>{{ tag[0] }}</h2>
+		<h2 class=""><a name="{{ tag[0] }}" class="gray_2"></a>{{ tag[0] }}</h2>
 		<ul class="columnUl">
 			{% for post in tag[1] %}
 			<li>
