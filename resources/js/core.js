@@ -243,7 +243,7 @@ function getQueryString(name) {
 				tmpl.push('			</span>');
 				tmpl.push('			<span>');
 				tmpl.push('				<i class="fa fa-folder-open"></i>');
-				tmpl.push('				<a href="/categories.html#' + d.category + '">' + d.category + '</a>');
+				tmpl.push('				<a href="/category/#' + d.category + '">' + d.category + '</a>');
 				tmpl.push('			</span>');
 //				tmpl.push('			<span>');
 //				tmpl.push('				<i class="fa fa-comments"></i>');
