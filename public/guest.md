@@ -14,8 +14,6 @@ permalink: /guest/
 
 	<p>
 		<article class="article">
-			<h1>雁过留声</h1>
-
 			如果有什么想对我说的,就请尽情留言吧~
 		</article>
 	</p>
