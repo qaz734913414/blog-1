@@ -1,23 +1,23 @@
 <div class="widget">
-    <h2 class="member">分类统计</h2>
-    <div class="item-avatar dates">
-        <ul>
-            {% capture categories %}
-                {% for categorie in site.categories %}
-                    {{ categorie[1].size | plus: 1000 }}#{{ categorie[0] }}#{{ categorie[1].size }}
-                {% endfor %}
-            {% endcapture %}
-            {% assign sortedcategories = categories | split:' ' | sort %}
-            {% for categorie in sortedcategories reversed %}
-                {% assign categorieitems = categorie | split: '#' %}
-                <a href="/categories/#{{ categorieitems[1] }}"><li><span class="community-count">{{ categorieitems[2] }}</span>{{ categorieitems[1] }}</li><a>
-            {% endfor %}
-        </ul>
-    </div>
-    <h2 class="member"></h2>
-    <div class="item-avatar dates">
-        <ul>
-            <a href="{{ site.baseurl }}/pages/"><li><span class="community-count">{{ site.posts.size }}</span>总文章数</li></a>
-        </ul>
-    </div>
+	<h2 class="member">分类统计</h2>
+	<div class="item-avatar dates">
+		<ul>
+			{% capture categories %}
+				{% for categorie in site.categories %}
+					{{ categorie[1].size | plus: 1000 }}#{{ categorie[0] }}#{{ categorie[1].size }}
+				{% endfor %}
+			{% endcapture %}
+			{% assign sortedcategories = categories | split:' ' | sort %}
+			{% for categorie in sortedcategories reversed %}
+				{% assign categorieitems = categorie | split: '#' %}
+				<a href="/categories/#{{ categorieitems[1] }}"><li><span class="community-count">{{ categorieitems[2] }}</span>{{ categorieitems[1] }}</li><a>
+			{% endfor %}
+		</ul>
+	</div>
+	<h2 class="member"></h2>
+	<div class="item-avatar dates">
+		<ul>
+			<a href="{{ site.baseurl }}/pages/"><li><span class="community-count">{{ site.posts.size }}</span>总文章数</li></a>
+		</ul>
+	</div>
 </div>

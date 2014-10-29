@@ -1,5 +1,5 @@
 ---
-layout: default1
+layout: column_3_default
 title: jcore文章分类
 keywords:	 "Jcore,jcore,文章分类"
 description: "jcore文章分类"
