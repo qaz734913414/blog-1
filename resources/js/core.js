@@ -185,9 +185,11 @@ function getQueryString(name) {
 		{
 			$.getJSON("../lists.json", function (data)
 			{
-				var q = decodeURIComponent(getQueryString("q"));
+				var q = getQueryString("q");
 				if(q!=null && q!=""){
 
+					q = decodeURIComponent(q);
+					
 					var query = JsonQuery(data);
 
 					try {
