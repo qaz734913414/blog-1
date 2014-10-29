@@ -558,8 +558,8 @@ a.gray_2 {color: #383838;text-decoration: none;}
 .columnUl li {width: 385px;height: 20px;float: left;margin-top: 5px;line-height: 20px;border-left: 4px #6a9fb5 solid;}
 .columnUl li b {height: 20px;float: left;margin-left: 10px;display: inline;overflow: hidden;font-weight: normal;}
 .columnUl li span {float: right;margin-right: 10px;display: inline;}
-.f3 {float: left;margin-bottom: 150px;font: 12px/1.5 \5FAE\8F6F\96C5\9ED1;color: #383838;}
-.f4 {width: 770px;float: left;margin-bottom: 150px;font: 12px/1.5 \5FAE\8F6F\96C5\9ED1;color: #383838;}
+.f3 {margin-bottom: 150px;font: 12px/1.5 \5FAE\8F6F\96C5\9ED1;color: #383838;}
+.f4 {width: 770px; margin-bottom: 150px;font: 12px/1.5 \5FAE\8F6F\96C5\9ED1;color: #383838;}
 .f5 {margin-bottom: 150px;font: 12px/1.5 \5FAE\8F6F\96C5\9ED1;color: #383838;}
 .f3 .Highlight {border-bottom: 2px #6a9fb5 solid;}
 .f4 .Highlight {border-bottom: 2px #6a9fb5 solid;}
