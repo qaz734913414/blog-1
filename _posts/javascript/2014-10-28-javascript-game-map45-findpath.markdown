@@ -204,11 +204,11 @@ function AStar(Grid, Start, Goal, Find) {
     // 寻找可用的相邻矩阵单元格函数
 
     // 返回所有可用的上、下、左、右周边因子
-    //	----------
+    //	-----------------
     //	|	0	 |
     //	|0	P	1|
     //	|	0	 |
-    //	----------
+    //	-----------------
     // 上面将返回P周围的每个点，排除[x:2, y:1]
     function Successors(x, y) {
         var N = y - 1, S = y + 1, E = x + 1, W = x - 1, $N = N > -1
@@ -224,11 +224,11 @@ function AStar(Grid, Start, Goal, Find) {
     };
 
     // 返回所有可用的上、下、左、右周边因子
-    //	----------
+    //	-----------------
     //	|0	0	0|
     //	|1	P	0|
     //	|0	1	0|
-    //	----------
+    //	-----------------
     // 上面将返回P周围的每个点，排除[x:0, y:2]
     function DiagonalSuccessors($N, $S, $E, $W, N, S, E, W, result) {
         if ($N) {
@@ -242,11 +242,11 @@ function AStar(Grid, Start, Goal, Find) {
     };
 
     // 返回所有可用的上、下、左、右周边因子
-    //	----------
+    //	-----------------
     //	|0	0	0|
     //	|1	P	0|
     //	|0	1	0|
-    //	----------
+    //	-----------------
     // 上面将返回P周围的每个点，排除[x:0, y:2]
     function DiagonalSuccessors$($N, $S, $E, $W, N, S, E, W, result) {
         $N = N > -1;
@@ -391,7 +391,7 @@ game.findPath(startPoint,endPoint,function(data){
     }
 });
 	
-{% endhighlight %}	
+{% endhighlight %}
 
 -----------------------
 
