@@ -15,8 +15,11 @@ tags: javascript game 算法 Astar
 
 > 路径算法（估价算法）
 
-![曼哈顿算法]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)
-![几何算法]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.png)
+曼哈顿算法
+![曼哈顿算法]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)  
+几何算法（勾股定理）
+![几何算法]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.png)  
+对角算法
 ![对角算法]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-2.png)  
 
 {% highlight html %}
