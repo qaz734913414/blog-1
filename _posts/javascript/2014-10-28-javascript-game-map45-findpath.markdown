@@ -8,8 +8,10 @@ date:   2014-10-28
 category: javascript
 tags: javascript game 算法 Astar
 ---
-提到`A*算法`，知道的人应该不少，不熟悉的朋友可以去看看 [Amit's A* Pages]、[A* Pathfinding for Beginners] 这两篇文章，今儿打算用`html+javascript`在斜45度地图上加上寻路效果。
+提到`A*算法`，简单讲就是：如何让游戏中的角色快速"绕过障碍物"找出通往目标点的路径。今儿打算用`html+javascript`在斜45度地图上加上寻路效果。  
 <!--more-->
+
+不熟悉的朋友可以去看看 [Amit's A* Pages]、[A* Pathfinding for Beginners] 这两篇文章。
 
 > 实现过程
 
