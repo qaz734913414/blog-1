@@ -1,8 +1,8 @@
 ---
 layout: column_1_2_default
-title: 雁过留声
-keywords:	 "jcore,guest,留言板,雁过留声"
-description: "jcore雁过留声"
+title: 雁过留痕
+keywords:	 "jcore,guest,留言板,雁过留痕"
+description: "jcore雁过留痕"
 permalink: /guest/
 ---
 
