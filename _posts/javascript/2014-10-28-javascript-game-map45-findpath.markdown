@@ -342,19 +342,19 @@ game.init45Map(function(maps){
     viewport.innerHTML = maps;
 });
 
-var startPoint = [0, 0],
-    endPoint   = [5, 6];
+var startPoint = [0, 0], // 开始坐标
+    endPoint   = [5, 6]; // 结束坐标
 game.findPath(startPoint,endPoint,function(data){
     document.getElementById("show").innerHTML = data.prompt;
     var result = data.result;
-    for(var i = 0; i<result.length; i++){
+    for(var i = 0; i<result.length; i++){ // 遍历路径节点
         (function(i){
             var xy = result[i];
-            var dom = document.getElementById("t_{0}_{1}".format(xy[0],xy[1]));
+            var dom = document.getElementById("t_{0}_{1}".format(xy[0],xy[1])); // 查找对应节点
             var timer = null;
-            timer = setTimeout(function () {
+            timer = setTimeout(function () { // 延时更改样式
                 dom.className = "d14";
-                clearTimeout(timer);
+                clearTimeout(timer); // 清空定时器
             }, i * 100);
         })(i);
     }
