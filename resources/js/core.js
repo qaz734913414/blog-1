@@ -200,7 +200,7 @@ function getQueryString(name) {
 					$(".main-m3-h1").html(_nav);
 
 					if(data.length ==0) {
-						$("#showPages").html("很遗憾,没有找到结果...");
+						$("#showPages").html("很遗憾,没有找到和“{0}”结果...".format(q));
 						return false;
 					}
 				}
