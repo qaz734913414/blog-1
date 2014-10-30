@@ -5,14 +5,13 @@
 		</div>
 		<div class="more-article new-article">
 			<h3>热门推荐文章</h3>
-			
-			{% for post in paginator.posts limit:7 %}
-			<div class="pics-cont" style="width:1200px;">
-				<dl>
-					<dt><a href="{{ site.baseurl }}{{ post.url }}"><img src="{{ site:staticurl }}/resources/images{{ post.url }}.png" width="138" height="105" data-bd-imgshare-binded="1"></a></dt>
-					<dd><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></dd>
+			{% for post in site.posts limit:7 %}
+				<div class="pics-cont" style="width:1200px;">
+					<dl>
+						<dt><a href="{{ site.baseurl }}{{ post.url }}"><img src="{{ site:staticurl }}/resources/images{{ post.url }}.png" width="138" height="105" data-bd-imgshare-binded="1"></a></dt>
+						<dd><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></dd>
+					</dl>
 				</dl>
-			</dl>
 			{% endfor %}
 		</div>
 	</div>
