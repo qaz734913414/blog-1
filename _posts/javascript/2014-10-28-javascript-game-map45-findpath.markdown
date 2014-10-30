@@ -13,6 +13,17 @@ tags: javascript game 算法 Astar
 
 不熟悉的朋友可以去看看 [Amit's A* Pages]、[A* Pathfinding for Beginners] 这两篇文章。
 
+> 路径算法（估价算法）
+
+![曼哈顿算法]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)
+![几何算法]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.png)
+![对角算法]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-2.png)  
+
+{% highlight html %}
+
+
+{% endhighlight %}
+
 > 实现过程
 
 `css`部分
