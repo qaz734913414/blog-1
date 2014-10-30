@@ -17,13 +17,28 @@ tags: javascript game 算法 Astar
 
 曼哈顿算法  
 ![曼哈顿算法]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)  
-几何算法（勾股定理）  
+
+{% highlight html %}
+
+“曼哈顿算法”，笔直的走，然后转个弯，再笔直的继续。
+
+{% endhighlight %}
+
+几何算法  
 ![几何算法]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.png)  
+
+{% highlight html %}
+
+“几何算法”（勾股定理），算出起点与终点之间的直线距离，然后乘上代价因子。
+
+{% endhighlight %}
+
 对角算法  
 ![对角算法]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-2.png)  
 
 {% highlight html %}
 
+“对角算法”综合了以上二种算法，先按对角线走，一直走到与终点水平或垂直平行后，再笔直的走。
 
 {% endhighlight %}
 
