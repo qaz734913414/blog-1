@@ -1,7 +1,7 @@
 ---
 layout: column_1_2
-title:  "javascript进阶.游戏.斜45度地图寻路"
-description: "javascript game map 斜45度地图寻路"
+title:  "javascript进阶.游戏.斜45度地图寻路（一）"
+description: "javascript game map 斜45度地图寻路（一）"
 keywords: javascript,game,map,斜45度地图寻路
 origin: 张嘉杰.原创
 date:   2014-10-28
