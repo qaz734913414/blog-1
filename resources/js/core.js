@@ -275,6 +275,8 @@ $("div.fJqueryba").hover(function(){
 	$(this).find("h2").removeClass("Highlight");
 });
 
-$('.pos-nav').click(function(){
+$('.pos-nav').toggle(function(){
 	$('.nav').slideDown();
+},function(){
+	$('.nav').slideUp();
 });
