@@ -273,8 +273,8 @@ $("div.fJqueryba").hover(function(){
 	$(this).find("h2").addClass("Highlight");
 },function(){
 	$(this).find("h2").removeClass("Highlight");
-});
+})
 
 $('.pos-nav').click(function(){
-	$('.nav').slideDown();
-});
+	$('.nav').toggle(600);
+})
