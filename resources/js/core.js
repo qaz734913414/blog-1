@@ -278,5 +278,5 @@ $("div.fJqueryba").hover(function(){
 $('.pos-nav').toggle(function(){
 	$('.nav').slideDown();
 },function(){
-	$('.nav').slideUp();
+	$('.nav').slideUp();   
 });
