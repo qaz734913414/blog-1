@@ -39,14 +39,6 @@
 	}
 
 	function ua(e) {
-	
-		var parser = new UAParser();
-		parser.setUA(e);
-		var browser = parser.getBrowser();
-		console.log("----------------------------");
-		console.log(browser);
-		console.log("----------------------------");
-	
 		var r = new Array;
 		var outputer = '';
 		if (r = e.match(/MSIE\s([^\s|;]+)/gi)) {
@@ -78,14 +70,6 @@
 	}
 
 	function os(e) {
-	
-		var parser = new UAParser();
-		parser.setUA(e);
-        var os = parser.getOS();
-		console.log("----------------------------");
-		console.log(os);
-		console.log("----------------------------");
-	
 		var os = '';
 		if (e.match(/win/ig)) {
 			if (e.match(/nt 5.1/ig)) {
