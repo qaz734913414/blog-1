@@ -39,6 +39,14 @@
 	}
 
 	function ua(e) {
+	
+		var parser = new UAParser();
+		parser.setUA(e);
+		var browser = parser.getBrowser();
+		console.log("----------------------------");
+		console.log(browser);
+		console.log("----------------------------");
+	
 		var r = new Array;
 		var outputer = '';
 		if (r = e.match(/MSIE\s([^\s|;]+)/gi)) {
@@ -70,6 +78,14 @@
 	}
 
 	function os(e) {
+	
+		var parser = new UAParser();
+		parser.setUA(e);
+        var os = parser.getOS();
+		console.log("----------------------------");
+		console.log(os);
+		console.log("----------------------------");
+	
 		var os = '';
 		if (e.match(/win/ig)) {
 			if (e.match(/nt 5.1/ig)) {
@@ -1249,10 +1265,12 @@
 				default:
 			}
 			return '<li class="ds-post" data-post-id="' + e.post_id + '"><div class="ds-post-self" data-post-id="' + e.post_id + '" data-thread-id="' + e.thread_id + '" data-root-id="' + e.root_id + '" data-source="' + e.source + '"><div class="ds-avatar"' + r + ">" + $.avatar(n) + (b.sourceName[e.source] ? $.serviceIcon(e.source) : "") + '</div><div class="ds-comment-body"><div class="ds-comment-header">' + (n.url ? '<a class="ds-user-name ds-highlight" data-qqt-account="' + s + '" href="' + h(n.url) + '" ' + ' rel="nofollow" target="_blank"' + r + ">" + h(n.name) + "</a>" + "<span class='ua'>" + ua(e.agent) + " " + os(e.agent) + "</span>" : '<span class="ds-user-name"' + r + ' data-qqt-account="' + s + '">' + h(n.name) + "</span>" + "<span class='ua'>" + ua(e.agent) + " " + os(e.agent) + "</span>") + "</div>" + (t.max_depth == 1 && t.show_context && u.length ? '<ol id="ds-ctx">' + i.map(u, function(e, t) {
+				try{
 				return (t == 1 && u.length > 2 ? '<li class="ds-ctx-entry"><a href="javascript:void(0);" class="ds-expand">\u8fd8\u6709' + (u.length - 2) + "\u6761\u8bc4\u8bba</a></li>" : "") + (st[e] ? $.ctxPost(st[e].data, t, t && t < u.length - 1) : "")
 			}).join("") + "</ol>" : "") + "<p>" + ((e.parent_id) ? ('<a class="ds-comment-context" data-post-id="' + e.post_id + '" data-parent-id="' + e.parent_id + '">' + C.reply_to + h(J(st[e.parent_id].data).name) + ": </a>") : '') + e.message + '</p><div class="ds-comment-footer ds-comment-actions' + (e.vote > 0 ? " ds-post-liked" : "") + '">' + o + "</div></div></div>" + (t.max_depth > 1 && (e.childrenArray || e.children) && e.source != "weibo" && e.source != "qqt" ? '<ul class="ds-children reply_' + e.parent_id + '">' + i.map(e.childrenArray || e.children, function(e) {
 				return st[e] ? $.post(st[e].data, t) : ""
 			}).join("") + "</ul>" : "") + "</li>"
+			}catch(e){}
 		};
 		var Q = i(''),
 			G = Q.find(".ds-bubble-content").delegate("a.ds-ctx-open", "click", function(e) {
@@ -1449,8 +1467,7 @@
 			}
 		}), $.recentVisitors = function(e, t) {
 			return i.map(e, function(e) {
-				return '<li style="margin:6px !important;" >' + $.avatar(e, t.avatar_size) + "</li>"
-				//return '<div class="ds-avatar">' + $.avatar(e, t.avatar_size) + "</div>"
+				return '<div class="ds-avatar">' + $.avatar(e, t.avatar_size) + "</div>"
 			}).join("")
 		}, P.RecentVisitors = R.extend({
 			uri: "/api/sites/listVisitors",
