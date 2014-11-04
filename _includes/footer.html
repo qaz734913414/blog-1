@@ -53,21 +53,17 @@
 	<div class="level-3"></div>
 </div>
 <script type="text/javascript" src="{{ "/resources/js/prettify.js" | prepend: site.staticurl }}"></script>
-<script type="text/javascript" src="{{ "/resources/js/core.js" | prepend: site.staticurl }}"></script>
-
+<script type="text/javascript" src="{{ "/resources/js/core.js" | prepend: site.staticurl }}"></scrip
 <script type="text/javascript">
 	var duoshuoQuery = {short_name:"jcore"};
 	(function() {
 		var ds = document.createElement('script');
 		ds.charset = 'UTF-8';
 		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		//ds.src = '{{ "/resources/duoshuo/duoshuo.js" | prepend: site.staticurl }}';
+		//ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.src = '{{ "/resources/duoshuo/duoshuo.js" | prepend: site.staticurl }}';
 		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
 	})();
-</script>
-	
-<script async="true" type="text/javascript">
 	var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 	document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fde8f68407bbc165071d066f45c6005fc' type='text/javascript'%3E%3C/script%3E"));
 </script>
