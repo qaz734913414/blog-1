@@ -1253,7 +1253,8 @@
 			}).join("") + "</ol>" : "") + "<p>" + ((e.parent_id) ? ('<a class="ds-comment-context" data-post-id="' + e.post_id + '" data-parent-id="' + e.parent_id + '">' + C.reply_to + h(J(st[e.parent_id].data).name) + ": </a>") : '') + e.message + '</p><div class="ds-comment-footer ds-comment-actions' + (e.vote > 0 ? " ds-post-liked" : "") + '">' + o + "</div></div></div>" + (t.max_depth > 1 && (e.childrenArray || e.children) && e.source != "weibo" && e.source != "qqt" ? '<ul class="ds-children reply_' + e.parent_id + '">' + i.map(e.childrenArray || e.children, function(e) {
 				
 				console.log(st[e]);
-				return st[e] ? $.post(st[e].data, t) : ""
+				return null;
+				//return st[e] ? $.post(st[e].data, t) : ""
 			}).join("") + "</ul>" : "") + "</li>"
 		};
 		var Q = i(''),
