@@ -1449,8 +1449,7 @@
 			}
 		}), $.recentVisitors = function(e, t) {
 			return i.map(e, function(e) {
-				return '<li style="margin:6px !important;" >' + $.avatar(e, t.avatar_size) + "</li>"
-				//return '<div class="ds-avatar">' + $.avatar(e, t.avatar_size) + "</div>"
+				return '<li class="ds-avatar">' + $.avatar(e, t.avatar_size) + "</li>"
 			}).join("")
 		}, P.RecentVisitors = R.extend({
 			uri: "/api/sites/listVisitors",
