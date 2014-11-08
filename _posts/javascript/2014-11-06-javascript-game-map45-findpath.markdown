@@ -133,7 +133,9 @@ function moving(startPoint, fps){
 
 -----------------------
 
-下面贴出完整的45度人物移动函数
+下面贴出完整的45度人物移动函数，先来个截图。
+
+![媚灵狐]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)  
 
 `javascript`部分
 
@@ -486,6 +488,12 @@ function Game(ops){
 }
 
 {% endhighlight %}
+
+-----------------------
+
+<a class="button" href="/resources/demo{{ page.url}}-gamemove.html" target="_blank">查看DEMO</a>
+
+-----------------------
 
 ### OK，今儿先到这儿了。:) 
 
