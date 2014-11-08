@@ -137,7 +137,7 @@ function moving(startPoint, fps){
 
 ![媚灵狐]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)  
 
-`javascript`部分
+`javascript`部分 
 
 {% highlight javascript %}
 
