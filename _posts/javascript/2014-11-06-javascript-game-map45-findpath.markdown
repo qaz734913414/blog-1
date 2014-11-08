@@ -1,17 +1,17 @@
 ---
 layout: column_1_2
 title:  "javascript进阶.游戏.斜45度地图人物移动"
-description: "javascript game map 斜45度地图人物移动"
-keywords: javascript,game,map,斜45度地图人物移动
+description: "javascript game map 斜45度地图人物移动 八方向"
+keywords: javascript,game,map,斜45度地图人物移动,八方向
 origin: 张嘉杰.原创
 date:   2014-11-06
 category: javascript
 tags: javascript game 算法 Astar move
 ---
-实现人物移动的过程，直白点说就是：点击屏幕人物移动到相应的地方，这里涉及到`坐标转换`、`动画循环`。今儿我继续在45度地图点击寻路之后，加入人物移动，和人物到达目的地够自动执行函数。  
+说到人物移动的过程，简单说就是：点击屏幕人物移动到相应的地方，这里涉及到`坐标转换`、`动画循环`。今儿我继续在45度地图点击寻路之后，加入人物移动，和人物到达目的地够自动执行函数。  
 <!--more-->
 
-好了大家先来看一下，鼠标点击屏幕，小球移动到相应的坐标，八方向动画函数的实现过程。
+好了大家先来看一下，鼠标点击屏幕，小球移动到相应的坐标，`八方向`动画函数的实现过程。
 
 > 移动的小球
 
@@ -37,18 +37,18 @@ body { width: 400px; height: 400px; border: 1px solid #000000;}
 
 {% highlight javascript %}
 
-var move = new moving({ x: 0, y : 0 }, 100);
+var move = new moving({ x: 0, y : 0 }, 100); // 初始化坐标，fps
 var role = document.getElementById("role"); // 人物对象
 document.body.onmouseup = function(e) {
 
     console.log("start...");
 
-    move.start({ x: e.pageX, y : e.pageY });
-    move.update(function(point){
+    move.start({ x: e.pageX, y : e.pageY }); // 起始坐标
+    move.update(function(point){ // 更新函数
         role.style.left = point.x + "px";
         role.style.top  = point.y + "px";
     });
-    move.finish(function(){
+    move.finish(function(){ // 执行完成函数
         console.log("end...");
     });
 };
@@ -96,7 +96,7 @@ function moving(startPoint, fps){
             case 7: _nowPoint.x +=1; _nowPoint.y -=1; break; // 右上
         }
 
-        if(_onupdate) _onupdate(_nowPoint);
+        if(_onupdate) _onupdate(_nowPoint); // 更新函数
     }
 
     // 执行函数
