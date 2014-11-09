@@ -6,7 +6,7 @@ keywords: html5,html5进阶,canvas,画布,游戏,人物移动,大话西游,媚�
 origin: 张嘉杰.原创
 date:   2014-10-22
 category: html5
-tags: html5 game 大话西游 媚灵狐
+tags: html5 canvas game 大话西游 媚灵狐
 ---
 还依稀记得高中那会儿特别火爆的网易游戏回合制游戏`大话西游`吗？这儿先不讨论游戏中的各种怀念的细节了。今儿打算用`canvas+javascript`来循环播放多个随机位置，八方向人物移动的动画效果。
 <!--more-->

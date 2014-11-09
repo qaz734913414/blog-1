@@ -6,7 +6,7 @@ keywords: html5,html5进阶,canvas,画布,在线选座,选座购票,在线选座
 origin: 张嘉杰.原创
 date:   2014-10-12
 category: html5
-tags: html5 在线选座
+tags: html5 canvas 在线选座
 ---
 `canvas+javascript`在线选座购票前端实现，利用`canvas`画出场馆图、区域座位（普通票、套票、情侣票）。都具备拖动及缩放功能。
 <!--more-->
