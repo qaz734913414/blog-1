@@ -11,10 +11,6 @@ tags: html5 canvas
 今儿之前的同事电话说有个简单的需求需要实现，刮刮乐（橡皮擦）效果，刮到80%的时候执行另外一个函数（中奖、不中奖）。今儿打算用`canvas+javascript`来实现这个效果。
 <!--more-->
 
-老样子先来一张图看看效果。
-
-![filter-image]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.jpg)  
-
 > 刮刮乐（橡皮擦）实现过程
 
 `html`部分：
