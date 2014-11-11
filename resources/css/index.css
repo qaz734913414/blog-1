@@ -577,7 +577,7 @@ code {padding: 2px 4px;font-size: 90%;color: #c7254e;background-color: #f9f2f4;b
 pre code {padding: 0;font-size: inherit;color: inherit;background-color: transparent;border-radius: 0;}
 
 /* 版权所属 */
-.alert-success {text-align: left;color: #468847;background-color: #dff0d8;border-color: #d6e9c6; }
+.alert-success {text-align: left;color: #468847;background-color: #dff0d8;border-color: #d6e9c6;box-shadow: 0 2px 4px #D8D8DC; }
 .alert {padding: 15px;margin-bottom: 20px;border: 1px solid transparent; border-radius: 4px;overflow: auto;}
 .alert > p + p { /* margin-top: 5px; */ /* margin-bottom: 0; */}
 
