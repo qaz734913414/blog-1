@@ -23,10 +23,10 @@
 
 		<div class="detail-ud" >
 			{% if page.previous %}
-				<p>上一篇:<a href="{{ page.previous.url}}" ><b class="mobile-ignore">&nbsp;&nbsp;{{ page.previous.title }}</b></a></p>
+				<p>上一篇:<a href="{{ site.url }}{{ page.previous.url}}" ><b class="mobile-ignore">&nbsp;&nbsp;{{ page.previous.title }}</b></a></p>
 			{% endif %}
 			{% if page.next %}
-				<p>下一篇:<a href="{{ page.next.url }}" ><b class="mobile-ignore">&nbsp;&nbsp;{{ page.next.title }}</b></a></p>
+				<p>下一篇:<a href="{{ site.url }}{{ page.next.url }}" ><b class="mobile-ignore">&nbsp;&nbsp;{{ page.next.title }}</b></a></p>
 			{% endif %}
 		</div>
 	</div>
