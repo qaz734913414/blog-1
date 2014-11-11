@@ -199,7 +199,7 @@ function getQueryString(name) {
 				page: 1,  // 默认选中分页
 				step: 3,  // 前后省略页码
 				callback: function(num){
-					showPages("pages",data,num);
+					showPages("pages",data,num,_pageSize);
 				}
 			});
 		}
@@ -243,7 +243,7 @@ function getQueryString(name) {
 
 	}, false);
 
-	function showPages(type,data,num){
+	function showPages(type,data,num,pageSize){
 
 		var count_sup = num * pageSize; // 循环上界每次增加count
 
