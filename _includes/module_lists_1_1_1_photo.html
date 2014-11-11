@@ -2,7 +2,7 @@
 	<h3 class="post-header">最新发布</h3>
 	<div class="arts-cont">
 		{% for post in paginator.posts limit:4 %}
-			{% if post.category == 'ofthe' %}{{ post }}
+			{% if post.category == 'ofthe' %}
 			<dl class="arts-dl cl">
 				<dt><a href="{{ site.url }}{{ post.url }}"><img src="{{ site:staticurl }}/resources/images{{ post.url }}.png" width="100" height="75" /></a></dt>
 				<dd>
