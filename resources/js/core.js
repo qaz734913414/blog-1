@@ -172,24 +172,64 @@ function getQueryString(name) {
 		}
 	};
 
-
-	var pageSize = 7;
-
 	// http://xxx/pages/?q=11111
-	 // http://xxx/pages/?t=1
+	 // http://xxx/mood/
+	 // http://xxx/coding/
 	document.addEventListener("DOMContentLoaded", function ()
 	{
-		var _path = window.location.href;
-		if(_path.indexOf("pages")!=-1)  // 全部分页
-		{
-			$.getJSON("../lists.json", function (data)
+		/* 获取数据函数 */
+		function getDate(callback){
+			$.getJSON("../lists.json", callback);
+		}
+		/* 过滤数据函数 */
+		function filterData(data, expression){
+			var query = JsonQuery(data);
+			try {
+				data = query.where(expression).exec();
+			}catch(e){}
+			return data;
+		}
+		/* 数据分页 */
+		function findDataPage(data, pageSize){
+			var _pageSize = pageSize || 7; // 默认分页7条数据
+			var _size = Math.ceil(Object.keys(data).length/_pageSize);
+			Pagination.Init(document.getElementById("pagination"),
 			{
+				size: _size, // 页面大小
+				page: 1,  // 默认选中分页
+				step: 3,  // 前后省略页码
+				callback: function(num){
+					showPages("pages",data,num);
+				}
+			});
+		}
+		
+		var _path = window.location.href;
+		
+		if(_path.indexOf("mood")!=-1){ // 天马行空
+			getDate(function (data){
+				var _expression = {'category.$eq': 'life' },
+				data = filterData(data, _expression);
+				$(".main-m3-h1").html("天马行空");
+				findDataPage(data);
+			});
+		}
+		if(_path.indexOf("coding")!=-1){ // 代码如诗
+			getDate(function (data){
+				var _expression = {'category.$ne': 'life' },
+				data = filterData(data, _expression);
+				$(".main-m3-h1").html("代码如诗");
+				findDataPage(data);
+			});
+		}
+
+		if(_path.indexOf("pages")!=-1) { // 全部分页
+			getDate(function (data){
 				var q = getQueryString("q");
 				if(q!=null && q!=""){
-
 					q = decodeURIComponent(q);
 
-					data = Query(data, {'title.$li': eval("/" + q + "/i")});
+					data = filterData(data, {'title.$li': eval("/" + q + "/i")});
 
 					var _nav = "搜索详情 > {0}".format(p);
 					$(".main-m3-h1").html(_nav);
@@ -199,47 +239,8 @@ function getQueryString(name) {
 						return false;
 					}
 				}
-				var t = getQueryString("t");
-				if(t!=null && t!=""){
-
-					var _expression = "",
-						_title = "";
-
-					switch (t){
-						case "1" :
-							_expression = {'category.$eq': 'life' }; _title = "天马行空";
-							break;
-						case "2" :
-							_expression = {'category.$ne': 'life' }; _title = "代码如诗";
-							break;
-					}
-
-					data = Query(data, _expression);
-
-					$(".main-m3-h1").html(_title);
-
-				}
-				var _size = Math.ceil(Object.keys(data).length/pageSize);
-				Pagination.Init(document.getElementById("pagination"),
-				{
-					size: _size, // 页面大小
-					page: 1,  // 默认选中分页
-					step: 3,  // 前后省略页码
-					callback: function(num){
-						showPages("pages",data,num);
-					}
-				});
 			});
-		}
-
-		function Query(data, expression){
-			var query = JsonQuery(data);
-
-			try {
-				data = query.where(expression).exec();
-			}catch(e){}
-
-			return data;
+			findDataPage(data);
 		}
 
 	}, false);
