@@ -176,8 +176,7 @@ function getQueryString(name) {
 	var pageSize = 7;
 
 	// http://xxx/pages/?q=11111
-	// http://xxx/categories/#life
-	// http://xxx/tags/#html5
+	 // http://xxx/pages/?t=1
 	document.addEventListener("DOMContentLoaded", function ()
 	{
 		var _path = window.location.href;
@@ -189,20 +188,36 @@ function getQueryString(name) {
 				if(q!=null && q!=""){
 
 					q = decodeURIComponent(q);
-					
-					var query = JsonQuery(data);
 
-					try {
-						data = query.where({'title.$li': eval("/" + q + "/i")}).exec();
-					}catch(e){}
+					data = Query(data, {'title.$li': eval("/" + q + "/i")});
 
-					var _nav = "搜索详情 > {0}".format(q);
+					var _nav = "搜索详情 > {0}".format(p);
 					$(".main-m3-h1").html(_nav);
 
 					if(data.length ==0) {
-						$("#showPages").html("很遗憾,没有找到和“{0}”相关结果...".format(q));
+						$("#showPages").html("很遗憾,没有找到和“{0}”相关结果...".format(p));
 						return false;
 					}
+				}
+				var t = getQueryString("t");
+				if(t!=null && t!=""){
+
+					var _expression = "",
+						_title = "";
+
+					switch (t){
+						case "1" :
+							_expression = {'category.$eq': 'life' }; _title = "天马行空";
+							break;
+						case "2" :
+							_expression = {'category.$ne': 'life' }; _title = "代码如诗";
+							break;
+					}
+
+					data = Query(data, _expression);
+
+					$(".main-m3-h1").html(_title);
+
 				}
 				var _size = Math.ceil(Object.keys(data).length/pageSize);
 				Pagination.Init(document.getElementById("pagination"),
@@ -216,6 +231,17 @@ function getQueryString(name) {
 				});
 			});
 		}
+
+		function Query(data, expression){
+			var query = JsonQuery(data);
+
+			try {
+				data = query.where(expression).exec();
+			}catch(e){}
+
+			return data;
+		}
+
 	}, false);
 
 	function showPages(type,data,num){
