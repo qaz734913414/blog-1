@@ -7,6 +7,7 @@ layout: nil
 	{
 		"id":"{{ post.id }}",
 		"title":"{{post.title}}",
+		"origin":"{{post.origin}}",
 		"image":"{{ site:staticurl }}/resources/images{{ post.url }}.png",
 		"url":"{{site.url}}{{post.url}}",
 		"date":"{{ post.date | date:'%Y年%m月%d日' }}",

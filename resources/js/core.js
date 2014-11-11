@@ -268,7 +268,7 @@ function getQueryString(name) {
 				tmpl.push('		<div class="mini-icon">');
 				tmpl.push('			<span>');
 				tmpl.push('				<i class="fa fa-user"></i>');
-				tmpl.push('				张嘉杰.原创');
+				tmpl.push('				' + d.origin + '');
 				tmpl.push('			</span>');
 				tmpl.push('			<span>');
 				tmpl.push('				<i class="fa fa-calendar"></i>');
