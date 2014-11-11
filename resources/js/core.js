@@ -228,19 +228,17 @@ function getQueryString(name) {
 				var q = getQueryString("q");
 				if(q!=null && q!=""){
 					q = decodeURIComponent(q);
-
 					data = filterData(data, {'title.$li': eval("/" + q + "/i")});
-
 					var _nav = "搜索详情 > {0}".format(p);
 					$(".main-m3-h1").html(_nav);
-
 					if(data.length ==0) {
 						$("#showPages").html("很遗憾,没有找到和“{0}”相关结果...".format(p));
 						return false;
 					}
 				}
+				findDataPage(data);
 			});
-			findDataPage(data);
+			
 		}
 
 	}, false);
