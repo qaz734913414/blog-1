@@ -206,6 +206,14 @@ function getQueryString(name) {
 		
 		var _path = window.location.href;
 		
+		if(_path.indexOf("ofthe")!=-1){ // 美文摘抄
+			getDate(function (data){
+				var _expression = {'category.$eq': 'ofthe' },
+				data = filterData(data, _expression);
+				$(".main-m3-h1").html("美文摘抄");
+				findDataPage(data);
+			});
+		}
 		if(_path.indexOf("mood")!=-1){ // 天马行空
 			getDate(function (data){
 				var _expression = {'category.$eq': 'life' },
@@ -216,7 +224,7 @@ function getQueryString(name) {
 		}
 		if(_path.indexOf("coding")!=-1){ // 代码如诗
 			getDate(function (data){
-				var _expression = {'category.$ne': 'life' },
+				var _expression = {'category.$ne': 'life', 'category.$ne': 'ofthe' },
 				data = filterData(data, _expression);
 				$(".main-m3-h1").html("代码如诗");
 				findDataPage(data);
@@ -236,7 +244,7 @@ function getQueryString(name) {
 						return false;
 					}
 				}
-				findDataPage(data);   
+				findDataPage(data);
 			});
 			
 		}
