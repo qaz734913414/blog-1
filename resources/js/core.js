@@ -236,7 +236,7 @@ function getQueryString(name) {
 						return false;
 					}
 				}
-				findDataPage(data);
+				findDataPage(data);   
 			});
 			
 		}
