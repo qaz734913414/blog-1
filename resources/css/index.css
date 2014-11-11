@@ -576,6 +576,11 @@ legend {display: block;width: 100%;padding: 0;margin-bottom: 20px;font-size: 21p
 code {padding: 2px 4px;font-size: 90%;color: #c7254e;background-color: #f9f2f4;border-radius: 4px;}
 pre code {padding: 0;font-size: inherit;color: inherit;background-color: transparent;border-radius: 0;}
 
+/* 版权所属 */
+.alert-success {text-align: left;color: #468847;background-color: #dff0d8;border-color: #d6e9c6; }
+.alert {padding: 15px;margin-bottom: 20px;border: 1px solid transparent; border-radius: 4px;overflow: auto;}
+.alert > p + p { /* margin-top: 5px; */ /* margin-bottom: 0; */}
+
 /* google highlight */
 .highlight pre code {
     background: url("../images/base/pre.png") repeat-x scroll 0 0 #F2F2F5;
