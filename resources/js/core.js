@@ -224,7 +224,7 @@ function getQueryString(name) {
 		}
 		if(_path.indexOf("coding")!=-1){ // 代码如诗
 			getDate(function (data){
-				var _expression = {'category.$ne': 'life', 'category.$ne': 'ofthe' },
+				var _expression = {'category.$ni': ['life', 'ofthe'] },
 				data = filterData(data, _expression);
 				$(".main-m3-h1").html("代码如诗");
 				findDataPage(data);
