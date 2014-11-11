@@ -9,8 +9,8 @@
 			{% for post in site.posts limit:7 %}
 				
 					<dl>
-						<dt><a href="{{ site.baseurl }}{{ post.url }}"><img src="{{ site:staticurl }}/resources/images{{ post.url }}.png" width="138" height="105" data-bd-imgshare-binded="1"></a></dt>
-						<dd><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></dd>
+						<dt><a href="{{ site.url }}{{ post.url }}"><img src="{{ site:staticurl }}/resources/images{{ post.url }}.png" width="138" height="105" data-bd-imgshare-binded="1"></a></dt>
+						<dd><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></dd>
 					</dl>
 			{% endfor %}
 			</div>

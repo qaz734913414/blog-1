@@ -11,7 +11,7 @@
 		</span>
 		<span>
 			<i class="fa fa-folder-open"></i>
-			<a href="{{ site.baseurl }}/category/#{{ page.category }}">{{ page.category }}</a>
+			<a href="{{ site.url }}/category/#{{ page.category }}">{{ page.category }}</a>
 		</span>
 		<span>
 			<i class="fa fa-comments"></i>
@@ -34,7 +34,7 @@
 	<div class="more-article">
 	<div class="alert alert-success">
 		<p>版权属于：<a href="http://www.jcore.cn">jcore.cn</a></p>
-		<p>原文地址：<a href="{{ site.url }}{{ page.url}}">{{ site.baseurl }}{{ page.url}}</a></p>
+		<p>原文地址：<a href="{{ site.url }}{{ page.url}}">{{ site.url }}{{ page.url}}</a></p>
 		<p>除非注明，文章均为原创，转载时必须以链接形式注明原始出处。</p>
 	</div>
 		<span class="fenx">分享文章到：</span>
@@ -47,8 +47,8 @@
 
 			{% for post in site.categories[page.category] limit:5 %}
 				<dl>
-					<dt><a href="{{ site.baseurl }}{{ post.url }}"><img src="{{ site:staticurl }}/resources/images{{ post.url }}.png" width="138" height="105" data-bd-imgshare-binded="1"></a></dt>
-					<dd><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title  }}</a></dd>
+					<dt><a href="{{ site.url }}{{ post.url }}"><img src="{{ site:staticurl }}/resources/images{{ post.url }}.png" width="138" height="105" data-bd-imgshare-binded="1"></a></dt>
+					<dd><a href="{{ site.url }}{{ post.url }}">{{ post.title  }}</a></dd>
 				</dl>
 			{% endfor  %}
 
