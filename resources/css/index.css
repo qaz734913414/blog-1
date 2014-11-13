@@ -300,7 +300,7 @@ body {
     font-size: 14px;
     padding-right: 5px;}
 .mini-icon,.mini-icon a{color:#33363c;}
-.main-m3-cont .contents{padding:10px 0; }
+.main-m3-cont .contents{padding:20px 0; }
 .main-m3-cont .contents img{max-width: 100%;}
 .main-m3-cont .contents p{
     margin: 0 0 10px;
@@ -469,29 +469,18 @@ body {
     text-decoration: underline;
 }
 
-/*图片展示*/
-.pics-show{float:none;margin-bottom:10px;margin-right:0;}
-
 /*窗口 缩小后宽度小于990调整*/
 @media only screen and (min-width: 960px) and (max-width: 1100px) {
     .header{width:940px;margin:0;}
-    .main{width:940px;margin:30px 0;}
-    .main-m{margin-bottom:20px;}
-    .main-r{float:none;width:670px;margin-left:265px;}
+    .main-r{float:none;}
     .foot-conte{float:none;margin-left:250px;}
     body{overflow-x:hidden;}
-    /*g1-2调整*/
-    .main-g-2{width:675px;}
-    .pics-cont dl:nth-child(4){clear:left;margin-top:10px;}
-    .pics-cont dl:nth-child(5){margin-top:10px;}
-    .douban-books{width:auto;}
 }
 @media only screen and (min-width: 768px) and (max-width: 960px) {
     .header{width:530px;margin:0;}
-    .main{width:530px;margin:30px 0;}
     .main-m{float:none;width:530px;}
     .main-l{float:none;width:530px;}
-    .main-r{position:relative;top:20px;float:none;width:530px;}
+    .main-r{float:none;width:530px;}
     .footer-fifth,.pics-cont dl{float:none;}
     .pics-cont dl{padding-bottom:10px;}
     .arts-dl dt{float:none;}
@@ -508,21 +497,13 @@ body {
         -moz-border-radius: 0;
         border-radius: 0;
     }
-    .font-widget{margin-left:34px;}
-    .foot-conta{margin-left:25px;margin-bottom:15px;}
-    .footer-fifth{float:none;width:100%;}
-    .foot-conte{clear:left;}
     body{overflow-x:hidden;}
-    /*g1-2调整*/
-    .main-g-2{width:530px;}
-    .douban-books{width:auto;}
 }
 @media screen and (max-width: 768px){
     .header{width:320px;margin:0;}
-    .main{width:320px;margin:30px 0;}
-    .main-m{float:none;width:320px;margin-bottom:20px;}
+    .main-m{float:none;width:320px;}
     .main-l{float:none;width:320px;}
-    .main-r{position:relative;top:20px;float:none;width:320px;}
+    .main-r{float:none;width:320px;}
     .footer-fifth,.pics-cont dl{float:none;}
     .pics-cont dl{padding-bottom:10px;}
     .arts-dl dt{float:none;}
@@ -540,17 +521,8 @@ body {
         border-radius: 0;
     }
     .font-widget{margin-left:34px;}
-    .foot-cont{width:280px;margin:0;}
-    .foot-conta{margin-left:25px;margin-bottom:15px;}
-    .footer-fifth{float:none;width:100%;}
-    .foot-conte{clear:left;}
-    .foot-cont{margin:0;}
+    .foot-conta{margin-bottom:15px;}
     body{overflow-x:hidden;}
-    /*g1-2调整*/
-    .main-g-2{width:320px;}
-    .g-3-img{float:none;}
-    .g-3-box{margin-top:10px;}
-    .douban-books{width:auto;}
 }
 
 .detail-ud {padding: 2px;font-size: 14px;}
