@@ -1,4 +1,5 @@
 /**
+ * blog:http://www.jcore.cn/
  * Created by zjj on 14-11-2.
  */
 if (typeof String.prototype.format !== "function") {
