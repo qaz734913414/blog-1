@@ -1,11 +1,11 @@
 
 /*
- * 背景层    -- z-index:0
- * 人物		-- z-index:1
- * npc	    -- z-index:2
- * 障碍层	-- z-index:3
- * 移动路径	-- z-index:4
- * 遮罩层层  -- z-index:5
+ * 背景层 -- z-index:0
+ * 人物 -- z-index:1
+ * npc -- z-index:2
+ * 障碍层 -- z-index:3
+ * 移动路径 -- z-index:4
+ * 遮罩层层 -- z-index:5
  */
 * { font-size: 9pt; margin: 0;padding: 0;}
 body { cursor:url('../red.cur'),auto; }
