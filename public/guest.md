@@ -6,7 +6,7 @@ description: "jcore雁过留痕"
 permalink: /guest/
 ---
 
-<div class="contents comments">
+<div class="contents">
 
 	<iframe id="mainFrame" src="http://www.duole.com/application" height="400" width="100%" frameborder="0" scrolling="no"></iframe>
 
@@ -20,7 +20,7 @@ permalink: /guest/
 
 <div>
 
-<div class="more-article">
+<div class="more-article comments">
 	<div class="detail-xg p10">
 		<div class="ds-thread" data-thread-key="{{page.id}}" data-title="{{page.title}}" id="ds-thread"></div>
 	</div>
