@@ -1,5 +1,5 @@
 ---
-layout: column_1_2
+layout: column_1_1_1_page
 title:  "永远不要对一个外行聊你的专业"
 description: "永远不要对一个外行聊你的专业"
 keywords: 美文摘录
