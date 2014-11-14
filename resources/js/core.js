@@ -261,7 +261,7 @@ function getQueryString(name) {
 
 		$.each(data,function(i,d){
 			if(i>= delta & i< count_sup) {
-				tmpl.push('<div class="contents">');
+				tmpl.push('<div class="contents cl">');
 				tmpl.push('	<div class="g-3-img"><a href="' + d.url + '"><img src="' + d.image + '" width="200" height="150" /></a></div>');
 				tmpl.push('	<div class="g-3-box">');
 				tmpl.push('		<h1 class="main-m3-h1"><a href="' + d.url + '">' + d.title + '</a></h1>');
