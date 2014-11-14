@@ -16,5 +16,4 @@ layout: nil
 		"content":"{{ post.content | split:'<!--more-->' | first | strip_newlines | replace:'"','\"' }}</p>"
 	}
 	{% if forloop.last == false %},{% endif %}{% endfor %}
-
 ]
