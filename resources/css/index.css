@@ -2286,7 +2286,9 @@ blockquote:before,blockquote:after {content: "";}
     .detail-ds{width:320px;padding:0;}
     .comments{width:320px;padding:0;}
     /*分类聚合页*/
+    .columnUl li{width:100%;}
     .columnUl li b{width:180px;}
     .column{width:auto;float:none;}
     .column h2{width:295px;}
+    .columnUl li span{margin-right:0;}
 }
