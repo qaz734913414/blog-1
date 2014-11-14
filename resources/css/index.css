@@ -555,6 +555,10 @@ body {
     .pics-cont{width:auto;}
     .detail-ds{width:320px;padding:0;}
     .comments{width:320px;padding:0;}
+    /*分类聚合页*/
+    .columnUl li b{width:180px;}
+    .column{width:auto;float:none;}
+    .column h2{width:295px;}
 }
 
 .detail-ud {padding: 2px;font-size: 14px;}
