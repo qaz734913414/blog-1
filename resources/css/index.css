@@ -542,16 +542,18 @@ body {
     .font-widget{margin-left:34px;}
     .foot-cont{width:280px;margin:0;}
     .foot-conta{margin-left:25px;margin-bottom:15px;}
-    .footer-fifth{float:none;width:100%;}
-    .foot-conte{clear:left;}
+    .footer-fifth{float:none;width:100%;margin-top:15px;}
+    .foot-conte{clear:left;padding-top:15px;}
     .foot-cont{margin:0;}
+    .foot-conta{margin-top:0;}
     body{overflow-x:hidden;}
     /*g1-2调整*/
-    .main-g-2{width:320px;}
+    .main-g-2{width:320px;overflow:hidden;}
     .g-3-img{float:none;}
     .g-3-box{margin-top:10px;}
     .douban-books{width:auto;}
     .pics-cont{width:auto;}
+    .detail-ds{padding:0;width:320px;}
 }
 
 .detail-ud {padding: 2px;font-size: 14px;}
