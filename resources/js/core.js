@@ -299,7 +299,7 @@ function getQueryString(name) {
                 $.each(data,function(i,d){
                     if(i>= delta & i< count_sup) {
                         tmpl.push('<div class="contents cl">');
-                        tmpl.push('    <div class="g-3-img pics-show"><a href="' + d.url + '"><img src="' + d.image + '" width="630" height="230"></a></div>');
+                        tmpl.push('    <div class="g-3-img pics-show"><a href="' + d.url + '" title="'+d.title+'"><img src="' + d.image + '" width="630" height="230"></a></div>');
                         tmpl.push('        <div class="g-3-box">');
                         tmpl.push('            <div class="g-3-cont">');
                         tmpl.push('                <p>');
