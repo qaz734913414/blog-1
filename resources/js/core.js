@@ -284,7 +284,7 @@ function getQueryString(name) {
 //				tmpl.push('			</span>');
 				tmpl.push('	  </div>');
 				tmpl.push('		<div class="g-3-cont">');
-				tmpl.push(d.content);
+				tmpl.push('		' + d.content);
 				tmpl.push('		</div>');
 				tmpl.push('	</div>');
 				tmpl.push('</div>');
