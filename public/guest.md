@@ -6,7 +6,7 @@ description: "jcore雁过留痕"
 permalink: /guest/
 ---
 
-<div class="contents">
+<div class="contents comments">
 
 	<iframe id="mainFrame" src="http://www.duole.com/application" height="400" width="100%" frameborder="0" scrolling="no"></iframe>
 
