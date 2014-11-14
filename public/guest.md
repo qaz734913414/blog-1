@@ -21,7 +21,7 @@ permalink: /guest/
 <div>
 
 <div class="more-article comments">
-	<div class="detail-xg p10">
+	<div class="detail-xg">
 		<div class="ds-thread" data-thread-key="{{page.id}}" data-title="{{page.title}}" id="ds-thread"></div>
 	</div>
 </div>
