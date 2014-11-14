@@ -554,7 +554,7 @@ body {
     .douban-books{width:auto;}
     .pics-cont{width:auto;}
     .detail-ds{width:320px;padding:0;}
-    .comments{width:auto;padding:0;}
+    .comments{width:320px;padding:0;}
 }
 
 .detail-ud {padding: 2px;font-size: 14px;}
