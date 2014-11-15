@@ -207,9 +207,9 @@ function getQueryString(name) {
 
         var _path = window.location.href;
 
-        if(_path.indexOf("ofthe")!=-1){ // 美文随笔
+        if(_path.indexOf("essay")!=-1){ // 美文随笔
             getDate(function (data){
-                var _expression = {'category.$eq': 'ofthe' },
+                var _expression = {'category.$eq': 'essay' },
                     data = filterData(data, _expression);
                 $(".main-m3-h1").html("美文随笔");
                 findDataPage(data,2);
@@ -225,7 +225,7 @@ function getQueryString(name) {
         }
         if(_path.indexOf("coding")!=-1){ // 代码如诗
             getDate(function (data){
-                var _expression = {'category.$ni': ['life', 'ofthe'] },
+                var _expression = {'category.$ni': ['life', 'essay'] },
                     data = filterData(data, _expression);
                 $(".main-m3-h1").html("代码如诗");
                 findDataPage(data);
