@@ -1,7 +1,7 @@
 ---
 layout: column_1_1_1_page
-title:  国人喜欢的"结圈子"与"窝里斗"
-description: 国人喜欢的"结圈子"与"窝里斗"
+title:  国人喜欢的'结圈子'与'窝里斗'
+description: 国人喜欢的'结圈子'与'窝里斗'
 keywords: 结圈子,窝里斗
 origin: 臧一民.非原创
 copy: true
