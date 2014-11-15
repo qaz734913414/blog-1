@@ -207,11 +207,11 @@ function getQueryString(name) {
 
         var _path = window.location.href;
 
-        if(_path.indexOf("ofthe")!=-1){ // 美文摘抄
+        if(_path.indexOf("ofthe")!=-1){ // 美文随笔
             getDate(function (data){
                 var _expression = {'category.$eq': 'ofthe' },
                     data = filterData(data, _expression);
-                $(".main-m3-h1").html("美文摘抄");
+                $(".main-m3-h1").html("美文随笔");
                 findDataPage(data,2);
             });
         }

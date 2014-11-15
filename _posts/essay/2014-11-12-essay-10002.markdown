@@ -6,8 +6,8 @@ keywords: 结圈子,窝里斗
 origin: 臧一民.非原创
 copy: true
 date:   2014-11-12
-category: excerpt
-tags: 美文摘录
+category: essay
+tags: 美文随笔
 ---
 中国人的群体属性是最强的，他们最愿意`结圈子`，可是他们又不懂得合作，总是喜欢`窝里斗`。就像柏杨先生曾经说过，中国人单个是条龙，但是几个联合之后就变成虫了，没能耐了。
 <!--more-->

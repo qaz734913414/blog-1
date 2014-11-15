@@ -6,8 +6,8 @@ keywords: 美文摘录
 origin: 王路.非原创
 copy: true
 date:   2014-11-11
-category: excerpt
-tags: 美文摘录
+category: essay
+tags: 美文随笔
 ---
 她说：当你看到天空，第一个想到的人会是谁？我想了想说：那人名字是三个字，以空结尾。她说：跟我一样耶，我也是想到`孙悟空`！我说：噢，不好意思，我想到的是`苍井空`。
 <!--more-->
