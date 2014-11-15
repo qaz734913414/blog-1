@@ -328,6 +328,7 @@ body {
 .main-g-2{width:935px;}
 .main-g-2-cont{width:960px;}
 .main-g-2-cont dl{margin-right:50px;}
+.main-g-2-cont dl.mr25{margin-right:25px;}
 .g-3-img{float: left;
     max-width: 100%;
     line-height: 0;
