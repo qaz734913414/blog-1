@@ -13,7 +13,7 @@ tags: 骑行
 
 > 座驾（Giant TCR SL2）
 
-![launchrocket]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)
+![捷安特]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)
 
 > 妙峰山
 
