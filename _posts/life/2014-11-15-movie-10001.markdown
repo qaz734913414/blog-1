@@ -1,7 +1,7 @@
 ---
 layout: column_1_2
-title:  "观后感.电影：星际穿越"
-description: "观后感.电影：星际穿越"
+title:  "观后感.电影《星际穿越》"
+description: "观后感.电影《星际穿越》"
 keywords: 观后感,电影,星际穿越
 origin: 张嘉杰.原创
 date:   2014-11-15
