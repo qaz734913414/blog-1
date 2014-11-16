@@ -238,10 +238,10 @@ function getQueryString(name) {
                 if(q!=null && q!=""){
                     q = decodeURIComponent(q);
                     data = filterData(data, {'title.$li': eval("/" + q + "/i")});
-                    var _nav = "搜索详情 > {0}".format(p);
+                    var _nav = "搜索详情 > {0}".format(q);
                     $(".main-m3-h1").html(_nav);
                     if(data.length ==0) {
-                        $("#showPages").html("很遗憾,没有找到和“{0}”相关结果...".format(p));
+                        $("#showPages").html("很遗憾,没有找到和“{0}”相关结果...".format(q));
                         return false;
                     }
                 }
