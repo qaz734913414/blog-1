@@ -212,7 +212,7 @@ function getQueryString(name) {
                 var _expression = {'category.$eq': 'essay' },
                     data = filterData(data, _expression);
                 $(".main-m3-h1").html("美文随笔");
-                findDataPage(data,2);
+                findDataPage(data,2,3);
             });
         }
         if(_path.indexOf("mood")!=-1){ // 天马行空
