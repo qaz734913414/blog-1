@@ -1,7 +1,7 @@
 ---
 layout: column_1_1_1_page
-title:  不懂技术的人不要对懂技术的人说这很容易实现
-description: 不懂技术的人不要对懂技术的人说这很容易实现
+title:  话.这个功能很容易实现
+description: 话.这个功能很容易实现
 keywords: 程序开发
 origin: 张嘉杰.原创
 date:   2014-11-16
