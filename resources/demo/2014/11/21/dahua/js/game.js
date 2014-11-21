@@ -1,6 +1,19 @@
 /**
+ * blog: http://www.jcore.cn/
  * Created by zjj on 14-11-21.
  */
+
+if (typeof String.prototype.format !== "function") {
+    /* 字符串模板 */
+    String.prototype.format = function () {
+        var s = this, //字符串指针
+            length = arguments.length; //参数长度
+        while (--length >= 0){
+            s = s.replace(new RegExp('\\{' + length + '\\}', 'g'), arguments[length]);
+        }
+        return s;
+    };
+}
 
 function Game(ops){
 
