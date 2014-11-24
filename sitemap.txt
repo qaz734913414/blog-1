@@ -2,6 +2,6 @@
 title : Sitemap
 ---
 {% for page in site.pages %}
-http://www.jcore.cn{{site.production_url}}{{ page.url }}{% endfor %}
+{{site.url}}{{site.production_url}}{{ page.url }}{% endfor %}
 {% for post in site.posts %}
-http://www.jcore.cn{{site.production_url}}{{ post.url }}{% endfor %}
+{{site.url}}{{site.production_url}}{{ post.url }}{% endfor %}
