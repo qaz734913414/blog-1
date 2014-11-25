@@ -20,5 +20,5 @@ title : {{ page.title | xml_escape }}
     <content type="html">{{ post.content | split:'<!--more-->' | first | strip_html  | xml_escape }}</content>
   </entry>
   {% endfor %}
-
+ 
 </feed>
