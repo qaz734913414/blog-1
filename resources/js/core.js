@@ -206,6 +206,8 @@ function getQueryString(name) {
         }
 
         var _path = window.location.href;
+        
+        var _coding = ['html5', 'javascript', 'shell'];
 
         if(_path.indexOf("essay")!=-1){ // 美文随笔
             getDate(function (data){
@@ -217,7 +219,7 @@ function getQueryString(name) {
         }
         if(_path.indexOf("mood")!=-1){ // 天马行空
             getDate(function (data){
-                var _expression = {'category.$eq': 'life' },
+                var _expression = {'category.$ni': _coding },
                     data = filterData(data, _expression);
                 $(".main-m3-h1").html("天马行空");
                 findDataPage(data);
@@ -225,7 +227,7 @@ function getQueryString(name) {
         }
         if(_path.indexOf("coding")!=-1){ // 代码如诗
             getDate(function (data){
-                var _expression = {'category.$eq': ['html5', 'javascript', 'shell'] },
+                var _expression = {'category.$in': _coding },
                     data = filterData(data, _expression);
                 $(".main-m3-h1").html("代码如诗");
                 findDataPage(data);
