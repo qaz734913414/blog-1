@@ -15,7 +15,7 @@ tags: website network
 
 但是进行网站跨设备测试又非常不便，所以在这里，我们将向您推荐一款简单实用的网站跨设备测试应用网站。
 
-![optimize-0]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png) 
+![optimize-0]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.jpg) 
 
 >respondr.webhoard.net
 
