@@ -19,15 +19,15 @@ tags: website network
 
 >respondr.webhoard.net
 
-![optimize-0]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.jpg) 
+![optimize-0]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.png) 
 
 >www.dimensionstoolkit.com
 
-![optimize-0]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-2.jpg) 
+![optimize-0]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-2.png) 
 
 >www.responsinator.com
 
-![optimize-0]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-3.jpg) 
+![optimize-0]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-3.png) 
 
 -----------------------
 
