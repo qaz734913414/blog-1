@@ -13,15 +13,21 @@ tags: website network
 
 不管采用怎样的布局进行设计，最核心的要求就是希望能够在各种设备上按照自己的网站页面设计思路去显示。
 
-但是进行网站跨设备测试又非常不便，以下几款是我常用的网站跨设备测试应用网站。
+但是进行网站跨设备测试又非常不便，以下几款是我常用的网站跨设备测试应用网站。（直接贴图了）
 
 ![optimize-0]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.jpg) 
 
 >respondr.webhoard.net
 
->www.responsinator.com
+![optimize-0]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.jpg) 
 
 >www.dimensionstoolkit.com
+
+![optimize-0]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-2.jpg) 
+
+>www.responsinator.com
+
+![optimize-0]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-3.jpg) 
 
 -----------------------
 
