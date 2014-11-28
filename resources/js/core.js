@@ -219,6 +219,7 @@ function getQueryString(name) {
         }
         if(_path.indexOf("mood")!=-1){ // 天马行空
             getDate(function (data){
+				_coding[3] = "essay";
                 var _expression = {'category.$ni': _coding },
                     data = filterData(data, _expression);
                 $(".main-m3-h1").html("天马行空");
