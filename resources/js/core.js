@@ -219,8 +219,9 @@ function getQueryString(name) {
         }
         if(_path.indexOf("mood")!=-1){ // 天马行空
             getDate(function (data){
-			console.log(_coding.push("essay"));
-                var _expression = {'category.$ni': _coding.push("essay") },
+				_coding = _coding.push("essay");
+				console.log(_coding);
+                var _expression = {'category.$ni': _coding },
                     data = filterData(data, _expression);
                 $(".main-m3-h1").html("天马行空");
                 findDataPage(data);
