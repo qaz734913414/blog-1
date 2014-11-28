@@ -219,7 +219,7 @@ function getQueryString(name) {
         }
         if(_path.indexOf("mood")!=-1){ // 天马行空
             getDate(function (data){
-                var _expression = {'category.$ni': _coding },
+                var _expression = {'category.$ni': _coding.push("essay") },
                     data = filterData(data, _expression);
                 $(".main-m3-h1").html("天马行空");
                 findDataPage(data);
