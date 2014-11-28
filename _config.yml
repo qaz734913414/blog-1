@@ -3,7 +3,7 @@ email:          zj7687362@gmail.com
 keep_files:     ['.git','.svn']
 
 encoding:       "utf-8"
-permalink:      /:year/:month/:day/:title
+permalink:      /:year/:month/:day/:title.html
 
 blogname:       "JackZhang's Blog"
 staticurl:      "http://www.jcore.cn"
