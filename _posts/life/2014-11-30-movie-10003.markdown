@@ -1,0 +1,15 @@
+---
+layout: column_1_2
+title:  "观后感.电影《机器纪元》"
+description: "观后感.电影《机器纪元》"
+keywords: 观后感,电影,机器纪元
+origin: 张嘉杰.原创
+date:   2014-11-30
+category: life
+tags: 电影 观后感
+---
+
+<!--more-->
+
+
+---------------------------------------
