@@ -49,7 +49,7 @@ $ cd /usr/local/src/ && wget http://down.shshenchu.com/memcached-1.4.20.tar.tar
 $ tar -zxvf memcached-1.4.20.tar.tar && memcached-1.4.20
 
 # 生成makefile，并编译和安装
-$ ./configure --prefix=/usr/lib/memcached --with-libevent=/usr/lib/libevent/ && make -j2 && make install
+$ ./configure --prefix=/usr/local/memcached --with-libevent=/usr/local/libevent/ && make -j2 && make install
 
 {% endhighlight %}
 
