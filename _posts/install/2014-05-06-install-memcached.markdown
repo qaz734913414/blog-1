@@ -28,7 +28,7 @@ $ ./configure --prefix=/usr/local/libevent && make -j2 && make isntall
 make[3]: Leaving directory `/usr/local/libevent-2.0.21-stable/test'
 make[2]: Leaving directory `/usr/local/libevent-2.0.21-stable/test'
 make[1]: Leaving directory `/usr/local/libevent-2.0.21-stable'
-make: *** 没有规则可以创建目标“isntall”。 停止。
+make: *** 没有规则可以创建目标“isntall”。 停止。 
 
 # yum查看并安装GCC
 $ yum search gcc && yum isntall gcc
