@@ -69,7 +69,7 @@ kill `cat /usr/local/memcached/logs/memcached.pid`
 
 参数选项说明：
 
-{% highlight txt %}
+{% highlight html %}
 
 -d:是启动一个守护进程
 -m:是分配给memcache使用的内存数量，单位是MB.
