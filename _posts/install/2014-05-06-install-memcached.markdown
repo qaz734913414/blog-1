@@ -85,7 +85,7 @@ kill `cat /usr/local/memcached/logs/memcached.pid`
 
 相关参考文章地址：
 
-libevent官网 - <http://libevent.org/>
+libevent官网 - <http://libevent.org/>  
 memcached官网 - <http://www.memcached.org/>
 
 -----------------------
