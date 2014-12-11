@@ -8,49 +8,86 @@ date:   2014-12-11
 category: jekyll
 tags: github jekyll mac blog hooks
 ---
-最近不知道是什么原因`Github Pages`上越来越不稳定了，动不动访问缓存提示失败各种`503`。于是今天晚上准备把博客全部迁到 [Githis] 上面来，主要是因为它支持 [Jekyll]。
+最近不知道是什么原因`Github Pages`上越来越不稳定了，动不动访问缓存提示失败各种`503`。于是今天晚上准备把博客全部迁到 [Githis] 上面来，主要是支持 [Jekyll]。
 <!--more-->
-需要注意的是`Github Pages`是基于`gh-pages`分支，而`Githis`目前只支持`master`分支。
+需要注意的是`Github Pages`的静态博客是基于项目分支`gh-pages`来显示的，而`Githis`则是依赖`master`分支来显示的。
 
-> 如何实现自动同步
+{% highlight bash %}
+# 查看ruby版本
+$ ruby -version 
 
-`Github`项目设置中有一个`HOOK（push钩子）`，当有内容更新时，自动`post`请求给`Githis`项目拉取，编译`jekyll`代码。
+#升级gem
+$ sudo gem update --system
 
-大家还是一步一步看图吧。
+# 安装jekyll
+$ gem install jekyll 
 
-1.第一步点击设置
+# 出现如下错误
+ERROR:  While executing gem ... (OptionParser::MissingArgument)
+    missing argument: -v
+	
+# 赋值权限执行
+$ sudo gem install jekyll
 
-![step1]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)  
+#支持markdown语法
+$ sudo gem install rdiscount
 
-2.第二步设置钩子地址和钩子请求方式
+# 安装完毕创建博客目录
+$ jekyll new blog
 
-![step2]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.png)  
+# 进入目录
+$ cd blog
 
-3.第三步成功后看到成功推送请求
+# 启动服务
+$ jekyll server
+{% endhighlight %}
 
-![step3]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-2.png)  
+完成以上步骤。外面访问地址栏 http://localhost:4000/ 就可以看到 jekyll 初始化的模板页面了。
 
-> 项目迁移
+下面介绍一下 jekyll 生成的目录结构。
+{% highlight html %}
 
-1.访问 [Githis] 项目主页点击 `Github`登录
+_config.yml 	# 配置文件
+_includes	# 重复利用文件
+_layouts	# 模板html文件
+_posts		# 文章模板（格式：`YYYY-MM-DD-name-of-post.markdown`）
+_site		# 生成文章html文档
+css		# 样式
+index.html	# 首页
 
-![step4]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-3.png)  
+{% endhighlight %}
 
-2.点击部署项目
+先在 `Github` 上建立blog资源目录，至于 `Git` 的相关命令如下：
+{% highlight bash %}
 
-![step5]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-4.png)  
+$ git init
+$ git add README.md
+$ git commit -m "first commit"
+$ git remote add origin https://github.com/[gitgub名称]/blog.git
+$ git push -u origin master
 
-3.添加网站
+{% endhighlight %}
 
-![step6]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-5.png)  
+等待十分钟左右，访问地址栏 http://[gitgub名称].github.io/blog/ 即可。
 
-4.设置push钩子地址
+至于绑定域名先在 `jekyll` 目录下添加文件 CNAME 里面写入相关域名。
+域名解析A地址指向 `204.232.175.78` 稍后访问域名即可。
 
-![step7]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-6.png)  
+###有没有觉得很简单 :)
 
-最后绑定自己的域名，把`CNAME`解析到`githis.com`稍后访问域名即可。
+-----------------------
 
-###OK，今儿就到这儿了，休息了 :)
+相关参考文章地址：
+
+Git 安装地址 - <http://git-scm.com/book/en/Getting-Started-Installing-Git>  
+Github Jcore - <http://github.com/jcores>  
+Github Pages - <http://pages.github.com>  
+Jekyll - <http://jekyllrb.com>  
+Jekyll-Gh - <https://github.com/jekyll/jekyll>  
+Jekyll-Help - <https://github.com/jekyll/jekyll-help>  
+Liquid-Help - <https://github.com/shopify/liquid/wiki/liquid-for-designers>  
+Markdown - <http://daringfireball.net/projects/markdown/syntax>  
+Markdown 预览 - <https://stackedit.io/editor>
 
 -----------------------
 
