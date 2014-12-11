@@ -10,7 +10,7 @@ tags: github jekyll mac blog hooks
 ---
 最近不知道是什么原因`Github Pages`上越来越不稳定了，动不动访问缓存提示失败各种`503`。于是今天晚上准备把博客全部迁到 [Githis] 上面来，主要是支持 [Jekyll]。
 <!--more-->
-因为`Github Pages`的静态博客是基于
+需要注意的是`Github Pages`的静态博客是基于项目分支`gh-pages`来显示的，而`Githis`则是依赖`master`分支来显示的。
 
 {% highlight bash %}
 # 查看ruby版本
