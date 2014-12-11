@@ -18,12 +18,17 @@ tags: github jekyll mac blog hooks
 
 大家还是一步一步看图吧。
 
-1. 第一步点击设置
+1.第一步点击设置
+
 ![step1]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)  
-2. 第二步设置钩子地址和钩子请求方式
+
+2.第二步设置钩子地址和钩子请求方式
+
 ![step2]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.png)  
-3. 第三步成功后看到成功推送请求
-![step3]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-2.png) 
+
+3.第三步成功后看到成功推送请求
+
+![step3]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-2.png)  
 
 {% highlight bash %}
 # 查看ruby版本
