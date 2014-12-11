@@ -1,0 +1,19 @@
+<div class="widget main-g-3">
+	<div class="main-m3-cont">
+		<div class="contents">
+			{{ content }}
+		</div>
+		<div class="more-article new-article">
+			<h3>热门推荐文章</h3>
+			<div class="pics-cont" style="width:1200px;">
+			{% for post in site.posts limit:7 %}
+				
+					<dl>
+						<dt><a href="{{ site.url }}{{ post.url }}"><img src="{{ site:staticurl }}/resources/images{{ post.url }}.png" width="138" height="105" data-bd-imgshare-binded="1"></a></dt>
+						<dd><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></dd>
+					</dl>
+			{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+	{% include head.html %}
+
+	<body>
+
+		{% include navigate.html %}
+		
+		<!-- 主体 -->
+		<div class="main">
+			<div class="main-l">
+				<!-- 搜索 -->
+				{% include module_search.html %}
+				<!-- 一句话励志 -->
+				{% include module_humor.html %}
+				<!-- 编码经验 -->
+				{% include module_coding.html %}
+				<!-- 评论 -->
+				{% include module_comments.html %}
+				<!-- 友情链接 -->
+				{% include module_links.html %}
+			</div>
+			<div class="main-m">
+				<!-- 焦点图片 -->
+				{% include module_focus_photo.html %}
+				<!-- 文章列表 -->
+				{% include module_lists_1_1_1.html %}
+				<!-- 图片列表 -->
+				{% include module_recommend.html %}
+			</div>
+			<div class="main-r">
+				<!-- 心情日志随笔 -->
+				{% include module_mood.html %}
+				<!-- 归类统计 -->
+				{% include module_count.html %}
+				<!-- 最近访问 -->
+				{% include module_visit.html %}
+			</div>
+		</div>
+	
+		{% include footer.html %}
+
+	</body>
+
+</html>

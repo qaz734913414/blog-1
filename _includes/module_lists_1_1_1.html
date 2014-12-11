@@ -1,0 +1,16 @@
+<div class="arts cl">
+	<h3 class="post-header">最新发布</h3>
+	<div class="arts-cont">
+		{% for post in paginator.posts limit:5 %}
+			<dl class="arts-dl cl">
+				<dt><a href="{{ site.url }}{{ post.url }}"><img src="{{ site:staticurl }}/resources/images{{ post.url }}.png" width="100" height="75" /></a></dt>
+				<dd>
+					<p class="tit"><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></p>
+					<p>发表于 {{ post.date | date:"%Y年%m月%d日" }} - <span class="ds-thread-count" data-thread-key="{{ post.id }}" ></span></p>
+					{{ post.content | split:'<!--more-->' |first }}
+				</dd>
+			</dl>
+		{% endfor %}
+		<a href="{{ site.url }}/pages/" class="load-more">查看更多</a>
+	</div>
+</div>

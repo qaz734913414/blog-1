@@ -1,0 +1,103 @@
+---
+layout: column_1_2
+title:  "mac新做系统安装软件"
+description: "mac新做系统安装软件"
+keywords: mac,OSX
+origin: 张嘉杰.原创
+date:   2014-02-10
+category: mac
+tags: mac OSX
+---
+每次`mac`重做完系统以后，都需要安装很多工具和软件。这里记录一下相关的安装过程和方法。有需要的朋友也可以参考一下。  
+<!--more-->
+
+第一步：
+{% highlight html %}
+
+1. 修改电脑名称。查看“”－“系统偏好设置”－修改全名.
+2. 设置键盘快捷键。s查看“”－“系统偏好设置”－“键盘”－“快捷键”－修改键盘快捷键。
+
+{% endhighlight %}
+
+第二步：
+{% highlight html %}
+
+1. 查看“”－“关于本机”－“更多信息”－“系统报告”的“硬件概览”中的第二行——型号标识符并牢记
+2. 在Finder中进入路径“系统”－“资源库”－“Extensions”（路径为System\Library\Extensions）
+   在Extensions中搜做到项“IOPlatformPluginFamily.kext”，右击它并选择“显示包内容”，此时看到“Contents”文件夹
+3. 进入“Contents”－“Plugins”文件夹内找到项“ACPI_SMC_PlatformPlugin.kext”，右击它并选择“显示包内容”  
+   此时看到“Contents”文件夹
+4. 进入“Contents”－“Resources”文件夹内，找到文件名跟步骤1）中显示之型号标识符一致的“.plist”文件并删除它
+5. 重启计算机
+
+{% endhighlight %}
+
+第三步：
+
+>  安装 [Xcode].
+
+第四步：
+
+>  安装 [Homebrew] 和包含的相关软件。
+
+{% highlight bash %}
+# 安装 homebrew（提示先安装 Command Line Tools。）
+$ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+
+# 安装 cask 
+$ brew tap phinze/homebrew-cask && brew install brew-cask
+
+# 管理brew安装的service工具
+$ brew tap jimbojsb/launchrocket && brew cask install launchrocket
+
+# brew安装软件
+$ brew search          —所有
+$ brew search nginx    —查找nginx
+$ brew install nginx   -安装nginx
+$ brew uninstall nginx —卸载nginx
+$ brew list 		 —所有已安装软件
+brew-cask	jpeg		memcached	openssl		redis
+freetype	libevent	mongodb		pcre		sqlite
+gdbm		libpng		mysql		pkg-config	wget
+go		libtool		nginx		python3		xz
+imagemagick	maven		node		readline
+
+# brew cask安装软件
+$ brew cask search    	       —所有
+$ brew cask search LaunchRocket      —查找LaunchRocket
+$ brew cask install LaunchRocket     -安装LaunchRocket
+$ brew cask uninstall LaunchRocket   —卸载LaunchRocket
+$ brew cask list		       —所有已安装软件
+alfred		induction	onepassword	textmate	virtualbox
+baidumusic	launchrocket	qq		totalterminal	vlc
+google-chrome	livereload	retinacapture	utorrent	webstorm
+
+{% endhighlight %}
+
+这里介绍一下`launchrocket`，他可以方便的管理一些常用软件。不了解的朋友，[戳这里](/2014/02/10/launchrocket/)。
+
+第四步：
+
+>  安装 [Eclipse].  
+
+Eclipse相关插件：
+
+	1. maven
+
+先写到这儿吧，还有好多软件，慢慢更新。  
+
+-----------------------
+
+相关参考文章地址：
+
+Xcode - <https://developer.apple.com/xcode/>  
+Homebrew - <http://brew.sh/index_zh-cn.html>  
+Eclipse - <http://eclipse.org/downloads/>  
+WebStorm - <http://www.jetbrains.com/webstorm/>
+
+-----------------------
+
+[Xcode]: 	https://developer.apple.com/xcode/
+[Homebrew]: http://brew.sh/index_zh-cn.html
+[Eclipse]: 	http://eclipse.org/downloads/
+[WebStorm]: http://www.jetbrains.com/webstorm/

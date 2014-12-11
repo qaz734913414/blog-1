@@ -1,0 +1,67 @@
+<!-- 页底 -->
+<div class="foot">
+	<div class="foot-cont cl">
+		<div class="foot-conta footer-fifth">
+			<a href="/"><img src="{{ "/resources/images/base/bokelogo1.jpg" | prepend: site.staticurl }}"  width="200" height="60"></a>
+			<p>努力的人还是有机会的...</p>
+		</div>
+		<div class="font-widget footer-fifth foot-contb">
+			<h2>最新文章</h2>
+			<ul>
+				{% for post in site.posts limit:5 %}
+					<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+		<div class="font-widget footer-fifth foot-contc">
+			<h2>推荐网站</h2>
+			<ul>
+				<li><a href="http://www.iteye.com/">IT EYE</a> </li>
+				<li><a href="http://www.oschina.net/">中国开源</a> </li>
+				<li><a href="https://ruby-china.org/">Ruby China</a> </li>
+				<li><a href="https://github.com/">Github</a> </li>
+				<li><a href="#">关于我们</a> </li>
+			</ul>
+		</div>
+		<div class="font-widget footer-fifth foot-contd">
+			<h2>网站标签</h2>
+			<ul>
+				{% include module_tags.html %}
+			</ul>
+
+		</div>
+		<div class="font-widget footer-fifth foot-conte">
+			<h2>网站导航</h2>
+			<ul>
+				<!-- 公共用菜单 -->
+				{% include menu.html %}
+			</ul>
+		</div>
+	</div>
+	<div class="copyright">
+		© 2014 版权所有，保留一切权利！
+		<span>
+			<script async="true" type="text/javascript">
+				var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+				document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fd75985f5a3b63a454993290053b9d99c' type='text/javascript'%3E%3C/script%3E"));
+			</script>
+		</span>
+	</div>
+</div>
+<div style="display: none;" id="rocket-to-top">
+	<div style="display: block; opacity: 0;" class="level-2"></div>
+	<div class="level-3"></div>
+</div>
+<script type="text/javascript" src="{{ "/resources/js/prettify.js" | prepend: site.staticurl }}"></script>
+<script type="text/javascript" src="{{ "/resources/js/core.js" | prepend: site.staticurl }}"></script>
+<script type="text/javascript">
+	var duoshuoQuery = {short_name:"jcore"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.charset = 'UTF-8';
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		//ds.src = '{{ "/resources/duoshuo/duoshuo.js" | prepend: site.staticurl }}';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+</script>

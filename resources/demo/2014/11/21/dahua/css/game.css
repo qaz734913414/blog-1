@@ -1,0 +1,99 @@
+/********* //游戏定义层次关系
+ * 背景层   -- z-index:0
+ * 人物		-- z-index:1
+ * npc	    -- z-index:2
+ * 障碍层	-- z-index:3
+ * 移动路径	-- z-index:4
+ * 遮罩层层  -- z-index:5
+ */
+* { font-size: 9pt; margin: 0;padding: 0;}
+body { cursor:url('../red.cur'),auto; }
+.z0 { z-index: 0; }
+.z1 { z-index: 1; }
+.z2 { z-index: 2; }
+.z3 { z-index: 3; }
+.z4 { z-index: 4; }
+.z5 { z-index: 5; }
+
+.o2 { opacity: .2; }
+.o4 { opacity: .4; }
+.o6 { opacity: .6; }
+
+/* 背景层 */
+#underlay {position: absolute;background: url(../images/bg/bg1.png) no-repeat;width: 1340px;height: 670px;left: 0;top: 0;}
+.d3 {
+    position: absolute;
+    background: url(../images/tile2.png) no-repeat -192px -64px;
+    width: 64px;height: 32px;line-height: 32px;text-align: center;z-index: 0;}
+.d1 {
+    position: absolute;
+    background: url(../images/tile2.png) no-repeat -192px -128px;
+    width: 64px;height: 32px;line-height: 32px;text-align: center;z-index: 0;}
+.d2 {position: absolute;background-image: url(../images/tile.gif);width: 64px;height: 32px;line-height: 32px;text-align: center;z-index: 0;}
+
+/* 主角人物 */
+.role { width:285px;height:200px;position:absolute; }
+/* 媚灵狐 */
+.mlh_z0{ background:url(../images/role/battlers/mlh_0.png); }
+.mlh_z1{ background:url(../images/role/battlers/mlh_1.png); }
+.mlh_z2{ background:url(../images/role/battlers/mlh_2.png); }
+.mlh_z3{ background:url(../images/role/battlers/mlh_3.png); }
+
+/* NPC人物 */
+.npc{ width:285px;height:200px;position:absolute; }
+/* 武尊神 */
+.wzs_z0{ background:url(../images/npc/battlers/wzs_0.png); }
+.wzs_z1{ background:url(../images/npc/battlers/wzs_1.png); }
+.wzs_z2{ background:url(../images/npc/battlers/wzs_2.png); }
+.wzs_z3{ background:url(../images/npc/battlers/wzs_3.png); }
+/* 剑飞侠 */
+.jfx_z0{ background:url(../images/npc/battlers/jfx_0.png); }
+.jfx_z1{ background:url(../images/npc/battlers/jfx_1.png); }
+.jfx_z2{ background:url(../images/npc/battlers/jfx_2.png); }
+.jfx_z3{ background:url(../images/npc/battlers/jfx_3.png); }
+/* 媚灵狐 */
+.hmr_z0{ background:url(../images/npc/battlers/hmr_0.png); }
+.hmr_z1{ background:url(../images/npc/battlers/hmr_1.png); }
+.hmr_z2{ background:url(../images/npc/battlers/hmr_2.png); }
+.hmr_z3{ background:url(../images/npc/battlers/hmr_3.png); }
+/* 霓裳仙 */
+.nsx_z0{ background:url(../images/npc/battlers/nsx_0.png); }
+.nsx_z1{ background:url(../images/npc/battlers/nsx_1.png); }
+.nsx_z2{ background:url(../images/npc/battlers/nsx_2.png); }
+.nsx_z3{ background:url(../images/npc/battlers/nsx_3.png); }
+
+/* 主角宠物 */
+.pet{ width:285px;height:200px;position:absolute; }
+/* 范式之魂 */
+.fszh_z0{ background:url(../images/role/pet/fszh_0.png); }
+.fszh_z1{ background:url(../images/role/pet/fszh_1.png); }
+.fszh_z2{ background:url(../images/role/pet/fszh_2.png); }
+.fszh_z3{ background:url(../images/role/pet/fszh_3.png); }
+
+/* NPC宠物 */
+.pet{ width:285px;height:200px;position:absolute; }
+/* 雷兽 */
+.ls_z0{ background:url(../images/npc/pet/ls_0.png); }
+.ls_z1{ background:url(../images/npc/pet/ls_1.png); }
+.ls_z2{ background:url(../images/npc/pet/ls_2.png); }
+.ls_z3{ background:url(../images/npc/pet/ls_3.png); }
+/* 浪淘沙 */
+.lts_z0{ background:url(../images/npc/pet/lts_0.png); }
+.lts_z1{ background:url(../images/npc/pet/lts_1.png); }
+.lts_z2{ background:url(../images/npc/pet/lts_2.png); }
+.lts_z3{ background:url(../images/npc/pet/lts_3.png); }
+/* 黄金兽 */
+.hjs_z0{ background:url(../images/npc/pet/hjs_0.png); }
+.hjs_z1{ background:url(../images/npc/pet/hjs_1.png); }
+.hjs_z2{ background:url(../images/npc/pet/hjs_2.png); }
+.hjs_z3{ background:url(../images/npc/pet/hjs_3.png); }
+/* 五叶 */
+.wy_z0{ background:url(../images/npc/pet/wy_0.png); }
+.wy_z1{ background:url(../images/npc/pet/wy_1.png); }
+.wy_z2{ background:url(../images/npc/pet/wy_2.png); }
+.wy_z3{ background:url(../images/npc/pet/wy_3.png); }
+/* 桃花仙 */
+.thx_z0{ background:url(../images/npc/pet/thx_0.png); }
+.thx_z1{ background:url(../images/npc/pet/thx_1.png); }
+.thx_z2{ background:url(../images/npc/pet/thx_2.png); }
+.thx_z3{ background:url(../images/npc/pet/thx_3.png); }
