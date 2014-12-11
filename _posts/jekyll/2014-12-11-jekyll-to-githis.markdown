@@ -50,7 +50,7 @@ tags: github jekyll mac blog hooks
 
 最后绑定自己的域名，把`CNAME`解析到`githis.com`稍后访问域名即可。
 
-###有没有觉得很简单 :)
+###OK，今儿就到这儿了，该休息了 :)
 
 -----------------------
 
