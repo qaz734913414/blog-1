@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+	{% include head.html %}
+
+	<body>
+
+		{% include navigate.html %}
+		
+		<!-- 主体 -->
+		<div class="main">
+			<div class="main-l">
+				<!-- 搜索 -->
+				{% include module_search.html %}
+				<!-- 编码经验 -->
+				{% include module_coding.html %}
+				<!-- 归类统计 -->
+				{% include module_count.html %}
+				<!-- 友情链接 -->
+				{% include module_links.html %}
+			</div>
+			<div class="main-m">
+				<!-- 文章列表 -->
+				{% include module_lists_1_1_1_photo.html %}
+			</div>
+			<div class="main-r">
+				<!-- 心情日志随笔 -->
+				{% include module_mood.html %}
+				<!-- 评论 -->
+				{% include module_comments.html %}
+				<!-- 最近访问 -->
+				{% include module_visit.html %}
+			</div>
+		</div>
+	
+		{% include footer.html %}
+
+	</body>
+
+</html>
