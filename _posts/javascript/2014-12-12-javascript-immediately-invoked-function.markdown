@@ -49,5 +49,5 @@ void function(){ ... }();   // => undefined
 
 相关参考文章地址：
 
-Immediately-Invoked Function Expression - <http://benalman.com/news/2010/11/immediately-invoked-function-expression/>
+Immediately-Invoked Function Expression - <http://benalman.com/news/2010/11/immediately-invoked-function-expression/>  
 self-executing anonymous functions - <http://www.paulirish.com/2010/10-things-i-learned-from-the-jquery-source/>
