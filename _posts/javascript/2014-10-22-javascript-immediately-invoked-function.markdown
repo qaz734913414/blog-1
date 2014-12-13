@@ -4,7 +4,7 @@ title:  "javascript进阶.立即调用的函数表达式"
 description: "javascript 立即调用 函数表达式"
 keywords: javascript,立即调用,函数表达式
 origin: 张嘉杰.原创
-date:   2014-12-12
+date:   2014-10-22
 category: javascript
 tags: javascript
 ---
