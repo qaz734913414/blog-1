@@ -4,7 +4,7 @@ title:  "html5系列.画布.随机蠕动随机颜色"
 description: "html5系列.画布.随机蠕动随机颜色"
 keywords: html5,canvas,画布,随机蠕动,随机颜色
 origin: 张嘉杰.原创
-date:   2014-10-22
+date:   2014-12-14
 category: html5
 tags: html5 canvas random color
 ---
