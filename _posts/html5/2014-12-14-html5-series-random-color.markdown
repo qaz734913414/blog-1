@@ -35,7 +35,66 @@ tags: html5 canvas random color
 
 {% highlight javascript %}
 
+(function( global, doc ){
 
+    var c = doc.getElementById('c'),
+        cx = c.getContext('2d'),
+        points = { // 点对象
+            speed  : 5, // 移动步长
+            size   : 1, // 点的大小
+            length : 5000 // 点数量
+        },
+        walkers = []; // 所有点步长数组
+
+    c.width = global.innerWidth;
+    c.height = global.innerHeight;
+
+    // 获取随机区间数
+    function RandomInt(min, max) {
+        return Math.floor(Math.random()*(max-min+1)+min);
+    }
+
+    // 获取随机区间颜色
+    function RandomColor() {
+        var r = RandomInt(0, 255),
+            g = RandomInt(0, 255),
+            b = RandomInt(0, 255);
+        return 'rgb(' + r + ',' + g + ',' + b + ')';
+    }
+
+    // 设置随机点出现的位置
+    function Point(x, y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    // 设置单个点的步长范围和颜色
+    function Walker(posX, posY, color) {
+        this.speed = points.speed; // 步长
+        this.size  = points.size;  // 点的大小
+        this.color = color; // 颜色
+        this.point = new Point(posX, posY); // 随机位置点
+        this.update = function() { // 更新点的位置和颜色
+            this.point.x += RandomInt(-this.speed, this.speed);
+            this.point.y += RandomInt(-this.speed, this.speed);
+            cx.fillStyle = this.color;
+            cx.fillRect(this.point.x, this.point.y, this.size, this.size);
+        }
+    }
+
+    // 循环创建每个点的 随机位置 随机颜色
+    for(var i = 0; i < points.length; i++) {
+        var w = new Walker(RandomInt(0, c.width), RandomInt(0, c.height), RandomColor());
+        walkers.push(w); // 添加数组
+    }
+
+    global.setInterval(function(){
+        for(var i = 0; i < walkers.length; i++) {
+            walkers[i].update(); //
+        }
+    }, 1000/60);
+
+})(window, document);
 
 {% endhighlight %}
 
