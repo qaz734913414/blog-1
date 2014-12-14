@@ -1,8 +1,8 @@
 ---
 layout: column_1_2
-title:  "html5系列.画布.随机蠕动随机颜色"
-description: "html5系列.画布.随机蠕动随机颜色"
-keywords: html5,canvas,画布,随机蠕动,随机颜色
+title:  "html5系列.画布.随机（位置、蠕动、颜色）的点"
+description: "html5系列.画布.随机点（位置、蠕动、颜色）的点"
+keywords: html5,canvas,画布,随机位置,随机蠕动,随机颜色
 origin: 张嘉杰.原创
 date:   2014-12-14
 category: html5
@@ -104,6 +104,6 @@ tags: html5 canvas random color
 
 -----------------------
 
-### OK,今天就先说到这儿 :)
+### 还是蛮简单的吧。OK,今天就先说到这儿 :)
 
 -----------------------
