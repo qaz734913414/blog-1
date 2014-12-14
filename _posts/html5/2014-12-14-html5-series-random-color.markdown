@@ -10,6 +10,7 @@ tags: html5 canvas random color
 ---
 和老同事一起吃晚饭的时候，谈起他当年去A类公司面试的一道题目，当时没有在规定的时间内完成。要求：在`canvas`画布上，随机生成固定大小的点，随机位置，随机蠕动，随机颜色。
 <!--more-->
+个人认为这道题目应该还算是比较简单的题目，下面给出实现过程。
 
 > 实现过程
 
@@ -90,7 +91,7 @@ tags: html5 canvas random color
 
     global.setInterval(function(){
         for(var i = 0; i < walkers.length; i++) {
-            walkers[i].update(); //
+            walkers[i].update();
         }
     }, 1000/60);
 
