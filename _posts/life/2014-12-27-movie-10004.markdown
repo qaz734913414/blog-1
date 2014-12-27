@@ -1,0 +1,16 @@
+---
+layout: column_1_2
+title:  "观后感.电影《智取威虎山》"
+description: "观后感.电影《智取威虎山》"
+keywords: 观后感,电影,智取威虎山
+origin: 张嘉杰.原创
+date:   2014-12-27
+category: life
+tags: 电影 观后感
+---
+好久没有和朋友们一起看电影去了，小聚之后，一起去看了`《智取威虎山》`，今天`天赐`小朋友居然没有哭闹的看完了整部片子，上学了果然懂事了不少。 
+<!--more-->
+
+![智取威虎山0]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.jpg)
+
+---------------------------------------
