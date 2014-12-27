@@ -12,8 +12,10 @@ tags: 电影 观后感
 <!--more-->
 首先恭喜我们公司`永乐影业`观影团活动在各地亦星光璀璨。
 
+> 203剿匪小队
 ![智取威虎山0]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)
 
+> 匪徒八大金刚
 ![智取威虎山1]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.png)
 
 看到`智取威虎山`这几个字，让我想起几部电影的名字`致203分队永不逝去青春`，`剿匪合伙人`，`那些年，我们一起剿过的匪徒`。（ps：如有雷同，没有巧合。）
