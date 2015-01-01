@@ -3,5 +3,5 @@ div.phone{
     height: 320px;
     position: absolute;
     overflow: hidden;
-    background: url(images/bg.png) no-repeat;
+    background: url(../images/bg.png) no-repeat;
 }
