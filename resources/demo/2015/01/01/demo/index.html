@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/index.css" type="text/css" />
+    <script type="text/javascript" src="js/mazelock.js"></script>
+</head>
+<body>
+
+<div class="phone"></div>
+
+<div id="wrap" ></div>
+<div id="msg"></div>
+</body>
+
+<script type="text/javascript">
+
+    var count = 0,
+        mazeLock = new MazeLock({
+            wrap : document.querySelector("#wrap"),
+            radius  : 30,
+            gap     : 24,
+            size    : 3,
+            callback : function(selected){
+                var msg = document.querySelector("#msg");
+                if(selected.join(",")=="0,4,8,7,6"){
+                    mazeLock.clearCanvas();
+                    msg.innerHTML = "成功";
+                    setTimeout(function(){
+                        window.location.href = "http://www.jcore.cn/"
+                    },1000);
+                }else{
+                    //mazeLock.drawClearPanel();
+                    mazeLock.drawErrorPanel();
+                    msg.innerHTML = "错误 " +(++count)+ " 次数";
+                }
+            }
+        });
+    mazeLock.init();
+    console.log(mazeLock);
+</script>
+</html>

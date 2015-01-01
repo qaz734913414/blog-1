@@ -1,0 +1,7 @@
+div.phone{
+    width: 320px;
+    height: 320px;
+    position: absolute;
+    overflow: hidden;
+    background: url(images/bg.png) no-repeat;
+}
