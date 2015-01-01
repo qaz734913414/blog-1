@@ -418,7 +418,7 @@ var MazeLock = (function(global, doc){
                 _circles.DrawErrorCircle();
                 setTimeout(function(){
                     _circles.DrawClearCircle();
-                },200);
+                },500);
             },
             clearCanvas : function(){
                 clearCanvas();
