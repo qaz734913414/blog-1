@@ -199,7 +199,7 @@ var MazeLock = (function(global, doc){
                     ConnectCircle(this.selected[i], this.selected[i+1]);
                 }
             },
-            DrawErrorCircle : function(){
+            DrawErrorCircle : function(callback){
                 clearCanvas(); // 清空画布
                 for(var i = 0 ; i < _circles.length; i++){ // 画错误圆
                     DrawCircle(i, _circles[i].hasChoose ? { solid : true, c1: '#f7574b', c2: '#f8d0cd' } : null);
@@ -207,6 +207,7 @@ var MazeLock = (function(global, doc){
                 for(var i = 0 ; i < this.selected.length - 1; i++){ // 画错误圆循环连接线
                     ConnectCircle(this.selected[i], this.selected[i+1],'#f7574b');
                 }
+                if(callback) callback();
             }
         }
     }
@@ -415,10 +416,11 @@ var MazeLock = (function(global, doc){
                 _circles.DrawClearCircle();
             },
             drawErrorPanel : function(){
-                _circles.DrawErrorCircle();
-                setTimeout(function(){
-                    _circles.DrawClearCircle();
-                },500);
+                _circles.DrawErrorCircle(function(){
+                	setTimeout(function(){
+                        _circles.DrawClearCircle();
+                    },500);
+                });
             },
             clearCanvas : function(){
                 clearCanvas();
