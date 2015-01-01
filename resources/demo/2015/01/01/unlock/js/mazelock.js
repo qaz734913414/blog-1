@@ -362,19 +362,12 @@ var MazeLock = (function(global, doc){
             element.removeEventListener(_touchMove, MoveListener, false);
             element.removeEventListener(_touchEnd,  EndListener,  false);
         }
-        
-        function unListener(){
-        	// 移除移动和离开事件
-            element.removeEventListener(_touchMove, MoveListener, false);
-            element.removeEventListener(_touchEnd,  EndListener,  false);
-        }
 
         /* 返回监听函数 */
         return {
             StartListener : StartListener,
             MoveListener  : MoveListener,
-            EndListener   : EndListener,
-            UnListener	  : unListener
+            EndListener   : EndListener
         }
     }
 
@@ -423,7 +416,6 @@ var MazeLock = (function(global, doc){
                 _circles.DrawClearCircle();
             },
             drawErrorPanel : function(){
-            	_listeners.UnListener();
                 _circles.DrawErrorCircle(function(){
                 	setTimeout(function(){
                         _circles.DrawClearCircle();
