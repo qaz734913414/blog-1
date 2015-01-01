@@ -2,7 +2,7 @@
 	<h3 class="post-header">热门推荐</h3>
 	<div class="arts-cont cl">
 		<div class="pics-cont">
-			{% for post in site.categories.javascript limit:4 %}
+			{% for post in site.tags.game limit:4 %}
 				<dl>
 					<dt><a href="{{ site.url }}{{ post.url }}"><img src="{{ site:staticurl }}/resources/images{{ post.url }}.png" width="138" height="105" /></a></dt>
 					<dd><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></dd>
