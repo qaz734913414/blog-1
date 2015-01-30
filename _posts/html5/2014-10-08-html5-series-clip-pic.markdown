@@ -4,7 +4,7 @@ title:  "html5系列.画布进阶.刮刮乐"
 description: "html5系列.画布进阶.刮刮乐"
 keywords: html5,html5进阶,canvas,画布,游戏,刮刮乐
 origin: 张嘉杰.原创
-date:   2014-09-20
+date:   2014-10-08
 category: html5
 tags: html5 canvas
 ---
