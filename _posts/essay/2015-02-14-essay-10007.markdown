@@ -1,5 +1,5 @@
 ---
-layout: column_1_2
+layout: column_1_1_1_page
 title:  "浅谈我的技术人生"
 description: "技术人生 技术成长过程"
 keywords: 技术人生,技术成长过程
