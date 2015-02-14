@@ -48,7 +48,7 @@ tags: 美文随笔
 
 我本人的薪资也是从3000、3500、5000、6000、8000、10000、12000、15000、18000、22000这么慢慢一路慢慢涨过来的。
 
-个人比较喜欢的语言：`Java、C++、Python、shell、Go、javascript、html5、flex、php、Android、Object-c、swift`。（服务器方面，负载、并发、压力测试）
+个人比较喜欢的语言：`Java`、`C++`、`Python`、`shell`、`Go`、`javascript`、`html5`、`flex`、`php`、`Android`、`Object-c`、`swift`。（服务器方面，负载、并发、压力测试）
 
 个人业余时间安排：经常会自己或者和朋友一起接一些私活来做，一方面可以多学点东西，另外还可以赚点￥，何乐而不为呢。
 
