@@ -1,5 +1,5 @@
 ---
-layout: column_1_2
+layout: column_1_1_1_page
 title:  "世界如此复杂，你要内心强大"
 description: "世界如此复杂，你要内心强大"
 keywords: 心情,世界复杂,内心强大
