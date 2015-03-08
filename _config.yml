@@ -14,4 +14,4 @@ url:            "http://www.jcore.cn"
 paginate:       10
 paginate_path:  "page:num"
 
-markdown:       kramdown
+markdown:       kramdown 
