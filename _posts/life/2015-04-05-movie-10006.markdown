@@ -10,8 +10,8 @@ tags: 电影 观后感
 ---
 看到海报让我想起`《冲出亚马逊》`即视感。。。吐槽一下：为什么海报看着主角长的像田亮？还是我眼神出问题了。。。
 <!--more-->
-
-
-
+![战狼-1]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.jpg) 
+![战狼-2]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.jpg) 
+![战狼-3]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-2.jpg) 
 #### OK，今儿先到这儿了。：）
 ---------------------------------------
