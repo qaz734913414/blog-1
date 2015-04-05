@@ -1,0 +1,15 @@
+---
+layout: column_1_2
+title:  "话.Scrum敏捷开发"
+description: "Scrum,敏捷开发"
+keywords: Scrum,敏捷开发
+origin: 张嘉杰.原创
+date:   2015-03-16
+category: life
+tags: Scrum
+---
+公司近期空降了一个领导（据说是`CSDN`创始人之一，面试完推荐过来的），年前开始推行、实施`Scrum`敏捷开发（之前公司也是采用该模式），年后开始对各个平台业务进行统一规整。
+<!--more-->
+
+
+-----------------------
