@@ -41,7 +41,7 @@ tags: Scrum
 而构建一个稳定可靠的软件是在软件开发流程中其实一件很困难的工作，而仅仅吧软件质量的责任归咎于软件开发人员是很不公平的，
 软件开发流程是需要来自不同领域人或`Team`一起参与这个过程，而软件质量在这个整个开发流程也是息息相关的。
 
-50% percent of our decisions are wrong. Fail fast, learn fast. （我们作出的决定中， 50% 都是错误的。早早失败，早早学习。）
+50% percent of our decisions are wrong. Fail fast, learn fast. （我们作出的决定中， 50% 都是错误的。早早失败，早早学习。）  
 No matter what you want to do, choose what is good for your team.（无论你选择做什么，选择对你的团队有利的事）
 
 ### OK，今儿就先到这儿了 :)
