@@ -19,7 +19,7 @@ tags: java thread
 整个线程其实一直没有执行完成，所以，其状态也不会变成`TERMINATED`，就此实现了线程的重用。
 
 java.util.concurrent.ThreadPoolExecutor
-{% highlight html %}
+{% highlight java %}
 /**
  * Main run loop
  */
