@@ -4,7 +4,7 @@ title:  "话.线程池实现原理"
 description: "线程池实现原理"
 keywords: java,线程池,线程池实现原理
 origin: 张嘉杰.原创
-date:   2015-03-16
+date:   2015-04-09
 category: java
 tags: java thread
 ---
