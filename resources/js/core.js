@@ -1,3 +1,4 @@
+if(top.location!==self.location){top.location.href=self.location.href; }
 
 if (typeof String.prototype.format !== "function") {
     /* 字符串模板 */
