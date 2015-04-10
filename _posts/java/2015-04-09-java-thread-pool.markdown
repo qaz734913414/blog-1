@@ -10,7 +10,7 @@ tags: java thread
 ---
 今儿同事问了一个关于多线程的问题。一般的线程，在调用其`start()`方法之后，会自动开始执行相应的逻辑，如果之后再次调用`start()`，会怎么样？是否可以？？？
 <!--more-->
-每个线程其实是有多个状态的，刚刚创建之后，其处于NEW状态，在执行完相应的`run()`逻辑之后，其处理TERMINATED状态。如果多次调用这个`start()`方法，是否可以让逻辑执行多次呢？
+每个线程其实是有多个状态的，刚刚创建之后，其处于`NEW`状态，在执行完相应的`run()`逻辑之后，其处理`TERMINATED`状态。如果多次调用这个`start()`方法，是否可以让逻辑执行多次呢？
 答案肯定是不行的（一个线程执行完自己的任务之后就被销毁了），所以多次执行`start()`必然不靠谱，应该会报错。同事又问到：那`jdk`线程池又是如何重用的呢？
 
 > `jdk`内部的`ThreadPoolExecutor`的实现
@@ -82,7 +82,7 @@ private void runTask(Runnable task) {
 }
 {% endhighlight %}
 
-注意`task.run()`这句，即我们总结的，调用`Runnable`的`run`方法。
+注意`task.run()`这句，即总结的，调用`Runnable`的`run`方法。
 
 用一个小例子来分析下整个线程池的执行任务的过程：
 {% highlight java %}
@@ -132,7 +132,7 @@ public void execute(Runnable command) {
 {% endhighlight %}
 
 看到这个`Runnable`什么时候执行，是新创建线程执行，还是复用之前的线程，甚至是否需要拒绝请求。
-我们当前的线程池`newFixedThreadPool(1)`是个固定大小的池，此时`poolSize == corePoolSize`，
+当前的线程池`newFixedThreadPool(1)`是个固定大小的池，此时`poolSize == corePoolSize`，
 所以此时的创建新线程的逻辑会返回`false`。
 {% highlight java %}
 /**
@@ -190,7 +190,7 @@ Runnable getTask() {
 }
 {% endhighlight %}
 
-此处是明显的生产者-消费者模式，其中生产者是我们`Client`，在外部不断的提交待执行的任务，消费者则是线程池内的线程，
+此处是明显的生产者-消费者模式，其中生产者是`Client`，在外部不断的提交待执行的任务，消费者则是线程池内的线程，
 这两者之间通过阻塞队列`workQueue`建立起了连接，一个生产，一个执行待执行的任务的`run`方法将其消费。
 这时，线程中的线程是连续执行任务，还是会结束，在新任务出现时创建新的`Worker`线程，是由所使用的线程池类型决定的，例如：
 {% highlight java %}
