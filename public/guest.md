@@ -8,7 +8,7 @@ permalink: /guest/
 
 <div class="contents">
 
-	<iframe id="mainFrame" src="http://www.duole.com/application" height="400" width="100%" frameborder="0" scrolling="no"></iframe>
+	<iframe id="mainFrame" src="http://kuang.xiami.com/kuang/play/" height="400" width="100%" frameborder="0" scrolling="no"></iframe>
 
 	<hr />
 
