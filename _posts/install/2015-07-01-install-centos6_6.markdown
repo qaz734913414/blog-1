@@ -57,6 +57,26 @@ SecureCRT的具体破解方法：License输出内容为注册必填内容。
 ![安装CentOS6.6-31]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-31.png)  
 ![安装CentOS6.6-32]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-32.png)  
 
+到这里`CentOS 6.6`就安装完毕了。`ping`一下`百度`发现如下错误：  
+![CentOS6.6 ping不通]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-33.png)  
+
+解决问题如下：
+{% highlight bash %}
+# 查看网卡
+$ vi /etc/sysconfig/network-scripts/ifcfg-eth0 
+{% endhighlight %}
+
+![CentOS6.6 ping不通]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-34.png)  
+
+{% highlight bash %}
+# 重启网卡
+$ /etc/inid.d/network restart 或者 service network restart
+{% endhighlight %}
+
+![CentOS6.6 ping不通]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-34.png)  
+
+OK，今儿先到这儿了。
+
 -----------------------
 
 [CentOS6.6下载]: <http://mirrors.aliyun.com/centos/6.6/isos/x86_64/CentOS-6.6-x86_64-bin-DVD1.iso>
