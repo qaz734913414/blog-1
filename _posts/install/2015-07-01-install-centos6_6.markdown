@@ -43,7 +43,19 @@ SecureCRT的具体破解方法：License输出内容为注册必填内容。
 ![安装CentOS6.6-17]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-17.png)  
 ![安装CentOS6.6-18]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-18.png)  
 ![安装CentOS6.6-19]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-19.png)  
-
+![安装CentOS6.6-20]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-20.png)  
+![安装CentOS6.6-21]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-21.png)  
+![安装CentOS6.6-22]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-22.png)  
+![安装CentOS6.6-23]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-23.png)  
+![安装CentOS6.6-24]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-24.png)  
+![安装CentOS6.6-25]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-25.png)  
+![安装CentOS6.6-26]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-26.png)  
+![安装CentOS6.6-27]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-27.png)  
+![安装CentOS6.6-28]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-28.png)  
+![安装CentOS6.6-29]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-29.png)  
+![安装CentOS6.6-30]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-30.png)  
+![安装CentOS6.6-31]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-31.png)  
+![安装CentOS6.6-32]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-32.png)  
 
 -----------------------
 
