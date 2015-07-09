@@ -71,14 +71,14 @@ SecureCRT的具体破解方法：License输出内容为注册必填内容。
 $ vi /etc/sysconfig/network-scripts/ifcfg-eth0 
 {% endhighlight %}
 
-![CentOS6.6 ping不通]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-34.png)  
+![CentOS6.6 ping不通 配置文件查看]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-34.png)  
 
 {% highlight bash %}
 # 重启网卡
 $ /etc/inid.d/network restart 或者 service network restart
 {% endhighlight %}
 
-![CentOS6.6 ping不通]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-34.png)  
+![CentOS6.6 ping不通 问题解决]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-35.png)  
 
 ###OK，今儿先到这儿了。
 
