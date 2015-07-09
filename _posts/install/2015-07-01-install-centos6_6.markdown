@@ -80,6 +80,13 @@ $ /etc/inid.d/network restart 或者 service network restart
 
 ![CentOS6.6 ping不通 问题解决]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-35.png)  
 
+> 使用SecureCRT，连接虚拟机
+
+![CentOS6.6 SecureCRT连接虚拟机1]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-36.png)  
+![CentOS6.6 SecureCRT连接虚拟机2]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-37.png)  
+![CentOS6.6 SecureCRT连接虚拟机3]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-38.png)  
+![CentOS6.6 SecureCRT连接虚拟机4]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-39.png)  
+
 ###OK，今儿先到这儿了。
 
 -----------------------
