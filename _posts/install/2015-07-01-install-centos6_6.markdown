@@ -14,11 +14,12 @@ tags: linux CentOS6.6
 > 环境、工具准备
 
 安装环境：Mac OS X 10.9.3  
-安装系统：CentOS 6.6（CentOS-6.6-x86_64-bin-DVD1.iso）[CentOS6.6下载]  
+安装系统：CentOS 6.6（CentOS-6.6-x86_64-bin-DVD1.iso）[[CentOS6.6下载]]  
 安装工具：WMware Fusion 7、SecureCRT 7.3.3 [链接: <http://pan.baidu.com/s/1o6OhxsI>  密码: kcji]
 
 SecureCRT的具体破解方法：
 ![破解SecureCRT]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)
+
 
 
 
