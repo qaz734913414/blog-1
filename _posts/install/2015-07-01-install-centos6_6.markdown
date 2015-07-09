@@ -57,6 +57,8 @@ SecureCRT的具体破解方法：License输出内容为注册必填内容。
 ![安装CentOS6.6-31]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-31.png)  
 ![安装CentOS6.6-32]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-32.png)  
 
+> 解决虚拟机访问外网问题
+
 到这里`CentOS 6.6`就安装完毕了。`ping`一下`百度`发现如下错误：  
 ![CentOS6.6 ping不通]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-33.png)  
 
