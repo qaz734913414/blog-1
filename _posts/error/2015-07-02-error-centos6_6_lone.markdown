@@ -11,7 +11,7 @@ tags: WMware CentOS6.6
 关于使用`WMware`克隆`CentOS6.6`模板机，无法`ping`通网络的问题，重启网卡出现错误。
 <!--more-->
 
-错误：Device eth0 does not seem to be present, delaying initialization
+错误：`Device eth0 does not seem to be present, delaying initialization`
 
 > 异常截图
 
