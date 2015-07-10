@@ -8,7 +8,7 @@ date:   2015-07-01
 category: linux
 tags: linux CentOS6.6
 ---
-截止目前CentOS 6.x最新版本为`CentOS 6.6`，下面主要介绍一下`CentOS 6.6`安装需要的工具和图形安装配置过程。  
+截止目前CentOS 6.x最高版本为`CentOS 6.6`，下面主要介绍一下`CentOS 6.6`安装需要的工具和图形安装配置过程。  
 <!--more-->
 
 > 环境、工具准备
