@@ -208,7 +208,8 @@ function getQueryString(name) {
 
         var _path = window.location.href;
         
-        var _coding = ['html5', 'javascript', 'shell'];
+        var _coding = ['html5', 'javascript'];
+        var _linux = ['linux', 'architect'];
 
         if(_path.indexOf("essay")!=-1){ // 美文随笔
             getDate(function (data){
@@ -235,6 +236,17 @@ function getQueryString(name) {
                 findDataPage(data);
             });
         }
+        if(_path.indexOf("architect")!=-1){ // 代码如诗
+            getDate(function (data){
+                var _expression = {'category.$in': _linux },
+                    data = filterData(data, _expression);
+                $(".main-m3-h1").html("架构之美");
+                findDataPage(data);
+            });
+        }
+        
+        
+        
 
         if(_path.indexOf("pages")!=-1) { // 全部分页
             getDate(function (data){
