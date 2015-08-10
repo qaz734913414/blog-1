@@ -1,9 +1,9 @@
 <div class="main-m3-hed">
-    <img src="{{ site:staticurl }}/resources/images{{ page.url }}.png" width="670" height="250" data-bd-imgshare-binded="1">
+	<img src="{{ site:staticurl }}/resources/images{{ page.url }}.png" width="670" height="250" data-bd-imgshare-binded="1">
 </div>
 <div class="main-m3-cont">
-    <h1 class="main-m3-h1">{{ page.title }}</h1>
-    <div class="mini-icon">
+	<h1 class="main-m3-h1">{{ page.title }}</h1>
+	<div class="mini-icon">
 		<span>
 			<i class="fa fa-user"></i>
 			{{ page.origin }}
@@ -20,49 +20,49 @@
 			<i class="fa fa-comments"></i>
 			<a href="#ds-reset"><span class="ds-thread-count" data-thread-key="{{ page.id }}" ></span></a>
 		</span>
-    </div>
-    <div class="contents">
-        {{ content }}
+	</div>
+	<div class="contents">
+		{{ content }}
 
-        <div class="detail-ud" >
-            {% if page.previous %}
-            <p>上一篇:<a href="{{ site.url }}{{ page.previous.url}}" ><b class="mobile-ignore">&nbsp;&nbsp;{{ page.previous.title }}</b></a></p>
-            {% endif %}
-            {% if page.next %}
-            <p>下一篇:<a href="{{ site.url }}{{ page.next.url }}" ><b class="mobile-ignore">&nbsp;&nbsp;{{ page.next.title }}</b></a></p>
-            {% endif %}
-        </div>
-    </div>
+		<div class="detail-ud" >
+			{% if page.previous %}
+			<p>上一篇:<a href="{{ site.url }}{{ page.previous.url}}" ><b class="mobile-ignore">&nbsp;&nbsp;{{ page.previous.title }}</b></a></p>
+			{% endif %}
+			{% if page.next %}
+			<p>下一篇:<a href="{{ site.url }}{{ page.next.url }}" ><b class="mobile-ignore">&nbsp;&nbsp;{{ page.next.title }}</b></a></p>
+			{% endif %}
+		</div>
+	</div>
 
-    <div class="more-article">
+	<div class="more-article">
 
-        {% if page.copy == nil %}
-        <div class="alert alert-success">
-            <p>版权属于：<a href="http://www.jcore.cn">jcore.cn</a></p>
-            <p>原文地址：<a href="{{ site.url }}{{ page.url}}">{{ site.url }}{{ page.url}}</a></p>
-            <p>除非注明，文章均为原创，转载时必须以链接形式注明原始出处。</p>
-        </div>
-        {% endif %}
-        <span class="fenx">分享文章到：</span>
-        <div class="bdsharebuttonbox fl bdshare-button-style0-32" data-bd-bind="1414306729753"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a><a href="#" class="bds_hi" data-cmd="hi" title="分享到百度空间"></a></div>
-        <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"32"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin","douban","hi"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban","hi"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-    </div>
-    <div class="more-article new-article">
-        <h3>热门推荐文章</h3>
-        <div class="pics-cont main-g-2-cont">
+		{% if page.copy == nil %}
+		<div class="alert alert-success">
+			<p>版权属于：<a href="http://www.jcore.cn">jcore.cn</a></p>
+			<p>原文地址：<a href="{{ site.url }}{{ page.url}}">{{ site.url }}{{ page.url}}</a></p>
+			<p>除非注明，文章均为原创，转载时必须以链接形式注明原始出处。</p>
+		</div>
+		{% endif %}
+		<span class="fenx">分享文章到：</span>
+		<div class="bdsharebuttonbox fl bdshare-button-style0-32" data-bd-bind="1414306729753"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a><a href="#" class="bds_hi" data-cmd="hi" title="分享到百度空间"></a></div>
+		<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"32"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin","douban","hi"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban","hi"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+	</div>
+	<div class="more-article new-article">
+		<h3>热门推荐文章</h3>
+		<div class="pics-cont main-g-2-cont">
 
-            {% for post in site.categories[page.category] limit:4 %}
-            <dl class="mr25">
-                <dt><a href="{{ site.url }}{{ post.url }}"><img src="{{ site:staticurl }}/resources/images{{ post.url }}.png" width="140" height="60" data-bd-imgshare-binded="1"></a></dt>
-                <dd><a href="{{ site.url }}{{ post.url }}">{{ post.title  }}</a></dd>
-            </dl>
-            {% endfor  %}
+			{% for post in site.categories[page.category] limit:4 %}
+			<dl class="mr25">
+				<dt><a href="{{ site.url }}{{ post.url }}"><img src="{{ site:staticurl }}/resources/images{{ post.url }}.png" width="140" height="60" data-bd-imgshare-binded="1"></a></dt>
+				<dd><a href="{{ site.url }}{{ post.url }}">{{ post.title  }}</a></dd>
+			</dl>
+			{% endfor  %}
 
-        </div>
-    </div>
-    <div class="more-article">
-        <div class="detail-xg p10">
-            <div class="ds-thread" data-thread-key="{{page.id}}" data-title="{{page.title}}" id="ds-thread"></div>
-        </div>
-    </div>
+		</div>
+	</div>
+	<div class="more-article">
+		<div class="detail-xg p10">
+			<div class="ds-thread" data-thread-key="{{page.id}}" data-title="{{page.title}}" id="ds-thread"></div>
+		</div>
+	</div>
 </div>
