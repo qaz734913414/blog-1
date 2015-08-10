@@ -5,7 +5,7 @@ description: "使用wget遍历下载整站"
 keywords: linux,shell,wget
 origin: 张嘉杰.原创
 date:   2014-09-12
-category: shell
+category: linux
 tags: linux shell wget
 ---
 最近同事的博客，域名快到期了，同事说用`wget`已经把网站静态化镜像了一份，但是文件头`mimetype`需要批量替换。在这里给朋友们分享一下如何使用`wget`遍历备份整站目录，并使用`sed`批量替换文件内容。

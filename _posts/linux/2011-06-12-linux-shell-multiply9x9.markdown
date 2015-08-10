@@ -5,7 +5,7 @@ description: "一行代码shell乘法口诀"
 keywords: linux,shell,shell乘法口诀
 origin: 张嘉杰.原创
 date:   2011-06-12
-category: shell
+category: linux
 tags: linux shell
 ---
 最近学习`shell`命令，先用shell实现一个乘法口诀表。脚踏实地，抱着平常心学习`shell`编程。学无止境，不能开启等死模式呐。:)
