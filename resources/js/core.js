@@ -236,7 +236,7 @@ function getQueryString(name) {
                 findDataPage(data);
             });
         }
-        if(_path.indexOf("architect")!=-1){ // 代码如诗
+        if(_path.indexOf("architect")!=-1){ // 架构之美
             getDate(function (data){
                 var _expression = {'category.$in': _linux },
                     data = filterData(data, _expression);
