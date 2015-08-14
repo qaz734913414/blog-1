@@ -45,7 +45,7 @@ rm -rf pssh-2.3.*
 
 {% endhighlight %}
 
-附加工具:
+> 附加工具:
 {% highlight html %}
 
 pscp 传输文件到多个hosts，类似 scp
@@ -55,7 +55,7 @@ prsync 使用rsync协议从本地计算机同步到远程主机
 
 {% endhighlight %}
 
-首先先设置多机ssh免登陆。
+> 设置多机ssh免登陆
 
 ![ssh免登陆]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}.png)  
 
@@ -78,7 +78,7 @@ EOF
 
 {% endhighlight %}
 
-验证pssh并发的特性，执行结果如下：  
+> 验证pssh并发的特性
 
 ![pssh延时3秒返回时间]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)  
 ![pssh时间]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.png)  
