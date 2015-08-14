@@ -1,7 +1,7 @@
 ---
 layout: column_1_2
-title:  "集群管理工具pssh"
-description: "集群管理工具pssh"
+title:  "集群管理工具.pssh"
+description: "集群管理工具.pssh"
 keywords: linux,shell,pssh
 origin: 张嘉杰.原创
 date:   2015-08-10
