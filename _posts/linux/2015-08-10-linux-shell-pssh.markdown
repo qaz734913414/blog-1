@@ -26,7 +26,7 @@ rm -rf pssh-2.3.*
 
 {% endhighlight %}
 
-参数解释:
+> 参数解释:
 {% highlight html %}
 
 -h 执行命令的远程主机列表,文件内容格式 [user@]host[:port] 如 root@127.0.0.1:22
