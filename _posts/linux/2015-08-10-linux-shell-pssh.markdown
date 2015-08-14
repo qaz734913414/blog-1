@@ -82,21 +82,17 @@ EOF
 
 {% highlight bash %}
 
-#验证是否无需密码执行shell命令
-pssh -i -h hosts.txt "uptime"
+#测试并发的特性
+time pssh -i -h hosts.txt "sleep 3;uptime"
 
 #多服务器建立目录，并返回建立目录列表
 pssh -i -h hosts.txt "mkdir -p /data/{app,tmp,log,bin,conf,data} && ls -lhi /data"
 
-#测试并发的特性
-time pssh -i -h hosts.txt "sleep 3;uptime"
-
 {% endhighlight %}
 
-执行结果如下：
+执行结果如下：  
 
-![pssh时间]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)  
-![pssh延时3秒返回时间]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-2.png)  
+![pssh延时3秒返回时间]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)  
 ![pssh时间]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.png)  
 
 ###到这里基本就完成了。还算是挺简单。:)
