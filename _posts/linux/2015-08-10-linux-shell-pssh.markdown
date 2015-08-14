@@ -80,10 +80,6 @@ EOF
 
 验证pssh并发的特性
 
-![pssh时间]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)  
-![pssh时间]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.png)  
-![pssh延时3秒返回时间]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-2.png)  
-
 {% highlight bash %}
 
 #验证是否无需密码执行shell命令
@@ -96,6 +92,11 @@ pssh -i -h hosts.txt "mkdir -p /data/{app,tmp,log,bin,conf,data} && ls -lhi /dat
 time pssh -i -h hosts.txt "sleep 3;uptime"
 
 {% endhighlight %}
+
+执行结果如下：
+![pssh时间]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)  
+![pssh时间]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.png)  
+![pssh延时3秒返回时间]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-2.png)  
 
 ###到这里基本就完成了。还算是挺简单。:)
 
