@@ -95,8 +95,8 @@ time pssh -i -h hosts.txt "sleep 3;uptime"
 
 执行结果如下：
 ![pssh时间]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)  
-![pssh时间]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.png)  
 ![pssh延时3秒返回时间]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-2.png)  
+![pssh时间]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.png)  
 
 ###到这里基本就完成了。还算是挺简单。:)
 
