@@ -88,4 +88,6 @@ ifconfig eth0|awk -F '[ :]+' 'NR==2{print $4}'
 
 {% endhighlight %}
 
+![快速取出本机IP]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)  
+
 -----------------------
