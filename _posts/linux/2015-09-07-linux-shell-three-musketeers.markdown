@@ -121,6 +121,6 @@ awk '{sub(/Apr/,"04");split($0,array,"[/: ]") ;printf("%s-%s-%s %s:%s:%s%s\n",ar
 
 {% endhighlight %}
 
-![原始数据格式替换成新数据格式]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.png)  
+![原始数据格式替换成新数据格式]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-2.png)  
 
 -----------------------
