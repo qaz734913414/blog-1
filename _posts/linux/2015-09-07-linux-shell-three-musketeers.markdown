@@ -75,4 +75,17 @@ rand()		#产生一个大于等于0而小于1的随机数
 
 {% endhighlight %}
 
+> 案例使用（有很多种方法，今天我们这里只说三剑客的使用方法）
+
+1.快速取出本机IP？
+{% highlight bash %}
+# grep
+ifconfig eth0|grep -Po '(?<=dr:)\S+'
+# sed 
+ifconfig eth0|sed -rn 's#.*r:(.*)  B.*#\1#gp'
+# awk 
+ifconfig eth0|awk -F '[ :]+' 'NR==2{print $4}'
+
+{% endhighlight %}
+
 -----------------------
