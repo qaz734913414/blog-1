@@ -69,7 +69,7 @@ toupper #可用于字符串大小间的转换，该功能只在gawk中有效
 tolower	#可用于字符串大小间的转换，该功能只在gawk中有效
 
 # awk 常用函数
-srand(x)#x是rand()函数的种子
+srand(x) #x是rand()函数的种子
 int(x)	#取整
 rand()	#产生一个大于等于0而小于1的随机数
 
