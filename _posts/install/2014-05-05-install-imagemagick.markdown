@@ -5,7 +5,7 @@ description: "linux安装,mac安装,安装imagemagick"
 keywords: imagemagick,jmagick,linux,mac
 origin: 张嘉杰.原创
 date:   2014-05-05
-category: install
+category: linux
 tags: imagemagick jmagick linux mac
 ---
 公司商品页图片儿用java程序压缩以后，展示出来不是很清楚，图片的质量被领导质疑，和技术总监商量测试完以后决定使用`imagemagick`来压缩图片。

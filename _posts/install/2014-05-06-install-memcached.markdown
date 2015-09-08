@@ -5,7 +5,7 @@ description: "linux安装,安装Memcache"
 keywords: Memcache,linux
 origin: 张嘉杰.原创
 date:   2014-05-06
-category: install
+category: linux
 tags: memcache linux
 ---
 `Memcache`是一个高性能的分布式的内存对象缓存系统，通过在内存里维护一个统一的巨大的`hash`表，它能够用来存储各种格式的数据，包括图像、视频、文件以及数据库检索的结果等。
