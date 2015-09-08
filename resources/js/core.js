@@ -208,7 +208,7 @@ function getQueryString(name) {
 
         var _path = window.location.href;
         
-        var _coding = ['html5', 'javascript'];
+        var _coding = ['html5', 'javascript', 'shell'];
         var _linux = ['linux', 'architect'];
 
         if(_path.indexOf("essay")!=-1){ // 美文随笔
