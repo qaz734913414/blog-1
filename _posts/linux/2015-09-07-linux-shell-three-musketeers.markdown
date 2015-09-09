@@ -114,7 +114,7 @@ ifconfig eth0|awk -F '[ :]+' 'NR==2{print $4}'
 {% highlight bash %}
 # sed 
 sed -rn 's#Apr#04#g;s#^(.*)/(.*)/(....):(.*) (.*)#\3-\2-\1 \4\5#p;' test.log
-sed -rn 's#^(..)/(...)/(....):(........) (.....)#\3-04-\1 \4\5#p;' test.log
+sed -rn 's#^(.{2})/(.{3})/(.{4}):(.{8}) (.{4})#\3-04-\1 \4\5#p;' test.log
 # awk 
 awk -F '[/: ]+' '{sub(/Apr/,"04");printf("%s-%s-%s %s:%s:%s%s\n",$3,$2,$1,$4,$5,$6,$7)}' test.log
 awk '{sub(/Apr/,"04");split($0,array,"[/: ]") ;printf("%s-%s-%s %s:%s:%s%s\n",array[3],array[2],array[1],array[4],array[5],array[6],array[7])}' test.log
