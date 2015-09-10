@@ -27,10 +27,12 @@ CentOS6.6 x86_64|NHS客户端（NFS-CLIENT2）|192.168.24.9
 >  服务器版本
 
 {% highlight bash %}
+
 [root@nfs-server ~]$ cat /etc/redhat-release
 CentOS release 6.6 (Final)
 [root@nfs-server ~]$ uname -r
 2.6.32-504.el6.x86_64
+
 {% endhighlight %}
 
 >  NFS软件列表
