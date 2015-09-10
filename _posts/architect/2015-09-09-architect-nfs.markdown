@@ -18,11 +18,11 @@ tags: linux nfs
 
 > NFS服务端部署环境准备
 
-服务器系统|角色|IP
-----|----|----
-CentOS6.6 x86_64|NFS服务端（NFS-SERVER）|192.168.24.7
-CentOS6.6 x86_64|NFS客户端（NFS-CLIENT1）|192.168.24.8
-CentOS6.6 x86_64|NHS客户端（NFS-CLIENT2）|192.168.24.9
+服务器系统|角色|IP|内网IP
+----|----|----|----
+CentOS6.6 x86_64|NFS服务端（NFS-SERVER）|192.168.24.7|10.128.10.7
+CentOS6.6 x86_64|NFS客户端（NFS-CLIENT1）|192.168.24.8|10.128.10.8
+CentOS6.6 x86_64|NHS客户端（NFS-CLIENT2）|192.168.24.9|10.128.10.9
 
 >  服务器版本
 
