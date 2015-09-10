@@ -384,6 +384,8 @@ iptables -A INPUT -i eth1 -p udp -s 10.128.10.0/24 --dport 2049 -j ACCEPT
 iptables -A INPUT -i eth1 -p udp -s 10.128.10.0/24 -j ACCEPT
 {% endhighlight %}
 
+###OK，今天先到这儿了 :) 
+
 -----------------------
 
 相关参考文章地址：
