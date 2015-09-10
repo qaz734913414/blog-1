@@ -85,26 +85,25 @@ CentOS release 6.6 (Final)
 	/var/lib/nfs/etab|记录NFS分享出来的目录的完整权限设定值
 	/var/lib/nfs/xtab|记录曾经登录过的客户端信息
 
-* `NFS`配置文件权限参数说明
-	+ `NFS`服务端的权限设置，`/etc/exports`文件配置格式中小括号中的参数
+* `NFS`服务端的权限设置，`/etc/exports`文件配置格式中小括号中的参数
 
-		参数名称(*为重要参数)|参数用途
-		----|----
-		rw*|Read-write，表示可读写权限
-		ro|Read-only，表示只读权限
-		sync*|请求或写入数据时，数据同步写入到NF SServer中，（优点：数据安全不会丢，缺点：系能较差）
-		async*|请求或写入数据时，先返回请求，再将数据写入到NFSServer中，异步写入数据
-		no_root_squash|访问NFS Server共享目录的用户如果是root的话，它对共享目录具有root权限
-		not_squash|访问NFS Server共享目录的用户如果是root的话，则它的权限，将被压缩成匿名用户
-		all_squash*|不管访问NFS Server共享目录的身份如何，它的权限都被压缩成一个匿名用户，同事它的UID、GID都会变成nfsnobody账号身份
-		anonuid*|匿名用户ID
-		anongid*|匿名组ID
-		insecure|允许客户端从大于1024的TCP/IP端口连NFS服务器
-		secure|限制客户端只能从小于1024的TCP/IP端口连接NFS服务器(默认设置)
-		wdelay|检查是否有相关的写操作，如果有则将这些写操作一起执行，这样可提高效率(默认设置)
-		no_wdelay|若有写操作则立即执行（应与sync配置）
-		subtree_check|若输出目录是一个子目录，则NFSW:务器将检查其父目录的权限(默认设置)
-		no_subtree_check|即使输出目录是一个子目录，NFS服务器也不检查其父目录的权限，这样做可提高效率
+	参数名称(*为重要参数)|参数用途
+	----|----
+	rw*|Read-write，表示可读写权限
+	ro|Read-only，表示只读权限
+	sync*|请求或写入数据时，数据同步写入到NF SServer中，（优点：数据安全不会丢，缺点：系能较差）
+	async*|请求或写入数据时，先返回请求，再将数据写入到NFSServer中，异步写入数据
+	no_root_squash|访问NFS Server共享目录的用户如果是root的话，它对共享目录具有root权限
+	not_squash|访问NFS Server共享目录的用户如果是root的话，则它的权限，将被压缩成匿名用户
+	all_squash*|不管访问NFS Server共享目录的身份如何，它的权限都被压缩成一个匿名用户，同事它的UID、GID都会变成nfsnobody账号身份
+	anonuid*|匿名用户ID
+	anongid*|匿名组ID
+	insecure|允许客户端从大于1024的TCP/IP端口连NFS服务器
+	secure|限制客户端只能从小于1024的TCP/IP端口连接NFS服务器(默认设置)
+	wdelay|检查是否有相关的写操作，如果有则将这些写操作一起执行，这样可提高效率(默认设置)
+	no_wdelay|若有写操作则立即执行（应与sync配置）
+	subtree_check|若输出目录是一个子目录，则NFSW:务器将检查其父目录的权限(默认设置)
+	no_subtree_check|即使输出目录是一个子目录，NFS服务器也不检查其父目录的权限，这样做可提高效率
 
 > 启动NFS服务端
 
@@ -321,7 +320,7 @@ EOF
 
 # 修改一下文件时间（应该是权限问题）
 [root@lamp01 mnt]# touch test.txt 
-touch: cannot touch `test.txt': Permission denied
+touch: cannot touch 'test.txt': Permission denied
 
 # 查看NFS服务器参数配置
 [root@nfs-server /]# cat /etc/exports 
