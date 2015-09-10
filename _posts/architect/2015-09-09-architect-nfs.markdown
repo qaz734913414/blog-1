@@ -8,9 +8,9 @@ date:   2015-09-09
 category: architect
 tags: linux nfs
 ---
-NFS（Network File System）即网络文件系统，是FreeBSD支持的文件系统中的一种，它允许网络中的计算机之间通过TCP/IP网络共享资源。  
+`NFS（Network File System）`即网络文件系统，是`FreeBSD`支持的文件系统中的一种，它允许网络中的计算机之间通过`TCP/IP`网络共享资源。  
 <!--more-->
-在NFS的应用中，本地NFS的客户端应用可以透明地读写位于远端NFS服务器上的文件，就像访问本地文件一样。
+在`NFS`的应用中，本地`NFS`的客户端应用可以透明地读写位于远端`NFS`服务器上的文件，就像访问本地文件一样。
 
 # NFS搭建
 
@@ -419,3 +419,6 @@ iptables -A INPUT -i eth1 -p udp -s 10.128.10.0/24 -j ACCEPT
 
 相关参考文章地址：
 
+nfs-howto - <http://nfs.sourceforge.net/nfs-howto/>  
+whatis_nfs- <http://nfs.sourceforge.net/nfs-howto/ar01s02.html#whatis_nfs>  
+Network_File_System - <https://en.wikipedia.org/wiki/Network_File_System>
