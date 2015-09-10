@@ -39,7 +39,7 @@ CentOS release 6.6 (Final)
 
 `NFS`可以被视为一个`RPC`程序，在启动任何一个`RPC`程序之前，需要做好端口的对应映射作用，这个映射工作就是由`rpcbind`服务来完成的,因此在提供`NFS`之前必须先启动`rpcbind`服务
 
-{% highlight bash %}
+{% highlight html %}
 
 首先准备以下软件包
 * nfs-utils（NFS服务主程序，包括rpc.nfsd、rpc.mountd两个deamons和相关文档说明及执行命令文件等）
