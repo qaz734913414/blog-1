@@ -39,7 +39,7 @@ CentOS release 6.6 (Final)
 
 `NFS`可以被视为一个`RPC`程序，在启动任何一个`RPC`程序之前，需要做好端口的对应映射作用，这个映射工作就是由`rpcbind`服务来完成的,因此在提供`NFS`之前必须先启动`rpcbind`服务
 
-{% highlight html %}
+{% highlight bash %}
 
 首先准备以下软件包
 * nfs-utils（NFS服务主程序，包括rpc.nfsd、rpc.mountd两个deamons和相关文档说明及执行命令文件等）
@@ -218,7 +218,7 @@ nfs             0:off   1:off   2:on    3:on    4:on    5:on    6:off
 
 题外话：一般生产环境中不使用`chkconfig`对服务做管理，而是直接添加在`/etc/rc.local`集中添加、管理服务（`yum`中没有相应的软件，使用编译安装，需要写启动脚本文件，等等情况）
 
-{% highlight html %}
+{% highlight bash %}
 
 # 启动文件中添加NFS启动服务
 cat >>/etc/rc.local<< EOF
@@ -245,7 +245,7 @@ EOF
 `NFS`共享的目录 `NFS`客户端地址（参1，参2...）  
 `NFS`共享的目录 `NFS`客户端地址1（参1，参2...） 客户端地址2（参1，参2...）  
 
-{% highlight html %}
+{% highlight bash %}
 
 # 创建共享目录
 mkdir /data
