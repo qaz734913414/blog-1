@@ -22,7 +22,7 @@ tags: linux nfs
 ----|----|----|----
 CentOS6.6 x86_64|NFS服务端（NFS-SERVER）|192.168.24.7|10.128.10.7
 CentOS6.6 x86_64|NFS客户端（NFS-CLIENT1）|192.168.24.8|10.128.10.8
-CentOS6.6 x86_64|NHS客户端（NFS-CLIENT2）|192.168.24.9|10.128.10.9
+CentOS6.6 x86_64|NHS客户端（NFS-CLIENT2）|192.168.24.9|10.128.10.9  
 
 >  服务器版本
 
@@ -83,7 +83,7 @@ CentOS release 6.6 (Final)
 	/usr/sbin/exportfs|NFS服务的管理命令
 	/usr/sbin/showmount|客户端的查看命令
 	/var/lib/nfs/etab|记录NFS分享出来的目录的完整权限设定值
-	/var/lib/nfs/xtab|记录曾经登录过的客户端信息
+	/var/lib/nfs/xtab|记录曾经登录过的客户端信息  
 
 * `NFS`服务端的权限设置，`/etc/exports`文件配置格式中小括号中的参数
 
@@ -103,7 +103,7 @@ CentOS release 6.6 (Final)
 	wdelay|检查是否有相关的写操作，如果有则将这些写操作一起执行，这样可提高效率(默认设置)
 	no_wdelay|若有写操作则立即执行（应与sync配置）
 	subtree_check|若输出目录是一个子目录，则NFSW:务器将检查其父目录的权限(默认设置)
-	no_subtree_check|即使输出目录是一个子目录，NFS服务器也不检查其父目录的权限，这样做可提高效率
+	no_subtree_check|即使输出目录是一个子目录，NFS服务器也不检查其父目录的权限，这样做可提高效率  
 
 > 启动NFS服务端
 
@@ -387,7 +387,7 @@ nfs内核参数优化文件路径|nfs内核参数优化文件说明
 /proc/sys/net/core/wmem_default|指定该文件发送套接字缓冲区大小的省缺值
 /proc/sys/net/core/wmem_max|指定该文件发送套接字缓冲区大小的最大值
 
-{% highlight bash %}
+{% highlight bash %}  
 
 cat >>/etc/sysctl.conf<<EOF
 # tune nfs kernel parametres
