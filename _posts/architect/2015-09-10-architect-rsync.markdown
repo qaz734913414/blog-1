@@ -176,7 +176,7 @@ drwxr-xr-x 2 rsync rsync 4096 9月   9 07:17 /backup/
 -rw------- 1 root root 20 9月   9 07:22 /etc/rsync.password
 
 # lamp01客户端推送目录文件至备份服务器（::backup对应/etc/rsyncd.conf配置文件中的[backup]）
-[root@lamp01 tmp]# rsync -avz /tmp/ rsync_backup@192.168.24.10::backup --password-file=/etc/rsync.password
+[root@lamp01 ~]# rsync -avz /tmp/ rsync_backup@192.168.24.10::backup --password-file=/etc/rsync.password
 
 # lnmp02客户端从备份服务器拉取目录文件至/tmp/目录
 [root@lnmp02 ~]# rsync -avz rsync_backup@192.168.24.10::backup /tmp/ --password-file=/etc/rsync.password
