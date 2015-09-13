@@ -108,8 +108,8 @@ comment = www by zhangjie 2015-09-10
 path = /backup
 EOF
 
-# 启动rsync服务（rsync --deamon --address=192.168.24.10，address限定只有访问此ip才能同步）
-[root@backup ~]# rsync --deamon
+# 启动rsync服务（rsync --daemon --address=192.168.24.10，address限定只有访问此ip才能同步）
+[root@backup ~]# rsync --daemon
 # 查看rsync服务进程
 [root@backup ~]# ps -ef|grep rsync
 root       1546      1  0 07:03 ?        00:00:00 rsync --daemon
