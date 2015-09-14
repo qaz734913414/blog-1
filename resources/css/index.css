@@ -56,6 +56,10 @@ body {
     -moz-border-radius: 8px;
     border-radius: 8px;}
 
+@font-face{font-family:'CJS';src: url('http://www.jcore.cn/resources/fonts/A_Font_with_Serifs.ttf'); font-weight: normal;font-style: normal;}
+@font-face{font-family:'标题';src: url('http://www.jcore.cn/resources/fonts/SentyMarukoElementary.ttf'); font-weight: normal;font-style: normal;}
+@font-face{font-family:'张嘉杰';src: url('http://www.jcore.cn/resources/fonts/SentyMarukoElementary.ttf'); font-weight: normal;font-style: normal;}
+
 /* 主体样式  */
 .main{width:1200px;margin:30px auto 0 auto;}
 .main-l{float:left;width:245px;margin-right:20px;}
