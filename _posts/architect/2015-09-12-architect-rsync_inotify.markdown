@@ -11,18 +11,22 @@ tags: linux rsync inotify
 `Inotify`是一种强大的、细颗粒的、异步的文件系统监控机制，`linux`内核从`2.6.13`起，加入`Inotify`可以监控文件系统中添加、删除、修改移动等各种事件，利用这个内核接口，就可以监控文件系统下文件的各种变化情况。
 <!--more-->
 
+![inotify+rsync]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}.png)
+
 # Inotify 数据实时同步工具
 
 > 背景，需求
 
 在日常工作中，往往需要知道在某些文件（夹）上都有那些变化
 
+{% highlight html %}
 * 通知配置文件的改变
 * 跟踪某些关键的系统文件的变化
 * 监控某个分区磁盘的整体使用情况
 * 系统崩溃时进行自动清理
 * 自动触发备份进程
 * 向服务器上传文件结束时发出通知
+{% endhighlight %}
 
 > Inotify+Rsync实时备份
 
@@ -181,11 +185,13 @@ max_queued_events：设置inotify实例事件(event)队列可容纳的事件数�
 
 `Rsync`和`Inotify`配合来实现实时同步，但是高并发的情况下会有延迟！一般10-300k的小文件，经过测试，每秒200个文件并发，数据同步几乎无延迟（小于1秒），如果高于200-300的并发，就可以会有延迟的情况。如果公司业务量比较大，就需要考虑其它方案：
 
+{% highlight html %}
 * Inotify（sersync）+Rsync文件级别
 * drdb文件系统级别
 * 第三方软件的同步功能：mysql同步，orange，mongodb
 * 业务上，程序实现双写
 * 业务逻辑解决
+{% endhighlight %}
 
 ###OK，今天先到这儿了 :) 
 
