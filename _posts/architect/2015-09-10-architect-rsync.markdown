@@ -1,7 +1,7 @@
 ---
 layout: column_1_2
-title:  "架构实践.数据同步备份服务器"
-description: "架构实践.数据同步备份服务器"
+title:  "架构实践.数据同步备份之rsync"
+description: "架构实践.数据同步备份之rsync"
 keywords: 架构实践,数据同步备份服务器,rsync
 origin: 张嘉杰.原创
 date:   2015-09-10
