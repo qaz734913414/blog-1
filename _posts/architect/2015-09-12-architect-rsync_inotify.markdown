@@ -102,9 +102,9 @@ inotify-tools-3.14-1.el6.x86_64
 -q,–quiet|只打印监控事件的信息
 –excludei|排除文件或目录时，不区分大小写
 -t,–timeout|超时时间
-–timefmt<fmt>|指定时间输出格式
-–format<fmt>|指定时间输出格式
--e,–event<event>|后面指定删、增、改等事件
+–timefmt|指定时间输出格式
+–format|指定时间输出格式
+-e,–event|后面指定删、增、改等事件
 
 > inotifywait events事件说明
 
@@ -172,9 +172,9 @@ EOF
 -rw-r--r-- 1 root root 0 9月   9 23:36 max_user_instances
 -rw-r--r-- 1 root root 0 9月   9 23:36 max_user_watches
 -----------------------------
-max_user_watches：设置inotifywait或inotifywatch命令可以监视的文件数量(单进程)
-max_user_instances：设置每个用户可以运行的inotifywait或inotifywatch命令的进程数
-max_queued_events：设置inotify实例事件(event)队列可容纳的事件数量
+max_user_watches	#设置inotifywait或inotifywatch命令可以监视的文件数量(单进程)
+max_user_instances	#设置每个用户可以运行的inotifywait或inotifywatch命令的进程数
+max_queued_events	#设置inotify实例事件(event)队列可容纳的事件数量
 -----------------------------
 [root@web ~]# echo 50000000 >/proc/sys/fs/inotify/max_user_watches 
 [root@web ~]# echo 50000000 >/proc/sys/fs/inotify/max_queued_events
