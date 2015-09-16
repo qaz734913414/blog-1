@@ -31,7 +31,162 @@ CentOS6.6 x86_64|备份服务端（BACKUP）|192.168.24.101
 
 > 服务器、软件版本
 
+{% highlight shell %}
 
+-------backup备份服务器-------
+[root@backup ~] cat /etc/redhat-release
+CentOS release 6.6 (Final)
+[root@backup ~] uname -r
+2.6.32-504.el6.x86_64
+[root@backup ~]# rpm -qa rsync
+rsync-3.0.6-12.el6.x86_64
+
+-------web应用服务器-------
+[root@backup ~] cat /etc/redhat-release
+CentOS release 6.6 (Final)
+[root@backup ~] uname -r
+2.6.32-504.el6.x86_64
+
+{% endhighlight %}
+
+> Sersync客户端安装（web服务器）
+
+{% highlight shell %}
+# 创建并进入目录
+[root@web ~]# mkdir -p /server/app && cd /server/app/
+
+# 下载Sersync安装包
+[root@web app]# wget http://7q5apr.com1.z0.glb.clouddn.com/resources/repos/backup/sersync2.5.4_64bit_binary_stable_final.tar.gz
+--2015-09-10 23:41:42--  http://7q5apr.com1.z0.glb.clouddn.com/resources/repos/backup/sersync2.5.4_64bit_binary_stable_final.tar.gz
+正在解析主机 7q5apr.com1.z0.glb.clouddn.com... 118.212.135.173, 218.58.222.99
+正在连接 7q5apr.com1.z0.glb.clouddn.com|118.212.135.173|:80... 已连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度：727290 (710K) [application/x-compressed]
+正在保存至: “sersync2.5.4_64bit_binary_stable_final.tar.gz”
+100%[======================================================================================================================================>] 727,290      474K/s   in 1.5s    
+2015-09-10 23:41:44 (474 KB/s) - 已保存 “sersync2.5.4_64bit_binary_stable_final.tar.gz” [727290/727290])
+
+# 解压并修改目录名称和目录结构
+[root@web app]# tar zxf sersync2.5.4_64bit_binary_stable_final.tar.gz && \
+mv GNU-Linux-x86/ sersync/ && \
+cd sersync/ && \
+mkdir {bin,conf,log} && \
+mv confxml.xml conf && \
+mv sersync2 bin/sersync
+
+# 查看目录结构
+[root@web sersync]# tree
+.
+├── bin
+│   └── sersync
+├── conf
+│   └── confxml.xml
+└── log
+
+{% endhighlight %}
+
+{% highlight html %}
+# 更新sersync配置文件confxml.xml
+[root@web sersync]# cp conf/confxml.xml conf/confxml.xml.bak && \
+cat >>conf/confxml.xml<<EOF
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<head version="2.5">
+    <host hostip="localhost" port="8008"></host>
+    <debug start="false"/>
+    <fileSystem xfs="false"/>
+    <filter start="false">
+        <exclude expression="(.*)\.svn"></exclude>
+        <exclude expression="(.*)\.gz"></exclude>
+        <exclude expression="^info/*"></exclude>
+        <exclude expression="^static/*"></exclude>
+    </filter>
+    <inotify>
+        <delete start="true"/>
+        <createFolder start="true"/>
+        <createFile start="false"/>
+        <closeWrite start="true"/>
+        <moveFrom start="true"/>
+        <moveTo start="true"/>
+        <attrib start="false"/>
+        <modify start="false"/>
+    </inotify>
+
+    <sersync>
+        <localpath watch="/backup">
+            <remote ip="192.168.24.101" name="backup"/>
+        </localpath>
+        <rsync>
+            <commonParams params="-artuz"/>
+            <auth start="true" users="rsync_backup" passwordfile="/etc/rsync.password"/>
+            <userDefinedPort start="false" port="874"/><!-- port=874 -->
+            <timeout start="false" time="100"/><!-- timeout=100 -->
+            <ssh start="false"/>
+        </rsync>
+        <crontab start="false" schedule="600"><!--600mins-->
+            <crontabfilter start="false">
+                <exclude expression="*.php"></exclude>
+                <exclude expression="info/*"></exclude>
+            </crontabfilter>
+        </crontab>
+        <plugin start="false" name="command"/>
+    </sersync>
+</head>
+EOF
+{% endhighlight %}
+
+> 启动sersync服务
+
+参数名称|参数说明
+----|----
+-d|启用守护进程模式
+-r|在监控前，将监控目录与远程主机用rsync命令推送一遍
+-n|指定开启守护线程的数量，默认为10个
+–o|指定配置文件，默认使用confxml.xml文件
+
+{% highlight shell %}
+# 运行sersync服务
+[root@web sersync]# /server/app/sersync/bin/sersync -r -d -o /server/app/sersync/conf/confxml.xml >/server/app/sersync/log/rsync.log 2>&1 &
+
+set the system param
+execute：echo 50000000 > /proc/sys/fs/inotify/max_user_watches
+execute：echo 327679 > /proc/sys/fs/inotify/max_queued_events
+parse the command param
+option: -r      rsync all the local files to the remote servers before the sersync work
+option: -d      run as a daemon
+option: -o      config xml name：  /server/app/sersync/conf/confxml.xml
+daemon thread num: 10
+parse xml config file
+host ip : localhost     host port: 8008
+daemon start，sersync run behind the console 
+use rsync password-file :
+user is rsync_backup
+passwordfile is         /etc/rsync.password
+config xml parse success
+please set /etc/rsyncd.conf max connections=0 Manually
+sersync working thread 12  = 1(primary thread) + 1(fail retry thread) + 10(daemon sub threads) 
+Max threads numbers is: 22 = 12(Thread pool nums) + 10(Sub threads)
+please according your cpu ，use -n param to adjust the cpu rate
+------------------------------------------
+rsync the directory recursivly to the remote servers once
+working please wait...
+execute command: cd /backup && rsync -artuz -R --delete ./ rsync_backup@192.168.24.101::backup --password-file=/etc/rsync.password >/dev/null 2>&1 
+run the sersync: 
+watch path is: /backup
+
+# 添加测试文件
+[root@web sersync]# touch /backup/{a..z}.html
+
+# 验证同步完毕
+[root@backup ~]# ls /backup/
+a.html  c.html  e.html  g.html  i.html  k.html  m.html  o.html  q.html  s.html  u.html  w.html  y.html
+b.html  d.html  f.html  h.html  j.html  l.html  n.html  p.html  r.html  t.html  v.html  x.html  z.html
+
+# sersync实时备份服务加入开机启动
+cat >>/etc/rc.local<<EOF
+########start up sersync backup by zhangjie at 20150913########
+/server/app/sersync/bin/sersync -r -d -o /server/app/sersync/conf/confxml.xml >/server/app/sersync/log/rsync.log 2>&1 &
+EOF
+{% endhighlight %}
 
 ###OK，今天先到这儿了 :) 
 
