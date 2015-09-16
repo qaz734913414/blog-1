@@ -182,7 +182,7 @@ a.html  c.html  e.html  g.html  i.html  k.html  m.html  o.html  q.html  s.html  
 b.html  d.html  f.html  h.html  j.html  l.html  n.html  p.html  r.html  t.html  v.html  x.html  z.html
 
 # sersync实时备份服务加入开机启动
-cat >>/etc/rc.local<<EOF
+[root@web sersync]# cat >>/etc/rc.local<<EOF
 ########start up sersync backup by zhangjie at 20150913########
 /server/app/sersync/bin/sersync -r -d -o /server/app/sersync/conf/confxml.xml >/server/app/sersync/log/rsync.log 2>&1 &
 EOF
