@@ -83,7 +83,7 @@ mv sersync2 bin/sersync
 
 {% endhighlight %}
 
-{% highlight xml %}
+{% highlight html %}
 # 更新sersync配置文件confxml.xml
 [root@web sersync]# cp conf/confxml.xml conf/confxml.xml.bak && \
 cat >>conf/confxml.xml<<EOF
