@@ -31,7 +31,7 @@ CentOS6.6 x86_64|备份服务端（BACKUP）|192.168.24.101
 
 > 服务器、软件版本
 
-{% highlight shell %}
+{% highlight bash %}
 
 -------backup备份服务器-------
 [root@backup ~] cat /etc/redhat-release
@@ -51,7 +51,7 @@ CentOS release 6.6 (Final)
 
 > Sersync客户端安装（web服务器）
 
-{% highlight shell %}
+{% highlight bash %}
 # 创建并进入目录
 [root@web ~]# mkdir -p /server/app && cd /server/app/
 
@@ -143,7 +143,7 @@ EOF
 -n|指定开启守护线程的数量，默认为10个
 –o|指定配置文件，默认使用confxml.xml文件
 
-{% highlight shell %}
+{% highlight bash %}
 # 运行sersync服务
 [root@web sersync]# /server/app/sersync/bin/sersync -r -d -o /server/app/sersync/conf/confxml.xml >/server/app/sersync/log/rsync.log 2>&1 &
 
