@@ -31,24 +31,6 @@ CentOS6.6 x86_64|备份服务端（BACKUP）|192.168.24.101
 
 > 服务器、软件版本
 
-{% highlight shell %}
-
--------backup备份服务器-------
-[root@backup ~] cat /etc/redhat-release
-CentOS release 6.6 (Final)
-[root@backup ~] uname -r
-2.6.32-504.el6.x86_64
-[root@backup ~]# rpm -qa rsync
-rsync-3.0.6-12.el6.x86_64
-
--------web应用服务器-------
-[root@backup ~] cat /etc/redhat-release
-CentOS release 6.6 (Final)
-[root@backup ~] uname -r
-2.6.32-504.el6.x86_64
-
-{% endhighlight %}
-
 
 
 ###OK，今天先到这儿了 :) 
