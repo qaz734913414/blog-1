@@ -4,7 +4,7 @@ title:  "架构实践.数据实时同步备份之rsync+lsyncd"
 description: "架构实践.数据实时同步备份之rsync+lsyncd"
 keywords: 架构实践,实时同步备份服务器,rsync+lsyncd,lsyncd
 origin: 张嘉杰.原创
-date:   2015-09-16
+date:   2015-09-15
 category: architect
 tags: linux rsync lsyncd
 ---
