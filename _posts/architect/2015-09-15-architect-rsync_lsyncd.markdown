@@ -162,7 +162,7 @@ Your identification has been saved in /root/.ssh/id_rsa.
 Your public key has been saved in /root/.ssh/id_rsa.pub.
 The key fingerprint is:
 6d:4f:12:44:f6:c5:20:6c:3d:98:2d:65:d9:2b:32:5f root@backup
-The key's randomart image is:
+The keys randomart image is:
 +--[ RSA 2048]----+
 |         o=*+=.  |
 |         o*+=.o  |
