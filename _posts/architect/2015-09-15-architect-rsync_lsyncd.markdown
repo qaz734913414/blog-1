@@ -139,7 +139,7 @@ settings {
 sync {
     default.rsync,
     source    = "/backup",
-    target    = "192.168.24.101:/backup",
+    target    = "192.168.24.101::backup/",
     -- excludeFrom = "/etc/rsyncd.d/rsync_exclude.lst",
     rsync     = {
         binary    = "/usr/bin/rsync",
