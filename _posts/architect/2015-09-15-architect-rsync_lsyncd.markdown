@@ -11,7 +11,7 @@ tags: linux rsync lsyncd
 `Lysncd`实际上是`lua`语言封装了`inotify+rsync`工具，完美解决了`inotify+rsync`海量文件同步带来的文件频繁发送文件列表的问题。
 <!--more-->
 
-![unison+rsync]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}.png)
+![rsync+lsyncd]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}.png)
 
 # lsyncd 数据实时同步工具
 
