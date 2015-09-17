@@ -6,7 +6,7 @@ encoding:       "utf-8"
 permalink:      /:year/:month/:day/:title
 
 blogname:       "JackZhang's Blog"
-staticurl:      "http://www.jcore.cn"
+staticurl:      "http://7q5apr.com1.z0.glb.clouddn.com"
 
 baseurl:        ""
 url:            "http://www.jcore.cn"
