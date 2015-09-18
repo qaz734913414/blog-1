@@ -45,9 +45,9 @@ CentOS release 6.6 (Final)
 rsync-3.0.6-12.el6.x86_64
 
 -------web应用服务器-------
-[root@backup ~] cat /etc/redhat-release
+[root@web ~] cat /etc/redhat-release
 CentOS release 6.6 (Final)
-[root@backup ~] uname -r
+[root@web ~] uname -r
 2.6.32-504.el6.x86_64
 {% endhighlight %}
 
