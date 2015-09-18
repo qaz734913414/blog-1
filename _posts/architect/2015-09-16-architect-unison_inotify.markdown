@@ -114,7 +114,7 @@ unison /backup/ ssh://192.168.24.101//backup -servercmd=~/usr/bin/unison -testse
 -auto|接受缺省的动作，然后等待用户确认是否执行
 -batch|batch mode，全自动模式，接受缺省动作，并执行
 -ignore|增加到忽略列表中
--ignorecase|[true|false|default]是否忽略文件名大小写
+-ignorecase|[true\false\default]是否忽略文件名大小写
 -follow|是否支持对符号连接指向内容的同步
 -immutable|不变目录，扫描时即忽略
 -silent|安静模式
