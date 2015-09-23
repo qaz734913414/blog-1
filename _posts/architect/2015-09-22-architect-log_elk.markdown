@@ -28,7 +28,6 @@ tags: linux elk
 
 服务器系统|角色|IP|软件
 ----|----|----|----
-CentOS6.6 x86_64|DB服务端（DB）|192.168.24.99|logstash-forwarder、mysql
 CentOS6.6 x86_64|WEB1服务端（WEB1）|192.168.24.100|logstash-forwarder、nginx、tomcat、jdk
 CentOS6.6 x86_64|WEB2服务端（WEB2）|192.168.24.101|logstash-forwarder、nginx、tomcat、jdk
 CentOS6.6 x86_64|日志服务端（LOG）|192.168.24.102|logstash、logstash-forwarder、elasticsearch、kibana、jdk
@@ -49,12 +48,6 @@ pv-1.4.4-1.el6.rf.x86_64.rpm
 > 服务器、系统版本
 
 {% highlight bash %}
--------db数据库服务器-------
-[root@web1 ~] cat /etc/redhat-release
-CentOS release 6.6 (Final)
-[root@backup ~] uname -r
-2.6.32-504.el6.x86_64
-
 -------web1应用服务器-------
 [root@web1 ~] cat /etc/redhat-release
 CentOS release 6.6 (Final)
