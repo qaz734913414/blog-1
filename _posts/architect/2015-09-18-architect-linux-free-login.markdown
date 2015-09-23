@@ -118,7 +118,7 @@ Address 192.168.24.101 maps to localhost, but this does not map back to the addr
 root@192.168.24.101's password: 
 Now try logging into the machine, with "ssh '-p 22 root@192.168.24.101'", and check in:
   .ssh/authorized_keys
-to make sure we haven't added extra keys that you weren't expecting.
+to make sure we haven't added extra keys that you weren t expecting.
 
 # 批量访问多机并显示ip
 [root@backup ~]# for i in `echo {0..1}`;do ssh root@192.168.24.10$i "ifconfig eth0|grep -Po '(?<=dr:)\S+'";done                                               
