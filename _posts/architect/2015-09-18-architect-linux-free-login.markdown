@@ -44,7 +44,7 @@ CentOS release 6.6 (Final)
 
 > 多机互信免密码（sshpass、ssh、pssh、pdsh）
 
-* sshpass
+* ***sshpass***
 
 `ssh`登录不能在命令行中指定密码，`sshpass`的出现，解决了这一问题。它允许使用`-p`参数指定明文密码，然后直接登录远程服务器，它支持密码从命令行、文件、环境变量中读取。
 
@@ -76,7 +76,7 @@ Address 192.168.24.101 maps to localhost, but this does not map back to the addr
 192.168.24.101
 {% endhighlight %}
 
-* ssh 密钥交换（免登录）
+* ***ssh 密钥交换（免登录）***
 
 通过`ssh-keygen`的密钥进行身份校验，免去输入密码的烦恼。
 
@@ -129,7 +129,7 @@ Address 192.168.24.101 maps to localhost, but this does not map back to the addr
 {% endhighlight %}
 
 
-* pssh（建立在ssh多机免登录的基础上）
+* ***pssh***（建立在ssh多机免登录的基础上）
 
 `pssh`是`python`编写可以在多台服务器上执行命令的工具，同时支持拷贝文件。
 
@@ -164,7 +164,7 @@ Stderr: Address 192.168.24.101 maps to localhost, but this does not map back to 
 
 {% endhighlight %}
 
-* pdsh 
+* ***pdsh*** 
 
 与`pssh`类似，`pdsh`可并行执行对远程目标主机的操作，在有批量执行命令或分发任务的需求时，使用这个命令可达到事半功倍的效果。同时，`pdsh`还支持交互模式，当要执行的命令不确定时，可直接进入`pdsh`命令行，非常方便。
 
