@@ -1,8 +1,8 @@
 ---
 layout: column_1_2
-title:  "架构实践.多机免登陆批量管理"
-description: "架构实践.多机免登陆批量管理"
-keywords: 架构实践,双向实时同步备份服务器,sshpass,ssh,pssh,pdsh
+title:  "架构实践.多机免登录批量管理"
+description: "架构实践.多机登录陆批量管理"
+keywords: 架构实践,多机登录陆批量管理,sshpass,ssh,pssh,pdsh
 origin: 张嘉杰.原创
 date:   2015-09-18
 category: architect
