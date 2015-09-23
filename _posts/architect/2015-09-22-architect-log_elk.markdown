@@ -88,7 +88,7 @@ cp /etc/logstash-forwarder.conf /etc/logstash-forwarder.conf.back
 
 > 日志服务端
 
-* 安装 Java 环境
+* ***安装 Java 环境***
 
 {% highlight bash %}
 # 下载 jdk
@@ -117,7 +117,7 @@ Java(TM) SE Runtime Environment (build 1.7.0_80-b15)
 Java HotSpot(TM) 64-Bit Server VM (build 24.80-b11, mixed mode)
 {% endhighlight %}
 
-* 安装 Elasticsearch
+* ***安装 Elasticsearch***
 
 {% highlight bash %}
 # 下载 Elasticsearch
@@ -173,7 +173,7 @@ http://192.168.24.102:9200/_plugin/bigdesk/
 http://192.168.24.102:9200/_plugin/head/
 {% endhighlight %}
 
-* 安装 Kibana
+* ***安装 Kibana***
 
 {% highlight bash %}
 # 下载 Kibana
@@ -302,7 +302,7 @@ tcp        0      0 :::22                       :::*                        LIST
 tcp        0      0 :::9200                     :::*                        LISTEN      2030/java 
 {% endhighlight %}
 
-* 安装 Logstash 
+* ***安装 Logstash***
 
 {% highlight bash %}
 # 下载 Logstash 安装包
