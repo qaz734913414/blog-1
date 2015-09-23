@@ -261,27 +261,27 @@ echo
  
 case "$1" in
 	start)
-        start
+		 start
 		 ;;
 	stop)
-        stop
-        ;;
+		 stop
+		 ;;
 	status)
-		status -p $PID_FILE $DAEMON
-		RETVAL=$?
-		;;
+		 status -p $PID_FILE $DAEMON
+		 RETVAL=$?
+		 ;;
 	restart)
-		stop
-		start
-		;;
+		 stop
+		 start
+		 ;;
 	reload)
-		reload
-		;;
-  	*)
-	# Invalid Arguments, print the following message.
-	echo "Usage: $0 {start|stop|status|restart}" >&2
-	exit 2
-	;;
+		 reload
+		 ;;
+	*)
+		 # Invalid Arguments, print the following message.
+		 echo "Usage: $0 {start|stop|status|restart}" >&2
+		 exit 2
+		 ;;
 esac
 
 # 修改启动权限
