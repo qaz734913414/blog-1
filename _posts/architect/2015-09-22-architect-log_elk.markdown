@@ -15,12 +15,14 @@ tags: linux elk
 
 `elk`架构是一种开源的日志管理方案组合，其中包含`elasticsearch`、`logstash`、`kibana`
 
-* `logstash`是一个管理日志和事件的工具，在部署时有两种运行模式：`standalone`、`centralized`
-	+ `standalone`：就是所有的事情都在一台服务器上运行，包括日志收集、日志索引、前端`WEB`界面都部署在一台机器上
-	+ `centralized`：就是多服务器模式，从很多服务器运输(ship)日志到一台总的日志(collector)服务器上用来索引和查找
+{% highlight html %}
+* logstash是一个管理日志和事件的工具，在部署时有两种运行模式：standalone、centralized
+	+ standalone：就是所有的事情都在一台服务器上运行，包括日志收集、日志索引、前端WEB界面都部署在一台机器上
+	+ centralized：就是多服务器模式，从很多服务器运输(ship)日志到一台总的日志(collector)服务器上用来索引和查找
 
-* `elasticsearch`是一个基于`lucene`的开源搜索引擎，分布式的搜索分析系统
-* `kibana`是一个可视化日志和数据系统，作为`WEB`前端可以很容易的和`elasticsearch`系统结合
+* elasticsearch是一个基于lucene的开源搜索引擎，分布式的搜索分析系统
+* kibana是一个可视化日志和数据系统，作为WEB前端可以很容易的和elasticsearch系统结合
+{% endhighlight %}
 
 > 部署环境准备
 
@@ -33,7 +35,16 @@ CentOS6.6 x86_64|日志服务端（LOG）|192.168.24.102|logstash、logstash-for
 
 > 服务器使用的包版本
 
-![elk-包版本]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)
+{% highlight html %}
+elasticsearch-1.7.2.noarch.rpm
+jdk-7u80-linux-x64.rpm
+kibana-4.1.2-linux-x64.tar.gz
+logstash-1.5.4-1.noarch.rpm
+logstash-forwarder-0.4.0-1.x86_64.rpm
+nginx-1.8.0-1.el6.ngx.x86_64.rpm
+pssh-2.3.1.tar.gz
+pv-1.4.4-1.el6.rf.x86_64.rpm
+{% endhighlight %}
 
 > 服务器、系统版本
 
