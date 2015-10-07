@@ -13,7 +13,7 @@ tags: 旅游 游记
 
 <!--more-->
 
-![桂林游记-0]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}.jpg) 
+![桂林游记-0]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.jpg) 
 
 这次的广西旅行，全程自由行，事前在网上做了不少的功课，在稍后的游记中也会慢慢整理给大家，希望对大家有用。
 
