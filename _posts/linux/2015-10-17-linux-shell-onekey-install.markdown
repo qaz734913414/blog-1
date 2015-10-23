@@ -187,7 +187,7 @@ CentOS release 6.6 (Final)
 # 设置本机host就行（添加如下即可）
 192.168.24.1·00 blog.jcore.cn bbs.jcore.cn cms.jcore.cn
 
-{% endhighlight %}
+{% endhighlight %} 
 
 > wordpress 安装过程 
 
