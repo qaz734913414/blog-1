@@ -137,7 +137,7 @@ CentOS release 6.6 (Final)
 
 # 执行 blog 脚本
 [root@web1 ~]# cd /server/scripts/exam
-[root@web1 exam]# sh blog.sh  
+[root@web1 exam]# sh init.sh
 ----------------------------------------
 | DATE       : 2015-10-17 20:11:51
 | HOSTNAME   : web1
