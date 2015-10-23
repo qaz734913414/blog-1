@@ -189,7 +189,7 @@ CentOS release 6.6 (Final)
 
 {% endhighlight %}
 
------------------------
+> wordpress 安装过程
 
 ![wordpress]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-14.png)
 ![wordpress]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-15.png)
@@ -197,6 +197,8 @@ CentOS release 6.6 (Final)
 ![wordpress]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-17.png)
 ![wordpress]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-18.png)
 ![wordpress]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-19.png)
+
+> dedecms 安装过程
 
 ![dedecms]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-0.png)
 ![dedecms]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.png)
@@ -206,6 +208,8 @@ CentOS release 6.6 (Final)
 ![dedecms]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-5.png)
 ![dedecms]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-6.png)
 
+> discuz 安装过程
+
 ![discuz]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-7.png)
 ![discuz]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-8.png)
 ![discuz]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-9.png)
@@ -214,3 +218,4 @@ CentOS release 6.6 (Final)
 ![discuz]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-12.png)
 ![discuz]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-13.png)
 
+-----------------------
