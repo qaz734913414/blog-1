@@ -133,7 +133,7 @@ CentOS release 6.6 (Final)
 {% highlight bash %}
 
 # 远程下载脚本
-[root@web1 ~]# curl -sSL http://7q5apr.com1.z0.glb.clouddn.com/lnamp_wordpress_install.sh | bash
+[root@web1 ~]# curl -sSL http://7q5apr.com1.z0.glb.clouddn.com/install.sh | bash
 
 # 执行 blog 脚本
 [root@web1 ~]# cd /server/scripts/exam
@@ -185,7 +185,7 @@ CentOS release 6.6 (Final)
 [2015-10-17 23:38:28] INFO [blog.sh][10775] ---------- install_DedecmsV53-UTF8-Final ok ----------
 
 # 设置本机host就行（添加如下即可）
-192.168.24.1·00 blog.jcore.cn bbs.jcore.cn cms.jcore.cn
+192.168.24.100 blog.jcore.cn bbs.jcore.cn cms.jcore.cn
 
 {% endhighlight %} 
 
