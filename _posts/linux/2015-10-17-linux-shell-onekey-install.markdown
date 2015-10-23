@@ -189,7 +189,7 @@ CentOS release 6.6 (Final)
 
 {% endhighlight %}
 
-> wordpress 安装过程
+> wordpress 安装过程 
 
 ![wordpress]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-14.png)
 ![wordpress]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-15.png)
