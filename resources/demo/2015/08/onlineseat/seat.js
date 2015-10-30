@@ -102,10 +102,6 @@
             var deltaWidth  = this.imgTexture.width*deltaScale;
             var deltaHeight = this.imgTexture.height*deltaScale;
 
-
-            //by default scale doesnt change position and only add/remove pixel to right and bottom
-            //so we must move the image to the left to keep the image centered
-            //ex: coefX and coefY = 0.5 when image is centered <=> move image to the left 0.5x pixels added to the right
             var canvasmiddleX = this.canvas.clientWidth / 2;
             var canvasmiddleY = this.canvas.clientHeight / 2;
             var xonmap = (-this.position.x) + canvasmiddleX;
