@@ -345,7 +345,7 @@ mysqld  22122 mysql   12u  IPv6  71789      0t0  TCP *:opsession-prxy (LISTEN)
 
 {% endhighlight %}
 
-> 其他主机安装多实例（端口：3306，3307）
+> mysql2主机安装多实例（端口：3306，3307）
 
 {% highlight bash %}
 
