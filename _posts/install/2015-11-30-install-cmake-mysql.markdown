@@ -300,7 +300,7 @@ mysqld  21262 mysql   12u  IPv6  70372      0t0  TCP *:mysql (LISTEN)
 
 {% endhighlight %}
 
-> 安装多实例（开启另外一个端口：3307）
+> 本机安装多实例（开启另外一个端口：3307）
 
 {% highlight bash %}
 
@@ -342,6 +342,43 @@ mysqld  22122 mysql   12u  IPv6  71789      0t0  TCP *:opsession-prxy (LISTEN)
 | performance_schema |
 | test               |
 +--------------------+
+
+{% endhighlight %}
+
+> 其他主机安装多实例（端口：3306，3307）
+
+{% highlight bash %}
+
+# 打包mysql1主机中/jcore/目录排除tools目录
+[root@mysql1 mysql-5.6.27]# tar -zcf mysql-5.6.27_cmark.tar.gz --exclude=tools /jcore/
+
+# mysql2主机创建目录
+[root@mysql2 ~]# mkdir -p /jcore/{server/mysql/{data,tmp},tools,scripts,data/mysql/{3306,3307}/data}
+
+# mysql2主机远程下载mysql1中的压缩文件
+[root@mysql2 ~]# scp root@192.168.24.5:/jcore/tools/mysql-5.6.27/mysql-5.6.27_cmark.tar.gz /jcore/tools/
+
+# mysql2主机加压文件至根目录
+[root@mysql2 ~]# tar -zxf /jcore/tools/mysql-5.6.27_cmark.tar.gz -C /
+
+# mysql2主机创建mysql用户、用户组
+[root@mysql2 ~]# useradd -M -s /sbin/nologin mysql         
+[root@mysql2 ~]# id mysql
+uid=500(mysql) gid=500(mysql) 组=500(mysql)
+
+# mysql2主机设置目录权限
+[root@mysql2 ~]# chown mysql.mysql /jcore/*/mysql/ -R      
+[root@mysql1 mysql-5.6.27]# ll -ld /jcore/{data,server}/mysql
+drwxr-xr-x  4 mysql mysql 4096 11月 30 02:11 /jcore/data/mysql
+drwxr-xr-x 14 mysql mysql 4096 11月 30 02:39 /jcore/server/mysql
+
+# 启动mysql
+[root@mysql2 ~]# /jcore/data/mysql/3306/mysql start
+[root@mysql2 ~]# /jcore/data/mysql/3307/mysql start
+
+[root@mysql2 ~]# ss -lntup|grep mysql
+tcp    LISTEN     0      600                   :::3306                 :::*      users:(("mysqld",3751,12))
+tcp    LISTEN     0      600                   :::3307                 :::*      users:(("mysqld",4498,12))
 
 {% endhighlight %}
 
