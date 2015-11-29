@@ -368,7 +368,7 @@ uid=500(mysql) gid=500(mysql) 组=500(mysql)
 
 # mysql2主机设置目录权限
 [root@mysql2 ~]# chown mysql.mysql /jcore/*/mysql/ -R      
-[root@mysql1 ~]# ll -ld /jcore/{data,server}/mysql
+[root@mysql2 ~]# ll -ld /jcore/{data,server}/mysql
 drwxr-xr-x  4 mysql mysql 4096 11月 30 02:11 /jcore/data/mysql
 drwxr-xr-x 14 mysql mysql 4096 11月 30 02:39 /jcore/server/mysql
 
