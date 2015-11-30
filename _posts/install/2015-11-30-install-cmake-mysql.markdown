@@ -85,22 +85,22 @@ CentOS release 6.6 (Final)
 
 # cmake安装mysql
 [root@mysql1 mysql-5.6.27]# cmake . \
-> -DCMAKE_INSTALL_PREFIX=/jcore/server/mysql \
-> -DMYSQL_DATADIR=/jcore/server/mysql/data \
-> -DMYSQL_UNIX_ADDR=/jcore/server/mysql/tmp/mysql.sock \
-> -DMYSQL_TCP_PORT=3306 \
-> -DDEFAULT_CHARSET=utf8 \
-> -DDEFAULT_COLLATION=utf8_general_ci \
-> -DEXTRA_CHARSETS=gbk,gb2312,utf8,ascii \
-> -DWITH_INNOBASE_STORAGE_ENGINE=1 \
-> -DWITH_FEDERATED_STORAGE_ENGINE=1 \
-> -DWITH_BLACKHOLE_STORAGE_ENGINE=1 \
-> -DWITH_FAST_MUTEXES=1 \
-> -DWITH_ZLIB=bundled \
-> -DENABLED_LOCAL_INFILE=1 \
-> -DWITH_READLINE=1 \
-> -DWITH_EMBEDDED_SERVER=1 \
-> -DWITH_DEBUG=0
+-DCMAKE_INSTALL_PREFIX=/jcore/server/mysql \
+-DMYSQL_DATADIR=/jcore/server/mysql/data \
+-DMYSQL_UNIX_ADDR=/jcore/data/mysql/tmp/mysql.sock \
+-DMYSQL_TCP_PORT=3306 \
+-DDEFAULT_CHARSET=utf8 \
+-DDEFAULT_COLLATION=utf8_general_ci \
+-DEXTRA_CHARSETS=gbk,gb2312,utf8,ascii \
+-DWITH_INNOBASE_STORAGE_ENGINE=1 \
+-DWITH_FEDERATED_STORAGE_ENGINE=1 \
+-DWITH_BLACKHOLE_STORAGE_ENGINE=1 \
+-DWITH_FAST_MUTEXES=1 \
+-DWITH_ZLIB=bundled \
+-DENABLED_LOCAL_INFILE=1 \
+-DWITH_READLINE=1 \
+-DWITH_EMBEDDED_SERVER=1 \
+-DWITH_DEBUG=0
 
 # 编译安装（这个过程时间有点长）
 [root@mysql1 mysql-5.6.27]# make && make install
