@@ -8,14 +8,10 @@ date:   2015-12-01
 category: architect
 tags: linux mysql database
 ---
-
+`MySQL集群`基本都会选择这个策略。`master`将操作记录到`bin-log`中，`slave`的一个线程去`master`读取`bin-log`，并将他们保存到`relay-log`中，`slave`的另外一个线程去重放`relay-log`中的操作来实现和`master`数据同步。
 <!--more-->
 
 ![mysql-master-slave]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}.png)
-
-> 主从复制原理
-
-`MySQL集群`基本都会选择这个策略。`master`将操作记录到`bin-log`中，`slave`的一个线程去`master`读取`bin-log`，并将他们保存到`relay-log`中，`slave`的另外一个线程去重放`relay-log`中的操作来实现和`master`数据同步。
 
 > MySQL binlog支持的复制类型
 
