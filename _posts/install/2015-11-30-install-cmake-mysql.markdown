@@ -288,15 +288,12 @@ mysqld  21262 mysql   12u  IPv6  70372      0t0  TCP *:mysql (LISTEN)
 [root@mysql1 mysql-5.6.27]# mysqladmin -uroot password '122333' -S /jcore/data/mysql/3306/mysql.sock
 
 # 直接命令执行mysql命令
-[root@mysql1 mysql-5.6.27]# mysql -uroot -p'122333' -S /jcore/data/mysql/3306/mysql.sock -e "show databases;"
-+--------------------+
-| Database           |
-+--------------------+
-| information_schema |
-| mysql              |
-| performance_schema |
-| test               |
-+--------------------+
+[root@mysql1 mysql-5.6.27]# mysql -uroot -p'122333' -S /jcore/data/mysql/3306/mysql.sock -e "select version();"
++------------+
+| version()  |
++------------+
+| 5.6.27-log |
++------------+
 
 {% endhighlight %}
 
@@ -333,15 +330,12 @@ mysqld  22122 mysql   12u  IPv6  71789      0t0  TCP *:opsession-prxy (LISTEN)
 [root@mysql1 mysql-5.6.27]# mysqladmin -uroot password '122333' -S /jcore/data/mysql/3307/mysql.sock
 
 # 直接命令执行mysql命令
-[root@mysql1 mysql-5.6.27]# mysql -uroot -p'122333' -S /jcore/data/mysql/3307/mysql.sock -e "show databases;"
-+--------------------+
-| Database           |
-+--------------------+
-| information_schema |
-| mysql              |
-| performance_schema |
-| test               |
-+--------------------+
+[root@mysql1 mysql-5.6.27]# mysql -uroot -p'122333' -S /jcore/data/mysql/3307/mysql.sock -e "select version();"
++------------+
+| version()  |
++------------+
+| 5.6.27-log |
++------------+
 
 {% endhighlight %}
 
@@ -379,6 +373,26 @@ drwxr-xr-x 14 mysql mysql 4096 11月 30 02:39 /jcore/server/mysql
 [root@mysql2 ~]# ss -lntup|grep mysql
 tcp    LISTEN     0      600                   :::3306                 :::*      users:(("mysqld",3751,12))
 tcp    LISTEN     0      600                   :::3307                 :::*      users:(("mysqld",4498,12))
+
+# 设置mysql环境变量
+[root@mysql2 ~]# echo 'export PATH=$PATH:/jcore/server/mysql/bin' >>/etc/profile
+[root@mysql2 ~]# source /etc/profile
+
+# 查看mysql2主机3306端口mysql版本
+[root@mysql2 ~]# mysql -uroot -p'122333' -S /jcore/data/mysql/3306/mysql.sock -e "select version();"
++------------+
+| version()  |
++------------+
+| 5.6.27-log |
++------------+
+
+# 查看mysql2主机3307端口mysql版本
+[root@mysql2 ~]# mysql -uroot -p'122333' -S /jcore/data/mysql/3307/mysql.sock -e "select version();"
++------------+
+| version()  |
++------------+
+| 5.6.27-log |
++------------+
 
 {% endhighlight %}
 
