@@ -35,10 +35,12 @@ tags: linux mysql database
 
 > 解决的问题
 
-* 负载平衡（load balancing）
-* 数据分布（Data distribution）
-* 备份机制（Backup）
-* 高可用性（High availability）
+{% highlight html %}
+1. 负载平衡（load balancing）
+2. 数据分布（Data distribution）
+3. 备份机制（Backup）
+4. 高可用性（High availability）
+{% endhighlight %}
 
 > 部署环境准备
 
