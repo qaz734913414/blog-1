@@ -1,10 +1,10 @@
 ---
 layout: column_1_2
-title:  "架构实践.MySQL主从复制"
-description: "架构实践.MySQL主从复制"
-keywords: 架构实践,MySQL主从复制,mysql
+title:  "架构实践.MySQL双主复制"
+description: "架构实践.MySQL双主复制"
+keywords: 架构实践,MySQL双主复制,mysql
 origin: 张嘉杰.原创
-date:   2015-12-01
+date:   2015-12-02
 category: architect
 tags: linux mysql database
 ---
