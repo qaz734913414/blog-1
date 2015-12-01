@@ -15,7 +15,7 @@ tags: linux mysql database
 
 > MySQL binlog支持的复制类型
 
-{% endhighlight %}txt
+{% highlight html %}
 1. Row level
 日志中会记录每一行数据被修改的形式，然后再slave端在对相同的数据进行修改
 优点：记录每一行的更改，很详细
