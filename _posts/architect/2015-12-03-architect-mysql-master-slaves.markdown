@@ -62,17 +62,29 @@ server-id = 2
 [root@mysql_slave2 ~]# grep "server-id" /jcore/data/mysql/3306/my.cnf
 server-id = 3
 
-# 增加slave日志更新开启（slave1 > slave2之间复制，该参数很关键）
-[root@mysql_slave1 ~]# sed -i '/server-id/a\log_slave_updates = 1' /jcore/data/mysql/3306/my.cnf
 
 # mysql_slave1生成新的server uuid
 [root@mysql_slave1 ~]# sed -i 's#^server-uuid=.*#server-uuid='`cat /proc/sys/kernel/random/uuid`'#g' /jcore/data/mysql/3306/data/auto.cnf
+
+# 增加slave日志更新开启（slave1 > slave2之间复制，该参数很关键）
+[root@mysql_slave1 ~]# sed -i '/server-id/a\log_slave_updates = 1' /jcore/data/mysql/3306/my.cnf
 
 # mysql_slave1重启mysql服务使server-id生效
 [root@mysql_slave1 ~]# /jcore/data/mysql/3306/mysql restart
 Restarting MySQL...
 Stoping MySQL...
 Starting MySQL...
+
+# 确认log_slave_updates参数已经打开
+[root@mysql_slave1 ~]# mysql -uroot -p'122333' -S /jcore/data/mysql/3306/mysql.sock -e "show variables like '%update%';"
++-----------------------------------------+-------+
+| Variable_name                           | Value |
++-----------------------------------------+-------+
+| binlog_direct_non_transactional_updates | OFF   |
+| log_slave_updates                       | ON    |
+| low_priority_updates                    | OFF   |
+| sql_safe_updates                        | OFF   |
++-----------------------------------------+-------+
 
 # mysql_slave2生成新的server uuid
 [root@mysql_slave2 ~]# sed -i 's#^server-uuid=.*#server-uuid='`cat /proc/sys/kernel/random/uuid`'#g' /jcore/data/mysql/3306/data/auto.cnf
@@ -141,7 +153,6 @@ start slave;
              Slave_IO_Running: Yes
             Slave_SQL_Running: Yes
             
-
 {% endhighlight %}
 
 > 多级主从复制验证
