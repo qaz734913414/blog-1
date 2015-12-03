@@ -85,7 +85,6 @@ replication slave on *.* to \
 reset master; \
 show binary logs;
 "
-Warning: Using a password on the command line interface can be insecure.
 +------------------+-----------+
 | Log_name         | File_size |
 +------------------+-----------+
