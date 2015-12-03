@@ -1,8 +1,8 @@
 ---
 layout: column_1_2
-title:  "架构实践.MySQL一主多从复制"
-description: "架构实践.MySQL一主多从复制"
-keywords: 架构实践,MySQL一主多从复制,mysql
+title:  "架构实践.MySQL多级主从复制"
+description: "架构实践.MySQL多级主从复制"
+keywords: 架构实践,MySQL多级主从复制,mysql
 origin: 张嘉杰.原创
 date:   2015-12-03
 category: architect
