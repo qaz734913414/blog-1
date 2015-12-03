@@ -135,7 +135,7 @@ start slave;
 {% highlight bash %}
 # mysql_master1、mysql_master2 表结构一致
 ####################################
-[root@mysql_master ~]# mysql -uroot -p'122333' -S /jcore/data/mysql/3306/mysql.sock -e "show databases;"
+[root@mysql_master1 ~]# mysql -uroot -p'122333' -S /jcore/data/mysql/3306/mysql.sock -e "show databases;"
 +--------------------+
 | Database           |
 +--------------------+
@@ -145,7 +145,7 @@ start slave;
 | test               |
 +--------------------+
 
-[root@mysql_slave ~]# mysql -uroot -p'122333' -S /jcore/data/mysql/3306/mysql.sock -e "show databases;"
+[root@mysql_master2 ~]# mysql -uroot -p'122333' -S /jcore/data/mysql/3306/mysql.sock -e "show databases;"
 +--------------------+
 | Database           |
 +--------------------+
@@ -204,7 +204,7 @@ show processlist;
 | 11 | root        | localhost          | jcore | Query       |    0 | init                                                                        | show processlist |
 +----+-------------+--------------------+-------+-------------+------+-----------------------------------------------------------------------------+------------------+
 
-# 回头mysql_master1查看（也已经同步）
+# 返回mysql_master1查看（发现也已经同步）
 [root@mysql_master1 ~]# mysql -uroot -p'122333' -S /jcore/data/mysql/3306/mysql.sock -e " \
 use jcore; \
 select * from blog; \
