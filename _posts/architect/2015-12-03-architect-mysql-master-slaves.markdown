@@ -187,10 +187,10 @@ show processlist;
 |  1 | system user |                    | NULL   | Connect     |  102 | Slave has read all relay log; waiting for the slave I/O thread to update it | NULL             |
 |  2 | system user |                    | NULL   | Connect     |  761 | Waiting for master to send event                                            | NULL             |
 | 11 | jcore       | 192.168.24.7:35940 | NULL   | Binlog Dump |  192 | Master has sent all binlog to slave; waiting for binlog to be updated       | NULL             |
-| 14 | root        | localhost          | jcore1 | Query       |    0 | init                                                                        | show processlist |
+| 14 | root        | localhost          | jcore  | Query       |    0 | init                                                                        | show processlist |
 +----+-------------+--------------------+--------+-------------+------+-----------------------------------------------------------------------------+------------------+
 
-# 回头mysql_slave2查看（也已经同步）
+# mysql_slave2查看（已经同步）
 [root@mysql_slave2 ~]# mysql -uroot -p'122333' -S /jcore/data/mysql/3306/mysql.sock -e " \
 use jcore; \
 select * from blog; \
@@ -207,7 +207,7 @@ show processlist;
 +----+-------------+-----------+--------+---------+------+-----------------------------------------------------------------------------+------------------+
 | 22 | system user |           | NULL   | Connect |  272 | Waiting for master to send event                                            | NULL             |
 | 23 | system user |           | NULL   | Connect |   80 | Slave has read all relay log; waiting for the slave I/O thread to update it | NULL             |
-| 26 | root        | localhost | jcore1 | Query   |    0 | init                                                                        | show processlist |
+| 26 | root        | localhost | jcore  | Query   |    0 | init                                                                        | show processlist |
 +----+-------------+-----------+--------+---------+------+-----------------------------------------------------------------------------+------------------+
 
 {% endhighlight %}
