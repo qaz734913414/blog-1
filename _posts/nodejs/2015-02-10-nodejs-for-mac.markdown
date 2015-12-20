@@ -212,6 +212,7 @@ root:nodeTest zjj$ DEBUG=nodeTest:* npm start
 
 ![nodejs-express]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.png)
 
+### 到这儿nodejs安装就完毕了。还是挺简单的。
 
 > 写个简单的爬虫（抓取jcore.cn的友情链接）
 
@@ -282,3 +283,8 @@ block content
 ![nodejs-reptile]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-2.png)
 
 -----------------------
+
+相关参考文章地址：
+
+Node.js - <https://nodejs.org/en/>
+Node.js intro git repository - <https://github.com/indexzero/nodejs-intro>
