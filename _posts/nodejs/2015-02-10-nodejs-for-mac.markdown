@@ -13,7 +13,7 @@ tags: javascript nodejs express
 
 不熟悉`brew`命令的朋友，[戳这里](/2014/02/10/newmac/)。 
 
-### 安装nodejs
+> 安装nodejs
 {% highlight bash %}
 root:~ zjj$ brew install nodejs
 ==> Downloading https://homebrew.bintray.com/bottles/node-4.2.1.mavericks.bottle.tar.gz
@@ -26,7 +26,7 @@ Bash completion has been installed to:
   /usr/local/Cellar/node/4.2.1: 2738 files, 36M
 {% endhighlight %}
 
-### 安装express
+> 安装express
 {% highlight bash %}
 root:~ zjj$ sudo npm install -g express
 express@4.13.3 /usr/local/lib/node_modules/express
@@ -57,7 +57,7 @@ express@4.13.3 /usr/local/lib/node_modules/express
 └── proxy-addr@1.0.10 (forwarded@0.1.0, ipaddr.js@1.0.5)
 {% endhighlight %}
 
-### 安装express-generator
+> 安装express-generator
 {% highlight bash %}
 root:~ zjj$ sudo npm install -g express-generator
 /usr/local/bin/express -> /usr/local/lib/node_modules/express-generator/bin/express
@@ -67,25 +67,25 @@ express-generator@4.13.1 /usr/local/lib/node_modules/express-generator
 └── commander@2.7.1 (graceful-readlink@1.0.1)
 {% endhighlight %}
 
-### 查看node版本
+> 查看node版本
 {% highlight bash %}
 root:~ zjj$ node -v
 v4.2.1
 {% endhighlight %}
 
-### 查看npm版本
+> 查看npm版本
 {% highlight bash %}
 root:~ zjj$ npm -v
 2.14.7
 {% endhighlight %}
 
-### 查看express版本
+> 查看express版本
 {% highlight bash %}
 root:~ zjj$ express -V
 4.13.1
 {% endhighlight %}
 
-### 创建一个简单的项目
+> 创建一个简单的项目
 {% highlight bash %}
 root:~ zjj$ express nodeTest
 
@@ -114,19 +114,19 @@ root:~ zjj$ express nodeTest
      $ DEBUG=nodeTest:* npm start
 {% endhighlight %}
 
-### 查看node项目目录结构	
+> 查看node项目目录结构	
 {% highlight bash %}
 root:~ zjj$ ls -Fl ~/nodeTest/
--rw-r--r--   1 zjj  staff  1442 12 20 01:26 app.js			### 程序启动文件
-drwxr-xr-x   3 zjj  staff   102 12 20 01:26 bin/			### 创建项目时已经提到，是真实的执行程序
-drwxr-xr-x  10 zjj  staff   340 12 20 01:27 node_modules/	### 存放所有的项目依赖库
--rw-r--r--   1 zjj  staff   327 12 20 01:26 package.json	### 项目依赖配置
-drwxr-xr-x   5 zjj  staff   170 12 20 01:26 public/			### 静态文件（css,js,img）
-drwxr-xr-x   4 zjj  staff   136 12 20 01:26 routes/			### 路由文件
-drwxr-xr-x   5 zjj  staff   170 12 20 01:26 views/			### 页面文件
+-rw-r--r--   1 zjj  staff  1442 12 20 01:26 app.js			> 程序启动文件
+drwxr-xr-x   3 zjj  staff   102 12 20 01:26 bin/			> 创建项目时已经提到，是真实的执行程序
+drwxr-xr-x  10 zjj  staff   340 12 20 01:27 node_modules/	> 存放所有的项目依赖库
+-rw-r--r--   1 zjj  staff   327 12 20 01:26 package.json	> 项目依赖配置
+drwxr-xr-x   5 zjj  staff   170 12 20 01:26 public/			> 静态文件（css,js,img）
+drwxr-xr-x   4 zjj  staff   136 12 20 01:26 routes/			> 路由文件
+drwxr-xr-x   5 zjj  staff   170 12 20 01:26 views/			> 页面文件
 {% endhighlight %}
 
-### 进入项目目录，并初始化ngde依赖
+> 进入项目目录，并初始化ngde依赖
 {% highlight bash %}
 root:~ zjj$ cd nodeTest && npm install
 cookie-parser@1.3.5 node_modules/cookie-parser
@@ -198,7 +198,7 @@ jade@1.11.0 node_modules/jade
 └── uglify-js@2.6.1 (async@0.2.10, uglify-to-browserify@1.0.2, source-map@0.5.3, yargs@3.10.0)
 {% endhighlight %}
 
-### 启动node项目（debug模式）
+> 启动node项目（debug模式）
 {% highlight bash %}
 root:nodeTest zjj$ DEBUG=nodeTest:* npm start
 
@@ -208,7 +208,7 @@ root:nodeTest zjj$ DEBUG=nodeTest:* npm start
   nodeTest:server Listening on port 3000 +0ms
 {% endhighlight %}  
   
-### 地址栏访问（http://localhost:3000）
+> 地址栏访问（http://localhost:3000）
 
 ![nodejs-express]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-1.png)
 
@@ -216,7 +216,7 @@ root:nodeTest zjj$ DEBUG=nodeTest:* npm start
 
 > 写个简单的爬虫（抓取jcore.cn的友情链接）
 
-### 1. 先添加两个模块（superagent获取源数据，cheerio解析数据）
+> 1. 先添加两个模块（superagent获取源数据，cheerio解析数据）
 
 {% highlight bash %}
 root:nodeTest zjj$ npm install --save superagent
@@ -241,7 +241,7 @@ cheerio@0.19.0 node_modules/cheerio
 └── htmlparser2@3.8.3 (domelementtype@1.3.0, entities@1.0.0, domutils@1.5.1, domhandler@2.3.0, readable-stream@1.1.13)
 {% endhighlight %}
 
-### 2. 具体实现（新建../routes/reptile.js，添加如下脚本）
+> 2. 具体实现（新建../routes/reptile.js，添加如下脚本）
 {% highlight bash %}
 var express = require('express');
 var superagent = require('superagent');
@@ -266,7 +266,7 @@ router.get('/', function (req, res, next) {
 module.exports = router;
 {% endhighlight %}
 
-### 3. jade模板（新建../views/reptile.jade，添加如下内容）
+> 3. jade模板（新建../views/reptile.jade，添加如下内容）
 {% highlight bash %} 
 extends layout
 
@@ -278,13 +278,15 @@ block content
         a(href=link.href, title=link.title) #{link.title}
 {% endhighlight %}
 		
-### 地址栏访问（http://localhost:3000/reptile）
+> 地址栏访问（http://localhost:3000/reptile）
 
 ![nodejs-reptile]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}-2.png)
+
+### 到这儿挺简单的一个例子就完成了，今儿就到这儿吧。:)
 
 -----------------------
 
 相关参考文章地址：
 
-Node.js - <https://nodejs.org/en/>
+Node.js - <https://nodejs.org/en/>  
 Node.js intro git repository - <https://github.com/indexzero/nodejs-intro>
