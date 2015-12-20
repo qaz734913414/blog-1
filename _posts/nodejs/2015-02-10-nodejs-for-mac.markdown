@@ -117,13 +117,13 @@ root:~ zjj$ express nodeTest
 > 查看node项目目录结构	
 {% highlight bash %}
 root:~ zjj$ ls -Fl ~/nodeTest/
--rw-r--r--   1 zjj  staff  1442 12 20 01:26 app.js			> 程序启动文件
+-rw-r--r--   1 zjj  staff  1442 12 20 01:26 app.js		> 程序启动文件
 drwxr-xr-x   3 zjj  staff   102 12 20 01:26 bin/			> 创建项目时已经提到，是真实的执行程序
 drwxr-xr-x  10 zjj  staff   340 12 20 01:27 node_modules/	> 存放所有的项目依赖库
--rw-r--r--   1 zjj  staff   327 12 20 01:26 package.json	> 项目依赖配置
-drwxr-xr-x   5 zjj  staff   170 12 20 01:26 public/			> 静态文件（css,js,img）
-drwxr-xr-x   4 zjj  staff   136 12 20 01:26 routes/			> 路由文件
-drwxr-xr-x   5 zjj  staff   170 12 20 01:26 views/			> 页面文件
+-rw-r--r--   1 zjj  staff   327 12 20 01:26 package.json		> 项目依赖配置
+drwxr-xr-x   5 zjj  staff   170 12 20 01:26 public/		> 静态文件（css,js,img）
+drwxr-xr-x   4 zjj  staff   136 12 20 01:26 routes/		> 路由文件
+drwxr-xr-x   5 zjj  staff   170 12 20 01:26 views/		> 页面文件
 {% endhighlight %}
 
 > 进入项目目录，并初始化ngde依赖
