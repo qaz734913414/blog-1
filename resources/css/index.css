@@ -135,6 +135,15 @@ body {
     box-shadow: 1px 3px 8px #777;
 }
 
+.item-avatar ul img{
+
+    margin: 0 15px 0 0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    box-shadow: 1px 3px 8px #777;
+}
+
 .item-avatar dl dd{float:left;width:160px;}
 .item-avatar dd.name a{font-weight:bold;}
 .item-avatar .activity{padding: 4px 8px;
