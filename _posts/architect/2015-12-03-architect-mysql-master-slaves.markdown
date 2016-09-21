@@ -13,7 +13,7 @@ tags: linux mysql database
 <!--more-->
 今天主要介绍的是多级主从复制的方案，`Master->Slave1->Slave2`。
 
-![mysql-master-slave]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}.png)
+![mysql-master-slaves]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}.png)
 
 > 部署环境准备
 
