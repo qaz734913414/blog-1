@@ -154,7 +154,7 @@ brew update;
 brew cleanup; 
 brew cask cleanup
 
-{% endhighlight %}
+{% endhighlight %} 
 
 
 #### 到这里问题基本都已经解决了，因为所以的软件基本都是通过`Homebrew`安装的，所以接下来就都还是挺顺畅的。。。
