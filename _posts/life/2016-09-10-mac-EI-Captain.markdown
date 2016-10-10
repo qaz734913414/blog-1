@@ -167,5 +167,5 @@ brew cask cleanup
 
 相关参考文章地址：
 
-xcode-select active developer directory error - <http://stackoverflow.com/questions/17980759/xcode-select-active-developer-directory-error>
+xcode-select active developer directory error - <http://stackoverflow.com/questions/17980759/xcode-select-active-developer-directory-error>  
 Can't install gems on OS X “El Capitan” - <http://stackoverflow.com/questions/31972968/cant-install-gems-on-os-x-el-capitan>
