@@ -19,17 +19,18 @@ tags: mac OSX
 
 > 开始填坑
 
-1. 准备卸载QQ（发现无法卸载）
 {% highlight bash %}
 
+# 1. 准备卸载QQ（发现无法卸载）
 root:~ zjj$ brew cask uninstall qq
 Error: qq is not installed
 
 {% endhighlight %}
 
-2. 查看安装软件列表（没有发现问题）
+
 {% highlight bash %}
 
+# 2. 查看安装软件列表（没有发现问题）
 root:~ zjj$ brew cask list
 1password	dockertoolbox	launchrocket	staruml		vlc
 alfred		eclipse-jee	licecap		sublime-text	vmware-fusion
@@ -40,9 +41,9 @@ docker		jd-gui		robomongo	virtualbox
 
 {% endhighlight %}
 
-3. 更新Homebrew（发现了权限的问题）
 {% highlight bash %}
 
+# 3. 更新Homebrew（发现了权限的问题）
 root:~ zjj$ brew update
 Error: The /usr/local directory is not writable.
 Even if this directory was writable when you installed Homebrew, other
@@ -56,56 +57,56 @@ back to your user account.
 
 {% endhighlight %}
 
-4. 按照提示执行
 {% highlight bash %}
 
+# 4. 按照提示执行
 root:~ zjj$ sudo chown -R $(whoami):admin /usr/local
 
 {% endhighlight %}
 
-5. 继续更新Homebrew（发现软件安装目录变了，提示关联新目录）
 {% highlight bash %}
 
+# 5. 继续更新Homebrew（发现软件安装目录变了，提示关联新目录）
 root:~ zjj$ brew update
 xcrun: error: active developer path ("/Applications/Xcode6-Beta.app/Contents/Developer") does not exist, use `xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools (or see `man xcode-select`)
 Error: Failure while executing: git status --untracked-files=all --porcelain 2>/dev/null 
 
 {% endhighlight %}
 
-6. 查看当前软件的默认目录
 {% highlight bash %}
 
+# 6. 查看当前软件的默认目录
 root:~ zjj$ xcode-select -p
 /Applications/Xcode6-Beta.app/Contents/Developer
 
 {% endhighlight %}
 
-7. 进入目录发现提示失败（Xcode6-Beta.app目录居然不见了）
 {% highlight bash %}
 
+# 7. 进入目录发现提示失败（Xcode6-Beta.app目录居然不见了）
 root:~ zjj$ cd /Applications/Xcode6-Beta.app/Contents/Developer
 -bash: cd: /Applications/Xcode6-Beta.app/Contents/Developer: No such file or directory
 {% endhighlight %}
 
-8. 重新找到软件安装目录
 {% highlight bash %}
 
+# 8. 重新找到软件安装目录
 root:~ zjj$ ls /Applications/Xcode.app/Contents/Developer/
 Applications	Library		Platforms	Tools
 Documentation	Makefiles	Toolchains	usr
 
 {% endhighlight %}
 
-9. 重新关联目录
 {% highlight bash %}
 
+# 9. 重新关联目录
 root:~ zjj$ sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer/
 
 {% endhighlight %}
 
-10. 再次更新Homebrew（已经可以更新了）
 {% highlight bash %}
 
+# 10. 再次更新Homebrew（已经可以更新了）
 root:~ zjj$ brew update
 To restore the stashed changes to /usr/local run:
   `cd /usr/local && git stash pop`
@@ -114,9 +115,9 @@ Updated 3 taps (caskroom/cask, homebrew/nginx, phinze/cask).
 
 {% endhighlight %}
 
-11. 继续卸载qq（发现问题依旧啊，找不到默认的Caskroom目录了）
 {% highlight bash %}
 
+# 11. 继续卸载qq（发现问题依旧啊，找不到默认的Caskroom目录了）
 root:~ zjj$ brew cask uninstall qq
 Uninstalling brew-cask... (4 files, 7.9K)
 Warning: The default Caskroom location has moved to /usr/local/Caskroom.
@@ -132,23 +133,23 @@ Error: qq is not installed
 
 {% endhighlight %}
 
-12. 备份brew cask软件目录 
 {% highlight bash %}
 
+# 12. 备份brew cask软件目录 
 root:~ zjj$ mv /opt/homebrew-cask/Caskroom /usr/local/
 
 {% endhighlight %}
 
-13. 重新关联更新下载软件（漫长的等待...）
 {% highlight bash %}
 
+# 13. 重新关联更新下载软件（漫长的等待...）
 root:~ zjj$ brew cask install --force $(brew cask list)
 
 {% endhighlight %}
 
-14. 中途出现错误（去除部分源、关联、清空Homebrew）
 {% highlight bash %}
 
+# 14. 中途出现错误（去除部分源、关联、清空Homebrew）
 brew uninstall --force brew-cask; 
 brew untap phinze/cask; 
 brew untap caskroom/cask; 
