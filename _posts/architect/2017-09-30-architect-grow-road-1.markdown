@@ -12,7 +12,7 @@ tags: architect
 如何成为一名合格的架构师？架构师的权利和义务有哪些？
 <!--more-->
 
-![mysql-master-slave]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}.png)
+![architect]({{ "/resources/images" | prepend: site.staticurl }}{{ page.url }}.png)
 
 > 什么是架构
 
@@ -94,6 +94,5 @@ tags: architect
 
 ![](http://ox564wtna.bkt.clouddn.com/architect/_image/qrcode_for_gh_1a76c2ff77c7_430.jpg)
 
-###到这里MySQL多级主从复制就完成了，OK，今天先到这儿了 :) 
 
 -----------------------
