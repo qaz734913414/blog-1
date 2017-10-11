@@ -1,7 +1,7 @@
 ---
 layout: column_1_2
-title:  "架构师成长之路 | 一"
-description: "架构师成长之路 | 一"
+title:  "架构师成长之路"
+description: "架构师成长之路"
 keywords: 架构实践
 origin: 张嘉杰.原创
 date:   2017-09-30
