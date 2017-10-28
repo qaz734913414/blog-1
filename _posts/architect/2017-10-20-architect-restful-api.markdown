@@ -344,31 +344,31 @@ tags: architect restful-api
 	     + 所有参数和`json_body`在计算时需要移除首尾空白字符，包括空格和回车等，但在请求时可以包含首尾空白符仅不参与签名
 	* 使用分配的`apiSecret`和`hmac-sha256`算法生成签名
 	    - 先使用`hmac-sha256`对第一步得到的`sign`做`hash`运算并将得到的值使用`base64`编码
-	    
-        ```java
-        import javax.crypto.Mac;
-        import javax.crypto.spec.SecretKeySpec;
-        import org.apache.commons.codec.binary.Base64;
-        
-        public class GenerateSignature {
-        	public static void main(String[] args) {
-        		try {
-        			String apiSecret = "secret";
-        			String stringToSign = "sign";
-        
-        			Mac sha256_HMAC = Mac.getInstance("HmacSHA256");
-        			SecretKeySpec secret_key = new SecretKeySpec(apiSecret.getBytes(), "HmacSHA256");
-        			sha256_HMAC.init(secret_key);
-        
-        			String hash = Base64.encodeBase64String(sha256_HMAC.doFinal(stringToSign.getBytes()));
-        			System.out.println(hash);
-        		} catch (Exception e){
-        			System.out.println("Error");
-        		}
-        	}
-        }
-        ```
 	* 生成的签名字符串以`X-Signature`为`key`放入请求头部
+	
+```java
+    import javax.crypto.Mac;
+    import javax.crypto.spec.SecretKeySpec;
+    import org.apache.commons.codec.binary.Base64;
+    
+    public class GenerateSignature {
+    	public static void main(String[] args) {
+    		try {
+    			String apiSecret = "secret";
+    			String stringToSign = "sign";
+    
+    			Mac sha256_HMAC = Mac.getInstance("HmacSHA256");
+    			SecretKeySpec secret_key = new SecretKeySpec(apiSecret.getBytes(), "HmacSHA256");
+    			sha256_HMAC.init(secret_key);
+    
+    			String hash = Base64.encodeBase64String(sha256_HMAC.doFinal(stringToSign.getBytes()));
+    			System.out.println(hash);
+    		} catch (Exception e){
+    			System.out.println("Error");
+    		}
+    	}
+    }
+```
 
 - - - - -
 > 如果你喜欢本文，请分享到朋友圈。  
