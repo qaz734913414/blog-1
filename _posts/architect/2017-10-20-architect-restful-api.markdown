@@ -33,17 +33,19 @@ tags: architect restful-api
 
 常用的`HTTP`动词有下面四个（对应的`SQL`命令）
 
-```table
+
 | 请求方式    | SQL命令   | 描述 |
+| ------    | ------   | --- |
 | GET           | SELECT    | 获取资源（一项或多项） |
 | POST         | CREATE   | 新建资源 |
 | PUT           | UPDATE  | 更新资源 |
 | DELETE     | DELETE   | 删除资源 |
-```
+
 
 下面是一个用户相关的例子
-```table
+
 | 请求方式    | URL                       | 描述 |
+| ------    | ---                       | --- |
 |GET            | /users                     | 获取所有用户 |
 |POST          | /users                     | 创建一个用户 |
 |GET            | /users/ID                | 获取某个指定用户的信息 |
@@ -51,28 +53,29 @@ tags: architect restful-api
 |DELETE      | /users/ID               | 删除某个用户 |
 |GET            | /users/ID/gifts       | 获取某个指定用户的所有礼券 |
 |GET            | /users/ID/gifts/ID | 获取某个指定用户的指定礼券信息 |
-```
+
 
 > URI 规范
 
-* 避免层级过深的`URI`
-* 不用大写
-* 用中杠`-`而不用下杠`_`
-* 参数列表要`encode`
-* `URI`中的名词表示资源集合，使用复数形式
+	* 避免层级过深的`URI`
+	* 不用大写
+	* 用中杠`-`而不用下杠`_`
+	* 参数列表要`encode`
+	* `URI`中的名词表示资源集合，使用复数形式
 
 > 安全性、幂等性
 
-* 安全性：不会改变资源状态，可以理解为只读的
-* 幂等性：执行1次和执行N次，对资源状态改变的效果是等价的
+	* 安全性：不会改变资源状态，可以理解为只读的
+	* 幂等性：执行1次和执行N次，对资源状态改变的效果是等价的
 
-```table
+
 | 请求类型   |安全性	|幂等性 |
+| ------   |----	|----- |
 | GET	       | √           | √ |
 | POST	       | ×           | × |
 | PUT	       | ×           | √ |
 | DELETE	  | ×           | √ |
-```
+
 
 安全性和幂等性均不保证反复请求能拿到相同的`response`。以`DELETE`为例，第一次`DELETE`返回200表示删除成功，第二次返回404提示资源不存在，这是允许的。
 
@@ -80,19 +83,21 @@ tags: architect restful-api
 
 下面是一些常见的参数
 
-```table
+
 |条件           |URL参数                             | 描述 |
+|---           |------                             | --- |
 |过滤条件   | ?type=1&age>30              | 指定返回条件的记录数 |
 |分页           | ?limit=10&offset=3          | 指定第几页，以及每页的记录数 |
 |排序           | ?sort=id,desc                     | 指定返回结果按照哪个属性排序，以及排序顺序 |
 |集合           | ?list=id,name                     | 指定集合字段记录数 |
-```
+
 
 > HTTP 状态码
 
 服务器向用户返回的状态码和提示信息，常见的有以下一些。
-```table
+
 | 状态码 | 请求方式 | 提示信息 | 描述 |
+| ----- | ------ | ------ | --- |
 | 200 | GET | OK | 服务器成功返回用户请求的数据，该操作是幂等的（Idempotent）|
 | 201 | POST/PUT/PATCH | CREATED | 用户新建或修改数据成功 |
 | 202 |  *  | Accepted | 表示一个请求已经进入后台排队（异步任务）|
@@ -105,16 +110,16 @@ tags: architect restful-api
 | 410 | GET | Gone | 用户请求的资源被永久删除，且不会再得到的 |
 | 422 | POST/PUT/PATCH | Unprocesable entity | 当创建一个对象时，发生一个验证错误 |
 | 500 |  *  | INTERNAL SERVER ERROR | 服务器发生错误，用户将无法判断发出的请求是否成功 |
-```
+
 
 > 传入参数
 
-* 地址栏参数
-    - `restful`地址栏参数`/api/users/1`（1为用户编号，获取用户为1的用户信息）
-    - `get`方式的查询字串 见过滤信息小节
-* 请求`body`数据
-    - `cookie`
-    - `request header`（`cookie`和`header`一般都用于`OAuth`认证 ）
+	* 地址栏参数
+	    - `restful`地址栏参数`/api/users/1`（1为用户编号，获取用户为1的用户信息）
+	    - `get`方式的查询字串 见过滤信息小节
+	* 请求`body`数据
+	    - `cookie`
+	    - `request header`（`cookie`和`header`一般都用于`OAuth`认证 ）
 
 > 返回结果
 
