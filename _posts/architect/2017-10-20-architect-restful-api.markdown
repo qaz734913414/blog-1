@@ -115,11 +115,11 @@ tags: architect restful-api
 > 传入参数
 
 	* 地址栏参数
-	    - `restful`地址栏参数`/api/users/1`（1为用户编号，获取用户为1的用户信息）
-	    - `get`方式的查询字串 见过滤信息小节
+	    1. `restful`地址栏参数`/api/users/1`（1为用户编号，获取用户为1的用户信息）
+	    2. `get`方式的查询字串 见过滤信息小节
 	* 请求`body`数据
-	    - `cookie`
-	    - `request header`（`cookie`和`header`一般都用于`OAuth`认证 ）
+	    1. `cookie`
+	    2. `request header`（`cookie`和`header`一般都用于`OAuth`认证 ）
 
 > 返回结果
 
