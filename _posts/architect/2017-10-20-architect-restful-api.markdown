@@ -317,32 +317,33 @@ tags: architect restful-api
 参考：`Github`的`API`的设计，它会在返回的`HTTP`头信息里带上：
 * `X-RateLimit-Limit: 5000`
 * `X-RateLimit-Remaining: 4999`
-表示这个接口在某一时间段内，该授权用户调用该接口的最大次数为`5000`次，该时间段内还剩余`4999`次。
+表示这个接口在某一时间段内，该授权用户调用该接口的最大次数为`5000`次，该时间段内还剩余`4999`次。  
 
 
 > 接口签名
 
-* 权限分配
-    - 对于每个类型客户端服务端会分配`apiKey`和`apiSecret`做安全签名使用
-* 请求`Header`
-    - Accept: application/json
-    - X-Api-Key: jGw7SRN6qckRc0jz （请求apiKey，由后端分发）
-    - X-Signature: 8STR59mJWFKv11GhdzSwd9iBzsySRKjt （根据签名算法算出的签名）
-    - X-Access-Token: 5262d64b892e8d4341000001 （用户登录后的AccessToken）
-    - X-App-Version: 1.0 （接口版本）
-    - X-Timestamp: 1508839280 （时间戳，为时间转换为的毫秒）
-    - X-Nonce: MBESwVRPSBgf48npjfuMPFzCGwMjLIac （32位随机字符串，防重复）
-* 签名算法
-    - 参与签名计算的字符串
-    - sign = `HTTPMethod`+`Path`+`Args`+`json_body_base64`+`Timestamp`+`Nonce`
-     + `HTTPMethod`为请求方法的大写，如`GET、POST`
-     + `Path`为请求接口地址`path` ，如请求地址为`http://www.ylkj.com/api/users`的`path`为`/api/users`
-     + `Args`为将所有请求参数，（包括`query`和`body`中的参数）以`key=value`组合，然后按字母顺序排列后使用`&`符号连接在一起，当提交类型为`Form`时，`file`类型参数不参与签名
-     + `json_body_base64`如果请求`body`为`json`时此值为`body`内容使用`base64`编码后的值，`body`非`json`时此值为空
-     + `Timestamp`和`Nonce`分别与头部中`X-Timestamp`和`X-Nonce`值相同
-     + 所有参数和`json_body`在计算时需要移除首尾空白字符，包括空格和回车等，但在请求时可以包含首尾空白符仅不参与签名
-* 使用分配的`apiSecret`和`hmac-sha256`算法生成签名
-    - 先使用`hmac-sha256`对第一步得到的`sign`做`hash`运算并将得到的值使用`base64`编码
+	* 权限分配
+	    - 对于每个类型客户端服务端会分配`apiKey`和`apiSecret`做安全签名使用
+	* 请求`Header`
+	    - Accept: application/json
+	    - X-Api-Key: jGw7SRN6qckRc0jz （请求apiKey，由后端分发）
+	    - X-Signature: 8STR59mJWFKv11GhdzSwd9iBzsySRKjt （根据签名算法算出的签名）
+	    - X-Access-Token: 5262d64b892e8d4341000001 （用户登录后的AccessToken）
+	    - X-App-Version: 1.0 （接口版本）
+	    - X-Timestamp: 1508839280 （时间戳，为时间转换为的毫秒）
+	    - X-Nonce: MBESwVRPSBgf48npjfuMPFzCGwMjLIac （32位随机字符串，防重复）
+	* 签名算法
+	    - 参与签名计算的字符串
+	    - sign = `HTTPMethod`+`Path`+`Args`+`json_body_base64`+`Timestamp`+`Nonce`
+	     + `HTTPMethod`为请求方法的大写，如`GET、POST`
+	     + `Path`为请求接口地址`path` ，如请求地址为`http://www.ylkj.com/api/users`的`path`为`/api/users`
+	     + `Args`为将所有请求参数，（包括`query`和`body`中的参数）以`key=value`组合，然后按字母顺序排列后使用`&`符号连接在一起，当提交类型为`Form`时，`file`类型参数不参与签名
+	     + `json_body_base64`如果请求`body`为`json`时此值为`body`内容使用`base64`编码后的值，`body`非`json`时此值为空
+	     + `Timestamp`和`Nonce`分别与头部中`X-Timestamp`和`X-Nonce`值相同
+	     + 所有参数和`json_body`在计算时需要移除首尾空白字符，包括空格和回车等，但在请求时可以包含首尾空白符仅不参与签名
+	* 使用分配的`apiSecret`和`hmac-sha256`算法生成签名
+	    - 先使用`hmac-sha256`对第一步得到的`sign`做`hash`运算并将得到的值使用`base64`编码
+	    
         ```java
         import javax.crypto.Mac;
         import javax.crypto.spec.SecretKeySpec;
@@ -366,7 +367,7 @@ tags: architect restful-api
         	}
         }
         ```
-* 生成的签名字符串以`X-Signature`为`key`放入请求头部
+	* 生成的签名字符串以`X-Signature`为`key`放入请求头部
 
 - - - - -
 > 如果你喜欢本文，请分享到朋友圈。
