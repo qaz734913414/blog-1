@@ -5,7 +5,7 @@ description: "RESTful API 设计规范"
 keywords: 架构实践
 origin: 张嘉杰.原创
 date:   2017-10-20
-category: architect restful-api
+category: architect
 tags: architect restful-api
 ---
 
@@ -19,15 +19,15 @@ tags: architect restful-api
 
 > 设计规范
 
-* 整体规范采用`RESTful`模式
-* 请求和返回数据类型统一为`JSON`
-* 所有拆分`API`服务接口，必须提供请求参数、响应结果、业务错误码
-* 所有请求、响应参数变量均使用小写
+	* 整体规范采用`RESTful`模式
+	* 请求和返回数据类型统一为`JSON`
+	* 所有拆分`API`服务接口，必须提供请求参数、响应结果、业务错误码
+	* 所有请求、响应参数变量均使用小写  
 
 > 接口协议
 
-`API`与应用服务的通信协议采用`HTTP`协议。
-**支付、订单** 等重要服务通信协议建议采用`HTTPs`协议，确保交互数据的传输安全。
+	`API`与应用服务的通信协议采用`HTTP`协议。
+	**支付、订单** 等重要服务通信协议建议采用`HTTPs`协议，确保交互数据的传输安全。
 
 > HTTP 请求方式
 
@@ -120,14 +120,15 @@ tags: architect restful-api
 
 为了保障前后端的数据交互的顺畅，规范数据的返回，采用固定的数据格式封装。
 
-```table
+
 | 参数         | 类型   | 描述 |
+| ---         | ---   | --- |
 | code         | String | 网关返回码 |
 | msg          | String | 网关返回码描述 |
 | sub_code | String | 业务返回码 |
 | sub_msg  | String | 业务返回码描述 |
 | result	      | String | 返回结果 |
-```
+
 
 参数具体说明
 
