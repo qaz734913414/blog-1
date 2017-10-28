@@ -347,27 +347,27 @@ tags: architect restful-api
 	* 生成的签名字符串以`X-Signature`为`key`放入请求头部
 	
 ```java
-    import javax.crypto.Mac;
-    import javax.crypto.spec.SecretKeySpec;
-    import org.apache.commons.codec.binary.Base64;
-    
-    public class GenerateSignature {
-    	public static void main(String[] args) {
-    		try {
-    			String apiSecret = "secret";
-    			String stringToSign = "sign";
-    
-    			Mac sha256_HMAC = Mac.getInstance("HmacSHA256");
-    			SecretKeySpec secret_key = new SecretKeySpec(apiSecret.getBytes(), "HmacSHA256");
-    			sha256_HMAC.init(secret_key);
-    
-    			String hash = Base64.encodeBase64String(sha256_HMAC.doFinal(stringToSign.getBytes()));
-    			System.out.println(hash);
-    		} catch (Exception e){
-    			System.out.println("Error");
-    		}
-    	}
-    }
+import javax.crypto.Mac;
+import javax.crypto.spec.SecretKeySpec;
+import org.apache.commons.codec.binary.Base64;
+
+public class GenerateSignature {
+	public static void main(String[] args) {
+		try {
+			String apiSecret = "secret";
+			String stringToSign = "sign";
+
+			Mac sha256_HMAC = Mac.getInstance("HmacSHA256");
+			SecretKeySpec secret_key = new SecretKeySpec(apiSecret.getBytes(), "HmacSHA256");
+			sha256_HMAC.init(secret_key);
+
+			String hash = Base64.encodeBase64String(sha256_HMAC.doFinal(stringToSign.getBytes()));
+			System.out.println(hash);
+		} catch (Exception e){
+			System.out.println("Error");
+		}
+	}
+}
 ```
 
 - - - - -
