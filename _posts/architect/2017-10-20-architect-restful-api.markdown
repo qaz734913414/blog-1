@@ -315,8 +315,10 @@ tags: architect restful-api
 请求速率限制，根据`app_key`，`sign_key`来判断用户某段时间的请求次数，将该数据更新到内存数据库`redis`、`memcached`，达到最大数即不接受该用户的请求，同时这样还可以利用到内存数据库`key`在特定时间自动过期的特性。在返回时设置`X-Rate-Limit-Reset`，当前时间段剩余秒数。
 
 参考：`Github`的`API`的设计，它会在返回的`HTTP`头信息里带上：
+
 	* `X-RateLimit-Limit: 5000`
-	* `X-RateLimit-Remaining: 4999`  
+	* `X-RateLimit-Remaining: 4999`
+
 表示这个接口在某一时间段内，该授权用户调用该接口的最大次数为`5000`次，该时间段内还剩余`4999`次。  
 
 > 接口签名
@@ -369,7 +371,7 @@ tags: architect restful-api
 	* 生成的签名字符串以`X-Signature`为`key`放入请求头部
 
 - - - - -
-> 如果你喜欢本文，请分享到朋友圈。
+> 如果你喜欢本文，请分享到朋友圈。  
 > 想要获得更多信息，请关注我。
 
 ![](http://ox564wtna.bkt.clouddn.com/architect/_image/qrcode_for_gh_1a76c2ff77c7_430.jpg)

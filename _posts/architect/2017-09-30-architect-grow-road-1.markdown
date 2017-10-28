@@ -89,7 +89,7 @@ tags: architect
  祝所有的朋友国庆、中秋双节假期，都玩儿的开开心心。
 
 - - - - -
-> 如果你喜欢本文，请分享到朋友圈。
+> 如果你喜欢本文，请分享到朋友圈。  
 > 想要获得更多信息，请关注我。
 
 ![](http://ox564wtna.bkt.clouddn.com/architect/_image/qrcode_for_gh_1a76c2ff77c7_430.jpg)
